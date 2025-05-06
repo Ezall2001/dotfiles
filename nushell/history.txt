@@ -1,0 +1,3168 @@
+echo $env.XDG_CONFIG_DIR
+echo $env
+echo $nu
+ll
+cd ~/AppData/Roaming/nushell/
+ls
+rm env.nu history.txt
+rm -rf vendor
+ls
+cd ..
+rmdir nushell
+rm -D nushell
+rm  nushell
+ls
+exit
+ls
+cd ~/personal/ostweaks/
+ls
+rm .config.lnk
+rm nvim.lnk
+ls .config
+mv ~/.config/wezterm ./config/wezterm
+ls
+ls .config
+ls config
+mv ./config/wezterm ./.config/wezterm
+ls
+rm config
+ls
+ls .config
+exit
+mv ~/AppData/Local/nvim ../ostweaks/.config/nvim
+cd ../ostweaks/
+ls
+ls .config
+exit
+nvim Arab_Soft\
+ls ../ostweaks/.config/
+cd ../ostweaks/.config/nushell/
+nvim .
+config nu
+config nu --doc
+config nu --doc | nu-highlight 
+config nu --doc | nu-highlight | bat
+nvim .
+source ./config.nu
+exit
+ls
+cd ../ostweaks/.config/nushell/
+ls
+nvim config.nu
+echo $XDG_CONFIG_HOME
+echo $env.XDG_CONFIG_HOME
+nvim config.nu
+$env.XDG_CONFIG_HOME | path join "starship/starship.toml"
+mkdir ../starship
+touch ../starship/starship.toml
+ls
+ls | select name
+ls | where type = file
+ls | where type == file
+ls | where size > 400b
+$env
+ls
+cd ..
+ls
+nvim wezterm
+exit
+ls
+echo $env.XDG_CONFIG_HOME
+cd ../ostweaks/.config/nushell/
+ls
+nvim config.nu
+ll
+$env
+$nu
+$nu.config
+$nu
+exit
+ls
+$nu
+$nu.config
+ll
+$env
+$env | describe
+cd ../ostweaks/.config/wezterm/
+nvim .
+ls
+$env.STARSHIP_CONFIG
+cd ../starship/
+nvim .
+ls
+nvim starship.toml
+ls
+lms
+ls
+exit
+ls
+nvim .
+cd ../ostweaks/.config/
+ls
+cd starship\
+ls
+nvim starship.toml
+exit
+cd ../ostweaks/.config/starship/
+nvim starship.toml
+ls
+nvim starship.toml
+ls
+nvim starship.toml
+ls
+nvim starship.toml
+ls
+nvim starship.toml
+ls
+nvim starship.toml
+ls
+nvim starship.toml
+ls
+l
+ll
+lll
+l
+lll
+l
+ll
+l
+ll
+ls
+throw 1
+cd ../ostweaks/.config/starship/
+nvim starship.toml
+test
+nvim starship.toml
+cd ../nushell/
+nvim config.nu
+ls
+nvim config.nu
+exit
+ls
+cd ../ostweaks/.config/starship/
+nvim config.nu
+nvim starship.toml
+false
+cd ../nushell/
+nvim config.nu
+source ./config.nu
+ls
+vi config.nu
+cd ../starship/
+vi startship
+vi starship.toml
+ls
+cd ../nushell/
+vi config.nu
+source config.nu
+vi config.nu
+source config.nu
+ls
+cd ../starship
+vi starship.toml
+ls
+vi config.nu
+source config.nu
+vi config.nu
+source config.nu
+config nu --doc | nu-highlight | bat
+source config.nu
+vi config.nu
+source config.nu
+config nu --doc | nu-highlight | bat
+exit
+exit
+exit
+ls
+st
+fc-list
+choco search fc-list
+wezterm ls-fonts | grep "Nerd"
+choco search grep
+choco install grep
+wezterm ls-fonts | grep "Nerd"
+wezterm ls-fonts
+cd ../ostweaks/.config/wezterm/
+vi .
+ls
+cd ../starship/
+lq
+ls
+ps
+cd ~
+ls
+fzf
+cd ./personal/
+fzf
+cd ostweaks\
+ls
+fzf
+ls
+cd .config
+cd ../../tmp/xrcore/
+ls
+cd src
+ls
+ll
+ls -al
+cd ..
+ls
+chmod -w ./src
+ls
+cd src
+ls
+cd ~ 
+ls
+fzf
+ls
+cd personal\
+ls
+cd ostweaks\
+ls .config
+cd .config
+ls
+cd nushell
+ls
+sl
+ls
+ll
+ls
+fzf
+ls
+fzf
+ls
+cd ../wezterm/
+ls
+cd ..
+ls
+vi starship.toml
+exit
+exit
+exit
+ls
+cd ../ostweaks/.config/wezterm/
+cd ../starship/
+nvim star
+ls
+err
+ls
+fzf
+ls
+ll
+fzf
+ls
+fzf
+nvim starship.toml
+ls
+fzf
+ls
+ls ( test<\n><\n><\n>)
+ls (<\n>ls<\n>à)
+ls
+fzf
+ls
+cd ../wezterm/
+exit
+ls
+^ls
+ls
+ls | get name
+ls | get name | first
+ls | get name | second
+ls | get name | first
+nvim .
+ls | get name | echo $in 
+rustc --version
+rust --version
+version | transpose key value | to md --pretty
+ls
+glob "*test"
+cd ..
+ls
+glob "*m"
+... glob "*m"
+...glob "*m"
+ls ...glob "*m"
+ls ...(glob "*m")
+ls glob "*m"
+ls (glob "*m")
+echo ...(glob "*m")
+type ...(glob "*m")
+describe ...(glob "*m")
+echo ...(glob "*m") | describe
+ls
+exit
+ls
+llllllllll
+exit
+cd ..
+mkdir bin
+cd bin
+ls
+touch self-control.nu
+nvim self-control.nu
+./my_script.nu
+./self-control.nu
+nu self-control.nu
+ls
+nu self-control.nu
+self-control
+pwd
+ll
+ls and permissions
+ls . | where type == 'file' and permissions
+open self-control.nu | get permissions
+permissions
+ls
+ls -l
+self-control
+exit
+nvim self-control.nu
+exit
+self-control
+nvim .
+ls
+cd ../tmp/
+ls
+nvim rome pacts.txt
+nvim .
+cd ../ostweaks/.config/nvim
+ls
+cd ../starship/
+nvim starship.toml
+ls
+fzf
+choco install ripgrep
+ripgrep --help
+exit
+ripgrep
+rg
+exit
+rg
+rg --help
+rg --help | bat
+nvim .
+ls
+cd ../ostweaks/.config/nushell/
+nvim config.nu
+source config.nu
+ls
+nvim config.nu
+source config.nu
+ls
+cd ../ostweaks/.config/nushell/
+nvim config.nu
+source config.nu
+ext
+nvim config.nu
+ext
+source config.nu
+exit
+clear
+nvim .
+choco search zig
+choco install zig
+zig --version
+vim .
+cd ../tmp/xrcore/
+vim .
+cd ../../ostweaks/bin/
+nu self-control.nu
+vi --help
+vi --help | bat
+fzf
+cd ../../
+fzf
+cd ostweaks\.config\nvim
+vi .
+ls
+cd ../temp
+cd ..
+ls
+cd tmp
+nvim temp.txt
+ls
+cd ../ostweaks/.config/nvim/
+ls
+cd ../ostweaks/.config/nvim/
+nvim .
+choco search lua_ls
+choco search lua_language_server
+choco install lua_language_server
+choco install lua-language-server
+nvim .
+ls
+clear
+nvim .
+choco search make
+choco install make 
+choco search CMake
+choco install cmake
+choco search Microsoft.visualStudio
+cd ../wezterm/
+exit
+nvim .
+exit
+choco install microsoft-visual-cpp-build-tools
+nvim .
+pid
+pd
+pc
+htop
+top
+ps
+exit
+exit
+ps
+psql
+choco list
+grep 
+choco list | grep pos
+choco uninstall postgresql
+choco list | grep pos
+ls
+cd ../tmp
+cd xr_solutions\
+ls
+mkdir xr_playground
+choco uninstall postgresql17
+choco list | grep pos
+choco remove postgresql17
+choco uninstall postgresql17 -n
+choco install posgresql --params '/Password:armen'
+choco install postgresql --params '/Password:armen'
+exti
+exit
+cd ../ostweaks/.config/wezterm/
+ls
+nvim .
+ls
+exit
+wezterm
+nvim .
+cd ../ostweaks/.config/nvim
+nvim .
+exit
+choco search zoxide 
+choco install zoxide
+z
+exit
+z
+zi
+z
+choco install zoxide
+z
+fzf
+cd ~
+fzf
+cd AppData\Local\Temp\chocolatey\ChocolateyScratch\zoxide\
+ls
+cd 0.9.2\
+ls
+cd tools\
+ls
+cd ..
+cd legal\
+ls
+cd ..
+ls
+choco uninstall zoxide
+winget install ajeetdsouza.zoxide
+z
+exit
+z
+ls
+fzf
+cd ~
+fzf
+z
+zi
+zoxide
+winget uninstall zoxide
+choco install zoxide
+zoxide
+zoxide -h
+zoxide init -h
+zoxide init nushell
+$nu.env-path
+cd C:\Users\armen\personal\ostweaks\.config\nushell
+zoxide init nushell | save -f ~/.zoxide.nu
+which save
+ls
+rm ~/.zoxide.nu
+zoxide init nushell | save -f ./.zoxide.nu
+ls
+bat config.nu
+zoxide init nushell
+exit
+nvim .
+exit
+z
+cd ../ostweaks/.config/nushell/
+ls
+nvim .
+source config.nu
+nvim .
+mv .zoxide.nu zoxide.nu
+source zoxide.nu
+z
+z
+source config.nu
+zoxide
+z
+source config.nu
+z
+_zoxide_z
+z
+exit
+source config.nu
+z
+_zoxide_z
+source config.nu
+exti
+exit
+nvim .
+exit
+nvim .
+cd ../ostweaks/.config/nushell/
+cd ../ostweaks/.config/nushell/
+source config.nu
+source zoxide.nu
+nvim .
+zoxide init -h
+zoxide init nushell --cmd
+zoxide init nushell --cmd z
+nushell --version
+nu -V
+nu -v
+$nu.env-path
+eixt
+exit
+source config.nu
+exit
+nvim .
+exit
+ls
+cd ../ostweaks/.config/nushell/
+ls
+rm zoxide.nu
+source config.nu<\n><\n><\n><\n>
+$env.XDG_CONFIG_HOME | path join ".zoxide"
+$env.XDG_CONFIG_HOME | path join ".zoxide" | const
+const --help
+source config.nu<\n><\n><\n><\n>
+$env.XDG_CONFIG_HOME | path join ".zoxide" | const
+$env.XDG_CONFIG_HOME | path join ".zoxide"
+source config.nu<\n><\n><\n><\n>
+ls ~/personal/ostweaks/.config.zoxide.nu
+ls ~/personal/ostweaks/.config/.zoxide.nu
+ls ~/personal/ostweaks/.config/
+source config.nu<\n><\n><\n><\n>
+source config.nu
+ls
+cwd
+pwd
+source config.nu<\n><\n><\n><\n><\n><\n><\n>
+path join "test"
+"" | path join "test"
+source config.nu<\n><\n><\n><\n><\n><\n><\n>
+nushell --version
+nu --version
+ls
+source config.nu
+z
+source config.nu
+z
+source config.nu
+ls
+z
+zi
+cd ls
+exit
+nvim .
+exit
+z
+z ~/personal/ostweaks/.config/nushell/
+nvim .
+source config.nu
+cd 
+cd lsdg
+z
+exit
+z
+cd nushell
+cd nvim
+cd ../nvim
+cd nushell
+cd nvim
+cd ../wezterm/
+cd ../starship/
+cd nushell
+cd nvim
+cd wezterm
+cd personal
+cd ../../../
+cd personal
+cd ./project_source/
+ls
+rm .zoxide.nu
+cd ../tmp/xr_solutions/
+cd nvim
+cdi
+help fzf
+fzf --help
+fzf
+fzf --preview = 'bat'
+fzf --preview = {'bat'}
+fzf --preview = "bat {}"
+fzf --preview "bat {}"
+fzf --preview "bat --color=always {}"
+cd nushell
+nvim .
+source config.nu
+fzf
+exit
+fzf
+nvim .
+source config.nu
+fzf
+exit
+fzf
+cd tmp
+cd ../tmp
+fzf
+ls
+rg
+df
+duf
+cd $(fzf)
+cd $(ls | fzf)
+into --help
+ls
+glob .txt
+glob *.txt
+ls glob *.txt
+ls (glob *.txt)
+ls ...(glob *.txt)
+ls tmp.txt ideas.txt
+start tmp.txt
+ls
+cd nvim
+cd nushell
+nvim .
+vi
+vi .
+nvim .
+nvim .
+nvim ;
+nvim .
+vi .
+nvim ;
+nvim .
+exit
+exti
+exit
+ls
+bat wifserch
+cd wifserch
+ls
+bat main.py
+cd src
+ls
+bat *
+bat **/*.py
+cd
+cd nvim
+vi .
+pg
+pgp
+psql
+pgp
+psql
+psql -U postgres
+psql --help
+psql -U postgres -<
+psql -U postgres -w
+psql -U postgres
+psql -U postgresql
+psql
+choco list | grep pos
+choco uninstall postgresql
+choco install postgresql --params '/Password:Hellow-World2025'
+psql
+psql -U postgres
+$env.PGPASSWORD='Hellow-World2025'; '\conninfo' | psql -U postgres
+cd
+fzf
+fzf /
+fzf..
+fzf ..
+fzf
+choco uninstall postgresql
+choco uninstall --help
+choco uninstall postgresql17
+choco install postgresql --params '/Password:Hellow-World2025'
+psql -U postgres
+psql
+postgresql
+net --help
+net start postgresql17
+net start postgresql
+psql
+"alter user postgres with password 'Hellow-World2025';" | psql -Upostgres
+psql -U postgres
+exit
+cd starship
+ls
+fzf
+ls
+fzf
+ls
+ls starship.toml
+cd ..
+ls
+bat nushell\
+ls
+fzf
+bat nushell\
+fzf
+nvim .
+cd
+fzf
+cd AppData\Local\nvim-data
+cd shada\
+rm main.shada.tmp.*
+cd nvim
+vi .
+cd nvim
+vi .
+exit
+cd nvim
+nvim .
+cd nvim
+vi .
+vi
+vi .
+vi ;
+vi .
+ls
+cd starship
+ls
+cd nvim
+cd personal
+cd project_source\tsop\
+ls
+cd src
+ls
+cd api
+cd ls
+ls
+cd nvim
+cdi
+cd personal
+cd project_source\
+cd self-control\
+ls
+cd xr
+ls
+l
+sls
+git status
+ls
+nvim .
+ls
+cd nushell
+ls
+cd nushell
+source test.nu
+cd xr
+ls
+open package-lock.json
+open package.json
+open ecosystem.config.js
+open ecosystem.config.js | lines
+lines --help
+nvim .
+cd wezterm
+exit
+nvim .
+exit
+cd wez
+ls
+cd wez
+ls
+fzf
+nvim .
+cd nvim 
+nvim .
+cd wez
+vi .
+exit
+vi .
+cd start
+cd star
+ls
+cd tmp
+ls
+nvim tmp.txt
+exit
+vi .
+exit
+ls
+sl
+exit
+ls
+cd abstract\
+cd projects\test_1\
+pnpm init
+pnpm install
+cd ...
+cd tools\ts_config\
+pnpm lint
+pnpm install
+pnpm lint
+cd test_a
+cd test1
+cd test_1
+pnpm install
+pnpm add eslint -w
+cd ..
+pnpm add eslint -w
+pnpm add eslint
+pnpm add eslint -w
+cd ../tools/ts_config/
+pnpm add -D tsup
+cd ...
+pnpm clean
+cd ts_config
+pnpm build
+cd abstract\
+pnpm install
+ls
+cd ./tools/tsup_config/
+pnpm build
+cd ...
+pnpm turbo tsup_config#build
+pnpm turbo @abstract/tsup_config#build
+pnpm turbo @abstract/tsup_config#lint
+pnpm install
+cd abstract\
+ls
+code .
+pnpm install
+cd configs/eslint_config/
+cd ..
+pnpm turbo @abstract/eslint_config#lint
+pnpm install jiti -D -w
+pnpm turbo @abstract/eslint_config#lint
+pnpm turbo @abstract/eslint_config#build
+pnpm install
+pnpm turbo @abstract/eslint_config#build
+pnpm turbo @abstract/eslint_config#dev
+pnpm install
+pnpm turbo @abstract/eslint_config#dev
+pnpm turbo @abstract/eslint_config#build
+pnpm turbo @abstract/tsup_config#build
+pnpm turbo @abstract/eslint_config#build
+pnpm turbo @abstract/tsup_config#build
+pnpm turbo @abstract/eslint_config#build
+pnpm turbo @abstract/tsup_config#build
+pnpm turbo @abstract/eslint_config#build
+pnpm install
+pnpm turbo @abstract/eslint_config#build
+pnpm install
+pnpm turbo @abstract/eslint_config#build
+pnpm install esbuild
+pnpm install esbuild -w
+pnpm install
+pnpm add esbuild-register -D
+pnpm add esbuild-register -D -w
+pnpm turbo @abstract/esbuild_configg#build
+pnpm turbo @abstract/esbuild_config#build
+pnpm add ts-node -w
+pnpm add ts-node -w -D
+pnpm turbo @abstract/esbuild_config#build
+pnpm add tsx -w -D
+pnpm turbo @abstract/esbuild_config#build
+pnpm install
+pnpm turbo @abstract/esbuild_config#build
+cd configs/esbuild_config/
+pnpm build_types
+pnpm turbo @abstract/esbuild_config#build
+cd abstract\
+pnpm turbo @abstract/esbuild_config#build
+pnpm turbo @abstract/eslint_config#build
+pnpm install
+pnpm turbo @abstract/eslint_config#build
+pnpm turbo @abstract/esbuild_config#build
+pnpm turbo @abstract/esbuild_config#build --force
+pnpm install
+pnpm add npm-dts
+pnpm add npm-dts -w
+pnpm install
+pnpm add -D -w vite-plugin-dts
+pnpm add -D -w vite
+pnpm turbo @abstract/vite_config#build --force
+pnpm add vite-tsconfig-pahts
+pnpm add vite-tsconfig-pahts -w -D
+pnpm add vite-tsconfig-paths -w -D
+pnpm turbo @abstract/vite_config#build --force
+pnpm install
+pnpm turbo @abstract/vite_config#build --force
+pnpm turbo @abstract/vite_config#lint:types --force
+pnpm turbo @abstract/vite_config#build --force
+cd configs\vite_config\
+pnpm add vite-plugin-dts vite-tsconfig-paths
+pnpm clean
+rm
+rm --help
+pnpm clean
+pnpm install
+pnpm add vite-plugin-dts vite-tsconfig-paths
+pnpm turbo @abstract/vite_config#build --force
+pnpm turbo @abstract/eslint_config#build --force
+pnpm turbo @abstract/tsup_config#build --force
+pnpm install
+pnpm turbo @abstract/tsup_config#build --force
+pnpm turbo @abstract/eslint_config#build --force
+cd ../tsup_config/
+pnpm add -D tsup
+pnpm add tsup
+pnpm turbo @abstract/eslint_config#build --force
+pnpm install
+pnpm turbo @abstract/eslint_config#build --force
+cd ../eslint_config/
+pnpm add @abstract/tsup_config -D
+pnpm turbo @abstract/eslint_config#build --force
+pnpm turbo @abstract/ts_config#build --force
+pnpm turbo @abstract/tsup_config#build --force
+pnpm turbo @abstract/eslint_config#build --force
+npm install
+pnpm install
+which rm
+which remove
+rm node_modules\
+rm -rf node_modules && rm -rf dist
+pnpm clean
+pnpm run rm -rf node_modules
+pnpm run nu rm -rf node_modules
+pnpm run nushell rm -rf node_modules
+pnpm run "nushell rm -rf node_modules"
+$env
+$enf.shell
+$env.shell
+$env.SHELL
+$env | get shell
+$env
+pnpm env list
+exit
+nu
+nushell
+pnpm clean
+pnpm --help
+pnpm install
+pnpm build
+pnpm add tsup
+cd abstract\
+cd configs/eslint_config/
+pnpm add tsup -D
+pnpm build
+pnpm turbo build
+pnpm turbo @abstract/tsup_config#build --force
+pnpm install
+pnpm turbo @abstract/eslint_config#build --force
+pnpm add tsx
+pnpm add tsx -D
+pnpm write_self_config
+pnpm add -D @types/node
+pnpm write_self_config
+eslint
+pnpm eslint
+pnpm write_self_config
+pnpm eslint
+pnpm build
+cd ...
+pnpm build
+cd configs\vite_config\
+pnpm add vite -P
+pnpm add vite --save-peer
+cd ...
+pnpm build
+cd ./configs/vite_config/
+pnpm add tsup -D
+pnpm trubo build
+pnpm turbo build
+pnpm add vitest
+pnpm add vitest --save-peer
+pnpm build
+pnpm turbo build
+pnpm install
+cd .../templates/node_lib_template/
+pnpm lint
+pnpm add vitest tsup
+pnpm add vitest tsup -D
+pnpm turbo test
+pnpm test
+pnpm lint
+pnpm turbo lint
+pnpm turbo lint:types
+pnpm turbo dev
+pnpm turbo test
+pnpm turbo lint
+cd ...
+pnpm turbo lint
+cd templates\node_lib_template\
+pnpm turbo lint
+cd ...
+pnpm lint
+pnpm lint --force
+pnpm dev
+pnpm lint
+pnpm lint --continue
+pnpm lint
+pnpm test:watch
+pnpm test
+cd templates\node_lib_template\
+pnpm test
+cd ...
+pnpm test
+pnpm test:cov
+cd templates\node_lib_template\
+pnpm add -D @vitest/coverage-v8
+cd ...
+pnpm test:cov
+cd ..
+cd personal_tools\
+pnpm test
+pnpm install
+pnpm test
+ls
+cd personal_tools\
+pnpm shell-name
+pnpm turbo gen workspace --copy
+cd libs/tpod/
+pnpm install
+pnpm turbo gen workspace --copy
+pnpm install
+cd personal_tools\
+pnpm install
+cd personal_tools\
+pnpm dev
+pnpm dev --continue
+pnpm dev
+ls
+cd personal_tools\
+pnpm dev
+ls personal_tools\
+cd personal_tools\
+pnpm dev
+cd libs\tool_belt\
+vitest --help
+pnpm vitest --help
+pnpm vitest list
+pnpm turbo gen workspace --copy
+cd ../test
+pnpm install
+pnpm build
+pnpm dev
+pnpm tsc --DeclarationOnly
+pnpm tsc --declaration
+pnpm tsc --declaration --noEmit=false
+pnpm tsc --declaration --noEmit false
+pnpm tsc --declaration --declarationOnly
+pnpm tsc --help
+pnpm tsc --declaration --emiDeclarationOnly
+pnpm tsc --declaration --emitDeclarationOnly
+pnpm tsc --declaration --emitDeclarationOnly --noEmit false
+pnpm tsc --declaration --emitDeclarationOnly --noEmit false --extendedDiagnostics
+cd nu
+ls
+rm test.nu
+bat env.nu
+bat config.nu
+ll
+cd self-control\
+cd ....
+cd project_source\
+cd self-control\
+py main.py
+pipenv
+py main.py
+ls
+vi data.csv
+code .
+cd test
+cd personal_tools\
+cd templates\test\
+pnpm add -D typedoc
+pnpm typedoc src/index.ts
+pnpm typedoc src/index.ts --hideGenerator
+cd personal_tools\
+cd test
+pnpm typedoc src/index.ts --hideGenerator
+pnpm typedoc src/index.ts
+pnpm typedoc
+cd personal-
+*
+cd sc
+cd sel
+cd selc
+cd ..
+cd selc
+cd sel-c
+cd sel
+py main.py
+vi data.csv
+code .
+vi data.csv
+py main.py
+cd sel
+vi data.csv
+exit
+cd too
+cd ..
+cd ../templates/test
+pnpm typedoc
+cd sel
+py main.py
+vi data.csv
+py main.py
+pnpm typedoc --watch
+cd test
+pnpm add @docusaurus/core
+pnpm add @docusaurus/core -D
+pnpm dlx docusaurus --version
+pnpm docusaurus --version
+pnpm docusaurus --version --config ./docs
+pnpm add @docusaurus/types -D
+pnpm doc:build
+pnpm docs:build
+pnpm docusaurus --config docs
+pnpm docusaurus --config docs/docusaurus.config.ts
+pnpm docusaurus --config ./docs/docusaurus.config.ts
+pnpm docusaurus --config ./docs/docusaurus.config.ts --typescript
+pnpm docusaurus -- --config ./docs/docusaurus.config.ts
+pnpm docusaurus -- --config ./docs
+pnpm docusaurus
+pnpm docusaurus -- --config ./docs
+pnpm docusaurus -- --config=./docs
+pnpm docusaurus -- --config './docs'
+pnpm docusaurus -- --config ./docs/docusaurus.config.ts
+pnpm docusaurus build --config ./docs/docusaurus.config.ts
+cd test
+pnpm dev
+pnpm docs:dev
+pnpm build
+pnpm docs:build
+pnpm docs:dev
+pnpm docusaurus start
+pnpm docusaurus start --config ./docs/docusaurus.config.ts
+pnpm docs:dev --port 4001
+pnpm docs:dev --port 4001 --port 4002
+pnpm add @docusaurus/plugin-content-pages -D
+pnpm add react -D
+pnpm docs:dev
+pnpm docs:build
+pnpm docs:dev
+pnpm docusaurus clean
+pnpm docs:clean
+pnpm docs:dev
+pnpm add @docusaurus/theme-classic -D
+pnpm docs:dev
+pnpm add -D @types/react
+pnpm docs:dev
+pnpm docs:clean
+pnpm docs:dev
+cd docs
+pnpm init
+pnpm add -D typescript
+cd ..
+pnpm turbo gen workspace --copy
+pnpm install
+cd package\
+pnpm add -D typedoc-plugin-markdown
+pnpm docs:gen
+cd test
+cd docs\
+pnpm add -D @docusaurus/tsconfig
+cd ...
+cd ../configs/ts_config/
+pnpm add -D @docusaurus/tsconfig
+cd test
+cd docs
+pnpm lint:types
+pnpm dev
+pnpm add typedoc typedoc-plugin-markdown docusaurus-plugin-typedoc --save-dev
+pnpm docs:build
+pnpm build
+pnpm serve
+pnpm dev
+pnpm build
+cd test
+cd docs
+pnpm add @docusaurus/plugin-content-docs
+pnpm add @docusaurus/plugin-content-docs -D
+pnpm add @docusaurus/plugin-sitemap -D
+pnpm dev
+pnpm build
+pnpm serve
+pnpm build
+pnpm dev
+cd sel
+py main.py
+vi data.csv
+exti
+exit
+pipenv shell
+exit
+cd sel
+vi data.csv
+exit
+cd sel
+py main.py
+cd -
+cd test
+cd docs
+ls
+pnpm dev
+cd ../package/
+pnpm typedoc
+cd ../test
+cd ..
+cd docs
+pnpm typedoc --watch
+cd sel
+py main.py
+vi data.csv
+py main.py
+vi data.csv
+py main.py
+cd test
+cd docs
+pnpm dev
+pnpm update
+pnpm dev
+pnpm update
+pnpm dev
+pnpm install
+pnpm dev
+cd docs
+pnpm install
+pnpm self-update
+pnpm --version
+exit
+pnpm --version
+where pnpm
+which pnpm
+choco list | grep pnpm
+choco udpate pnpm
+choco upgrade pnpm
+pnpm --version
+cd docs
+pnpm clean
+pnpm install
+pnpm turbo build
+pnpm dev
+pnpm add -D corss-env
+pnpm add cross-env -D
+pnpm build
+pnpm dev
+cd ..../libs/tbelt/
+cd .../configs/
+pnpm turbo gen workspace --copy
+pnpm install
+cd ../libs/tbelt/
+pnpm build
+pnpm turbo @armen/tbelt#build
+pnpm turbo @armen/tbelt#lint
+pnpm turbo @armen/tbelt#build
+pnpm turbo @armen/tsup#build
+pnpm turbo @armen/tsup_config#build
+pnpm turbo @armen/tsup#build
+pnpm turbo @armen/tbelt#build
+pnpm turbo @armen/tsup_config#build
+pnpm turbo @armen/tbelt#build
+pnpm install
+cd sel
+py main.py
+vi data.csv
+pnpm turbo @armen/tbelt#build
+pnpm install
+pipenv shell
+cd personal_tools\configs\
+cd docusaurus_config\
+pnpm build
+pnpm install
+npm list
+npm list -g --depth=0
+which pnp
+which pnpm
+pnpm --version
+choco upgrade pnpm
+cd wez
+vi wezterm.lua
+vi keymap\
+bat C:\ProgramData\chocolatey\logs\chocolatey.log
+choco remove pnpm
+choco uninstall pnpm
+pnpm --version
+which pnpm
+cd C:\Users\armen\AppData\Local
+ls
+ls where name == pnpm
+ls | where name == pnpm
+pnpm
+exit
+exit
+pnpm --version
+cd test
+pnpm --version
+pnpm --self-update --save
+pnpm self-update --save
+pnpm self-update
+exit
+pnpm --version
+cd test
+pnpm --version
+pnpm install
+pnpm approve-builds
+cd docs
+cd docu
+pnpm dev
+cd ...
+cd test
+cd docs
+pnpm dev
+pnpm install
+pnpm dev
+pnpm clean
+pnpm install
+pnpm dev
+cd docusaurus_config\
+cd docu
+pnpm dev
+pnpm build
+cd test
+pnpm install
+pnpm clean
+pnpm install
+cd tbelt
+pnpm build
+cd docu
+pnpm build
+pnpm turbo @armen/docusaurus_config#build
+cd test
+cd docs
+pnpm dev
+cd tbelt
+pnpm build
+pnpm turbo @armen/tbelt#build
+pnpm install
+cd eslint_config
+cd .../configs/eslint_config
+pnpm add @eslint/js
+pnpm install
+cd -
+pnpm turbo @armen/tbelt#build
+cd docu
+pnpm build
+cd tbelt
+pnpm build
+pnpm turbo @armen/docusaurus#build
+pnpm turbo @armen/docusaurus_config#build
+pnpm install
+pnpm turbo @armen/docusaurus_config#build
+pnpm build
+pnpm build
+pnpm turbo @armen/tbelt#build
+pnpm turbo @armen/tbelt#build --force
+pnpm build
+pnpm serve
+pnpm build
+pnpm buil
+pnpm build
+cd package\
+pnpm build
+cd docu
+pnpm build
+pnpm dev
+cd tbelt/pac
+cd tebepac
+cd tebelt pack
+cd tebelt
+cd tbelpac
+cd tbel_
+cd tbel_pac
+cd tbel
+cd packa
+pnpm build
+node
+pnpm build
+pnpm dev
+pnpm dev
+pnpm add path-browserify
+pnpm install
+pnpm add -D @types/path-browserify
+pnpm install
+pnpm dev
+pnpm add -D @types/node
+pnpm dev
+exit
+pnpm dev
+exit
+which glidex
+choco list | grep glide
+choco list | grep g
+choco search armory
+choco serach armoury
+ls
+cd tbelt
+cd docs
+pnpm install
+cd docu
+pnpm add -p acorn
+pnpm outdated
+pnpm update --save
+pnpm audit
+pnpm audit --fix
+pnpm install
+cd ....
+pnpm audit --fix
+pnpm install
+pnpm recursive install
+pnpm list
+pnpm recursive list
+cd tbelt
+cd package\
+pnpm add acorn
+cd ../docs
+pnpm add acorn
+pnpm clean
+pnpm --version
+where pnpm
+which pnpm
+cd ....
+pnpm shell-name
+choco list | grep pnpm
+cd os
+cd ostweaks
+cd nu
+ls
+vi config.nu
+ripgrep
+rp
+rg
+choco list | rg rip
+vi config.nu
+choco list | grep rip
+pnpm --version
+pnpm --version
+choco search pnpm
+choco install pnpm
+pnpm --version
+which pnpm
+pnpm shell-name
+pnpm clean
+pnpm clean
+cd tbelt
+cd package\
+pnpm -w shell-name
+pnpm install
+pnpm -F tbelt build
+pnpm -F tbelt... build
+pnpm env list
+choco list | rg node
+pnpm completion --help
+pnpm completion bash
+pnpm setup --help
+pnpm config --json
+pnpm config list
+pnpm --location
+pnpm config --location
+pnpm config list --location
+echo $env.XDG_CONFIG_HOME
+cd ..
+ls
+ls -la
+cd configstore
+ls
+cd update-notifier-@docusaurus\
+ls
+bat core.json
+cd ....
+pnpm config set scriptShell "test"
+pnpm config list
+ls
+cd .config
+ls
+which nu
+pnpm config set scriptShell "C:\\ProgramData\\chocolatey\\bin\\nu.exe"
+pnpm config list
+pnpm build
+pnpm install
+pnpm -w clean
+pnpm clean
+cd -w
+cd ...
+cd .
+cd ..
+pnpm clean
+pnpm -F tbelt clean
+pnpm -F tbelt... clean
+pnpm install
+pnpm -F tbelt... clean
+pnpm install
+pnpm turbo @armen/tbelt#clean
+dlx @turbo/codemod@latest update
+pn dlx @turbo/codemod@latest update
+pnpm dlx @turbo/codemod@latest update
+pnpm dlx @turbo/codemod@latest update --force
+which nu
+pnpm turbo @armen/tbelt#clean
+exit
+exit
+exti
+exit
+cd personal_tools\
+pnpm turbo @armen/tbelt#clean
+echo $env.TURBO_SHELL
+pnpm shell-name
+TURBO_SHELL = C:\ProgramData\chocolatey\bin\nu.exe
+TURBO_SHELL = "C:\ProgramData\chocolatey\bin\nu.exe"
+echo $env.TURBO_SHELL
+pnpm turbo @armen/tbelt#clean
+$env.SHELL
+exit
+$env.SHELL
+cd personal_tools\
+pnpm turbo @armen/tbelt#clean
+turbo
+pnpm turbo
+pnpm turbo --help
+pnpm turbo
+pnpm nu turbo @armen/tbelt#clean
+pnpm nu -c 'turbo @armen/tbelt#clean'
+pnpm turbo nu -c '@armen/tbelt#clean'
+pnpm nu turbo @armen/tbelt#clean
+pnpm turbo @armen/tbelt#clean
+exit
+pnpm turbo @armen/tbelt#clean
+cd personal_tools\
+pnpm turbo @armen/tbelt#clean
+exit
+cd personal_tools\
+pnpm turbo @armen/tbelt#clean
+ps aux
+ps
+kill -9 9644
+kill 9644 -f
+pnpm turbo @armen/tbelt#clean
+pnpm add -w -D rimraf
+pnpm clean
+pnpm install
+pnpm clean
+pnpm install
+pnpm build
+cd tbelt
+cd documentation\
+pnpm build
+pnpm serve
+pnpm add react-dom@19.1.0
+lflglsieolieilhsrfeijedggdg*gdg
+exit
+cd doc
+pnpm build
+pnpm serve
+cd docs
+cd documen
+pnpm build
+pnpm serve
+cd sel
+vi data.csv
+ls
+cd docum
+pnpm dev
+cd tbel
+cd pac
+pnpm dev
+const hey = ()=>1
+node .
+node
+cd sel
+py main.py
+vi data.csv
+echo 3 | py main.py
+py main.py
+bat data.csv
+choco update wezterm
+choco upgrade wezterm
+wezterm upgrade
+choco upgrade
+choco upgrade --help
+cd ostweaks
+cd pnpm
+ls
+cd .config/pnpm
+ls
+vi rc
+cd rc
+ls
+cd -
+ls
+cd rc
+cd -
+cd ./rc
+vi rc
+cd rc
+cd pers
+pnpm turbo gen workspace --copy
+cd templates/ts_bench/
+pnpm install
+cdc tbelt
+cd tbelt
+cd packa
+cd pack
+pnpm install
+cd ../documentation/
+pnpm clean
+pnpm install
+pnpm add -D @docusaurus/tsconfig
+cd ...
+cd ../configs/ts_config/
+pnpm install
+pnpm clean
+pnpm clean
+pnpm install
+pnpm clean
+pnpm add @docusaurus/core
+pnpm clean
+pnpm install
+pnpm install
+pnpm build
+cd ../docusaurus_config/
+pnpm lin
+pnpm lint
+pnpm install
+pnpm build
+pnpm build
+pnpm lint
+pnpm build
+pnpm serve
+pnpm dev
+pnpm build
+pnpm serve
+pnpm build
+node
+pnpm lint
+node
+pnpm lint
+node
+pnpm lint
+no
+node
+pnpm lint
+cd dsel
+cd sel
+vi data.csv
+cd pack
+pnpm lint
+node
+pnpm lint:types
+cd packa
+pnpm lint:types
+cd sel
+py main.py
+vi data.csv
+exit
+pipenv shell
+quit
+exit
+cd packa
+pnpm lint:types
+cd sel
+py main.py
+cd ost
+cd .config\
+ls
+cd starship\
+ls
+sl
+ls
+ils
+ls
+vi starship.toml
+exit
+pipenv shell
+exit
+exit
+cd packa
+pnpm lint:types
+pnpm build
+cd ../docs
+cd ../documentation/
+pnpm build
+pnpm serve
+pnpm list
+cd ../../../configs/docusaurus_config/
+pnpm list
+pnpm update --save
+pnpm add acorn
+pnpm build
+pnpm build
+pnpm build -w
+pnpm turbo build
+cd ../tsup_config
+pnpm build
+pnpm install
+pnpm build
+pnpm turbo build
+exit
+pnpm build
+pnpm build
+pnpm serve
+pnpm lint:types
+pn lint:types
+pn lint
+pn build
+pn serve
+pn dev
+pn build
+pn serve
+pn dev
+pn dev
+exit
+ls
+cd star
+ils
+ls
+cd pacak
+cd packa
+ls
+ils
+ls
+ils
+ls
+ils
+ls
+ils
+ls
+ils
+ls
+ils
+ls
+ils
+ls
+cd tmp
+ls
+mkdir git_playground
+cd git_playground\
+git ls
+ls
+ls -la
+git init
+ls
+ls -la
+mkdir directory_a
+cd directory_a\
+ls
+vi starship.toml
+ils
+exit
+cd pacak
+cd packa
+cd ../docs
+cd ../doc
+cd ../documentation/
+ls
+cd ../../../configs/docusaurus_config/
+pnpm dev
+pn dev
+pn add docusaurus-plugin-sass
+pn add sass -p
+pn clean
+pn install
+pn approve-builds
+pn build
+pn clean
+pn install
+pn build
+pn install
+pn build
+pn serve
+pn dev
+ls
+cd sel
+py main.py
+vi data.csv
+cd ost
+ls
+cd .config\
+ls
+vi starship\
+cd star
+ls
+cd packa
+cd ..
+ls
+cd packa
+ls
+ls ..
+cd ..
+ls
+cd packa
+ls
+cd ..
+ils
+ls
+ils
+ls
+ils
+ls
+cd packa
+ls
+pn dev
+pn lint
+cd ../documentation/
+pn dev
+pn buiild
+pn build
+pn serve
+pn build
+pn serve
+pn dev
+pn add @ark/attest -D
+vitest --help
+pn vitest --help
+pn vitest list
+pn vitest list --help
+pn vitest list src
+pn vitest list object
+pn vitest run object
+pn attest
+pn attest --help
+pn attest stats --help
+pn attest stats
+pn vitest run object
+pn attest stats object
+pn attest stats ./src/object
+pn attest stats ./src/object/merge_keys/record.test.ts
+pn vitest run object
+pn attest stats ./src/object
+node --version
+pn attest stats ./src/object/merge_keys/bench.ts
+node --version
+node ./src/object/merge_keys/bench.ts
+node ./src/object/merge_keys/bench.ts --experimental-strip-types
+node ./src/object/merge_keys/bench.ts --experimental-strip-types --experimental-transform-types
+choco list | rg node
+choco update nodejs
+choco upgrade nodejs
+node --version
+node ./src/object/merge_keys/bench.ts
+pn add -D tsx
+tsx --help
+pn tsx --help
+pn tsx ./src/object/merge_keys/bench.ts
+pn attest
+pn attest stats
+cd config
+cd perso
+cd config
+cd -
+cd ./configs/
+cd vite_config\
+pn update vitest vite --save
+pn update vitest vite -p
+pn update vitest vite -P
+pn update vitest vite -P --save
+pn update --help
+pn up vitest --save
+pn up vitest --save -P
+pn up vitest -P
+vi starship.toml
+cd sel
+vi data.csv
+py main.py
+cd packa
+ls
+ls .attest\
+ls .attest\assertions\
+l
+sll
+ll
+pn vitest object
+pn vitest run object
+pn vitest run object --typecheck
+pn vitest run object
+pn vitest run object --typecheck
+pn install
+pn add -g @pnpm/exe
+pn setup
+pn add -g @pnpm/exe
+pn --version
+pn vitest --version
+pn update --save
+pn vitest --version
+pn vitest run object --typecheck
+pn vitest run object --typecheck --force
+pn vitest run object --typecheck
+pn vitest run object --typecheck -t
+pn vitest run object --typecheck
+pn test
+pn test:watch
+pn vitest bench
+pn vitest run bench
+pn vitest bench --watch=false
+pn vitest bench object --watch=false
+pn vitest run object --typecheck
+pn vitest run object
+pn vitest run object --typecheck
+pn vitest bench object --watch=false
+pn vitest bench object --run
+pn install
+pn vitest bench object --run
+pn install
+pn vitest bench object --run
+pn install
+pn vitest bench object --run
+pn tsx --test
+pn tsx **/*.bench.ts
+pn tsx **/types.bench.ts
+pn bench:tyeps
+pn bench:types
+pn tsx **/types.bench.ts
+pn tsx --help
+pn tsx --files **/types.bench.ts
+pn add -D globby
+pn globby **/types.bench.ts
+npx globby **/types.bench.ts
+pn add -D glob
+pn vitest run object/types.bench.ts
+pn vitest run object/**/types.bench.ts
+pn vitest run **/types.bench.ts
+pn bench
+pn bench:types
+pn vitest run **/types.bench.ts
+pn bench:types
+pn bench
+pn test
+cd packa
+tsx ./src/types/set_ops/is_subset/types.bench.ts
+pn tsx ./src/types/set_ops/is_subset/types.bench.ts
+pn tsx ./src/types/set_ops/is_equal//types.bench.ts
+pn tsx ./src/types/set_ops/is_equal/types.bench.ts
+cd sel
+py main.py
+vi data.csv
+pn tsx ./src/logical/and/types.bench.ts
+pn attest stats
+pn attest stats ./src/logical/and/types.bench.ts
+pn attest stats ./src/logical/and/types.bench.ts --benchPercentThreshold 10
+pn tsx ./src/logical/and/types.bench.ts --benchPercentThreshold 10
+pn tsx ./src/logical/and/types.bench.ts --benchPercentThreshold 2
+pn tsx ./src/logical/and/types.bench.ts --skipTypes
+pn tsx ./src/logical/and/types.bench.ts --updateSnapshots
+pn tsx --updateSnapshots ./src/logical/and/types.bench.ts
+pn tsx ./src/logical/and/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/and/types.bench.ts
+pn tsx ./src/logical/and/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/not/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/and/types.bench.ts
+pn tsx ./src/logical/not/types.bench.ts
+pn tsx ./src/logical/not/types.bench.ts --updateSnapshots
+pn vitest run logical
+pn tsx ./src/logical/not/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/or/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/or/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/nor/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/or/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/or/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/and/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts
+pn tsx ./src/logical/and/types.bench.ts
+pn tsx ./src/logical/and/types.bench.ts --updateSnapshots
+pn vitest run logical
+pn tsx ./src/logical/not/types.bench.ts
+pn tsx ./src/logical/not/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/and/types.bench.ts
+pn tsx ./src/logical/and/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/or/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/nand/types.bench.ts
+pn tsx ./src/logical/nand/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/nor/types.bench.ts
+pn tsx ./src/logical/nor/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/or/types.bench.ts
+pn tsx ./src/logical/or/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/nand/types.bench.ts
+pn tsx ./src/logical/nand/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/and/types.bench.ts
+pn tsx ./src/logical/and/types.bench.ts --updateSnapshots
+pn vitest run logical
+node 
+pn vitest run logical
+pn tsx ./src/logical/xor/types.bench.ts
+pn tsx ./src/logical/xor/types.bench.ts --updateSnapshots
+pn tsx ./src/logical/xor/types.bench.ts
+pn tsx ./src/logical/xnor/types.bench.ts
+pn vitest run logical
+pn tsx ./src/default/default_to/types.bench.ts
+pn tsx ./src/default/default_to/types.bench.ts --updateSnapshots
+pn vitest run default
+pn tsx ./src/default/default_to/types.bench.ts
+pn tsx ./src/default/default_to/types.bench.ts --updateSnapshots
+pn build
+cd configs
+cd eslint_config\
+pn build
+cd packa
+pn vitest run safe
+tsx ./src/function/safe/types.bench.ts
+pn tsx ./src/function/safe/types.bench.ts
+cd configs
+cd vite_config\
+pn build
+cd -
+cd packa
+pn test
+pn build
+cd ../documentation/
+pn build
+pn dev
+cd ../package/
+pn lint:types
+pn build
+cd configs
+cd docusaurus_config\
+pn build
+pn serve
+pn build
+pn serve
+pn dev
+pn docusaurus generate-typedoc
+cd documen
+pn docusaurus generate-typedoc
+pn docusaurus start --no-open
+pn lint
+pn lint:types
+pn dev
+exit
+pn dev
+pn buil
+pn build
+cd sel
+vi data.csv
+pn serve
+cd sel
+vi data.csv
+cd sel
+py main.py
+vi data.csv
+zen-browser --version
+cd tmp
+cd arc_export_helper\
+git clone git@github.com:ivnvxd/arc-export.git .
+cdi
+cd ~
+cdi
+ls
+fzf
+cd AppData\Local\Packages\TheBrowserCompany.Arc_ttt1ap7aakyb4\LocalCache\Local\Arc\StorableSidebar.json
+cd ./AppData/Local/Packages/TheBrowserCompany.Arc_ttt1ap7aakyb4/LocalCache/Local/Arc
+ls
+mv StorableSidebar.json ~/personal/tmp/arc_export_helper/
+cd arc
+ls
+git clone https://github.com/ivnvxd/arc-export.git .
+git clone https://github.com/ivnvxd/arc-export.git
+ls
+mv StorableSidebar.json arc-export\
+ls
+cd arc-export\
+ls
+py main.py
+ls
+bat arc_bookmarks_2025_04_18.html
+ls
+cd ..
+rm -rf ./arc_export_helper/
+cd star
+ls
+cd packa
+ls
+ils
+ls
+cd star
+cd -
+ls
+ils
+ls
+exit
+vi starship.toml
+exit
+pipenv shell
+exit
+cd packa
+cd ../documentation/
+pn dev
+cd package.json
+cd packa
+pn tsx ./src/control_flow/if_else/types.bench.ts
+pn tsx ./src/control_flow/if_else/types.bench.ts --updateSnapshots
+pn vitest run if_else
+pn vitest run if_else$
+pn vitest run if_else 
+pn vitest run if_else/tests
+pn vitest run if_else/tests --typeCheck
+pn vitest run if_else/tests
+cd ../documentation/
+pn build
+pn tsx ./src/string/parse/boolean/types.bench.ts
+pn vitest run parse_boolean
+pn vitest run parse/boolean
+pn serve
+exit
+exit
+cd sel
+py main.py
+vi data.csv
+exit
+pipenv shell
+exit
+cd packa
+cd ../documentation/
+cd pacaka
+cd packa
+pn build
+cd configs/docu
+cd configs
+cd docusaurus_config\
+pn build
+pn serve
+pn build && pn serve
+pn build & pn serve
+pn build
+pn serve
+pn build and pn serve
+pn build; pn serve
+cd star
+ls
+ils
+fzf
+ls
+fzf
+ls
+fzf
+ls
+cd packa
+ils
+ls
+fzf
+ils
+ls
+fzf
+cd sel
+ls
+cd packa
+ls
+cd ..
+cd -
+cd sel
+ls
+cd -
+ls
+ils
+ls
+cd sel
+ls
+cd packa
+ls
+cd sel
+ls
+cd packa
+fzf
+ils
+ls
+fzf
+vi starship.toml
+exit
+exit
+pn dev
+exit
+ls
+cd packa
+cd ../documentation/
+cd configs
+cd docusaurus_config\
+pn build; pn serve
+pn dev
+pn build; pn serve
+pn devb
+pn build; pn serve
+pn turbo gen-workspace
+pn turbo --help
+pn turbo gen --help
+pn turbo gen --copy
+pn turbo gen workspace --copy
+cd libs
+cd typedoc_plugins\
+pn dev
+pn install
+pn add typedoc-plugin-markdown
+pn dev
+pn install
+pn build
+pn dev
+pn build
+pn dev
+pn build
+pn dev
+pn add typedoc
+pn build
+pn build
+pn turbo build
+pn dev
+pn turbo build
+pn serve
+pn turbo build
+pn serve
+pn turbo build
+pn build
+pn build
+pn serve
+pn build
+pn build
+pn buil
+pn build
+pn serve
+pn dev
+pn vitest run listify
+pn vitest run templater
+node
+cd sel
+py main.py
+vi data.csv
+exit
+pipenv shell
+pn vitest run replace
+cd -
+pn vitest run replace
+pn tsx ./src/string/replace/types.bench.ts
+pn tsx ./src/string/replace/types.bench.ts --updateSnapshots
+pn tsx ./src/string/replace/types.bench.ts
+pn vitest run build_str
+pn tsx ./src/string/template/build_str/types.bench.ts
+pn tsx ./src/string/template/build_str/types.bench.ts --updateSnapshots
+pn tsx ./src/string/template/build_str/types.bench.ts
+pn tsx ./src/string/template/build_str/types.bench.ts --updateSnapshots
+pn tsx ./src/string/template/build_str/types.bench.ts
+exit
+exit
+exit
+exit
+cd typedoc_plugins
+pn test
+pn dev
+pn test
+pn add @armen/tbelt
+pn install
+pn add @docusaurus/plugin-content-docs -D
+pn build
+cd documentation
+cd package\
+pn build
+pn install
+pn add docusaurus-plugin-typedoc @docusaurus/core -D
+cd configs
+cd docusaurus_config\
+pn build
+pn build
+ls
+exit
+exit
+cd pesonal
+cd personal
+cd ..
+ls
+cd project_source\
+ls
+ls rect_radius
+ls portfolio
+ls portfolio/design
+ls `portfolio/design ideas/`
+cd ls
+cd -
+ls
+cd ..
+cd tmp
+ls
+cd git_playground
+ls
+ls -a
+cd star
+ls
+git add .
+git status
+ls -r
+ls --help
+ls -f
+ls 
+ls subdir
+ls **
+ls **/*
+ls directory_a\
+touch directory_a\a.txt
+ils
+ls
+vi starship.toml
+ls
+cd ..
+ls
+cd git_playground\
+ls
+git status
+git add .
+git commit -m "a"
+git status
+git branch -vv
+git remote add origin https://github.com/Ezall2001/git_playground_2025.git
+git push origin master --set-upstream
+git switch -c a1
+git status
+git switch -
+git status
+git branch
+git switch a1
+touch directory_a/a1.txt
+git status
+git add
+git add .
+git status
+git restore --staged directory_a\a1.txt
+git status
+git add .
+git commit -m "a1"
+git push origin a1 --set-upstream
+git status
+git switch -
+git merge a1
+git status
+git switch a1
+git branch --set-upstream-to=origin/master
+git status
+git push
+git push origin HEAD
+git push origin HEAD:master
+ls
+git status
+ls **
+ls **/*
+ils
+git switch -
+git switch a1
+git branch --set-upstream-to=origin/a1
+git push
+git switch -
+git status
+git switch -
+git branch --set-upstream-to=origin/master
+git push
+git push origin HEAD
+git switch -
+touch m1.txt
+git status
+git add .
+git commit -m "m1"
+git switch -
+git push origin HEAD
+git push
+git push origin HEAD
+git push origin HEAD:master
+touch m2.txt
+git add .
+git commit -m "m2"
+git push origin HEAD
+git switch -
+git status
+git switch -
+git status
+git branch --set-upstream-to=origin/a1
+git log --oneline
+git switch 81c7c8d
+git switch --detach 81c7c8d
+ls **/*
+git switch -
+ls **/*
+git switch --detach 81c7c8d
+ls **/*
+ls
+git switch -
+git switch --detach -
+git switch -
+ls
+git switch - --detach
+ls
+cd ..
+cd git_playground\
+git switch -
+git switch - --detach
+git tag --help
+git tag
+git show --help
+git switch -
+git show --help
+git --help show
+git --help
+git help tag
+git help -a
+git help tag
+git help -a tag
+git tag -h
+git tag --help
+git tag -h
+git switch main
+git switch master
+git status
+git switch origin/master
+git switch origin/master --detach
+git switch a1
+git log --oneline
+git status
+git switch master
+git tag -h
+git tag v0.1
+git tag
+git tag -l
+git push
+git status
+git switch a1
+git log --oneline
+ils
+git switch -
+git switch master
+git log --oneline
+ls
+git switch a1
+git log --oneline
+git tag
+git push v1.0
+git push origin v1.0
+git switch master
+touch m3.txt
+git status
+git add .
+git commit -m "m3"
+git log --oneline
+git tag v0.1.1
+git tag
+git log --oneline
+git switch a1
+git push origin v0.1
+git push origin --tags
+git switch --detach v0.1.1
+git switch v0.1.1
+git log
+git switch master
+ls
+git -d v0.1
+git tag -d v0.1
+git log --oneline
+git push origin v0.1
+git push origin --tags
+git push origin --delete tag v0.1
+git log --oneline
+git switch --detach 0218e5e
+git tag -a -s v0.1 -m "this is v0.1 release"
+git tag -a v0.1 -m "this is v0.1 release"
+git tag show v0.1
+git tag
+git tag -d show
+git show v0.1
+git tag test
+git show v0.1
+git tag -d test
+git show v0.1
+git log
+git show 8fe512443a0d8e4066ff85dda70576f85b85027c
+git switch main
+git switch master
+ils
+ls
+git log
+git switch 81c7c8d33e0d61bc971accfe878ffd27ebb4961b
+git switch 81c7c8d33e0d61bc971accfe878ffd27ebb4961b --detach
+git tag -d v0.1
+git tag 0.1
+git log
+git switch master
+git log
+git switch --detach 0218e5e
+ls
+git switch master
+ls
+vi m1.txt
+ls
+fzf
+ls
+fzf
+ls
+git add .
+git commit -m "m1 changes"
+vi m1.text
+vi m1.txt
+ils
+ls
+l
+ils
+ls
+cd personal
+exit
+cd git
+git status
+cd star
+ils
+ls
+ils
+ls
+git push
+ls
+git fetch origin
+ils
+ls
+vi m3.txt
+git add .
+git commit -m "m3 from local"
+ls
+git pull
+git pull abort
+git pull --abort
+git merge --abort
+ls
+git status
+git pull
+ls
+vi starship.toml
+exit
+exit
+cd    ls
+ls
+cd tbelt
+cd base
+pn vitest run replace
+pn vitest run replace --typecheck
+pn tsx ./src/string/replace/types.bench.ts
+pn tsx ./src/string/replace/types.bench.ts --updateSnapshots
+pn tsx ./src/string/replace/types.bench.ts
+pn tsx ./src/string/replace/types.bench.ts --updateSnapshots
+pn vitest run replace --typecheck
+cd ../node
+pn tsx ./src/test.ts
+pn build
+pn install
+pnbuild
+pn build
+pn clean
+pn install
+pn build
+pn tsx ./src/test.ts
+pn add fast-glob -D
+pn fg
+pn fast-glob
+pn remove fast-glob
+pn tsx ./src/test.ts
+cd ./src/
+pn tsx ./src/test.ts
+cd ../documentation/
+cd .../documentation/
+pn add -D glob
+cd ....
+cd libs/typedoc_plugins/
+pn clean
+pn build
+pn install
+pn build
+cd package\
+pn build
+pn build
+cd configs
+cd docusaurus_config\
+pn build
+pn turbo build
+pn build
+cd ../base
+pn build
+cd ../documentation/
+pn build
+cd ../base
+pn build
+cd tbelt
+cd ./documentation/
+pn build
+pn build
+pn lint
+pn lint
+pn lint:types
+pn build
+pn build
+tsx ./src/record/record_constructor/types.bench.ts
+pn tsx ./src/record/record_constructor/types.bench.ts
+cd configs
+cd eslint_config\
+pn build
+pn tsx ./src/record/record_constructor/types.bench.ts
+pn build
+node
+ls
+pn vitest run indexof
+cd base
+pn vitest run indexof
+node Object.getPrototypeOf(true)
+node
+node Object.getPrototypeOf(true)
+pn vitest run indexof
+node
+pn vitest run indexof
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn tsx ./src/indexing/indexof/types.bench.ts --updateSnapshots
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn tsx ./src/indexing/indexof/types.bench.ts --updateSnapshots
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn vitest run indexof
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn tsx ./src/indexing/indexof/types.bench.ts --updateSnapshots
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn tsx ./src/test/types.bench.ts
+pn bench:types
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn tsx ./src/indexing/indexof/types.bench.ts --updateSnapshots
+pn tsx ./src/list/listify/types.bench.ts
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn tsx ./src/test/types.bench.ts
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn tsx ./src/indexing/indexof/types.bench.ts --updateSnapshots
+pn tsx ./src/record/record_constructor/types.bench.ts --updateSnapshots
+pn bench:types --updateSnapshots
+pn tsx ./src/control_flow/if_else/types.bench.ts --updateSnapshots
+pn tsx ./src/function/safe/types.bench.ts --updateSnapshots
+pn tsx ./src/function/safe/types.bench.ts
+pn tsx ./src/record/record_constructor/types.bench.ts --updateSnapshots
+pn tsx ./src/default/default_to/types.bench.ts
+pn tsx ./src/indexing/indexof/types.bench.ts
+pn tsx ./src/list/listify//types.bench.ts
+pn tsx ./src/tuple/tuple_constructor/types.bench.ts
+pn tsx ./src/string/parse/boolean/types.bench.ts
+cd ../documentation/
+pn build
+pn serve
+pn build
+pn serve
+pn build
+pn add -g tsx
+pn add approve-builds -g
+pn approve-builds -g
+pn tsx ./config/docusaurus/entries/base.ts
+cd configs
+pn tsx ./config/docusaurus/entries/base.ts
+pn tsx ./docusaurus/entries/base.ts
+pn tsx ./config/docusaurus/entries/base.ts
+cd -
+cd ./configs
+cd ./config
+pn tsx ./docusaurus/entries/base.ts
+pn tsx ./config/docusaurus/entries/base.ts
+cd ..
+cd documentation\
+pn tsx ./config/docusaurus/entries/base.ts
+pn build
+pn serve
+node 
+cd star
+ls
+cd git_playground
+ils
+git add .
+git commit -m "merge"
+git push
+ils
+touch m4.txt
+ls
+rm m4.txt
+ls
+touch m4.txt
+ls
+git add .
+ls
+vi m3.txt
+git log
+git status
+ls
+rm m1.txt
+ls
+mv m3.txt m1.txt
+ls
+git status
+git add .
+mv m1.txt m5.txt
+ls
+git add .
+git commit -m "m5"
+git push
+mv m5.txt m1.txt
+git diff --cached
+git add -A
+git status
+git restore --staged .
+git status
+git add .
+git restore .
+git restore --staged
+git restore --staged .
+ls
+mv m1.txt m1.md
+ls
+git status
+git add .
+ls
+git commit -m "rename m5 to m1"
+git push
+mv m1.md m1.txt
+git add .
+git add -A
+ls
+ils
+ls
+git status
+git add -h
+git restore --staged .
+git add -u
+ls
+git status
+git restore --staged .
+git status
+git add -h
+git add -i
+git add
+git add .
+rm ./.git/index.lock
+git add .
+git restore --staged .
+git stash
+git stash pop
+git add --intend-to-add .
+git add -N .
+git status
+git add m1.txt
+git status
+git stash
+ils
+ls
+git stash pop
+git stash
+ls
+git stash pop
+git stash
+vi starship.toml
+exit
+exit
+cd git_playground
+git stash list
+git show stash@{0}
+git stash apply 0
+git stash
+git stash show
+git stash list
+git stash drop 1
+git config --help
+git config pull.ff only
+git config show pull
+git config show 
+git config show pull.ff
+git config pull.ff
+git config 
+git config pull
+git config -l
+git fetch -h
+git fetch -a
+git branch -a
+git branch
+git log -p
+git log --oneline graph
+git log --oneline --graph
+git log --oneline --graph --parent
+git log --oneline --graph --parents
+git log --oneline --graph --parents --decorate
+git log --oneline --graph --parents
+git log --oneline --graph --parents --decorate
+git log --oneline --graph --parents
+git status
+git stash pop
+git add .
+git commit -m "finished stash"
+git branch
+git switch a1
+git status
+git fetch origin
+git switch master
+git merge a1
+git push
+git log --oneline --graph --parents
+ls
+cd git_playground
+ls
+git log --oneline --graph --parents
+git log --oneline --graph --parents --all
+git log --oneline --graph --parents
+git log --oneline --graph --parents HEAD~4
+git log --oneline --graph --parents HEAD~4 HEAD
+git log --oneline --graph --parents --help
+git log --oneline --graph --parents HEAD~4-HEAD
+git log --oneline --graph --parents HEAD~4 HEAD
+git log --oneline --graph --parents -n4
+git log --oneline --graph --parents -n4 --help
+git log --oneline --graph --parents HEAD~4..HEAD
+git log --oneline --graph --parents HEAD~8..HEAD
+git log --oneline --graph --parents
+git show e34de7a
+git log --oneline --graph --parents
+git branch
+git switch --detach 81d30d1
+git status
+git switch master
+git switch HEAD~1
+git switch HEAD~1 --detach
+git log --oneline --graph --parents
+git log --oneline --graph --parents --all
+git switch HEAD~2 --detach
+git switch master
+git switch HEAD~2 --detach
+git log --oneline --graph --parents --all
+git switch master
+ls
+git switch master
+git log --oneline --graph --parents --al
+git log --oneline --graph --parents --all
+git log --oneline --gragh --all
+git log --oneline --graph
+git config -l
+git config --global alias.graph 'git log --oneline --graph --decorate'
+git graph
+git config -l
+git graph
+git config --global alias.graph 'log --oneline --graph --decorate'
+git graph
+git config -l
+git config --global pull.ff=only
+git config --global pull.ff only
+git config -l
+git graph --all
+git switch 81d30d1
+git config --global alias.dswitch 'switch --detach'
+git dswitch 81d30d1
+ls
+git graph --all
+ls
+nvim m1.txt
+git add .
+git commit -m "changed content of m1 previouslly m3"
+git graph --all
+git switch master
+git graph --all
+git branch detached_commit cd5dcd8
+git branch
+git switch detached_commit
+ls
+git graph --all
+git switch master
+git graph --all
+git merge detached_commit
+git graph --all
+git commit --help
+git commit -h
+git commit -h | bat
+git commit -h | less
+git commit -h
+git commit --help
+git commit --help | bat
+cd git_playground
+ls
+git --help
+git help commit
+git help -g
+git help everyday
+git help -a
+git help add
+git help -a
+git help add | bat
+choco list | rg git
+choco upgrade git
+cd git_playground
+git push
+exit
+cd xr
+node .
+cd xr
+pn start
+bat ./package.json
+node .
+pn sync_model xr Machine
+node .
+ccc
+git stash list
+git stash clear
+pn sync_model --help
+pn sync_model all CustomerMachineLogs
+pn sync_model 1 CustomerMachineLogs
+pn sync_model 2 CustomerMachineLogs
+cd sel
+py main.py
+vi data.csv
+choco search obs
+choco install obs
+exif
+exit
+pipenv shell
+exit
+cd git_playground
+git cz
+ls
+git log --pretty
+git log --oneline
+ls
+pn init
+vi package.json
+pn add -D commitizen
+pnpm self-update
+pn cz init
+cz init
+pn cz --help
+npm cz --help
+npx cz --help
+ls
+pn commitizen --help
+pn git-cz
+pn cz -- --help
+pn cz commit -- --help
+pn git-cz commit -- --help
+pn git-cz --help
+pn git-cz -- --help
+pn cz init
+pn commitizen init
+pn git-cz init
+pn cz version
+pn commitizen init cz-conventional-changelog
+bat ./package.json
+pn dlx commitizen init cz-conventional-changelog
+pn dlx commitizen init cz-conventional-changelog --pnpm --save-dev --save-exact
+bat ./package.json
+pn cz
+pn cz --help
+pn cz -- --help
+git add .
+pn cz
+rm ./node_modules/ -rf
+ls
+vi package.json
+pn install
+vi package.json
+pn install
+cd git_playground
+ls ./node_modules/.bin/
+pn cz init --help
+pn cz init
+pn commitizen init --help
+pn commitizen info --help
+pn dlx commitizen init cz-conventional-changelog --pnpm --save-dev --save-exact
+pn commitizen info --help
+pn cz init
+pn cz init --help
+pn cz -- init --help
+pn cz init -- --help
+npm cz --help
+npm run cz --help
+npm run cz -- --help
+npx cz -- --help
+npx cz init -- --help
+rm ./node_modules/ -rf
+vi package.json
+git --help
+git add --help
+git help add
+git help git
+man git
+HELP git
+HELP git /
+HELP git /?
+git web--browse
+git status
+git reset
+git help git
+git config -g web.browser
+git config web.browser
+git config web.browser -g
+git config -g web.browser chrome
+git config --global web.browser chrome
+git config web.browser
+git config web.browser chrome
+git config web.browser
+git help git
+chrome
+zen-browser
+fzf /
+cd /
+cd `Program Files (x86)\`
+fzf
+cd ..
+cd `Program Files\`
+fzf
+cd git
+cd git_playground
+git config browser.chrome.path C:\Program Files\Google\Chrome\Application
+git config browser.chrome.path
+git config browser.chrome.path C:\\Program Files\\Google\\Chrome\\Application
+git config browser.chrome.path
+git config browser.chrome.path 'C:\\Program Files\\Google\\Chrome\\Application'
+git config browser.chrome.path
+git config browser.chrome.path 'C:\\Program Files\\Google\\Chrome\\Application' --replace-all
+git config browser.chrome.path
+git config browser.chrome.path 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' --replace-all
+git config browser.chrome.path
+git help git
+git config browser.zen.path 'C:\\Program Files\\Zen Browser\\zen.exe' --replace-all
+git config browser.zen.path
+git config --global browser.chrome.path 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' --replace-all
+git config --global browser.zen.path 'C:\\Program Files\\Zen Browser\\zen.exe' --replace-all
+git config --global web.browser zen
+git config web.browser zen
+git help git
+git config web.browser
+git help git
+git config web.browser
+git config browser.zen.path
+git config -l
+git config --help
+git config -h
+cd xr
+node .
+git commit -am 'resource refactor'
+git push
+git push origin HEAD
+git switch MVP-2886-call-out---api-update
+git switch -c MVP-2886-call-out---api-update
+cd git
+bat ./package.json
+ls
+pn install
+cz
+pn cz -- init
+vi package.json
+pn com
+pn add -g commitizen
+cz init
+git cz
+git add .
+git revert --staged
+git reset
+touch .gitignore
+vi .gitignore
+git status
+git add .
+cd git
+cz version
+choco search commitizen
+pn remove -g commitizen
+git add --help
+git config browser.zen.path
+echo $(git config browser.zen.path)
+echo git config browser.zen.path
+git config browser.zen.path | echo
+git config browser.zen.path
+git config browser.zen.cmd 'C:\\Program Files\\Zen Browser\\zen.exe'
+git config browser.zen.cmd
+git add --help
+git config browser.zen.cmd "C:\\Program Files\\Zen Browser\\zen.exe"
+git add --help
+git config browser.zen.cmd "C:\\'Program Files'\\'Zen Browser'\\zen.exe"
+git add --help
+git config browser.zen.cmd "C:\\Program Files\\Zen Browser\\zen.exe"
+git config -gl
+git config -l
+git config browser.zen.cmd
+git config browser.zen.cmd '"C:\\Program Files\\Zen Browser\\zen.exe"'
+git config browser.zen.cmd
+git config -l
+git add --help
+exit
+cd xr
+node . 
+git stash -m "department"
+node . 
+cd sel
+py main.py
+vi data.csv
+reboot
+cd sel
+py main.py
+vi data.csv
+top
+choco search btop
+choco search htop
+cd xr
+git stash pop
+node . 
+git commit -am 'department resources'
+git status
+git add .
+git commit -am 'department resources missing files'
+cd xr
+node .
+pn sync_model xr Department
+git commit -am 'added association'
+node .
+pn sync_model 2 CustomerCallout
+pn sync_model 2 CustomerCallout --f
+pn sync_model 2 CustomerCallout -f
+cd .config
+ls
+cd nvim
+ls
+vi .
+vi --version
+choco upgrade nvim
+choco search neovim
+choco upgrade neovim
+vi
+vi .
+exit
+exit
+cd .config
+ls
+ls configstore
+git init
+git status
+git branch
+git branch -h
+git branch -m arch@windows
+git branch -m asus@windows
+git branch
+git switch -c asus@arch
+git switch -
+git switch asus@windows
+git status
+git graph --all
+touch .gitignore
+git add .gitignore
+git commit -m 'ci: init asus@arch'
+git switch asus@windows
+git switch -c asus@windows
+git add pnpm
+git commit -m 'feat: init pnpm config'
+git add configstore
+git commit -m 'feat: init docusaurus config'
+git add wezterm
+git commit -m 'feat: init wezterm config'
