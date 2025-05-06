@@ -1,0 +1,5 @@
+require("keymap").bind_immediates()
+require("other")
+require("lazy_pm")
+require("keymap").bind_deffered()
+require("formatting")
