@@ -1,0 +1,215 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+continuation_prompt = '[▶▶](bold blue)' # not implemented yet
+
+format = """
+$username\
+$directory\
+\
+[(  \
+($git_branch )($git_commit )($git_state )($git_status )\
+)[](fg:git_bg bg:fill_bg)\
+](fg:git_text bg:git_bg)\
+\
+$fill\
+\
+[](bg:fill_bg fg:status_bg)[ \
+$character \
+($battery )\
+($git_metrics )\
+($lua )($nodejs )($python )\
+($cmd_duration )$memory_usage $time \
+](bg:status_bg)
+\
+ ▶ """
+
+#  
+#
+#
+palette = 'dracula_official'
+
+[palettes.dracula_official]
+username_bg = '#472060'
+username_text = 'purple'
+directory_bg = '#F33A6A'
+directory_text = 'bright-white'
+git_bg = '#ead3c1'
+git_text = '#533f4b'
+fill_bg = '#243342'
+status_bg = '#fff0f9'
+status_black = '#341916'
+status_red = '#F33A6A'
+status_green = '#20BB20'
+status_yellow = 'yellow'
+status_dark_yellow = 'yellow'
+status_dark_grey = '#ead3c1'
+status_dark_green = '#0de74f'
+status_dark_black = '#000000'
+
+
+
+# LEFT
+## USER
+[username]
+style_user = 'bold italic fg:username_text bg:username_bg'
+style_root = 'bold italic fg:username_text bg:username_bg'
+format = '[░▒▓](fg:username_bg)[@$user ]($style)'
+show_always = true
+aliases = { "Administrator" = "root 󰡗 " }
+
+## DIR
+[directory]
+use_os_path_sep = false
+truncation_symbol = ' /'
+home_symbol = ' '
+read_only = '┃ 󰏮  '
+read_only_style = 'bold fg:directory_text bg:directory_bg'
+style = 'italic bold fg:directory_text bg:directory_bg'
+repo_root_style = 'italic bold underline fg:directory_text bg:directory_bg'
+format = """\
+[](fg:username_bg bg:directory_bg)\
+[ $path ]($style)\
+[($read_only )]($read_only_style)\
+[](fg:directory_bg bg:git_bg)"""
+repo_root_format = """\
+[](fg:username_bg bg:directory_bg)\
+[  /]($style)[$repo_root]($repo_root_style)\
+[$path ]($style)\
+[($read_only )]($read_only_style)\
+[](fg:directory_bg bg:git_bg)"""
+
+
+## GIT
+[git_branch]
+format = '[$branch(:$remote_branch)](bold fg:git_text bg:git_bg)'
+always_show_remote = false
+truncation_symbol = '󰨿 '
+truncation_length = 40
+only_attached = true
+
+[git_commit]
+format = '[\[$hash($tag)\]](bold italic fg:git_text bg:git_bg)'
+only_detached = false
+tag_disabled = false
+tag_symbol = '🔖'
+tag_max_candidates = 0
+
+[git_state]
+rebase = 'rebase'
+merge = 'merge'
+revert = 'reverting'
+cherry_pick = 'cherry'
+bisect = 'bisect'
+am = 'AM'
+am_or_rebase = 'AM/reabse'
+format = '[$state ($progress_current/$progress_total)](fg:git_text bg:git_bg)'
+disabled = false
+
+[git_status]
+up_to_date = ''
+ahead = '󱃭 '
+behind = '󱃩 '
+diverged = '󰾷 '
+conflicted = ' '
+untracked = '󱙔 '
+staged = '󰎝 '
+modified = '󱞂 '
+deleted = '󱙒 '
+renamed = '󰚹 '
+stashed = '󰘓 '
+format = '[(\[$all_status$ahead_behind\])](fg:git_text bg:git_bg)'
+disabled = false
+
+
+# MID
+[fill]
+symbol = ' '
+style = 'bg:fill_bg'
+
+
+# RIGHT
+## STATUS
+[character]
+success_symbol = '🚀'
+error_symbol = '🤯'
+vimcmd_symbol = '' # not implemented yet
+vimcmd_visual_symbol = '' # not implemented yet
+format = '[$symbol](bold bg:status_bg)'
+
+## BATTERY
+[battery]
+format = '[$symbol$percentage]($style)'
+
+[[battery.display]]
+threshold = 50
+style = 'bold fg:status_dark_green bg:status_bg'
+charging_symbol = '󰢝 '
+discharging_symbol = '󰁾 '
+
+[[battery.display]]
+threshold = 20
+style = 'bold fg:status_dark_yellow bg:status_bg'
+charging_symbol = '󰂆 '
+discharging_symbol = '󰁻 '
+
+[[battery.display]]
+threshold = 10
+style = 'bold fg:status_dark_red bg:status_bg'
+charging_symbol = '󰢟 '
+discharging_symbol = '󱃍 '
+
+## GIT
+[git_metrics]
+format = """([\\[󰳏 ](bg:status_bg fg:status_dark_grey)\
+[(+$added)]($added_style)\
+[(-$deleted)]($deleted_style)\
+[\\]](fg:status_dark_grey bg:status_bg))"""
+added_style = 'bold italic bg:status_bg fg:status_green'
+deleted_style = 'bold italic bg:status_bg fg:status_red'
+disabled = false
+
+## LANG
+[lua]
+format = '[ ](bold fg:status_dark_blue bg:status_bg)'
+
+[nodejs]
+format = '[ ](bold fg:status_dark_green bg:status_bg)'
+
+[python]
+format = '[󱔎 ](bold fg:status_dark_green bg:status_bg)'
+
+## PERF
+[cmd_duration]
+format = '([󱎫 ](bold fg:status_dark_yello bg:status_bg)[$duration](bold fg:status_green bg:status_bg))'
+min_time = 100 # (in ms)
+show_milliseconds = true
+show_notifications = true
+min_time_to_notify = 60000 # 1 min (in ms)
+notification_timeout = 3000 # 3 sec (in ms)
+
+## MEM
+[memory_usage]
+disabled = false
+threshold = 10 # (%)
+format = '([󱛟 ](bold fg:status_dark_black bg:status_bg)[$ram_pct](bold fg:status_black bg:status_bg))'
+
+## TIME
+[time]
+disabled = false
+time_format = '%H%M.%S'
+format = '[$time](bold fg:status_red bg:status_bg)'
+
+
+
+
+
+# TODO
+# hostname, local ip, shlvl, status, sudo, custom commands
+# try the sparse arrow fill to status
+
+
+
+
+
+
