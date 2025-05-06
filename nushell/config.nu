@@ -24,3 +24,5 @@ $env.config.cursor_shape = {
 
 
 source ./zoxide.nu
+
+fastfetch
