@@ -7,6 +7,7 @@ alias vi = nvim
 alias fzf = fzf --preview "bat --style=plain --color=always {}"
 alias pn = pnpm
 alias grep = rg
+alias fastfetch = fastfetch -c ($env.XDG_CONFIG_HOME | path join "fastfetch/config.jsonc") 
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu") 
