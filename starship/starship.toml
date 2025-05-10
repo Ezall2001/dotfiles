@@ -4,7 +4,10 @@ add_newline = true
 continuation_prompt = '[▶▶](bold blue)' # not implemented yet
 
 format = """
+[░▒▓](fg:username_bg)\
 $username\
+$hostname\
+\
 $directory\
 \
 [(  \
@@ -29,6 +32,7 @@ $character \
 #
 palette = 'dracula_official'
 
+
 [palettes.dracula_official]
 username_bg = '#472060'
 username_text = 'purple'
@@ -52,11 +56,15 @@ status_dark_black = '#000000'
 # LEFT
 ## USER
 [username]
-style_user = 'bold italic fg:username_text bg:username_bg'
+style_user = 'bold fg:username_text bg:username_bg'
 style_root = 'bold italic fg:username_text bg:username_bg'
-format = '[░▒▓](fg:username_bg)[@$user ]($style)'
+format = '[$user]($style)'
 show_always = true
-aliases = { "Administrator" = "root 󰡗 " }
+aliases = { "Administrator" = "󰡗  root" }
+
+[hostname]
+ssh_only = false
+format = '[@$hostname ](bold italic fg:username_text bg:username_bg)'
 
 ## DIR
 [directory]
@@ -205,7 +213,7 @@ format = '[$time](bold fg:status_red bg:status_bg)'
 
 
 # TODO
-# hostname, local ip, shlvl, status, sudo, custom commands
+# local ip, shlvl, status, sudo, custom commands
 # try the sparse arrow fill to status
 
 
