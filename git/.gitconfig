@@ -1,14 +1,19 @@
 [user]
 	email = armen.bakir.e@gmail.com
 	name = Ezall2001
+
 [alias]
 	graph = log --oneline --graph --decorate -n10
 	dswitch = switch --detach
+
 [pull]
 	ff = only
+
 [web]
 	browser = zen
+
 [browser "zen"]
-	path = C:\\\\Program Files\\\\Zen Browser\\\\zen.exe
+	cmd = \"C:\\Program Files\\Zen Browser\\zen.exe\"
+
 [core]
 	editor = nvim
