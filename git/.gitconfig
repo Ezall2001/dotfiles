@@ -8,8 +8,6 @@
 	ff = only
 [web]
 	browser = zen
-[browser "chrome"]
-	path = C:\\\\Program Files\\\\Google\\\\Chrome\\\\Application\\\\chrome.exe
 [browser "zen"]
 	path = C:\\\\Program Files\\\\Zen Browser\\\\zen.exe
 [core]
