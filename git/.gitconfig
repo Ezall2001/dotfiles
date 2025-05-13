@@ -2,7 +2,7 @@
 	email = armen.bakir.e@gmail.com
 	name = Ezall2001
 [alias]
-	graph = log --oneline --graph --decorate
+	graph = log --oneline --graph --decorate -n10
 	dswitch = switch --detach
 [pull]
 	ff = only
