@@ -49,7 +49,7 @@ $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
 $env.config.edit_mode = 'vi'
 $env.config.cursor_shape = {
-  vi_insert : "line",       
+  vi_insert : "line", 
   vi_normal : "block"
 }
 
@@ -57,8 +57,15 @@ $env.STARSHIP_CONFIG = $env.XDG_CONFIG_HOME | path join "starship/starship.toml"
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 
-# other
+# integration
 const autoload_dir = $nu.data-dir | path join "vendor/autoload"
+const zoxide_autoload_path = $autoload_dir | path join "zoxide.nu"
+const starship_autoload_path = $autoload_dir | path join "starship.nu"
+
 mkdir $autoload_dir
 
+starship init nu | save -f  $starship_autoload_path
+zoxide init nushell --cmd cd | save -f $zoxide_autoload_path
+
+# other
 fastfetch
