@@ -93,12 +93,12 @@ repo_root_format = """\
 format = '[$branch(:$remote_branch)](bold fg:git_text bg:git_bg)'
 always_show_remote = false
 truncation_symbol = '󰨿 '
-truncation_length = 40
+truncation_length = 20
 only_attached = true
 
 [git_commit]
 format = '[\[$hash($tag)\]](bold italic fg:git_text bg:git_bg)'
-only_detached = false
+only_detached = true
 tag_disabled = false
 tag_symbol = '🔖'
 tag_max_candidates = 0
