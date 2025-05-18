@@ -21,7 +21,7 @@ $fill\
 $character \
 ($battery )\
 ($lua )($nodejs )($python )\
-($cmd_duration )$memory_usage $time \
+($cmd_duration )$time \
 ](bg:status_bg)
 \
  ▶ """
@@ -191,12 +191,6 @@ show_milliseconds = true
 show_notifications = true
 min_time_to_notify = 60000 # 1 min (in ms)
 notification_timeout = 3000 # 3 sec (in ms)
-
-## MEM
-[memory_usage]
-disabled = false
-threshold = 10 # (%)
-format = '([󱛟 ](bold fg:status_dark_black bg:status_bg)[$ram_pct](bold fg:status_black bg:status_bg))'
 
 ## TIME
 [time]
