@@ -11,9 +11,9 @@ $hostname\
 $directory\
 \
 [(  \
-($git_branch )($git_commit )($git_state )($git_status )\
+($git_branch )($git_commit )($git_status )($git_state )\
 )[](fg:git_bg bg:fill_bg)\
-](fg:git_text bg:git_bg)\
+](fg:git_brown bg:git_bg)\
 \
 $fill\
 \
@@ -39,7 +39,8 @@ username_text = 'purple'
 directory_bg = '#F33A6A'
 directory_text = 'bright-white'
 git_bg = '#ead3c1'
-git_text = '#533f4b'
+git_brown = '#533f4b'
+git_red = '#F33A6A'
 fill_bg = '#243342'
 status_bg = '#fff0f9'
 status_black = '#341916'
@@ -90,28 +91,26 @@ repo_root_format = """\
 
 ## GIT
 [git_branch]
-format = '[$branch(:$remote_branch)](bold fg:git_text bg:git_bg)'
+format = '[$branch(:$remote_branch)](bold fg:git_brown bg:git_bg)'
 always_show_remote = false
 truncation_symbol = '󰨿 '
 truncation_length = 20
 only_attached = true
 
 [git_commit]
-format = '[\[$hash($tag)\]](bold italic fg:git_text bg:git_bg)'
+format = '[\[$hash($tag)\]](bold italic fg:git_brown bg:git_bg)'
 only_detached = true
 tag_disabled = false
 tag_symbol = '🔖'
 tag_max_candidates = 0
 
 [git_state]
-rebase = 'rebase'
-merge = 'merge'
-revert = 'reverting'
-cherry_pick = 'cherry'
-bisect = 'bisect'
-am = 'AM'
-am_or_rebase = 'AM/reabse'
-format = '[$state ($progress_current/$progress_total)](fg:git_text bg:git_bg)'
+rebase = '󰓂 '
+merge = ' '
+revert = '󰕍 '
+cherry_pick = '[󱁂 ](fg:git_red bg:git_bg)'
+bisect = '󱂅 '
+format = '[$state( $progress_current/$progress_total)](fg:git_brown bg:git_bg)'
 disabled = false
 
 [git_status]
@@ -126,7 +125,7 @@ modified = '󱞂 '
 deleted = '󱙒 '
 renamed = '󰚹 '
 stashed = '󰘓 '
-format = '[(\[$all_status$ahead_behind\])](fg:git_text bg:git_bg)'
+format = '[(\[$all_status$ahead_behind\])](fg:git_brown bg:git_bg)'
 disabled = false
 
 
