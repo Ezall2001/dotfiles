@@ -11,7 +11,7 @@ $hostname\
 $directory\
 \
 [(  \
-($git_branch )($git_commit )($git_status )($git_state )\
+($git_branch )($git_commit )($git_metrics )($git_status )($git_state )\
 )[](fg:git_bg bg:fill_bg)\
 ](fg:git_brown bg:git_bg)\
 \
@@ -20,7 +20,6 @@ $fill\
 [](bg:fill_bg fg:status_bg)[ \
 $character \
 ($battery )\
-($git_metrics )\
 ($lua )($nodejs )($python )\
 ($cmd_duration )$memory_usage $time \
 ](bg:status_bg)
@@ -40,7 +39,8 @@ directory_bg = '#F33A6A'
 directory_text = 'bright-white'
 git_bg = '#ead3c1'
 git_brown = '#533f4b'
-git_red = '#F33A6A'
+git_red = '#D00050'
+git_green = '#008B48'
 fill_bg = '#243342'
 status_bg = '#fff0f9'
 status_black = '#341916'
@@ -104,6 +104,13 @@ tag_disabled = false
 tag_symbol = '🔖'
 tag_max_candidates = 0
 
+## GIT
+[git_metrics]
+format = "([(-$deleted)]($deleted_style)|[(+$added)]($added_style))"
+added_style = 'bold bg:git_bg fg:git_green'
+deleted_style = 'bold bg:git_bg fg:git_red'
+disabled = false
+
 [git_state]
 rebase = '󰓂 '
 merge = ' '
@@ -165,16 +172,6 @@ threshold = 10
 style = 'bold fg:status_dark_red bg:status_bg'
 charging_symbol = '󰢟 '
 discharging_symbol = '󱃍 '
-
-## GIT
-[git_metrics]
-format = """([\\[󰳏 ](bg:status_bg fg:status_dark_grey)\
-[(+$added)]($added_style)\
-[(-$deleted)]($deleted_style)\
-[\\]](fg:status_dark_grey bg:status_bg))"""
-added_style = 'bold italic bg:status_bg fg:status_green'
-deleted_style = 'bold italic bg:status_bg fg:status_red'
-disabled = false
 
 ## LANG
 [lua]
