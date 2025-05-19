@@ -5,6 +5,7 @@ alias fzf = fzf --preview "bat --style=plain --color=always {}"
 alias pn = pnpm
 alias grep = rg
 alias fastfetch = fastfetch -c ($env.XDG_CONFIG_HOME | path join "fastfetch/config.jsonc") 
+alias helbat = bat -l help --style=-header
 
 ## git aliases
 alias g = git
@@ -41,8 +42,6 @@ alias gf = git fetch
 alias gpsh = git push
 alias gpsh-f = git push --force-with-lease
 alias gpl = git pull
-
-
 
 # environment
 $env.config.shell_integration.osc133 = false
