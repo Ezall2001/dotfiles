@@ -1,10 +1,10 @@
 # aliases
+alias ls = ls -a
 alias ll = ls -l
 alias vi = nvim
 alias fzf = fzf --preview "bat --style=plain --color=always {}"
 alias pn = pnpm
 alias grep = rg
-alias fastfetch = fastfetch -c ($env.XDG_CONFIG_HOME | path join "fastfetch/config.jsonc") 
 alias helbat = bat -l help --style=-header
 
 ## git aliases
@@ -44,6 +44,7 @@ alias gpsh-f = git push --force-with-lease
 alias gpl = git pull
 
 # environment
+$env.XDG_CONFIG_HOME = "/home/armen/.config"
 $env.config.shell_integration.osc133 = false
 $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false

@@ -13,7 +13,7 @@
 	browser = zen
 
 [browser "zen"]
-	cmd = \"C:\\Program Files\\Zen Browser\\zen.exe\"
+	cmd = /sbin/zen-browser
 
 [core]
 	editor = nvim
