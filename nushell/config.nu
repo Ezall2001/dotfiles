@@ -6,6 +6,7 @@ alias fzf = fzf --preview "bat --style=plain --color=always {}"
 alias pn = pnpm
 alias grep = rg
 alias helbat = bat -l help --style=-header
+alias ssh = ssh -F ($env.XDG_CONFIG_HOME | path join 'ssh/config')
 
 ## git aliases
 alias g = git

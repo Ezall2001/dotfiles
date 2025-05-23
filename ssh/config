@@ -1,0 +1,5 @@
+Host github
+  HostName github.com
+  User git
+  IdentityFile ~/.config/ssh/keys/github_ed25
+
