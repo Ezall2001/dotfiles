@@ -72,20 +72,20 @@ format = '[@$hostname ](bold italic fg:username_text bg:username_bg)'
 use_os_path_sep = false
 truncation_symbol = ' /'
 home_symbol = ' '
-read_only = '┃ 󰏮  '
+read_only = '┃ 󰏮 '
 read_only_style = 'bold fg:directory_text bg:directory_bg'
 style = 'italic bold fg:directory_text bg:directory_bg'
 repo_root_style = 'italic bold underline fg:directory_text bg:directory_bg'
 format = """\
 [](fg:username_bg bg:directory_bg)\
 [ $path ]($style)\
-[($read_only )]($read_only_style)\
+[($read_only)]($read_only_style)\
 [](fg:directory_bg bg:git_bg)"""
 repo_root_format = """\
 [](fg:username_bg bg:directory_bg)\
 [  /]($style)[$repo_root]($repo_root_style)\
 [$path ]($style)\
-[($read_only )]($read_only_style)\
+[($read_only)]($read_only_style)\
 [](fg:directory_bg bg:git_bg)"""
 
 
