@@ -7,6 +7,7 @@ alias pn = pnpm
 alias grep = rg
 alias helbat = bat -l help --style=-header
 alias ssh = ssh -F ($env.XDG_CONFIG_HOME | path join 'ssh/config')
+alias btop = btop -p 0
 
 ## git aliases
 alias g = git
