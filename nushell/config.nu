@@ -46,7 +46,16 @@ alias gpsh-f = git push --force-with-lease
 alias gpl = git pull
 
 # environment
+## UNIX CONVENTION
+$env.EDITOR = 'nvim'
+$env.VISUAL = 'nvim'
+$env.PAGER = 'bat'
+$env.SHELL = 'nu'
+$env.BROWSER = 'zen-browser'
+
+## XDG
 $env.XDG_CONFIG_HOME = "/home/armen/.config"
+
 $env.config.shell_integration.osc133 = false
 $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
