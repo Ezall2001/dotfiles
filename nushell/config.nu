@@ -1,3 +1,12 @@
+const SCRIPTS_PATH = '~/.config/scripts'
+
+const NU_LIB_DIRS = [
+  $SCRIPTS_PATH
+]
+
+$env.path ++= [$SCRIPTS_PATH]
+
+
 # aliases
 alias ls = ls -a
 alias ll = ls -l
