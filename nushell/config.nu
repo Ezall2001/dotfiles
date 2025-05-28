@@ -67,7 +67,11 @@ $env.BROWSER = 'zen-browser'
 
 ## XDG
 $env.XDG_CONFIG_HOME = "/home/armen/.config"
+$env.XDG_DATA_HOME = "/home/armen/.local/share"
+$env.XDG_STATE_HOME = "/home/armen/.local/state"
+$env.XDG_CACHE_HOME = "/home/armen/.cache"
 
+## nushell config
 $env.config.shell_integration.osc133 = false
 $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
@@ -77,9 +81,12 @@ $env.config.cursor_shape = {
   vi_normal : "block"
 }
 
-$env.STARSHIP_CONFIG = $env.XDG_CONFIG_HOME | path join "starship/starship.toml"
+## other nushell config
 $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
+
+## integration
+$env.STARSHIP_CONFIG = $env.XDG_CONFIG_HOME | path join "starship/starship.toml"
 
 # other
 const autoload_dir = $nu.data-dir | path join "vendor/autoload"
