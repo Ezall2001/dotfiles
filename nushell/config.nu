@@ -81,6 +81,3 @@ $env.PROMPT_INDICATOR_VI_NORMAL = ""
 # other
 const autoload_dir = $nu.data-dir | path join "vendor/autoload"
 mkdir $autoload_dir
-
-sleep 200ms # to allow for hypr animation on open
-fastfetch
