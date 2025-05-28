@@ -1,5 +1,14 @@
+# unwanted data
 nushell/history.txt
 kanata/kanata_log.txt
+
+# unwanted configs
 Code
-ssh/keys
+Electron
+UNIGINE
+
+# unmanaged configs
 btop/btop.conf
+
+# secrets
+ssh/keys
