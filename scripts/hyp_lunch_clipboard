@@ -1,0 +1,16 @@
+#!/usr/bin/env nu
+
+export def main []: [nothing -> nothing] {
+  const class = 'ghostty.clipse'
+  const window_rule = '[float; size 500 700; move 100%-w-5 100%-w-5]' 
+
+  let is_spawned = hyprctl clients | rg $'class: ($class)' | collect | is-empty | not $in
+
+  if (not $is_spawned) {
+    hyprctl dispatch -- exec $window_rule ghostty --class=($class) -e clipse 
+  } else {
+    hyprctl dispatch focuswindow class:($class)
+  }
+
+}
+

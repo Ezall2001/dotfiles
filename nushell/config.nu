@@ -1,10 +1,13 @@
 const SCRIPTS_PATH = '~/.config/scripts'
 
 const NU_LIB_DIRS = [
-  $SCRIPTS_PATH
+  ($SCRIPTS_PATH),
 ]
 
 $env.path ++= [$SCRIPTS_PATH]
+
+# loading scripts
+use hyp_lunch_clipboard
 
 
 # aliases
