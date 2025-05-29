@@ -1,25 +1,31 @@
 const SCRIPTS_PATH = '~/.config/scripts'
 
+# scripts
 const NU_LIB_DIRS = [
   ($SCRIPTS_PATH),
 ]
 
-$env.path ++= [$SCRIPTS_PATH]
-
-# loading scripts
 use hyp_lunch_clipboard
 
-
 # aliases
+alias _ls = ls
 alias ls = ls -a
 alias ll = ls -l
-alias vi = nvim
+
+alias sbat = bat --style=-header
+alias pbat = bat --plain
+
+alias _fzf = fzf
 alias fzf = fzf --preview "bat --style=plain --color=always {}"
-alias pn = pnpm
-alias grep = rg
-alias helbat = bat -l help --style=-header
+
+alias _ssh = ssh
 alias ssh = ssh -F ($env.XDG_CONFIG_HOME | path join 'ssh/config')
+
+alias _btop = btop
 alias btop = btop -p 0
+
+alias vi = nvim
+alias pn = pnpm
 
 ## git aliases
 alias g = git
@@ -86,8 +92,8 @@ $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 
 ## integration
+$env.path ++= [$SCRIPTS_PATH]
 $env.STARSHIP_CONFIG = $env.XDG_CONFIG_HOME | path join "starship/starship.toml"
 
-# other
-const autoload_dir = $nu.data-dir | path join "vendor/autoload"
-mkdir $autoload_dir
+
+
