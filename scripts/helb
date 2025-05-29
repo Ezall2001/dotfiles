@@ -1,0 +1,29 @@
+#!/usr/bin/env -S nu --stdin
+
+alias hbat = bat --style=-header -l help
+
+export def --wrapped main [command?: string, ...rest, --external (-e), --help (-h)]: [
+  table -> nothing
+  string -> nothing
+  nothing -> nothing
+] {
+  # handles command
+  if $command != null {
+    let type = try { which $command | first | get type }
+    if $type == null { print 'command not found'; return null }
+
+    ## handels external commands
+    if $type == 'external' or $external {
+      if ($rest | is-empty) { run-external $command '--help' | hbat; return null}
+      run-external $command ...$rest | hbat
+      return null
+    }
+
+    ## handels builtin commands
+    if $type in ['built-in', 'alias', 'custom'] { help $command ...$rest | hbat; return null }
+
+  } else {
+    $in | hbat
+    return null
+  }
+}
