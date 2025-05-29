@@ -71,6 +71,7 @@ $env.VISUAL = 'nvim'
 $env.PAGER = 'bat'
 $env.SHELL = 'nu'
 $env.BROWSER = 'zen-browser'
+$env.MANPAGER = "sh -c 'sed -u -e \"s/\\x1B\\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 
 ## XDG
 $env.XDG_CONFIG_HOME = "/home/armen/.config"
