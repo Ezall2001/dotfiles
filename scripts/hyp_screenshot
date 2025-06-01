@@ -1,0 +1,12 @@
+#!/usr/bin/env nu
+
+def main [mode: string, --active (-a)]: [nothing -> nothing] {
+  hyprctl dispatch submap reset
+  if $active {
+    hyprshot -m $mode -m active -t 2000
+    return
+  }  
+
+  if not (ps | where name == slurp | is-empty) {return}
+  hyprshot -m $mode -t 2000
+}
