@@ -8,6 +8,7 @@ const NU_LIB_DIRS = [
 use hyp_lunch_clipboard
 use hyp_screenshot
 use hyp_idle
+use hyp_select_emoji
 use helb
 
 # aliases
