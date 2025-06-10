@@ -8,6 +8,6 @@ export def main [emojies_path: string] {
   let category = $dir_path | ls $in | get name | path basename | str join "\n" | tofi
   let file_path = $dir_path | path join $category
   let emoji = cat $file_path | tofi | split row '::' | first | clipse -c
-
+  if ($emoji == '') {return null}
   hyprctl dispatch sendshortcut CTRL SHIFT, V, pid:($active_pid)
 }

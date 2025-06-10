@@ -1,18 +1,28 @@
 #!/usr/bin/env nu
 
+const class = 'ghostty.clipse'
+const window_rule = '[float; size 500 700; move 100%-w-5 100%-w-5]' 
+
+export def 'main clipse' []: nothing -> nothing {
+  let prv_active_pid = hyprctl -j activewindow | from json | get pid
+
+  let prv_val = clipse -p
+  ghostty --class=($class) -e "clipse"
+  let val = clipse -p 
+
+  if $val == $prv_val {return null}
+
+  hyprctl dispatch sendshortcut CTRL SHIFT, V, pid:($prv_active_pid)
+}
+
 
 export def main []: [nothing -> nothing] {
-  let active_pid = hyprctl -j activewindow | from json | get pid
-
-  const class = 'ghostty.clipse'
-  const window_rule = '[float; size 500 700; move 100%-w-5 100%-w-5]' 
-
   let is_spawned = hyprctl clients | rg $'class: ($class)' | collect | is-empty | not $in
 
-  if (not $is_spawned) {
-    hyprctl dispatch -- exec $window_rule ghostty --class=($class) -e $'clipse;hyprctl dispatch sendshortcut CTRL SHIFT, V, pid:($active_pid)'
-  } else {
+  if ($is_spawned) {
     hyprctl dispatch focuswindow class:($class)
+  } else {
+    hyprctl dispatch -- exec $window_rule hyp_lunch_clipboard clipse
   }
 
 }
