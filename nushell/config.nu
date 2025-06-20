@@ -11,6 +11,7 @@ use hyp_idle
 use hyp_select_emoji
 use hyp_select_audio
 use hyp_init_windows
+use hyp_bring_window
 use helb
 
 # aliases
