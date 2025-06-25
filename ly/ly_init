@@ -1,0 +1,7 @@
+#!/usr/bin/env -S nu -l
+
+source /home/armen/.config/nushell/login.nu
+
+export def main [...args]: nothing -> nothing {
+  exec ...$args
+}

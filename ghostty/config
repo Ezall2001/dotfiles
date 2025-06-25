@@ -1,2 +1,2 @@
 theme = Dracula
-command = nu -l -e 'fastfetch'
+command = nu -e 'fastfetch'

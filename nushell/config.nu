@@ -1,4 +1,4 @@
-const SCRIPTS_PATH = '~/.config/scripts'
+const SCRIPTS_PATH = $nu.home-path | path join '.config/scripts'
 
 # scripts
 const NU_LIB_DIRS = [
@@ -10,7 +10,7 @@ use hyp_screenshot
 use hyp_idle
 use hyp_select_emoji
 use hyp_select_audio
-use hyp_init_windows
+#use hyp_init_windows
 use hyp_bring_window
 use helb
 
@@ -70,21 +70,6 @@ alias gpsh = git push
 alias gpsh-f = git push --force-with-lease
 alias gpl = git pull
 
-# environment
-## UNIX CONVENTION
-$env.EDITOR = 'nvim'
-$env.VISUAL = 'nvim'
-$env.PAGER = 'bat'
-$env.SHELL = 'nu'
-$env.BROWSER = 'zen-browser'
-$env.MANPAGER = "sh -c 'sed -u -e \"s/\\x1B\\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
-
-## XDG
-$env.XDG_CONFIG_HOME = "/home/armen/.config"
-$env.XDG_DATA_HOME = "/home/armen/.local/share"
-$env.XDG_STATE_HOME = "/home/armen/.local/state"
-$env.XDG_CACHE_HOME = "/home/armen/.cache"
-
 ## nushell config
 $env.config.shell_integration.osc133 = false
 $env.config.buffer_editor = "nvim"
@@ -100,7 +85,6 @@ $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 
 ## integration
-$env.path ++= [$SCRIPTS_PATH]
 $env.STARSHIP_CONFIG = $env.XDG_CONFIG_HOME | path join "starship/starship.toml"
 
 
