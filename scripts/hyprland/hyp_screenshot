@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-def main [mode: string, --active (-a)]: [nothing -> nothing] {
+export def main [mode: string, --active (-a)]: [nothing -> nothing] {
   hyprctl dispatch submap reset
   if $active {
     hyprshot -m $mode -m active -t 2000

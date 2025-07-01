@@ -1,18 +1,9 @@
-const SCRIPTS_PATH = $nu.home-path | path join '.config/scripts'
-
 # scripts
-const NU_LIB_DIRS = [
-  ($SCRIPTS_PATH),
-]
+const NU_LIB_DIRS = [($nu.home-path | path join '.config/scripts')] 
 
-use hyp_lunch_clipboard
-use hyp_screenshot
-use hyp_idle
-use hyp_select_emoji
-use hyp_select_audio
-#use hyp_init_windows
-use hyp_bring_window
+use hyprland *
 use helb
+use wait_job
 
 # aliases
 alias _ls = ls

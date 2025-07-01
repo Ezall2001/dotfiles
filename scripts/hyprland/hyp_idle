@@ -1,12 +1,12 @@
 #!/usr/bin/env nu
 
-export def 'level0 action' [] {
+def 'level0 action' [] {
     brightnessctl s 5% -s -d intel_backlight
     brightnessctl s 0 -s -d asus::kbd_backlight 
     brightnessctl s 0% -s -d ddcci2
 }
 
-export def 'level0 rev' [] {
+def 'level0 rev' [] {
     brightnessctl -r -d intel_backlight
     brightnessctl -r -d asus::kbd_backlight 
     brightnessctl -r -d ddcci2

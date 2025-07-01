@@ -16,3 +16,4 @@ $env.XDG_PICTURES_DIR = $nu.home-path | path join "Downloads"
 
 ## OTHER
 $env.path ++= ['.config/scripts'] | each {|p| $nu.home-path | path join $p}
+$env.path ++= glob -F $'($env.home)/.config/scripts/**'

@@ -1,0 +1,24 @@
+#!/usr/bin/env nu
+
+use ./consts.nu *
+use ./init_setups/portable.nu *
+use ./init_setups/station.nu *
+use ./init_setups/specials.nu *
+
+export def main [] {
+  let mons = hyprctl -j monitors | from json
+
+  let setup = match ($mons | length) {
+    1 => 'portable'
+    2 => 'station'
+  }
+
+  init_specials
+  if $setup == 'portable' { init_portable_setup } else { init_station_setup }
+
+  mkdir $state_dir
+  $setup | save $state_file
+
+  wait_job -i 1sec hyp_init_setup 
+}
+
