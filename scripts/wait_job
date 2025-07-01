@@ -1,0 +1,11 @@
+#!/usr/bin/env nu
+
+def are_jobs_done [tags: list<string>] {
+  job list | where tag in $tags | length | into bool | not $in
+}
+
+export def main [...tags: string, --check_interval: duration (-i) = 100ms]: nothing -> nothing {
+  while not (are_jobs_done $tags) {
+    sleep $check_interval
+  }
+}
