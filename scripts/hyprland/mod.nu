@@ -5,3 +5,4 @@ export use hyp_screenshot *
 export use hyp_select_audio *
 export use hyp_select_emoji *
 export use hyp_setup *
+export use hyp_workspace *

@@ -1,0 +1,47 @@
+#!/usr/bin/env nu
+
+const offset_table = {
+  'HDMI-A-1':0
+  'eDP-1':10,
+}
+
+def get_mon [monitor?:string] {
+  let monitors = hyprctl monitors -j | from json 
+  if $monitor == null { $monitors | where focused == true | get name | first } else { $monitor } 
+}
+
+def get_workspace_absolute_id [monitor:string, workspace:int] {
+  let offset = $offset_table | get $monitor
+  $workspace + $offset
+}
+
+def main [] {}
+def 'main id' [workspace:int, monitor?:string] {id $workspace $monitor}
+def 'main focus' [workspace:int, monitor?:string] {focus $workspace $monitor}
+def 'main move' [workspace:int, client?:int, monitor?:string, --silent (-s)] {
+  move $workspace $client $monitor --silent=$silent
+}
+
+
+export def id [workspace:int, monitor?:string] {
+  let _mon = get_mon $monitor
+  get_workspace_absolute_id $_mon $workspace
+}
+
+export def focus [workspace:int, monitor?:string, --silent (-s)] {
+  let _mon = get_mon $monitor
+  let _workspace = get_workspace_absolute_id $_mon $workspace
+  hyprctl dispatch workspace $_workspace
+}
+
+export def move [workspace:int, client?:int, monitor?:string, --silent (-s)] {
+  let _mon = get_mon $monitor
+  let _workspace = get_workspace_absolute_id $_mon $workspace
+
+
+  let arg = if $client == null { $_workspace } else { $'($_workspace), pid:($client)' }
+  let dispatcher = if $silent {'movetoworkspacesilent'} else {'movetoworkspace'}
+
+  hyprctl dispatch $dispatcher $arg
+}
+
