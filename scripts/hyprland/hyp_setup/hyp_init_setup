@@ -17,8 +17,8 @@ export def main [] {
   if $setup == 'portable' { init_portable_setup } else { init_station_setup }
 
   mkdir $state_dir
-  $setup | save $state_file
+  $setup | save -f $state_file
 
-  wait_job -i 1sec hyp_init_setup 
+  sleep 2sec
 }
 

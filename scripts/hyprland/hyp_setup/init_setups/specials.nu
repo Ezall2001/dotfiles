@@ -7,7 +7,7 @@ export def init_specials [] {
   # move to workspace and tag 
   # sleep to allow for process to finish forking
   job spawn {
-    sleep 1sec
+    sleep 2sec
 
     let windows = hyprctl -j clients | from json
 
@@ -23,6 +23,6 @@ export def init_specials [] {
 
     hyprctl dispatch tagwindow +p_terminal $'pid:($ghostty_pid)'
 
-  } | job tag $in hyp_init_setup
+  } 
 }
 
