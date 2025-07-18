@@ -3,7 +3,6 @@ const NU_LIB_DIRS = [($nu.home-path | path join '.config/scripts')]
 
 use hyprland *
 use helb
-use wait_job
 
 # aliases
 alias _ls = ls
