@@ -3,7 +3,7 @@
 const class = 'ghostty.clipse'
 const window_rule = '[float; size 500 700; move 100%-w-5 100%-w-5]' 
 
-export def 'main clipse' []: nothing -> nothing {
+def 'main clipse' []: nothing -> nothing {
   let prv_active_pid = hyprctl -j activewindow | from json | get pid
 
   let prv_val = clipse -p
