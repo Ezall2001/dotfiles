@@ -1,5 +1,4 @@
-require("keymap").bind_immediates()
 require("other")
+require("keymap")
 require("lazy_pm")
-require("keymap").bind_deffered()
 require("formatting")
