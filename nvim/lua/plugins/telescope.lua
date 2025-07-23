@@ -1,8 +1,17 @@
-local config = function () 
+local config = function()
+  local telescope = require('telescope')
   local builtin = require('telescope.builtin')
   local keymaps = require('keymap.definitions')
   keymaps.telescope(builtin)
-end 
+
+  telescope.setup {
+    extensions = {
+      ["ui-select"] = {
+        require("telescope.themes").get_dropdown {}
+      }
+    }
+  }
+end
 
 local spec = {
   'nvim-telescope/telescope.nvim',
@@ -13,4 +22,3 @@ local spec = {
 }
 
 return spec
-
