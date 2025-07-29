@@ -1,8 +1,9 @@
 # scripts
-const NU_LIB_DIRS = [($nu.home-path | path join '.config/scripts')] 
+const NU_LIB_DIRS = [($nu.home-path | path join '.config/scripts')]
 
 use hyprland *
 use helb
+use btrkdlfmt
 
 # aliases
 alias _ls = ls
@@ -29,7 +30,7 @@ alias g = git
 alias gc = git commit
 alias ga = git add
 alias gsw = git switch
-alias gst = git stash 
+alias gst = git stash
 alias gd = git diff
 alias gstl = git stash list
 alias gstp = git stash pop
@@ -61,14 +62,17 @@ alias gpsh-f = git push --force-with-lease
 alias gpl = git pull
 
 ## nushell config
-$env.config.shell_integration.osc133 = false
+$env.config.shell_integration.osc133 = true
+$env.config.use_kitty_protocol = true
+$env.config.highlight_resolved_externals = true
 $env.config.buffer_editor = "nvim"
 $env.config.show_banner = false
 $env.config.edit_mode = 'vi'
 $env.config.cursor_shape = {
-  vi_insert : "line",       
-  vi_normal : "block"
+	vi_insert : "line",
+	vi_normal : "block"
 }
+
 
 ## other nushell config
 $env.PROMPT_INDICATOR_VI_INSERT = ""
@@ -76,6 +80,3 @@ $env.PROMPT_INDICATOR_VI_NORMAL = ""
 
 ## integration
 $env.STARSHIP_CONFIG = $env.XDG_CONFIG_HOME | path join "starship/starship.toml"
-
-
-

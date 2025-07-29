@@ -1,0 +1,47 @@
+#!/usr/bin/env -S nu --stdin
+
+
+const default_config_path = '~/.config/kdl/kdlfmt.kdl'
+
+	def config_from_flag [path:string]: nothing -> string {
+	if ($path | path exists) {$path} else {$default_config_path}
+}
+
+def config_from_path [path:string]: nothing -> string {
+	mut rolling_path = $path | path dirname | path expand
+
+	while $rolling_path != '/' {
+		let conf_path = $rolling_path | path join 'kdlfmt.kdl'
+		if ($conf_path | path exists) {return $conf_path}
+		$rolling_path = $rolling_path | path dirname
+	}
+
+	return $default_config_path
+}
+
+
+export def get_conf [path?: string, config?: string] {
+	if $config != null {config_from_flag $config
+	} else if $path != null {config_from_path $path
+	} else {$default_config_path}
+	| path expand
+}
+
+export def main [path?: string, --config:string (-c)]: [
+	string -> string
+	string -> nothing
+	nothing -> nothing
+] {
+	if $path == null {
+		let stdin = $in
+		let conf = get_conf $path $config
+		$stdin | (run-external "kdlfmt" "format" "--stdin" "--config" $conf)
+	} else {
+		let conf = get_conf $path $config
+		run-external "kdlfmt" "format" "--config" $conf $path
+	}
+}
+
+def 'main get_conf' [path?: string, config?: string] {
+	get_conf $path $config
+}
