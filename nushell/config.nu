@@ -80,3 +80,4 @@ $env.PROMPT_INDICATOR_VI_NORMAL = ""
 
 ## integration
 $env.STARSHIP_CONFIG = $env.XDG_CONFIG_HOME | path join "starship/starship.toml"
+$env.FZF_DEFAULT_COMMAND = 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
