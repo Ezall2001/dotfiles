@@ -1,6 +1,8 @@
 # unwanted data
 nushell/history.txt
+nushell/secrets.nu
 kanata/kanata_log.txt
+Session.vim
 
 # unwanted configs
 Code
