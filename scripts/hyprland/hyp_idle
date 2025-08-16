@@ -1,9 +1,15 @@
 #!/usr/bin/env nu
 
+def set_brightness [dev:string, pct:float] {
+	let curr_pct = brightnessctl -m i -d $dev | split row ',' | get 3 | str substring 0..-2 | into float
+	let set_pct = [$curr_pct, $pct] | math min | $'($in)%'
+	brightnessctl s $set_pct -s -d $dev
+}
+
 def 'level0 action' [] {
-    brightnessctl s 5% -s -d intel_backlight
-    brightnessctl s 0 -s -d asus::kbd_backlight 
-    brightnessctl s 0% -s -d ddcci2
+    set_brightness intel_backlight 5
+    set_brightness asus::kbd_backlight 0
+    set_brightness ddcci2 0
 }
 
 def 'level0 rev' [] {
@@ -14,10 +20,9 @@ def 'level0 rev' [] {
 
 
 export def main [level: int, --reverse (-r)]: nothing -> nothing {
-  match $level {
-    0 => {if $reverse {level0 rev} else {level0 action}}
-    _ => {print 'unknown level'}
-  }
-
+	match $level {
+		0 => {if $reverse {level0 rev} else {level0 action}}
+		_ => {print 'unknown level'}
+	}
 }
 
