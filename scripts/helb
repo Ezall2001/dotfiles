@@ -2,28 +2,46 @@
 
 alias hbat = bat --style=-header -l help
 
-export def --wrapped main [command?: string, ...rest, --external (-e), --help (-h)]: [
-  table -> nothing
+def handle_stdin [stdin?: string] {
+	if ($stdin == null) {print 'no input has been passed'}
+	$stdin | hbat
+}
+
+def handle_cmd_arg [cmd:list<string>, external:bool, source: bool, hcmd?: string] {
+	let base_cmd = $cmd | first
+
+  let type = try { which $base_cmd | first | get type }
+  if $type == null { print 'command not found'; return null }
+
+  if $type == 'external' or $external {
+		handle_extern_cmd $cmd $hcmd
+	} else if $type in ['built-in', 'alias', 'custom'] {
+		handle_internal_cmd $cmd $source $type
+	}
+}
+
+def handle_internal_cmd [cmd:list<string>, source:bool, type:string] {
+	if $source == false or $type == 'built-in' {
+		(help ...$cmd) | hbat
+	} else {
+		let help_cmd = ['help', ...$cmd, '|', 'bat --style=-header -l help'] | str join ' '
+		nu -c $help_cmd
+	}
+}
+
+def handle_extern_cmd [cmd:list<string>, hcmd?: string] {
+	let _hcmd = if $hcmd == null {'--help'} else {$hcmd}
+	(run-external ...$cmd $_hcmd) | hbat
+}
+
+
+export def main [...cmd, --external (-e), --source (-s), --hcmd (-c): string]: [
   string -> nothing
   nothing -> nothing
 ] {
-  # handles command
-  if $command != null {
-    let type = try { which $command | first | get type }
-    if $type == null { print 'command not found'; return null }
-
-    ## handels external commands
-    if $type == 'external' or $external {
-      if ($rest | is-empty) { run-external $command '--help' | hbat; return null}
-      run-external $command ...$rest | hbat
-      return null
-    }
-
-    ## handels builtin commands
-    if $type in ['built-in', 'alias', 'custom'] { help $command ...$rest | hbat; return null }
-
-  } else {
-    $in | hbat
-    return null
-  }
+	if ($cmd | is-empty) {
+		handle_stdin $in
+	} else {
+		handle_cmd_arg $cmd $external $source $hcmd
+	}
 }
