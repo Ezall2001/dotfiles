@@ -5,6 +5,7 @@ use hyprland *
 use tmux *
 use helb
 use btrkdlfmt
+use qutebrowser *
 
 # aliases
 alias _ls = ls
