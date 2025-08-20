@@ -1,1 +1,2 @@
 export module qtb_session
+export module qtb_external_update
