@@ -1,16 +1,5 @@
-# unwanted data
-nushell/history.txt
-nushell/secrets.nu
-kanata/kanata_log.txt
-
-# unwanted configs
 Code
+obsidian
 Electron
 UNIGINE
 systemd
-
-# unmanaged configs
-btop/btop.conf
-
-# secrets
-ssh/keys
