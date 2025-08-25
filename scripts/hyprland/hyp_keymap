@@ -1,0 +1,23 @@
+#!/usr/bin/env nu
+
+use consts.nu [modifiers_mask_map]
+
+def build_keybind_str [obj:record] {
+	if $obj.description == '' {return null}
+
+	let modifiers_str = try {$modifiers_mask_map | get ($obj.modmask | into string)} catch {print $'mask ($obj.modmask) not defined'; return}
+	let keybind_str = [$modifiers_str $obj.key] | str join ' '
+	let submap_str = if $obj.submap == '' {'default'} else {$obj.submap}
+	$"($submap_str)   ($keybind_str) :: ($obj.description)"
+}
+
+export def main [] {
+	let keybinds = hyprctl binds -j
+	| from json
+	| select modmask key description submap
+	| each { build_keybind_str $in }
+	| where $it != null
+	| str join "\n"
+
+	$keybinds | tofi
+}

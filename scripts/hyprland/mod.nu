@@ -7,3 +7,4 @@ export module hyp_select_emoji
 export module hyp_setup
 export module hyp_workspace
 export module hyp_defrag_workspaces
+export module hyp_keymap
