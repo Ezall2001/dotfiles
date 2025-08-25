@@ -6,23 +6,42 @@ def set_brightness [dev:string, pct:float] {
 	brightnessctl s $set_pct -s -d $dev
 }
 
-def 'level0 action' [] {
-    set_brightness intel_backlight 5
-    set_brightness asus::kbd_backlight 0
-    set_brightness ddcci2 0
+def wake_up [] {
+		brightnessctl -r -d intel_backlight
+		brightnessctl -r -d asus::kbd_backlight 
+		hyprctl dispatch dpms on eDP-1
+		hyprctl dispatch dpms on HDMI-A-1 
 }
 
-def 'level0 rev' [] {
-    brightnessctl -r -d intel_backlight
-    brightnessctl -r -d asus::kbd_backlight 
-    brightnessctl -r -d ddcci2
-}
+def get_action [idx?:int] {
+	let lvl0 = {|| hyprlock }
 
-
-export def main [level: int, --reverse (-r)]: nothing -> nothing {
-	match $level {
-		0 => {if $reverse {level0 rev} else {level0 action}}
-		_ => {print 'unknown level'}
+	let lvl1 = {||
+		set_brightness intel_backlight 5
+		set_brightness asus::kbd_backlight 0
+		hyprctl dispatch dpms off HDMI-A-1 
 	}
+
+	let lvl2 = {||
+		hyprctl dispatch dpms off eDP-1
+	}
+
+	let actions = [$lvl0 $lvl1 $lvl2]
+	let action = try {$actions | get $idx} catch {null}
+	$action
 }
 
+export def main [level?: int, --wakeup (-w)]: nothing -> nothing {
+	if $wakeup {
+		wake_up
+		return
+	}
+
+	let action = get_action $level
+	if $action == null {
+		print 'action not found'
+		return
+	}
+
+	do $action
+}
