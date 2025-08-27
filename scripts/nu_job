@@ -1,0 +1,33 @@
+#!/usr/bin/env nu
+
+export def await [...tags --timeout (-t):duration] {
+	let _timeout = if $timeout == null {5sec} else {$timeout}
+	let timeout_id = spawn 'nu_job_timeout' {sleep $_timeout}
+
+	loop {
+		let id = job recv
+		if $id == $timeout_id {
+			print $"await on ($tags | str join ', ') timed-out after ($_timeout | into string)"
+			break
+		}
+
+		let done = job list | where tag in $tags | is-empty
+		if $done { break }
+	}
+}
+
+export def spawn [tag:string closure:closure] {
+	let p_id = job id
+
+	let id = job spawn {
+		do $closure
+		job id | job send $p_id
+	}
+
+	job tag $id $tag
+	$id
+}
+
+def main [] { }
+def 'main spawn' [tag:string closure:closure] {spawn $tag $closure}
+def 'main await' [...tags --timeout (-t):duration] {await ...$tags --timeout=$timeout}
