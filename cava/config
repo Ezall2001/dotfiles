@@ -37,9 +37,8 @@ foreground = blue
 
 gradient = 1
 gradient_color_1 = '#ffffff'
-gradient_color_2 = '#f33a6a'
+gradient_color_2 = '#ff2e66'
 gradient_color_3 = '#922340'
-
 
 [smoothing]
 monstercat = 1

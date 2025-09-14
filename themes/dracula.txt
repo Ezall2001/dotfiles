@@ -38,3 +38,5 @@ hsl(260, 48%, 12%) - #1a102e
 ## starship(fill)
 hsl(259, 48%, 15%) - #201439
 
+## cava(last-gradiant)
+#922340
