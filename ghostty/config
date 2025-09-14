@@ -1,4 +1,4 @@
-theme = Dracula
+theme = dracula_custom
 font-family = JetBrainsMonoNL Nerd Font
 font-size = 12
 freetype-load-flags = true
