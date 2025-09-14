@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = true
-continuation_prompt = '[▶▶](bold blue)' # not implemented yet
+continuation_prompt = '[ ](bold blue)'
 
 format = """
 [░▒▓](fg:username_bg)\
@@ -17,41 +17,38 @@ $directory\
 \
 $fill\
 \
-[](bg:fill_bg fg:status_bg)[ \
-$character \
-($battery )\
-($lua )($nodejs )($python )\
-($cmd_duration )$time \
+[](bg:fill_bg fg:status_bg)[\
+($status )\
+($lua)($nodejs)($python)\
+($cmd_duration )\
+$time \
 ](bg:status_bg)
-\
- ▶ """
-
-#  
-#
-#
-palette = 'dracula_official'
+📜 """
 
 
-[palettes.dracula_official]
-username_bg = '#472060'
-username_text = 'purple'
-directory_bg = '#F33A6A'
+palette = 'dracula_custom'
+
+[palettes.dracula_custom]
+username_bg = '#371D49'
+username_text = 'bright-purple'
+
+directory_bg = 'red'
 directory_text = 'bright-white'
+
 git_bg = '#ead3c1'
 git_brown = '#533f4b'
 git_red = '#D00050'
 git_green = '#008B48'
-fill_bg = '#243342'
-status_bg = '#fff0f9'
-status_black = '#341916'
-status_red = '#F33A6A'
-status_green = '#20BB20'
-status_yellow = 'yellow'
-status_dark_yellow = 'yellow'
-status_dark_grey = '#ead3c1'
-status_dark_green = '#0de74f'
-status_dark_black = '#000000'
 
+fill_bg = '#201439'
+
+status_bg = 'white'
+status_black = 'black'
+status_red = '#D00050'
+status_green = '#008B48'
+status_brown = '#B78F71'
+status_yellow = '#ADBA17'
+status_blue = 'blue'
 
 
 # LEFT
@@ -104,7 +101,6 @@ tag_disabled = false
 tag_symbol = '🔖'
 tag_max_candidates = 0
 
-## GIT
 [git_metrics]
 format = "([(-$deleted)]($deleted_style)|[(+$added)]($added_style))"
 added_style = 'bold bg:git_bg fg:git_green'
@@ -144,48 +140,35 @@ style = 'bg:fill_bg'
 
 # RIGHT
 ## STATUS
-[character]
+[status]
+disabled = false
 success_symbol = '🚀'
-error_symbol = '🤯'
-vimcmd_symbol = '' # not implemented yet
-vimcmd_visual_symbol = '' # not implemented yet
+symbol = '🤯'
+not_executable_symbol = '❌'
+not_found_symbol = '❓'
+sigint_symbol = '💣'
+signal_symbol = '💣'
+recognize_signal_code = true
+map_symbol = true
+pipestatus = false
 format = '[$symbol](bold bg:status_bg)'
-
-## BATTERY
-[battery]
-format = '[$symbol$percentage]($style)'
-
-[[battery.display]]
-threshold = 50
-style = 'bold fg:status_dark_green bg:status_bg'
-charging_symbol = '󰢝 '
-discharging_symbol = '󰁾 '
-
-[[battery.display]]
-threshold = 20
-style = 'bold fg:status_dark_yellow bg:status_bg'
-charging_symbol = '󰂆 '
-discharging_symbol = '󰁻 '
-
-[[battery.display]]
-threshold = 10
-style = 'bold fg:status_dark_red bg:status_bg'
-charging_symbol = '󰢟 '
-discharging_symbol = '󱃍 '
 
 ## LANG
 [lua]
-format = '[ ](bold fg:status_dark_blue bg:status_bg)'
+version_format = 'v${major}'
+format = '[ $version ](bold fg:status_blue bg:status_bg)'
 
 [nodejs]
-format = '[ ](bold fg:status_dark_green bg:status_bg)'
+version_format = 'v${major}'
+format = '[ $version ](bold fg:status_green bg:status_bg)'
 
 [python]
-format = '[󱔎 ](bold fg:status_dark_green bg:status_bg)'
+version_format = 'v${major}'
+format = '[󱔎 $version ](bold fg:status_yellow bg:status_bg)'
 
 ## PERF
 [cmd_duration]
-format = '([󱎫 ](bold fg:status_dark_yello bg:status_bg)[$duration](bold fg:status_green bg:status_bg))'
+format = '([󱎫 ](bold fg:status_brown bg:status_bg)[$duration](bold fg:status_brown bg:status_bg))'
 min_time = 100 # (in ms)
 show_milliseconds = true
 show_notifications = true
@@ -197,17 +180,3 @@ notification_timeout = 3000 # 3 sec (in ms)
 disabled = false
 time_format = '%H%M.%S'
 format = '[$time](bold fg:status_red bg:status_bg)'
-
-
-
-
-
-# TODO
-# local ip, shlvl, status, sudo, custom commands
-# try the sparse arrow fill to status
-
-
-
-
-
-
