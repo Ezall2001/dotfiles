@@ -1,7 +1,7 @@
 $env.config.menus = [
 	{
 		name: help_menu
-		only_buffer_difference: false
+		only_buffer_difference: true
 		marker: " : "
 		type: {
 			layout: description
