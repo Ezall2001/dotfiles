@@ -1,0 +1,10 @@
+#!/usr/bin/env nu
+
+use path.nu
+
+export def main [] {}
+def 'main path' [
+	path:string
+	--cols (-c) = 80:oneof<int,string>
+	--rows (-r) = 60:oneof<int,string>
+] { path $path --cols $cols --rows $rows }
