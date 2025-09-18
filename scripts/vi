@@ -1,0 +1,6 @@
+#!/usr/bin/env nu
+
+export def main [path=.:string] {
+	let path = if ($path | str contains '/') or ($path == .) {$path} else {zoxide query $path}
+	nvim $path
+}

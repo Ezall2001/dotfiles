@@ -5,3 +5,4 @@ use tmux *
 use helb
 use btrkdlfmt
 use qutebrowser *
+use vi
