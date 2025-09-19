@@ -1,4 +1,3 @@
-vim.print(require("constants").nvim_root_dir)
 require("options")
 require("keymap")
 require("lazy_pm")
