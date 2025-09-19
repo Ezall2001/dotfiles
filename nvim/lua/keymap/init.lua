@@ -1,4 +1,7 @@
-local keymap = require("keymap.definitions")
+local require_all_in_dir = require("utils.require_all_in_dir")
 
-keymap.general()
-keymap.custom_commands()
+local require_keymap_dir = vim.fs.joinpath("lua", "keymap", "definitions")
+
+require_all_in_dir(require_keymap_dir, function(module)
+	module()
+end)
