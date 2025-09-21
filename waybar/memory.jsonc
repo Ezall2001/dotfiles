@@ -1,0 +1,8 @@
+{
+	"memory": {
+		"interval": 30,
+		"format": "{percentage}% ",
+		"tooltip": true,
+		"tooltip-format": "RAM: {used:0.2f} / {total:0.2f} GiB\nSWAP: {swapUsed:0.2f} / {swapTotal:0.2f} GiB"
+	}
+}
