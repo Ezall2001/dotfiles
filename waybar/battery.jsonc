@@ -1,0 +1,31 @@
+{
+	"battery": {
+		"bat": "BAT0",
+		"adapter": "AC0",
+		"tooltip": true,
+		"design-capacity": false,
+		"full-at": 100,
+		"interval": 60,
+		"states": {
+			"full": 100,
+			"mid": 90,
+			"warning": 30,
+			"critical": 10
+		},
+		// discharging format
+		"format-discharging-full": "{capacity} 󰁹",
+		"format-discharging-mid": "{capacity} 󰂀",
+		"format-discharging-warning": "{capacity} 󰁼",
+		"format-discharging-critical": "{capacity} 󰁺",
+		// charging format
+		"format": "{capacity} 󰂅",
+		"format-charging-mid": "{capacity} 󰢝",
+		"format-charging-warning": "{capacity} 󰂇",
+		"format-charging-critical": "{capacity} 󰢜",
+		// tooltip format
+		"format-time": "{H}h {m}min",
+		"tooltip-format": "TTF/D: {time}\nDraw: {power}W\nHealth: {health}%",
+		"tooltip-format-charging": "TTF: {time}\nDraw: {power}W\nHealth: {health}%",
+		"tooltip-format-discharging": "TTD: {time}\nDraw: {power}W\nHealth: {health}%"
+	}
+}
