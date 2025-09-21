@@ -1,11 +1,7 @@
 local const = require("constants")
-local lib = require("commands.winmove")
+local lib = require("features.window.winmove")
 
 local panes = function()
-	-- TODO keybind to reset layout (after creating a tmux pane)
-	-- TODO make the new panes start at root or oil or smth other than the same win
-	-- TODO confirm instead of error on quit
-	-- TODO zoom
 	-- create/destroy
 	vim.keymap.set(const.all_map_modes, "<M-v>", vim.cmd.split, { desc = "split tab vertically" })
 	vim.keymap.set(const.all_map_modes, "<M-z>", vim.cmd.vsplit, { desc = "split tab horizontally" })

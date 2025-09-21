@@ -11,6 +11,7 @@ local extra_lsps = {
 }
 
 local config = function()
+	vim.lsp.config("jsonls", {})
 	require("mason-lspconfig").setup()
 
 	for _, lsp in ipairs(extra_lsps) do

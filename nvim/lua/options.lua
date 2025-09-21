@@ -32,7 +32,7 @@ vim.o.modeline = false
 vim.o.list = true
 vim.o.listchars = "tab:┃ ,trail:·,multispace:···,extends:,precedes:,conceal:󰇘"
 vim.o.conceallevel = 2
-vim.o.concealcursor = "nc"
+vim.o.concealcursor = "c"
 -- vim.o.encoding = "utf-8"
 -- vim.o.formatoptions = ""
 -- TODO: finish font option discovery
@@ -126,15 +126,28 @@ vim.filetype.add({
 	},
 })
 
+-- TODO: refactor this
+-- help
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "help",
+	callback = function(arg)
+		vim.bo[arg.buf].bufhidden = "wipe"
+	end,
+})
+
 -- global vars
 vim.g.have_nerd_font = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- vim-tmux-navigator vars
+--- vim-tmux-navigator vars
 vim.g.tmux_navigator_no_mappings = 1
 vim.g.tmux_navigator_save_on_switch = 2
 vim.g.tmux_navigator_no_wrap = 1
+
+--- netrw
+vim.g.loaded_netrw = 1       -- disables netrw file manager
+vim.g.loaded_netrwPlugin = 1 -- disables netrw extra functionalities
 
 -- unexplored
 -- vim.o.incsearch = true

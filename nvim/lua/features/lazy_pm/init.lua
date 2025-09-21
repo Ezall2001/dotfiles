@@ -1,6 +1,4 @@
-require("lazy_pm.bootstrap")
-
-local lazy = require("lazy")
+require("features.lazy_pm.bootstrap")
 
 local opts = {
 	defaults = {
@@ -8,7 +6,6 @@ local opts = {
 		version = false,
 	},
 	spec = {
-
 		{ import = "plugins" },
 	},
 	local_spec = true,
@@ -52,7 +49,7 @@ local opts = {
 
 	change_detection = {
 		enabled = true,
-		notify = true,
+		notify = false,
 	},
 	readme = {
 		enabled = true,
@@ -64,4 +61,8 @@ local opts = {
 	},
 }
 
-lazy.setup(opts)
+return {
+	init = function()
+		require("lazy").setup(opts)
+	end
+}

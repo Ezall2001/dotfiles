@@ -1,7 +1,6 @@
 local ts_config = {
 	defaults = {
 		sorting_strategy = "descending",
-		selection_strategy = "follow",
 		mappings = {},
 	},
 
