@@ -1,0 +1,26 @@
+{
+	"network": {
+		"interval": 10,
+		"family": "ipv4",
+		"format-icons": [
+			"󰤯",
+			"󰤟",
+			"󰤢",
+			"󰤥",
+			"󰤨"
+		],
+		// format
+		"format": "network ??",
+		"format-wifi": "{icon}",
+		"format-ethernet": "",
+		"format-disconnected": "󰤮",
+		"format-disabled": "󰤫",
+		"format-linked": "test",
+		// tooltip
+		"tooltip": true,
+		"tooltip-format": "Interface: {ifname}\nIp: {ipaddr}/{cidr}\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
+		"tooltip-format-wifi": "Essid: {essid}\nInterface: {ifname}\nIp: {ipaddr}/{cidr}\nSignal: {signalStrength}%\nFrequency: {frequency}GHz\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
+		"tooltip-format-disconnected": "Disconnected",
+		"tooltip-format-disabled": "Disabled"
+	}
+}

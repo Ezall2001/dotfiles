@@ -1,4 +1,4 @@
-// TODO: add cava, bluetooth, memory,network,power-profile,
+// TODO: add cava, bluetooth, power-profile,
 // privacy(for when mic is on unknowingly), clock, custom, hyprland,
 // pulse-audio , image, mpd, mpris, systemd, temperature, tray, upower,
 // wireplumber, workspaces
@@ -15,7 +15,8 @@
 		"./battery.jsonc",
 		"./cpu.jsonc",
 		"./memory.jsonc",
-		"./image.jsonc"
+		"./image.jsonc",
+		"./network.jsonc"
 	],
 	"modules-left": [],
 	"modules-center": [
@@ -28,7 +29,8 @@
 			"image#pc-mode",
 			"cpu",
 			"memory",
-			"battery"
+			"battery",
+			"network"
 		]
-	},
+	}
 }
