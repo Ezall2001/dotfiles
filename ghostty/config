@@ -1,5 +1,5 @@
 theme = dracula_custom
-font-family = JetBrainsMonoNL Nerd Font
+font-family = JetBrainsMono Nerd Font
 font-size = 12
 freetype-load-flags = true
 grapheme-width-method = unicode
