@@ -95,6 +95,7 @@ keybind = shift+end=unbind
 keybind = shift+insert=unbind
 keybind = shift+page_up=unbind
 keybind = shift+page_down=unbind
+keybind = ctrl+enter=unbind
 
 ## defs
 keybind = alt+g>r=reload_config
