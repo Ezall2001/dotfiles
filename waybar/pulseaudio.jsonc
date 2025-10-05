@@ -1,0 +1,22 @@
+{
+	"pulseaudio": {
+		"tooltip": true,
+		"ignored-sinks": [],
+		"format-icons": {
+			"headphone": "",
+			"headset": "",
+			"bluez_output.E0_08_71_5E_87_40.1": "<span size = '16000' rise = '-2000'>󰥰</span>",
+			"bluez_output.E8_D0_3C_32_DC_D3.1": "󰦢",
+			"default": [
+				"",
+				"",
+				" "
+			]
+		},
+		"format": "{icon} {volume} {format_source}",
+		"format-muted": "  {format_source}",
+		"format-source": "󰍬",
+		"format-source-muted": "󰍭",
+		"tooltip-format": "{desc}"
+	}
+}
