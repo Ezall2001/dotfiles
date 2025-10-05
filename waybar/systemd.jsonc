@@ -1,0 +1,8 @@
+{
+	"systemd-failed-units": {
+		"format": " {nr_failed}",
+		"user": true,
+		"system": true,
+		"hide-on-ok": true
+	}
+}
