@@ -1,0 +1,10 @@
+{
+	"image#pc-mode": {
+		"path": ".config/waybar/assets/sharingan/ems_sasuke.svg",
+		"size": 25
+	},
+	"image#arch": {
+		"path": ".config/waybar/assets/arch/arch.png",
+		"size": 20
+	}
+}
