@@ -11,11 +11,11 @@
 		],
 		// format
 		"format": "network ??",
-		"format-wifi": "{icon}",
-		"format-ethernet": "",
-		"format-disconnected": "󰤮",
-		"format-disabled": "󰤫",
-		"format-linked": "test",
+		"format-wifi": "{icon} ",
+		"format-ethernet": " ",
+		"format-disconnected": "󰤮 ",
+		"format-disabled": "󰤫 ",
+		"format-linked": "󰩟 ",
 		// tooltip
 		"tooltip": true,
 		"tooltip-format": "Interface: {ifname}\nIp: {ipaddr}/{cidr}\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
