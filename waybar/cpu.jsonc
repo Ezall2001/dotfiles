@@ -2,6 +2,20 @@
 	"cpu": {
 		"interval": 10,
 		"tooltip": true,
-		"format": "{usage}% "
+		"format": " {usage}"
+	},
+	"temperature#cpu": {
+		"interval": 10,
+		"thermal-zone": 6,
+		"critical-thershold": 80,
+		"format": "{temperatureC}°C",
+		"tooltip": false
+	},
+	"group/cpu": {
+		"orientation": "horizontal",
+		"modules": [
+			"cpu",
+			"temperature#cpu"
+		]
 	}
 }
