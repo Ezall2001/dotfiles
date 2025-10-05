@@ -1,0 +1,15 @@
+{
+	"mpris": {
+		"interval": 5,
+		"title-len": 30,
+		"ellipsis": "󰨿 ",
+		"ignored-players": [],
+		"player-icons": {
+			"mpd": "󰦚",
+			"firefox": "󰈹",
+			"default": ""
+		},
+		"format": "{player_icon} {title}",
+		"tooltip-format": "Player: {player}\nTitle: {title}\nAlbum: {album}\nArtist: {artist}\nPosition: {position}/{length}"
+	}
+}
