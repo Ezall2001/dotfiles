@@ -1,0 +1,25 @@
+{
+	"custom/gpu-usage": {
+		"interval": 10,
+		"return-type": "json",
+		"exec": ".config/scripts/waybar/waybar_gpu usage",
+		"hide-empty-text": true,
+		"format": "<span size = '12000'>󰾲</span> {text}",
+		"tooltip": false
+	},
+	"custom/gpu-temp": {
+		"interval": 10,
+		"return-type": "json",
+		"exec": ".config/scripts/waybar/waybar_gpu temp",
+		"hide-empty-text": true,
+		"format": "{text}°C",
+		"tooltip": false
+	},
+	"group/gpu": {
+		"orientation": "horizontal",
+		"modules": [
+			"custom/gpu-usage",
+			"custom/gpu-temp"
+		]
+	}
+}

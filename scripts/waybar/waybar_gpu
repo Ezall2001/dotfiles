@@ -1,0 +1,39 @@
+#!/usr/bin/env nu
+
+def usage [] {
+	let data = nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader
+	| str replace ' ' ''
+	| from csv --noheaders
+	| rename usage 
+	| get usage
+	| first
+
+	{
+		text: $data
+		alt: ""
+		tooltip: ""
+		class: "gpu-usage"
+		percentage: 0
+	} | to json -r
+}
+
+def temp [] {
+	let data = nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits,noheader
+	| str replace ' ' ''
+	| from csv --noheaders
+	| rename temp
+	| get temp
+	| first
+
+	{
+		text: $data
+		alt: ""
+		tooltip: ""
+		class: "gpu-temp"
+		percentage: 0
+	} | to json -r
+}
+
+def main [] {}
+def 'main usage' [] {usage}
+def 'main temp' [] {temp}
