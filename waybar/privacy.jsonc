@@ -1,0 +1,27 @@
+{
+	"privacy": {
+		"icon-spacing": 6,
+		"icon-size": 14,
+		"transition-duration": 0,
+		"expand": false,
+		"ignore-monitor": true,
+		"modules": [
+			{
+				"type": "screenshare",
+				"tooltip": true,
+				"tooltip-icon-size": 16
+			},
+			{
+				"type": "audio-in",
+				"tooltip": true,
+				"tooltip-icon-size": 16
+			}
+		],
+		"ignore": [
+			{
+				"type": "audio-in",
+				"name": "cava"
+			}
+		]
+	}
+}
