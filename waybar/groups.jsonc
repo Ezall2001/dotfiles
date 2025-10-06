@@ -1,0 +1,39 @@
+{
+	"group/left": {
+		"orientation": "horizontal",
+		"modules": [
+			"image#arch",
+			"clock",
+			"systemd-failed-units",
+			"privacy"
+		]
+	},
+	"group/center-left": {
+		"orientation": "horizontal",
+		"modules": [
+			"network",
+			"bluetooth",
+			"battery",
+			"memory",
+			"group/cpu",
+			"group/gpu"
+		]
+	},
+	//"image#pc-mode"
+	"group/center": {
+		"orientation": "horizontal",
+		"modules": []
+	},
+	"group/center-right": {
+		"orientation": "horizontal",
+		"modules": []
+	},
+	"group/right": {
+		"orientation": "horizontal",
+		"modules": [
+			"cava",
+			"mpris",
+			"pulseaudio"
+		]
+	}
+}
