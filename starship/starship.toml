@@ -67,7 +67,7 @@ format = '[@$hostname ](bold italic fg:username_text bg:username_bg)'
 ## DIR
 [directory]
 use_os_path_sep = false
-truncation_symbol = ' /'
+truncation_symbol = '󰩀/'
 home_symbol = ' '
 read_only = '┃ 󰏮 '
 read_only_style = 'bold fg:directory_text bg:directory_bg'
@@ -143,7 +143,7 @@ style = 'bg:fill_bg'
 [status]
 disabled = false
 success_symbol = '🚀'
-symbol = '🤯'
+symbol = '[](bold bg:status_bg fg:status_red)'
 not_executable_symbol = '❌'
 not_found_symbol = '❓'
 sigint_symbol = '💣'
