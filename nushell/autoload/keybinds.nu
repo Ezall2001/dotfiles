@@ -58,7 +58,7 @@ $env.config.keybindings = [
 	{
 		name: history_menu
 		modifier: control
-		keycode: char_y
+		keycode: char_t
 		mode: [vi_insert vi_normal]
 		event: {
 			until: [
@@ -73,6 +73,19 @@ $env.config.keybindings = [
 		keycode: char_r
 		mode: [vi_insert vi_normal]
 		event: { send: executehostcommand cmd: 'exec nu -e "print reloaded"'}
+	}
+	{
+		name: copy_cmdline
+		modifier: control
+		keycode: char_y
+		mode: [vi_insert vi_normal]
+		event: [
+			{ edit: MoveToStart }
+			{ edit: InsertString value: "r#'" }
+			{ edit: MoveToEnd }
+			{ edit: InsertString value: "'# | str trim | clipse -c" }
+			{ send: Enter }
+		]
 	}
 	{
 		name: fzf_nav_cd
