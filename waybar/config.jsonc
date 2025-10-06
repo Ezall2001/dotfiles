@@ -1,36 +1,40 @@
-// TODO: add cava, bluetooth, power-profile,
-// privacy(for when mic is on unknowingly), clock, custom, hyprland,
-// pulse-audio , image, mpd, mpris, systemd, temperature, tray, upower,
-// wireplumber, workspaces
-// TODO: add animation to the entire bar when bat <= 10
 {
+	//config
+	"name": "HDMI-A-1",
 	"layer": "top",
 	"position": "top",
-	"height": 20,
-	"spacing": 2,
+	"height": 30,
+	"spacing": 0,
 	"mode": "dock",
 	"start_hidden": false,
 	"reload_style_on_change": true,
+	// imports
 	"include": [
 		"./battery.jsonc",
 		"./cpu.jsonc",
+		"./gpu.jsonc",
 		"./memory.jsonc",
 		"./image.jsonc",
-		"./network.jsonc"
+		"./network.jsonc",
+		"./clock.jsonc",
+		"./mpris.jsonc",
+		"./pulseaudio.jsonc",
+		"./cava.jsonc",
+		"./bluetooth.jsonc",
+		"./systemd.jsonc",
+		"./groups.jsonc",
+		"./privacy.jsonc"
 	],
-	"modules-left": [],
+	// layout
+	"modules-left": [
+		"group/left"
+	],
 	"modules-center": [
-		"group/hardware"
+		"group/center-left",
+		"group/center",
+		"group/center-right"
 	],
-	"modules-right": [],
-	"group/hardware": {
-		"orientation": "horizontal",
-		"modules": [
-			"image#pc-mode",
-			"cpu",
-			"memory",
-			"battery",
-			"network"
-		]
-	}
+	"modules-right": [
+		"group/right"
+	]
 }
