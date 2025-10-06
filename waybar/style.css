@@ -1,0 +1,66 @@
+/* global */
+window#waybar {
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	font-family: 'JetBrainsMono Nerd Font';
+	font-size: 14px;
+}
+
+.modules-left {
+	padding-left: 6px;
+}
+
+.modules-right {
+	padding-right: 6px;
+}
+
+
+label.module {
+	padding: 0 6px;
+}
+
+tooltip {
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+}
+
+tooltip label {
+	color: white;
+}
+
+/* specific */
+/* image */
+#image.arch {
+	padding-right: 6px;
+}
+
+#image.pc-mode {
+	padding: 0 6px;
+}
+
+/* cpu */
+#cpu {
+	padding-right: 0;
+}
+
+/* gpu */
+#custom-gpu-usage {
+	padding-right: 0;
+}
+
+/* privacy */
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: .2; }
+	100% { opacity: 1; }
+}
+
+#privacy {
+	padding-left: 6px;
+	animation: blink 3s ease-in-out infinite;
+}
+
+/* bluetooth */
+#bluetooth {
+	padding-right: 8px;
+}
