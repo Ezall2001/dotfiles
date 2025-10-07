@@ -1,0 +1,10 @@
+starship: theme-icons
+hyprlock: theme-icons-font
+hyprland: theme-font
+ghostty: theme-font
+nushell: theme-icons
+cava: theme
+tmux: theme-icons
+waybar: theme-icons-font
+fastfetch: theme-icons
+zen: font
