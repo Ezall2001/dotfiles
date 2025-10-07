@@ -1,0 +1,2 @@
+main: JetBrainsMono Nerd Font
+color-icon: Fluent Emoji Color
