@@ -1,0 +1,148 @@
+## Note
+structure icons like scrollbars, seperators, ..., are not included
+
+# network
+wifi: 󰤯 󰤟 󰤢 󰤥 󰤨
+ethernet: 
+disconnected: 󰤮
+disabled: 󰤫
+linked (no ip): 󰩟
+
+# battery
+draining: 󰁺 󰁻 󰁼 󰁽 󰁾 󰁿 󰂀 󰂁 󰂂 󰁹
+charging: 󰢜 󰂆 󰂇 󰂈 󰢝 󰂉 󰢞 󰂊 󰂋 󰂅
+
+# clock
+time: 󰥔
+chrono: 󱎫
+
+# hardware
+cpu: 
+gpu: 󰢮
+ram: 
+disk: 
+headset: 
+bluetooth-headset: 󰥰
+bluetooth-speaker: 󰦢
+
+# bluetooth
+connected: 󰂱
+not-connected: 󰂯
+off: 󰂲
+connected-device-battery: 󰥉
+
+# audio
+mic: 󰍬
+mic-muted: 󰍭
+volume:   
+muted: 
+
+# programming
+bug: 
+debug: 
+warn: 
+hint: 󱩌
+info: 󰋼
+error: 
+trace: 
+success: 🚀
+not_found:❓
+not_executable: ❌
+kill_signal: 💣
+array: 
+boolean: 
+class: 🎩
+constant: 󰏿
+constructor: 
+enum: 
+event: 
+field: 󰐱
+function: 󰡱
+interface: 
+key: 
+module: 
+namespace: 󰦮
+null: 󰟢
+number: 󰎠
+object: 
+operator: 
+string: 
+database: 󰆼
+type: 
+variable: 🌊
+
+# git
+branch: 
+repository: 
+tag: 🔖
+rebase: 󰓂
+merge: 
+cherry_pick: 󱁂
+bisect: 󱂅
+conflicted: 
+stashed: 󰘓
+repo-ahead = 󱃭
+repo-behind: 󱃩
+repo-diverged: 󰾷
+file-untracked: 󱙔
+file-staged: 󰎝
+file-modified: 󱞂
+file-deleted: 󱙒
+file-renamed: 󰚹
+added: 
+modified: 
+ignored: 
+removed: 
+renamed: 
+
+# general actions
+undo: 󰕍
+
+# rights
+root: 󰡗
+no-write: 󰏮
+
+# apps
+firefox: 󰈹
+mpd: 󰦚
+bash: $
+lua: 
+js: 
+python: 󱔎
+
+# files
+file: 󰈔
+dir_closed: 
+dir_open: 
+
+# text
+truncated: 󰩀 󰨿
+conceal: 󰇘
+wrap: ↪
+extend: 
+precede: 
+fold:  
+tab: ┃
+space: ·
+
+# other
+command: 
+down: 
+up: 
+input: 󰥻
+search: 
+history: 
+completion: 
+help: 
+pointer: 
+multi-line-pointer: 
+transparent-background: ░▒▓
+home: 
+install: 
+toggle: 󰒉 
+
+# special
+hyperlock: 🌀 🧙🏻‍♂️
+starship: 📜
+sfzf: 🐕‍🦺
+fzf_nav: 
