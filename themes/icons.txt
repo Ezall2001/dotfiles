@@ -45,6 +45,12 @@ hint: 󱩌
 info: 󰋼
 error: 
 trace: 
+todo: 
+note: 
+fix: 
+performance: #clock.chrono
+test: 󰙨
+hack: 
 success: 🚀
 not_found:❓
 not_executable: ❌
@@ -112,6 +118,8 @@ python: 󱔎
 
 # files
 file: 󰈔
+new_file: 
+unknown_file: 󰡯
 dir_closed: 
 dir_open: 
 
@@ -122,6 +130,7 @@ wrap: ↪
 extend: 
 precede: 
 fold:  
+fold_lines: 󰡏
 tab: ┃
 space: ·
 
