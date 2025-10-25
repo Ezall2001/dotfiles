@@ -76,6 +76,13 @@ string: 
 database: 󰆼
 type: 
 variable: 🌊
+unit: 
+text: 
+color: 󰏘
+reference: 󰓹
+keyword: 󰝨
+value: 
+snippet: 
 
 # git
 branch: 
@@ -149,6 +156,7 @@ transparent-background: ░▒▓
 home: 
 install: 
 toggle: 󰒉 
+done: #other.toggle.1
 
 # special
 hyperlock: 🌀 🧙🏻‍♂️
