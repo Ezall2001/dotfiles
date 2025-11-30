@@ -39,7 +39,7 @@ osc-color-report-format = 16-bit
 app-notifications = true
 gtk-single-instance = false
 gtk-wide-tabs = true
-desktop-notifications = true
+desktop-notifications = false
 
 term = xterm-ghostty
 auto-update = off
