@@ -85,6 +85,7 @@ value: 
 snippet: 
 
 # git
+git: 󰊢
 branch: 
 repository: 
 tag: 🔖
@@ -102,6 +103,9 @@ file-staged: 󰎝
 file-modified: 󱞂
 file-deleted: 󱙒
 file-renamed: 󰚹
+line-deleted: ━
+line-added/upated: ┃
+line-untracked = ┆
 added: 
 modified: 
 ignored: 
@@ -161,5 +165,5 @@ done: #other.toggle.1
 # special
 hyperlock: 🌀 🧙🏻‍♂️
 starship: 📜
-sfzf: 🐕‍🦺
+sfzf - nvim-telescope: 🐕‍🦺
 fzf_nav: 
