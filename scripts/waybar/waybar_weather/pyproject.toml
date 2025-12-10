@@ -1,0 +1,15 @@
+[project]
+	name = "waybar_weather"
+	version = "0.1.0"
+	requires-python = ">=3.10,<3.15"
+	dependencies = [
+		"pyinstaller (>=6.17.0,<7.0.0)",
+		"requests (>=2.32.5,<3.0.0)",
+		"python-dotenv (>=1.2.1,<2.0.0)",
+		"prettytable (>=3.17.0,<4.0.0)",
+		"tabulate[wcwidth] (>=0.9.0,<0.10.0)",
+	]
+
+[tool.poetry]
+	[tool.poetry.scripts]
+		main = "waybar_weather.__main__:main"
