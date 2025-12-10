@@ -16,6 +16,14 @@ charging: 󰢜 󰂆 󰂇 󰂈 󰢝 󰂉 󰢞 󰂊 󰂋 󰂅
 time: 󰥔
 chrono: 󱎫
 
+# weather
+temperature: 
+sunny: 
+partly_cloudy: 
+partly_cloudy_rainy: 
+rainy: 
+cloudy: 󰅟
+
 # hardware
 cpu: 
 gpu: 󰢮
