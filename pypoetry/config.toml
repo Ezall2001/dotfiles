@@ -1,0 +1,14 @@
+system-git-client = true
+
+[installer]
+	parallel = true
+	re-resolve = true
+
+[virtualenvs]
+	create = true
+	in-project = true
+	use-poetry-python = false
+
+	[virtualenvs.options]
+		always-copy = false
+		no-pip = false
