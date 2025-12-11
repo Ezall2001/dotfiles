@@ -1,22 +1,15 @@
 #!/usr/bin/env -S nu --stdin
 
+use ../upath lookup
 
 const default_config_path = '~/.config/kdl/kdlfmt.kdl'
 
-	def config_from_flag [path:string]: nothing -> string {
+def config_from_flag [path:string]: nothing -> string {
 	if ($path | path exists) {$path} else {$default_config_path}
 }
 
 def config_from_path [path:string]: nothing -> string {
-	mut rolling_path = $path | path dirname | path expand
-
-	while $rolling_path != '/' {
-		let conf_path = $rolling_path | path join 'kdlfmt.kdl'
-		if ($conf_path | path exists) {return $conf_path}
-		$rolling_path = $rolling_path | path dirname
-	}
-
-	return $default_config_path
+	lookup 'kdlfmt.kdl' $path | default $default_config_path
 }
 
 
