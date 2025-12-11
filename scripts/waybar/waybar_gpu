@@ -4,7 +4,7 @@ def usage [] {
 	let data = nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader
 	| str replace ' ' ''
 	| from csv --noheaders
-	| rename usage 
+	| rename usage
 	| get usage
 	| first
 
