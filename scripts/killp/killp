@@ -1,0 +1,26 @@
+#!/usr/bin/env -S nu --stdin
+
+export def main [name?:string, --print (-p), --regex (-r), --all (-a), --force (-f)]: [
+nothing -> table
+nothing -> table
+] {
+	let _name = if $name != null { $name } else { $in }
+
+	let filtred = if $regex { ps | where name =~ $_name } else { ps | where name == $_name }
+
+	let procs = if $all { $filtred } else {
+		try { $filtred | sort-by pid | last } catch { [] }
+	}
+
+	if $print or ($procs | is-empty) { return $procs }
+
+	let pids = $procs | get pid
+
+	if $force {
+		$pids | each { kill -9 $in }
+	} else {
+		$pids | each { kill $in }
+	}
+
+	return $procs
+}
