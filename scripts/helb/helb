@@ -10,10 +10,10 @@ def handle_stdin [stdin?: string] {
 def handle_cmd_arg [cmd:list<string>, external:bool, source: bool, hcmd?: string] {
 	let base_cmd = $cmd | first
 
-  let type = try { which $base_cmd | first | get type }
-  if $type == null { print 'command not found'; return null }
+	let type = try { which $base_cmd | first | get type }
+	if $type == null { print 'command not found'; return null }
 
-  if $type == 'external' or $external {
+	if $type == 'external' or $external {
 		handle_extern_cmd $cmd $hcmd
 	} else if $type in ['built-in', 'alias', 'custom'] {
 		handle_internal_cmd $cmd $source $type
@@ -36,8 +36,8 @@ def handle_extern_cmd [cmd:list<string>, hcmd?: string] {
 
 
 export def main [...cmd, --external (-e), --source (-s), --hcmd (-c): string]: [
-  string -> nothing
-  nothing -> nothing
+	string -> nothing
+	nothing -> nothing
 ] {
 	if ($cmd | is-empty) {
 		handle_stdin $in
