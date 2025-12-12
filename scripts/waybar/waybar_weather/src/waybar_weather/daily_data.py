@@ -1,12 +1,10 @@
 from __future__ import annotations
 
-import json
+from datetime import date, datetime, time, timedelta
 
 import requests
 
-from datetime import time, datetime, timedelta, date
-
-from waybar_weather.lib import get_loc, format_url, DATE_FORMAT, TIME_FORMAT, CONDITIONS_STR
+from waybar_weather.lib import CONDITIONS_STR, DATE_FORMAT, TIME_FORMAT, format_url, get_loc
 
 
 class DayData:
