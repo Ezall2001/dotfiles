@@ -1,1 +1,4 @@
-export def style [str:string style:string] { $'(ansi $style)($str)(ansi rst)' }
+export def style [str:string ...styles] {
+	let style = $styles | each {ansi $in} | str join ''
+	$'($style)($str)(ansi rst)'
+}
