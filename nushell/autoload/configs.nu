@@ -18,6 +18,22 @@ $env.PROMPT_INDICATOR_VI_INSERT = ""
 $env.PROMPT_INDICATOR_VI_NORMAL = ""
 
 # comletion
+let completer = {|spans|
+	carapace $spans.0 nushell ...$spans | from json
+}
+
+$env.config.completions = {
+	algorithm: "fuzzy"
+	sort: "smart"
+	case_sensitive: false
+	quick: true
+	partial: true
+	use_ls_colors: true
+	external: {
+		enable: true
+		completer: $completer
+	}
+}
 
 # terminal integration
 $env.config.use_kitty_protocol = true
@@ -64,12 +80,3 @@ $env.config.filesize = {
 $env.config.render_right_prompt_on_last_line = false
 $env.config.float_precision = 3
 $env.config.ls.use_ls_colors = true
-
-# hooks
-# keybinds
-# menus
-# plugins
-# theme
-$env.config.highlight_resolved_externals = true #
-
-
