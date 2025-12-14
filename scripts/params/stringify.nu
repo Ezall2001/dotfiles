@@ -1,5 +1,5 @@
-export def main [params:record] {
-	$params
+export def main [params:record, --join (-j)] {
+	let _params = $params
 	| transpose key val
 	| where val != null
 	| each {|r|
@@ -8,5 +8,7 @@ export def main [params:record] {
 		} else {
 			$'--($r.key)=($r.val)'
 		}
-	} | str join ' '
+	}
+
+	if $join {$_params | str join ' '} else {$_params}
 }
