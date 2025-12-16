@@ -1,6 +1,6 @@
-from waybar_weather.lib import safe, load_env
 from waybar_weather.daily_data import get_daily_data
 from waybar_weather.hourly_data import get_hourly_data
+from waybar_weather.lib import load_env, safe
 from waybar_weather.result import Results
 
 

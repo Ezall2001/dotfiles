@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 from prettytable import PrettyTable, TableStyle
 
@@ -22,26 +23,26 @@ def pango_space(n: int):
 	return ' ' * n
 
 
-def format_text(daily: list[DayData] | None):
-	if daily is None:
+def format_text(hourly: list[HourData] | None):
+	if hourly is None:
 		return 'something went wrong'
 
-	today = daily[0]
-	icon = CONDITIONS_ICONS[today.condition]
+	now = hourly[datetime.now().hour]
+	icon = CONDITIONS_ICONS[now.condition]
 
-	return f'{icon} {today.feels_like}°C'
+	return f'{icon} {now.feels_like}°C'
 
 
-def tooltip_today(today: DayData):
-	icon = CONDITIONS_ICONS[today.condition]
+def tooltip_today(today: DayData, now: HourData):
+	icon = CONDITIONS_ICONS[now.condition]
 	feels_like = (
-		f'<span size="30000" color="{FEELS_LIKE_COLOR}"><tt>{icon}</tt>  {today.feels_like}°C</span>'
+		f'<span size="30000" color="{FEELS_LIKE_COLOR}"><tt>{icon}</tt>  {now.feels_like}°C</span>'
 	)
 	high = f'<span color="{HIGH_COLOR}"><b>High:</b></span> {today.high}°C'
 	low = f'<span color="{LOW_COLOR}"><b>Low:</b></span> {today.low}°C'
 
 	condition = (
-		f'<span size="20000" color="{CONDITION_COLOR}"><u>{CONDITIONS_STR[today.condition]}</u></span>'
+		f'<span size="20000" color="{CONDITION_COLOR}"><u>{CONDITIONS_STR[now.condition]}</u></span>'
 	)
 	rain = f'<b>Precipitation:</b> {today.precip}mm ({today.precip_prob}% chance)'
 	humidity = f'<b>Humidity:</b> {today.humidity}%'
@@ -105,12 +106,16 @@ def format_tooltip(daily: list[DayData] | None, hourly: list[HourData] | None):
 	daily_section = "Could not retrieve daily's data"
 	hourly_section = "Could not retrieve today's data"
 
+	if daily is not None and hourly is not None:
+		now = hourly[datetime.now().hour]
+		today_section = tooltip_today(daily[0], now)
+
 	if daily is not None:
-		today_section = tooltip_today(daily[0])
 		daily_section = tooltip_daily(daily[1:])
 
 	if hourly is not None:
-		hourly_section = tooltip_hourly(hourly)
+		buckets = hourly[::4] + [hourly[-1]]
+		hourly_section = tooltip_hourly(buckets)
 
 	return str.format('{}\n\n{}\n\n{}', today_section, hourly_section, daily_section)
 
@@ -120,7 +125,7 @@ class Results:
 	text: str
 
 	def __init__(self, daily: list[DayData] | None, hourly: list[HourData] | None):
-		self.text = format_text(daily)
+		self.text = format_text(hourly)
 		self.tooltip = format_tooltip(daily, hourly)
 
 	def to_json(self):
