@@ -1,0 +1,16 @@
+#!/usr/bin/env -S nu --stdin
+
+use ../../sfzf
+
+def get_params [buffer:string] {
+	{
+		query: $buffer
+		height: 20%
+		list-border: rounded
+	}
+}
+
+def main [buffer='':string]: string -> string {
+	let params = get_params $buffer
+	$in | sfzf --params $params
+}
