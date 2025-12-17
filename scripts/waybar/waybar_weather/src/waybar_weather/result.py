@@ -14,27 +14,28 @@ from waybar_weather.lib import (
 	HIGH_COLOR,
 	LOW_COLOR,
 	TEMP_ICON,
+	get_condition_icon,
 )
 
-RAIN_ICON = CONDITIONS_ICONS[-1]
+RAIN_ICON = CONDITIONS_ICONS[4]
 
 
 def pango_space(n: int):
 	return ' ' * n
 
 
-def format_text(hourly: list[HourData] | None):
-	if hourly is None:
+def format_text(daily: list[DayData] | None, hourly: list[HourData] | None):
+	if hourly is None or daily is None:
 		return 'something went wrong'
 
 	now = hourly[datetime.now().hour]
-	icon = CONDITIONS_ICONS[now.condition]
+	icon = get_condition_icon(now.condition, daily[0].sunrise, daily[0].sunset)
 
 	return f'{icon} {now.feels_like}°C'
 
 
 def tooltip_today(today: DayData, now: HourData):
-	icon = CONDITIONS_ICONS[now.condition]
+	icon = get_condition_icon(now.condition, today.sunrise, today.sunset)
 	feels_like = (
 		f'<span size="30000" color="{FEELS_LIKE_COLOR}"><tt>{icon}</tt>  {now.feels_like}°C</span>'
 	)
@@ -125,7 +126,7 @@ class Results:
 	text: str
 
 	def __init__(self, daily: list[DayData] | None, hourly: list[HourData] | None):
-		self.text = format_text(hourly)
+		self.text = format_text(daily, hourly)
 		self.tooltip = format_tooltip(daily, hourly)
 
 	def to_json(self):

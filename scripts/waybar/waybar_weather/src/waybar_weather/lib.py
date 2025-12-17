@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, time
 from typing import Callable, TypeVar
 
 import requests
@@ -22,7 +22,7 @@ CONDITIONS_STR = [
 ]
 
 TEMP_ICON = ''
-CONDITIONS_ICONS = ['', '', '', '󰅟', '']
+CONDITIONS_ICONS = [['', ''], ['', ''], ['', ''], '', '']
 STATE_DIR = os.getenv('XDG_STATE_HOME')
 HEADER_COLOR = '#bd93f9'
 FEELS_LIKE_COLOR = '#fff0f9'
@@ -30,6 +30,16 @@ LOW_COLOR = '#8be9fd'
 HIGH_COLOR = '#FF2E66'
 CONDITION_COLOR = '#ead3c1'
 LOG_FILE = os.path.join(STATE_DIR or 'tmp', 'waybar', 'weather.log')
+
+
+def get_condition_icon(condition: int, sunrise: time, sunset: time):
+	if condition == 3 or condition == 4:
+		return CONDITIONS_ICONS[condition]
+
+	now = datetime.now().time()
+	phase_idx = 1 if now >= sunset or now < sunrise else 0
+
+	return CONDITIONS_ICONS[condition][phase_idx]
 
 
 def load_env():
