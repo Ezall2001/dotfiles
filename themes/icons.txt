@@ -18,11 +18,14 @@ chrono: 󱎫
 
 # weather
 temperature: 
-sunny: 
-partly_cloudy: 
-partly_cloudy_rainy: 
+cloudy: 
 rainy: 
-cloudy: 󰅟
+day_clear: 
+day_partly_cloudy: 
+day_partly_cloudy_rain: 
+night_clear: 
+night_partly_couldy: 
+night_partly_cloudy_rain: 
 
 # hardware
 cpu: 
