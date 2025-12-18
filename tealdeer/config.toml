@@ -1,0 +1,44 @@
+[display]
+	compact = false
+	use_pager = true
+	show_title = true
+
+[updates]
+	auto_update = true
+	auto_update_interval_hours = 720
+	archive_source = "https://github.com/tldr-pages/tldr/releases/latest/download/"
+	tls_backend = "rustls-with-webpki-roots"
+	download_languages = ["en"]
+
+[search]
+	languages = ["en"]
+	platforms = ["current", "common", "all"]
+
+[style.description]
+	underline = false
+	bold = false
+	italic = true
+
+[style.command_name]
+	foreground = "red"
+	underline = false
+	bold = true
+	italic = false
+
+[style.example_text]
+	foreground = "blue"
+	underline = true
+	bold = true
+	italic = false
+
+[style.example_code]
+	foreground = "cyan"
+	underline = false
+	bold = false
+	italic = false
+
+[style.example_variable]
+	foreground = "green"
+	underline = false
+	bold = false
+	italic = true
