@@ -125,6 +125,8 @@ renamed: 
 
 # general actions
 undo: 󰕍
+sort_asc: 
+sort_desc: 
 
 # rights
 root: 󰡗
@@ -144,6 +146,8 @@ new_file: 
 unknown_file: 󰡯
 dir_closed: 
 dir_open: 
+restore: 󰙰
+delete: 󰗨
 
 # text
 truncated: 󰩀 󰨿
