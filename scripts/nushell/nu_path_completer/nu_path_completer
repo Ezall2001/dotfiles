@@ -1,0 +1,31 @@
+#!/usr/bin/env nu
+
+use preview.nu
+use filters.nu
+use consts.nu [BINDS INPUT_GETTER DEFAULT_STATE]
+use ../../sfzf [main get_state update_state]
+use params/mod.nu [get_params]
+use input.nu [get_input]
+use output.nu [get_output]
+use ../../ucommandline
+
+
+def 'main _filter dir' [] { filters dir }
+def 'main _filter hidden' [] { filters hidden }
+def 'main _filter ignored' [] { filters ignored }
+def 'main _filter absolute' [] { filters absolute }
+def 'main _filter start' [start:string] { filters start $start }
+def 'main _update input' [] { get_input }
+def 'main _preview' [selected:string] { preview $selected }
+
+
+def main [buffer='':string, pos=0:int, state?:record] {
+	let state = $DEFAULT_STATE | merge ($state | default {})
+	update_state $state {}
+
+	let cursor_str = ucommandline get $buffer $pos
+	let params = get_params $state $cursor_str.string
+	let selected = get_input | sfzf $INPUT_GETTER --binds $BINDS --params $params
+
+	get_output $buffer $cursor_str $selected
+}
