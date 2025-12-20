@@ -1,0 +1,9 @@
+[project]
+	name = "ucommandline"
+	version = "0.1.0"
+	requires-python = ">=3.10,<3.15"
+	dependencies = ["pyinstaller (>=6.17.0,<7.0.0)"]
+
+[tool.poetry]
+	[tool.poetry.scripts]
+		main = "ucommandline.__main__:main"

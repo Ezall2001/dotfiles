@@ -1,0 +1,66 @@
+#:schema https://raw.githubusercontent.com/astral-sh/ruff/refs/heads/main/ruff.schema.json
+
+builtins = []
+cache-dir = "dist/.ruff_cache"
+include = ["*.py"]
+exclude = [
+	".bzr",
+	".direnv",
+	".eggs",
+	".git",
+	".git-rewrite",
+	".hg",
+	".mypy_cache",
+	".nox",
+	".pants.d",
+	".pytype",
+	".ruff_cache",
+	".svn",
+	".tox",
+	".venv",
+	"__pypackages__",
+	"_build",
+	"buck-out",
+	"dist",
+	"node_modules",
+	"venv",
+]
+fix = true
+unsafe-fixes = false
+indent-width = 2
+line-length = 100
+output-format = "full"
+preview = false
+respect-gitignore = true
+show-fixes = false
+src = ['.', 'src']
+
+[analyze]
+	detect-string-imports = false
+	direction = 'dependencies'
+	preview = false
+	type-checking-imports = true
+
+
+[format]
+	docstring-code-format = true
+	docstring-code-line-length = "dynamic"
+	indent-style = "tab"
+	line-ending = "auto"
+	preview = false
+	quote-style = "single"
+	skip-magic-trailing-comma = false
+
+[lint]
+	dummy-variable-rgx = '^_$'
+	future-annotations = false
+	preview = false
+	select = ["E", "F"]
+	ignore = []
+	task-tags = ["TODO", "FIX", "NOTE"]
+	typing-extensions = true
+
+	[lint.flake8-quotes]
+		inline-quotes = "single"
+		docstring-quotes = "single"
+		multiline-quotes = "single"
