@@ -5,7 +5,7 @@ $env.config.history.isolation = false
 
 # misc
 $env.config.show_banner = false
-$env.config.rm.always_trash = true
+$env.config.rm.always_trash = false
 
 # command editor
 $env.config.edit_mode = "vi"
