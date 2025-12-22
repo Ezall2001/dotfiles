@@ -1,7 +1,7 @@
 # history
 $env.config.history.file_format = 'sqlite'
 $env.config.history.sync_on_enter = true
-$env.config.history.isolation = false
+$env.config.history.isolation = true
 
 # misc
 $env.config.show_banner = false
