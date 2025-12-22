@@ -7,5 +7,6 @@ export def get_params [state:record query:string] {
 		header-label: 'actions'
 		accept-nth: 1
 		preview: 'nu_path_completer _preview {}'
+		scheme: path
 	}
 }
