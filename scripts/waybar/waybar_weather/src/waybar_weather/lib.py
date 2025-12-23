@@ -19,10 +19,11 @@ CONDITIONS_STR = [
 	'Clear',
 	'Overcast',
 	'Rain, Overcast',
+	'Rain',
 ]
 
 TEMP_ICON = ''
-CONDITIONS_ICONS = [['', ''], ['', ''], ['', ''], '', '']
+CONDITIONS_ICONS = [['', ''], ['', ''], ['', ''], '', '', '']
 STATE_DIR = os.getenv('XDG_STATE_HOME')
 HEADER_COLOR = '#bd93f9'
 FEELS_LIKE_COLOR = '#fff0f9'

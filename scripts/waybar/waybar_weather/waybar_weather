@@ -1,5 +1,5 @@
 #!/usr/bin/env nu
 
 def main [] {
-	./dist/waybar_weather
+	~/.config/scripts/waybar/waybar_weather/dist/waybar_weather
 }

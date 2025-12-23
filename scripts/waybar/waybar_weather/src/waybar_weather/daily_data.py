@@ -36,7 +36,7 @@ class DayData:
 		self.condition = CONDITIONS_STR.index(data['conditions'])
 
 
-def _get_daily_data() -> list[DayData] | None:
+def get_daily_data() -> list[DayData] | None:
 	loc = get_loc()
 
 	if loc is None:
@@ -54,10 +54,3 @@ def _get_daily_data() -> list[DayData] | None:
 	data = res.json()
 
 	return list(map(DayData, data['days']))
-
-
-def get_daily_data() -> list[DayData] | None:
-	try:
-		return _get_daily_data()
-	except Exception:
-		return None
