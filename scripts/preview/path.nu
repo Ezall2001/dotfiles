@@ -7,16 +7,28 @@ def dir [] {
 	}
 }
 
+const IMG_EXT = [jpg png]
 def img [cols:oneof<int,string> rows:oneof<int,string>] {
 	{|path|
 		let type = $path | path type
 		if $type != file {return}
 
 		let ext = $path | path parse | get extension
-		const img_ext = [jpg png]
-		if $ext not-in $img_ext {return}
+		if $ext not-in $IMG_EXT {return}
 
 		exec timg -C -W --pixelation kitty $'-g($cols)x($rows)' $path
+	}
+}
+
+const IGNORE_EXT = [zip]
+def ignore [] {
+	{|path|
+		let type = $path | path type
+		let ext = $path | path parse | get extension
+		if $type != file {return}
+		if $ext in $IGNORE_EXT {
+			exec echo 'ignored file'
+		}
 	}
 }
 
@@ -37,6 +49,7 @@ export def main [
 	$env.config.use_ansi_coloring = true
 
 	let handlers = [
+		(ignore)
 		(dir)
 		(img $cols $rows)
 		(rest_files $cols)
@@ -48,4 +61,3 @@ export def main [
 		return $res
 	}
 }
-
