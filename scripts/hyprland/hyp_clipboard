@@ -1,0 +1,31 @@
+#!/usr/bin/env nu
+
+const class = 'ghostty.clipse'
+const window_rule = '[float; size 500 700; move 100%-w-5 100%-w-5]'
+
+def get_clipboard [] {
+	try {wl-paste} catch {''}
+}
+
+def 'main clipse' []: nothing -> nothing {
+	let prv_active_pid = hyprctl -j activewindow | from json | get pid
+
+	let prv_val = get_clipboard
+	ghostty --class=($class) -e "clipse"
+	let val = get_clipboard
+
+	if $val == $prv_val {return null}
+
+	hyprctl dispatch sendshortcut CTRL SHIFT, V, pid:($prv_active_pid)
+}
+
+
+export def main []: [nothing -> nothing] {
+	let is_spawned = hyprctl clients | rg $'class: ($class)' | collect | is-empty | not $in
+
+	if ($is_spawned) {
+		hyprctl dispatch focuswindow class:($class)
+	} else {
+		hyprctl dispatch -- exec $window_rule hyp_clipboard clipse
+	}
+}
