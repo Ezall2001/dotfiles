@@ -1,0 +1,7 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_hyp_write]
+
+def main [str:string pid?:int] {
+	_hyp_write $str $pid
+}
