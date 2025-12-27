@@ -127,6 +127,7 @@ renamed: 
 undo: 󰕍
 sort_asc: 
 sort_desc: 
+copy: 󰆏
 
 # rights
 root: 󰡗
