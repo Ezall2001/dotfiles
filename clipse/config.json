@@ -1,6 +1,11 @@
 {
 	"allowDuplicates": false,
 	"maxHistory": 100,
+	"deleteAfter": 0,
+	"pollInterval": 50,
+	"maxEntryLength": 50,
+	"enableMouse": false,
+	"enableDescription": true,
 	"historyFile": "~/.local/state/clipse/clipboard_history.json",
 	"logFile": "~/.local/share/clipse/clipse.log",
 	"tempDir": "~/.cache/clipse/tmp_files",
@@ -8,16 +13,16 @@
 	"keyBindings": {
 		"up": "k",
 		"down": "j",
-		"start": "G",
-		"end": "g",
 		"nextPage": "l",
 		"prevPage": "h",
+		"home": "g",
+		"end": "G",
 		"clearSelected": "c",
-		"selectSingle": "v",
-		"selectDown": "ctrl+j",
-		"selectUp": "ctrl+k",
+		"selectSingle": "",
+		"selectDown": "tab",
+		"selectUp": "shift+tab",
 		"togglePin": "p",
-		"togglePinned": "tab",
+		"togglePinned": "P",
 		"choose": "enter",
 		"filter": "/",
 		"yankFilter": "y",
@@ -25,12 +30,26 @@
 		"remove": "x",
 		"more": "?",
 		"quit": "q",
-		"home": "home"
+		"forceQuit": "esc"
 	},
 	"imageDisplay": {
 		"type": "kitty",
 		"scaleX": 20,
 		"scaleY": 20,
 		"heightCut": 2
-	}
+	},
+	"autoPaste": {
+		"enabled": false,
+		"keybind": "ctrl+v",
+		"buffer": 10
+	},
+	"excludedApps": [
+		"1Password",
+		"Bitwarden",
+		"KeePassXC",
+		"LastPass",
+		"Dashlane",
+		"Password Safe",
+		"Keychain Access"
+	]
 }
