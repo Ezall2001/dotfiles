@@ -17,7 +17,7 @@ def 'main clipse' []: nothing -> nothing {
 	ghostty --class=($class) -e "clipse"
 	let val = get_clipboard
 
-	if ($val == $prv_val) or (active_client | is-empty) {return null}
+	if ($val == $prv_val) or ($active_client | is-empty) {return null}
 	hyp_write $val $active_client.pid
 }
 
