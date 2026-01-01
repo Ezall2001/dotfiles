@@ -1,5 +1,5 @@
 const class = 'ghostty.emoji'
-const window_rule = '[float; size 500 700; move 100%-w-5 100%-w-5]'
+const window_rule = '[float; size 500 700; move (monitor_w-window_w-7) (monitor_h-window_h-7)]'
 
 export def _main [] {
 	let is_spawned = hyprctl clients | rg $'class: ($class)' | collect | is-empty | not $in
