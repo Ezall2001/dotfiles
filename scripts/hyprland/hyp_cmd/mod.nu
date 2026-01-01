@@ -7,6 +7,8 @@ export def _main [] {
 	lunch_selector
 
 	let cmd_name = open $IPC_FILE | str trim
+	if $cmd_name == '' { return }
+
 	let cmd = get_cmds | where name == $cmd_name | first
 
 	if $cmd == null {
