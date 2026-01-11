@@ -1,5 +1,5 @@
 - hyprland: 0.53
 - neovim: 0.11
-- ghostty: 1.1.3
+- ghostty: 1.2.3
 - nushell: 0.100
 - ly: 1.3
