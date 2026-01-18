@@ -1,12 +1,21 @@
 use ./defs [get_cmds]
-use ./selector.nu [lunch_selector]
-use ./consts.nu [IPC_FILE]
+use ../hyp_menu [main]
+use ./params.nu [get_params]
+use ../../sfzf [main]
+
+def select [] {
+	let cmds = get_cmds
+	let input = $cmds | get name | str join "\n"
+	let params = get_params
+
+	$input | sfzf --params $params
+}
 
 
-export def _main [] {
-	lunch_selector
 
-	let cmd_name = open $IPC_FILE | str trim
+export def _menu [] {
+	let cmd_name = select
+
 	if $cmd_name == '' { return }
 
 	let cmd = get_cmds | where name == $cmd_name | first
@@ -17,6 +26,10 @@ export def _main [] {
 	}
 
 	do $cmd.exec
+}
+
+export def _main [] {
+	hyp_menu [hyp_cmd _menu] hyp_cmd
 }
 
 export def main [] { _main }
