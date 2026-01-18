@@ -1,0 +1,7 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main set unset]
+
+def main [] {_main}
+def 'main set' [] {set}
+def 'main unset' [] {unset}
