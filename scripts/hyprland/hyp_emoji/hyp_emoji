@@ -1,24 +1,8 @@
 #!/usr/bin/env nu
 
-use ../../sfzf [main]
-use ../hyp_write [main]
 use ./actions.nu [copy]
-use ./input.nu [get_input]
-use ./params.nu [get_params]
-use ./consts.nu [BINDS]
-use ./mod.nu [_main]
-
-
-def 'main _sfzf' [pid:int] {
-	let params = get_params
-	let output = get_input |
-	sfzf --params $params --binds $BINDS |
-	lines | str join " "
-
-	if $pid == -1 {return}
-	hyp_write $output $pid
-}
-
-def 'main _action copy' [...selected] {copy $selected}
+use ./mod.nu [_main _menu]
 
 def main [] { _main }
+def 'main _menu' [address?:string] { _menu $address }
+def 'main _action copy' [...selected] { copy $selected }

@@ -1,16 +1,25 @@
-const class = 'ghostty.emoji'
-const window_rule = '[float; size 500 700; move (monitor_w-window_w-7) (monitor_h-window_h-7)]'
+use ../hyp_menu [main]
+use ../../sfzf [main]
+use ./input.nu [get_input]
+use ./params.nu [get_params]
+use ./consts.nu [BINDS]
+
+export def _menu [address?:string] {
+	let params = get_params
+
+	let output = get_input |
+	sfzf --params $params --binds $BINDS |
+	lines | str join " "
+
+	if $address == null {return}
+	hyp_write $output $address
+}
 
 export def _main [] {
-	let is_spawned = hyprctl clients | rg $'class: ($class)' | collect | is-empty | not $in
 	let active_client = hyprctl -j activewindow | from json
-	let pid = if ($active_client | is-empty) {-1} else {$active_client.pid}
+	let address = if ($active_client | is-empty) {''} else {$active_client.address}
 
-	if ($is_spawned) {
-		hyprctl dispatch focuswindow class:($class)
-	} else {
-		hyprctl dispatch -- exec $window_rule $"ghostty --class=($class) -e 'hyp_emoji _sfzf ($pid)'"
-	}
+	hyp_menu [hyp_emoji _menu $address] hyp_emoji
 }
 
 export def main [] { _main }
