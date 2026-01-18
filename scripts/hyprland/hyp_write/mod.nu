@@ -1,33 +1,33 @@
-def paste_strategy [pid:int str:string] {
+def paste_strategy [address:string str:string] {
 	$str | clipse -c
-	hyprctl dispatch focuswindow pid:($pid)
-	hyprctl dispatch sendshortcut CTRL SHIFT, V, pid:($pid)
+	hyprctl dispatch focuswindow address:($address)
+	hyprctl dispatch sendshortcut CTRL SHIFT, V, address:($address)
 }
 
-def wtype_strategy [pid:int str:string] {
-	hyprctl dispatch focuswindow pid:($pid)
+def wtype_strategy [address:string str:string] {
+	hyprctl dispatch focuswindow address:($address)
 	wtype $str
 }
 
-def get_active_pid [] {
-	hyprctl activewindow -j | from json | get pid
+def get_active_address [] {
+	hyprctl activewindow -j | from json | get address
 }
 
-export def _hyp_write [str:string pid?:int] {
-	let pid = $pid | default (get_active_pid)
+export def _hyp_write [str:string address?:string] {
+	let pid = $address | default (get_active_address)
 
 	let client = hyprctl clients -j | from json |
-	where pid == $pid | first
+	where address == $address | first
 
 	if ($client | is-empty) { return }
 
 	if ($client.class == 'com.mitchellh.ghostty') {
-		paste_strategy $pid $str
+		paste_strategy $address $str
 	} else {
-		wtype_strategy $pid $str
+		wtype_strategy $address $str
 	}
 }
 
-export def main [str:string pid?:int] {
-	_hyp_write $str $pid
+export def main [str:string address?:string] {
+	_hyp_write $str $address
 }
