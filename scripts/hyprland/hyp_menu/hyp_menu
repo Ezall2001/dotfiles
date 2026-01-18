@@ -1,0 +1,5 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main]
+
+def main [cmd:list<string> title:string params={}:record] {_main $cmd $title $params}
