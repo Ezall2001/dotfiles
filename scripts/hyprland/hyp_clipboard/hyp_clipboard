@@ -1,0 +1,6 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main _clipse]
+
+def main [] { _main }
+def 'main _clipse' [address?:string] {_clipse $address}
