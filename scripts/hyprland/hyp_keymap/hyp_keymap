@@ -1,0 +1,6 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main _menu]
+
+def main [] { _main }
+def 'main _menu' [] { _menu }
