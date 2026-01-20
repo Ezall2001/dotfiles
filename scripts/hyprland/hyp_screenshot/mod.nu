@@ -24,7 +24,6 @@ def copy_path [name:string] {
 }
 
 export def _main [mode: string, active:bool]: [nothing -> nothing] {
-	hyprctl dispatch submap reset
 	init
 
 	let name = get_name
