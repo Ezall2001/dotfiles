@@ -1,0 +1,6 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main _menu]
+
+def main [type:string] { _main $type }
+def 'main _menu' [type:string] {_menu $type}
