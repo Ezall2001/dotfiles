@@ -1,0 +1,5 @@
+export const FILL = ''
+export const BORDER = '󰆢'
+export const FILL_H = ''
+export const FILL_PLUS = '󰐖'
+export const BORDER_PLUS = ''

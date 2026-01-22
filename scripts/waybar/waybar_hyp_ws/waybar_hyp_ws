@@ -1,0 +1,9 @@
+#!/usr/bin/env nu
+
+
+use ./refresh.nu [main]
+use ./mod.nu [_main]
+
+
+def main [col:int] { _main $col }
+def 'main refresh' [] { refresh }
