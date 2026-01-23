@@ -10,3 +10,7 @@ export def monintor_removed_handler [name:string] {
 	reset_vws_cols
 	waybar_hyp_ws refresh
 }
+
+export def active_monitor_change_handler [name:string ws_name:string] {
+	waybar_hyp_ws refresh
+}

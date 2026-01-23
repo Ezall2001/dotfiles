@@ -1,7 +1,7 @@
 use ../hyp_utils [get_socket]
 use ./handlers/window.nu [window_opened_handler window_closed_handler move_window_handler active_window_change_handler]
 use ./handlers/workspace.nu [workspace_changed_handler move_workspace_handler]
-use ./handlers/monitor.nu [monintor_added_handler monintor_removed_handler]
+use ./handlers/monitor.nu [monintor_added_handler monintor_removed_handler active_monitor_change_handler]
 
 
 def handler [event:string] {
@@ -12,6 +12,7 @@ def handler [event:string] {
 	match $name {
 		monitoradded => {monintor_added_handler $args.0}
 		monitorremoved => {monintor_removed_handler $args.0}
+		focusedmon => {active_monitor_change_handler $args.0 $args.1}
 		workspace => {workspace_changed_handler $args.0}
 		moveworkspace => {move_workspace_handler $args.0 $args.1}
 		openwindow => {window_opened_handler $args.0}
