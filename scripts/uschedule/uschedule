@@ -1,0 +1,8 @@
+#!/usr/bin/env nu
+
+use ./wait_until.nu [main]
+
+def main [] {}
+def 'main wait_until' [check_interval:duration check:closure --timeout (-t):duration] {
+	wait_until $check_interval $check --timeout=$timeout
+}
