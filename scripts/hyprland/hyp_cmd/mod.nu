@@ -1,7 +1,8 @@
-use ./defs [get_cmds]
 use ../hyp_menu [main]
 use ./params.nu [get_params]
 use ../../sfzf [main]
+
+export use ./defs [get_cmds]
 
 def select [] {
 	let cmds = get_cmds
