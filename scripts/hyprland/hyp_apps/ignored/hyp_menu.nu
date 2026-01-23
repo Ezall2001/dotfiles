@@ -1,6 +1,8 @@
-export def main [] {
+export def main [title:string] {
 	{
-		name: 'hyp menu'
-		check: {|client| $client.title == 'hyp_menu'}
+		name: $'hyp menu ($title)'
+		check: {|client|
+			$client.class == 'com.mitchellh.ghostty' and $client.title == $title
+		}
 	}
 }
