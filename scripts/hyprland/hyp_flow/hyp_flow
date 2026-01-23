@@ -1,0 +1,15 @@
+#!/usr/bin/env nu
+
+use ./focus.nu [main]
+use ./pull.nu [main]
+use ./push.nu [main]
+use ./change_vws_col.nu [main]
+
+def main [] {}
+
+def 'main focus' [row:int type:string] {focus $row $type}
+def 'main pull' [row:int type:string] { pull $row $type }
+def 'main push' [addr?:string] { push $addr }
+def 'main change_vws_col' [new_col:int row?:int type?:string] {
+	change_vws_col $new_col $row $type
+}
