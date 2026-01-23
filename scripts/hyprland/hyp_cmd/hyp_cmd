@@ -1,6 +1,9 @@
 #!/usr/bin/env nu
 
 use ./mod.nu [_main _menu]
+use ../hyp_init [init_waybar]
 
 def main [] { _main }
+
 def 'main _menu' [] {_menu}
+def 'main init_waybar' [] {init_waybar}
