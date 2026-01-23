@@ -1,8 +1,12 @@
-use ./ignored/hyp_menu.nu [main]
+use ./hyp_menu.nu [main]
 
 export def get_ignored [] {
 	[
-		(hyp_menu)
+		(hyp_menu clipse)
+		(hyp_menu hyp_keymap)
+		(hyp_menu hyp_emoji)
+		(hyp_menu hyp_cmd)
+		(hyp_menu hyp_lunch)
 	]
 }
 
