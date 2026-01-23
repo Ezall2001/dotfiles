@@ -1,2 +1,3 @@
-export use ./get_apps.nu *
+export use ./defs *
+export use ./ignored *
 export use ./apply_tags.nu *
