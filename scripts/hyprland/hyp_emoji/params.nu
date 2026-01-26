@@ -10,5 +10,6 @@ export def get_params [] {
 		nth: null
 		input-border: null
 		header-border: horizontal
+		no-separator: true
 	}
 }
