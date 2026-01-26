@@ -1,24 +1,20 @@
-local action_fn = function(fn, action, win_id, args)
-	local callback = function()
-		local winmove = require("winmove")
-		local _win_id = win_id or vim.api.nvim_get_current_win()
-		local _args = args or {}
+local u = require('utils.callback')
 
-		winmove.start_mode(winmove.Mode[action])
-		winmove[fn](_win_id, unpack(_args))
-		winmove.stop_mode()
+local action_fn = function(fn, win_id, args)
+	local winmove = require('winmove')
+	local _args = args or {}
+
+	if win_id == 0 then
+		win_id = vim.fn.win_getid()
 	end
 
-	return callback
+	winmove[fn](win_id, unpack(_args))
 end
 
-local winmove_mode_to_action = function(fn, action)
-	return function(win_id, args)
-		return action_fn(fn, action, win_id, args)
-	end
-end
+local M = {}
 
-return {
-	swap = winmove_mode_to_action("swap_window_in_direction", "Swap"),
-	resize = winmove_mode_to_action("resize_window", "Resize"),
-}
+M.swap = u.mkcb(action_fn, 'swap_window_in_direction')
+M.resize = u.mkcb(action_fn, 'resize_window')
+M.split_into = u.mkcb(action_fn, 'split_into')
+
+return M

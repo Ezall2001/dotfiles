@@ -1,47 +1,33 @@
-local p = require("features.plugins")
-local o = require("features.oil")
+--#selene: allow(mixed_table)
 
-local OIL_KEYMAP_GROUP = vim.api.nvim_create_augroup("oil_keymap", { clear = true })
+local o = require('features.oil')
+local p = require('features.plugins')
 
-local all_buf = function()
-	vim.keymap.set("n", "-", o.invoke)
+local discard_changes_cb = function()
+	require('oil').discard_all_changes()
 end
 
-local oil_buf_only = function(arg)
-	local buf = arg.buf
-	if vim.bo[arg.buf].filetype ~= "oil" then
-		return nil
-	end
-
-	local oil = require("oil")
-	local a = require("oil.actions")
-
-	vim.keymap.set("n", "-", a.parent.callback, { buffer = buf })
-	vim.keymap.set("n", "<C-->", a.open_cwd.callback, { buffer = buf })
-
-	vim.keymap.set("n", "<CR>", a.select.callback, { buffer = buf })
-	vim.keymap.set("n", "<C-CR>", a.select_vsplit.callback, { buffer = buf })
-
-	vim.keymap.set("n", "<C-p>", a.preview.callback, { buffer = buf })
-	vim.keymap.set("n", "<C-t>", a.toggle_trash.callback, { buffer = buf })
-	vim.keymap.set("n", "<C-n>", a.change_sort.callback, { buffer = buf })
-
-	vim.keymap.set("n", "<C-u>", oil.discard_all_changes, { buffer = buf })
-
-	vim.keymap.set("n", "<C-c>", a.open_cmdline.callback, { buffer = buf })
-	vim.keymap.set("n", "<C-d>", a.cd.callback, { buffer = buf })
+local normal_buf = function()
+	vim.keymap.set('n', '-', o.invoke)
 end
 
-local plugin_cb = function(_)
-	all_buf()
+local oil_buf = {
+	['-'] = { 'actions.parent', mode = 'n' },
+	['<C-->'] = { 'actions.open_cwd', mode = 'n' },
+	['<CR>'] = { 'actions.select', mode = 'n' },
+	['<C-z>'] = { 'actions.select', mode = 'n', opts = { vertical = true } },
+	['<C-v>'] = { 'actions.select', mode = 'n', opts = { horizontal = true } },
+	['<C-p>'] = { 'actions.preview', mode = 'n' },
+	['<C-t>'] = { 'actions.toggle_trash', mode = 'n' },
+	['<C-n>'] = { 'actions.change_sort', mode = 'n' },
+	['<C-u>'] = { p.on_plugin_register('oil', discard_changes_cb), mode = 'n' },
+	['<C-m>'] = { 'actions.open_cmdline', mode = 'n' },
+	['<C-d>'] = { 'actions.cd', mode = 'n' },
+}
 
-	vim.api.nvim_create_autocmd("Filetype", {
-		group = OIL_KEYMAP_GROUP,
-		pattern = "oil",
-		callback = oil_buf_only,
-	})
-end
-
-return function()
-	p.on_plugin_register("oil", plugin_cb)
-end
+return {
+	init = function()
+		p.on_plugin_register('oil', normal_buf)
+	end,
+	oil_buf = oil_buf,
+}

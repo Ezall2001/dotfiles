@@ -1,5 +1,60 @@
+local p = require('features.plugins')
+local m = require('keymap.lib').map
+local u = require('utils.callback')
+
 local dev = function()
-	vim.keymap.set("n", "<M-d>r", require("features.dev.source_curr"))
+	m({
+		'n',
+		'<leader>/r',
+		require('features.dev.source_curr'),
+		{ desc = 'source current lua file' },
+	})
 end
 
-return dev
+local telescope = function()
+	local t = require('features.telescope').pickers.dev
+
+	m({
+		'n',
+		'<leader>/h',
+		t.help,
+		{ desc = 'telescope find help tags' },
+	})
+
+	m({
+		'n',
+		'<leader>/i',
+		t.highlights,
+		{ desc = 'telescope list highlights' },
+	})
+
+	m({
+		'n',
+		'<leader>/au',
+		t.autocommands,
+		{ desc = 'telescope list autocommands' },
+	})
+
+	m({
+		'n',
+		'<leader>/kb',
+		u.mkcb(t.keymaps, true),
+		{ desc = 'telescope list buffer keymaps' },
+	})
+
+	m({
+		'n',
+		'<leader>/kw',
+		u.mkcb(t.keymaps, false),
+		{ desc = 'telescope list workspace keymaps' },
+	})
+end
+
+local M = {}
+
+M.init = function()
+	dev()
+	p.on_plugin_register('telescope', telescope)
+end
+
+return M

@@ -1,7 +1,6 @@
-return {
-	init = function()
-		require("features.oil.oil_on_vim_enter")()
-	end,
+local M = {}
 
-	invoke = require("features.oil.invoke"),
-}
+M.invoke = require("features.oil.invoke")
+M.project = require("features.oil.project")
+
+return M

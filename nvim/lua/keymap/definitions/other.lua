@@ -1,4 +1,25 @@
-local other = function() end
-vim.keymap.set("n", "<C-s>", "<Cmd>write<CR>")
+local m = require('keymap.lib').map
 
-return other
+local other = function()
+	m({
+		{ 'n', 'i' },
+		'<C-s>',
+		'<Cmd>write<CR>',
+		{
+			desc = 'write buffer',
+			silent = true,
+		},
+	})
+
+	m({
+		'n',
+		'<Esc>',
+		'<Cmd>nohlsearch<CR><Esc>',
+		{
+			desc = 'Escape, remove search highlight',
+			silent = true,
+		},
+	})
+end
+
+return { init = other }

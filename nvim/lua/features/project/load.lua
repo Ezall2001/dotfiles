@@ -1,25 +1,21 @@
-local c = require("constants")
-local p = require("features.plugins")
+local cl = require('features.project.constants')
+local u = require('features.project.utils')
 
-local ressurect_obsession = function()
-	local project_path = vim.g.project_path
-	local filepath = vim.fs.joinpath(project_path, "Session.vim")
-
-	if vim.fn.filereadable(filepath) ~= 1 then
-		return
+local load_components = function()
+	for _, cp in ipairs(cl.load_components) do
+		cp.project.load()
 	end
-
-	vim.cmd(":source " .. filepath)
 end
 
-local attach_project = function()
-	local root = vim.fn.getcwd()
-	local project_path = vim.fs.find(c.project_dir, {
-		type = "directory",
-		path = root,
-		upward = true,
-		follow = true,
-	})[1]
+local fallback_components = function()
+	for _, cp in ipairs(cl.fallback_components) do
+		cp.project.fallback()
+	end
+end
+
+local attach_project_path = function()
+	local cwd = vim.fn.getcwd()
+	local project_path = u.search_project(cwd)
 
 	if project_path == nil then
 		return false
@@ -29,15 +25,26 @@ local attach_project = function()
 	return true
 end
 
-local load_project = function()
-	local is_attached = attach_project()
-
+--NOTE: for some reason this has to be either async or delayed a bit ????
+local load_cb = function(is_attached)
 	if not is_attached then
-		vim.notify("no project dir found", vim.log.levels.INFO)
+		vim.notify('no project dir found', vim.log.levels.INFO)
+		vim.defer_fn(fallback_components, 10)
 		return
 	end
 
-	p.on_plugin_register("obsession", ressurect_obsession)
+	vim.defer_fn(load_components, 10)
+end
+
+local load_project = function()
+	local is_attached = attach_project_path()
+
+	vim.api.nvim_create_autocmd('VimEnter', {
+		once = true,
+		callback = function()
+			load_cb(is_attached)
+		end,
+	})
 end
 
 return load_project

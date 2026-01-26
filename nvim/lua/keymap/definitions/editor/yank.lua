@@ -1,0 +1,115 @@
+local p = require('features.plugins')
+local m = require('keymap.lib').map
+
+local yank = function()
+	m({
+		{ 'n', 'v' },
+		'y',
+		'<Plug>(YankyYank)',
+		{ desc = 'yank (preserve cursor pos)' },
+	})
+
+	m({
+		'n',
+		'Y',
+		'<Plug>(YankyYank)$',
+		{ desc = 'yank to end of line (preserve cursor pos)' },
+	})
+
+	m({
+		{ 'n', 'v' },
+		'<leader>y',
+		[["+<Plug>(YankyYank)]],
+		{ desc = 'yank to clipboard' },
+	})
+	m({
+		'n',
+		'<leader>Y',
+		[["+<Plug>(YankyYank)$]],
+		{ desc = 'yank to end of line to clipboard' },
+	})
+end
+
+local put = function()
+	m({
+		'n',
+		'p',
+		'<Plug>(YankyPutAfter)',
+		{ desc = 'put after cursor (auto-indent)' },
+	})
+	m({
+		'n',
+		'P',
+		'<Plug>(YankyPutBefore)',
+		{ desc = 'put before cursor (auto-indent)' },
+	})
+	m({
+		'v',
+		'p',
+		[["_d<Plug>(YankyPutBeforeFilter)]],
+		{ desc = 'replace selection keeping register content (auto-indent)' },
+	})
+
+	m({
+		'n',
+		'[p',
+		'<Plug>(YankyPreviousEntry)',
+		{ desc = 'yanky cycle previous entry' },
+	})
+	m({
+		'n',
+		']p',
+		'<Plug>(YankyNextEntry)',
+		{ desc = 'yanky cycle next entry' },
+	})
+end
+
+local yanky = function()
+	local l = require('yanky.textobj').last_put
+	m({
+		'n',
+		'<leader>pv',
+		l,
+		{ desc = 'yanky select last put' },
+	})
+end
+
+local telescope = function()
+	local t = require('telescope').extensions.yank_history
+
+	m({
+		'n',
+		'<leader>pt',
+		t.yank_history,
+		{ desc = 'telescope open yank history' },
+	})
+end
+
+local M = {}
+
+M.yanky_telescope_picker = function()
+	local mapping = require('yanky.telescope.mapping')
+
+	local mappings = {
+		default = mapping.put('p'),
+		i = {
+			['<c-x>'] = mapping.delete(),
+		},
+		n = {
+			p = mapping.put('p'),
+			P = mapping.put('P'),
+			x = mapping.delete(),
+		},
+	}
+
+	return mappings
+end
+
+M.init = function()
+	yank()
+	put()
+	p.on_plugin_register('yanky', yanky)
+	p.on_plugin_register('telescope', telescope)
+end
+
+return M

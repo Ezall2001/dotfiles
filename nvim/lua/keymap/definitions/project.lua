@@ -1,8 +1,19 @@
 local p = require("features.project")
+local m = require("keymap.lib").map
 
 local project = function()
-	vim.keymap.set("n", "<M-p>p", p.create)
-	vim.keymap.set("n", "<M-p>d", p.delete)
+	m({
+		"n",
+		"<Leader>/pc",
+		p.create,
+		{ desc = "create project (.nivm)" },
+	})
+	m({
+		"n",
+		"<Leader>/pd",
+		p.delete,
+		{ desc = "delete project (.nvim)" },
+	})
 end
 
-return project
+return { init = project }
