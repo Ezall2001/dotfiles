@@ -10,7 +10,13 @@ def not_focusable_derivitive [vws:record] {
 	}
 }
 
-def focusable_derivitive [col:int state:record vws:record focused_vws:record active_vws:record] {
+def focusable_derivitive [
+	col:int
+	state:record
+	vws:record
+	focused_vws:oneof<record,nothing>
+	active_vws:oneof<record,nothing>
+] {
 	let has_own = has_own_window $vws $state $col
 	let has_foreign = has_foreign $vws $col $has_own
 	let is_focused = is_focused $vws $focused_vws
@@ -25,7 +31,13 @@ def focusable_derivitive [col:int state:record vws:record focused_vws:record act
 	}
 }
 
-export def main [col:int state:record vws:record focused_vws:record active_vws:record] {
+export def main [
+	col:int
+	state:record
+	vws:record
+	focused_vws:oneof<record,nothing>
+	active_vws:oneof<record,nothing>
+] {
 	let derivitive = if $vws.col != $col {
 		not_focusable_derivitive $vws
 	} else {

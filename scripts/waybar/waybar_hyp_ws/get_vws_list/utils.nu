@@ -21,10 +21,18 @@ export def has_foreign [vws:record col:int has_own:bool] {
 	| length | $in > $expected
 }
 
-export def is_active [vws:record active_vws:record] {
-	$vws.row == $active_vws.row and $vws.col == $active_vws.col and $vws.type == $active_vws.type
+export def is_active [vws:record active_vws:oneof<record,nothing>] {
+	if $active_vws == null {
+		false
+	} else {
+		$vws.row == $active_vws.row and $vws.col == $active_vws.col and $vws.type == $active_vws.type
+	}
 }
 
-export def is_focused [vws:record focused_vws:record] {
-	$vws.row == $focused_vws.row and $vws.type == $focused_vws.type
+export def is_focused [vws:record focused_vws:oneof<record,nothing>] {
+	if $focused_vws == null {
+		false
+	} else {
+		$vws.row == $focused_vws.row and $vws.type == $focused_vws.type
+	}
 }
