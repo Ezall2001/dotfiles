@@ -1,0 +1,17 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main]
+use ./menu [_menu]
+use ./menu/input.nu [get_input]
+use ./menu/actions.nu [set_brightness]
+use ./controls.nu [increase decrease increase_mon decrease_mon]
+
+def main [name?:string pct?:int] { _main $name $pct }
+def 'main increase' [name:string pct:int] {increase $name $pct}
+def 'main decrease' [name:string pct:int] {decrease $name $pct}
+def 'main increase_mon' [pct:int --name(-n):string] {increase_mon $pct --name=$name}
+def 'main decrease_mon' [pct:int --name(-n):string] {decrease_mon $pct --name=$name}
+
+def 'main _menu' [] {_menu}
+def 'main _input' [] {get_input}
+def 'main _action set_brightness' [name:string pct:int] {set_brightness $name $pct}
