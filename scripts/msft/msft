@@ -1,0 +1,15 @@
+#!/usr/bin/env nu
+
+use mod.nu [_msft]
+use actions.nu [group sort delete restore]
+use input.nu [get_input]
+use preview.nu [_preview]
+
+def main [--group] {_msft $group}
+
+def 'main _action group' [] {group}
+def 'main _action sort' [by:string] {sort $by}
+def 'main _action delete' [...selected] {delete $selected}
+def 'main _action restore' [...selected --cwd] {restore $selected --cwd=$cwd}
+def 'main _input' [] { get_input }
+def 'main _preview' [path='':string trash_path='':string] { _preview $path $trash_path }
