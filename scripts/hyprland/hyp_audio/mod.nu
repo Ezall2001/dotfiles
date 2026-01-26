@@ -25,6 +25,7 @@ def get_params [] {
 	{
 		with-nth: '{2}'
 		accept-nth: '{1}'
+		input-border: top
 	}
 }
 
