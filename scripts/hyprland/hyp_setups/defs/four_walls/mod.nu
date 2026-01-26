@@ -1,7 +1,7 @@
 use ../../utils/col_rule.nu [make_col_priority_rule]
 
 const devices = [
-	{ name:builtin_kbd type:keyboard backlight:'asus::kbd_backlight'}
+	{name:builtin_kbd type:keyboard backlight:'asus::kbd_backlight'}
 ]
 
 const monitors = [
