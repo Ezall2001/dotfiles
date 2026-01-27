@@ -7,6 +7,8 @@ export def get_ignored [] {
 		(hyp_menu hyp_emoji)
 		(hyp_menu hyp_cmd)
 		(hyp_menu hyp_lunch)
+		(hyp_menu hyp_secondary_vws_manager)
+		(hyp_menu hyp_backlight)
 	]
 }
 
