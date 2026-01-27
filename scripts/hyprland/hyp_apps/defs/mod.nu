@@ -4,7 +4,6 @@ use tmux.nu [main]
 use obsidian.nu [main]
 use ghostty.nu [main]
 use zen.nu [main]
-use test.nu [main]
 
 # NOTE: order matters
 export def get_apps [] {
@@ -16,6 +15,5 @@ export def get_apps [] {
 		(obsidian)
 		(zen)
 		(ghostty)
-		(test)
 	]
 }
