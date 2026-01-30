@@ -13,5 +13,5 @@ export def get_ignored [] {
 }
 
 export def is_ignored [client:record] {
-	get_ignored | where (do $it.check $client) | length | $in > 0
+	get_ignored | where (do $it.check $client) | is-not-empty
 }
