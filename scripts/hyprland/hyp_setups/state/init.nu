@@ -32,5 +32,3 @@ export def main [] {
 
 	$state | save -f $HYP_SETUP_STATE_FILE
 }
-
-#TODO: change_vws_window

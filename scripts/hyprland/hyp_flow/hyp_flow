@@ -5,6 +5,10 @@ use ./pull.nu [main]
 use ./push.nu [main]
 use ./change_vws_col.nu [main]
 
+use ./secondary_vws [_menu main]
+use ./secondary_vws/actions.nu
+use ./secondary_vws/input.nu [get_input]
+
 def main [] {}
 
 def 'main focus' [row:int type:string] {focus $row $type}
@@ -13,3 +17,9 @@ def 'main push' [addr?:string] { push $addr }
 def 'main change_vws_col' [new_col:int row?:int type?:string] {
 	change_vws_col $new_col $row $type
 }
+
+def 'main secondary_vws' [] {secondary_vws}
+def 'main secondary_vws _menu' [] {_menu}
+def 'main secondary_vws _input' [] {get_input}
+def 'main secondary_vws _action push_pull' [addr:string] {actions push_pull $addr}
+def 'main secondary_vws _action make_primary' [addr:string] {actions make_primary $addr}
