@@ -22,7 +22,6 @@ export def remove_secondary_vws [row:int] {
 	let removed_vws = $state.secondary_vws_list | last
 
 	let windows = $state.windows | each {tmp_update_window $in $row}
-	print ($windows | table -e)
 
 	update_state {
 		secondary_vws_list: $secondary_vws_list
