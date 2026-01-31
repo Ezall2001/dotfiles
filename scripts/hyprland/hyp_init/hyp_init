@@ -2,4 +2,4 @@
 
 use ./mod.nu [_main]
 
-export def main [] { _main }
+def main [] { _main }

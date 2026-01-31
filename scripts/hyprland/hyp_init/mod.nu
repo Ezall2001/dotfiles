@@ -15,4 +15,4 @@ export def _main [] {
 	init_focus
 }
 
-export def main [] {}
+export def main [] {_main}
