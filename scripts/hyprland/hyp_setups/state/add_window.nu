@@ -1,7 +1,7 @@
 use ../utils [get_state update_state]
 use ../get_setup.nu [main]
 use ../../hyp_utils [get_window_primary_vws_ring get_vws_attached_window]
-use ./secondary_vws.nu [add_secondary_vws]
+use ./secondary_vws [add_secondary_vws]
 use ../../hyp_apps [is_ignored]
 
 ## PRIMARY

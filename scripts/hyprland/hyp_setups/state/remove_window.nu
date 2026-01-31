@@ -1,5 +1,5 @@
 use ../utils [get_state update_state]
-use ./secondary_vws.nu [remove_secondary_vws]
+use ./secondary_vws [remove_secondary_vws]
 
 export def main [addr:string] {
 	let state = get_state
@@ -11,6 +11,7 @@ export def main [addr:string] {
 		remove_secondary_vws $win.attached.row
 	}
 
+	let state = get_state
 	let rest = $state.windows | where address != $addr
 
 	update_state {windows: $rest}

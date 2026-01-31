@@ -1,6 +1,6 @@
 use ../utils [get_state update_state]
 use ../get_setup.nu [main]
-use ./secondary_vws.nu [remove_secondary_vws]
+use ./secondary_vws [remove_secondary_vws]
 use ../../hyp_utils [get_ws_name col_to_mon]
 
 

@@ -1,6 +1,6 @@
-use ../utils [get_state update_state]
-use ../get_setup.nu [main]
-use ../../hyp_utils [mon_to_col get_ws_name]
+use ../../utils [get_state update_state]
+use ../../get_setup.nu [main]
+use ../../../hyp_utils [mon_to_col get_ws_name]
 
 export def add_secondary_vws [col?:int] {
 	let setup = get_setup
@@ -20,18 +20,5 @@ export def add_secondary_vws [col?:int] {
 
 	let ws_name = get_ws_name $vws.row secondary
 	#TODO: create workspace
-	$vws
-}
-
-
-export def remove_secondary_vws [row:int] {
-	#TODO: update vws rows  < row
-	let state = get_state
-
-	let new_list = $state.secondary_vws_list | where row != $row
-	let vws = $state.secondary_vws_list | where row == $row
-	update_state {secondary_vws_list: $new_list} $state
-
-	#TODO: destroy the workspaces
 	$vws
 }
