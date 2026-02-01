@@ -7,19 +7,22 @@ export def get_brightness [name:string]: nothing -> oneof<int,nothing> {
 	} catch {null}
 }
 
-export def set_brightness [name:string pct:int]: nothing -> nothing {
+export def set_brightness [name:string pct:int]: nothing -> bool {
 	let pct = $pct | into_pct
-	brightnessctl -d $name s $pct | ignore
+	try {
+		brightnessctl -d $name s $pct | ignore
+		true
+	} catch {false}
 }
 
-export def increase_brightness [name:string step:int]: nothing -> nothing {
+export def increase_brightness [name:string step:int]: nothing -> bool {
 	let curr = (get_brightness $name) | default (-1)
 	if $curr == (-1) {return}
 
 	set_brightness $name ($curr + $step)
 }
 
-export def decrease_brightness [name:string step:int]: nothing -> nothing {
+export def decrease_brightness [name:string step:int]: nothing -> bool {
 	let curr = get_brightness $name | default (-1)
 	if $curr == (-1) {return}
 

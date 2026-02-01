@@ -1,8 +1,7 @@
-use ./utils.nu [set_brightness]
 use ../hyp_menu [main]
 
 export use ./controls.nu [increase decrease increase_mon decrease_mon]
-export use ./utils.nu [get_brightness]
+export use ./utils.nu [get_brightness set_brightness]
 
 export def _main [name?:string pct?:int] {
 	if $name == null or $pct == null {
