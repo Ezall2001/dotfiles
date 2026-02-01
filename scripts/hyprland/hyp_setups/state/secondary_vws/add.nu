@@ -1,6 +1,6 @@
 use ../../utils [get_state update_state]
 use ../../get_setup.nu [main]
-use ../../../hyp_utils [mon_to_col get_ws_name]
+use ../../../hyp_utils [mon_to_col get_ws_name col_to_mon]
 
 export def add_secondary_vws [col?:int] {
 	let setup = get_setup
@@ -19,6 +19,8 @@ export def add_secondary_vws [col?:int] {
 	update_state {secondary_vws_list: $new_list} $state
 
 	let ws_name = get_ws_name $vws.row secondary
-	#TODO: create workspace
+	let mon_name = col_to_mon $col $setup
+
+	hyprctl keyword workspace name:($ws_name), persistent:true, monitor:($mon_name)
 	$vws
 }

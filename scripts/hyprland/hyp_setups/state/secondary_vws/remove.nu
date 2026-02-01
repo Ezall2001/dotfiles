@@ -28,6 +28,9 @@ export def remove_secondary_vws [row:int] {
 		windows: $windows
 	} $state
 
-	#TODO: destroy the workspaces
+	let ws_name = get_ws_name $removed_vws.row secondary
+	let id = hyprctl workspaces -j | from json | where name == $ws_name | first | get id
+
+	hyprctl dispatch renameworkspace $id delete
 	$removed_vws
 }
