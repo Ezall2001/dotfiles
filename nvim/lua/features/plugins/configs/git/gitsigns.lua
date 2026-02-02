@@ -12,6 +12,7 @@ local signs = {
 local signs_staged = signs
 
 local preview_config = {
+	border = 'rounded',
 	style = 'minimal',
 	relative = 'cursor',
 	row = 0,

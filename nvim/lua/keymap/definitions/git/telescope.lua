@@ -1,17 +1,7 @@
 ---@diagnostic disable: param-type-mismatch
 
-local p = require('features.plugins')
-
-local gitsigns = function()
-	local gs = require('gitsigns')
-
-	vim.keymap.set('n', '<leader>gsc', function()
-		gs.show()
-	end)
-end
-
 local telescope = function()
-	local t = require('features.telescope').pickers.git
+	-- local t = require('features.telescope.git')
 
 	vim.keymap.set('n', '<leader>gwc', require('telescope.builtin').git_commits)
 
@@ -25,9 +15,4 @@ local telescope = function()
 	vim.keymap.set('n', '<leader>gst', require('telescope.builtin').git_stash)
 end
 
-return {
-	init = function()
-		p.on_plugin_register('gitsigns', gitsigns)
-		p.on_plugin_register('telescope', telescope)
-	end,
-}
+return telescope
