@@ -85,46 +85,4 @@ M.mini_surround = function()
 	}
 end
 
-M.mini_pairs = function()
-	return {
-		['('] = {
-			action = 'open',
-			pair = '()',
-			neigh_pattern = '[^\\].',
-			register = { bs = false },
-		},
-		['['] = {
-			action = 'open',
-			pair = '[]',
-			neigh_pattern = '[^\\].',
-			register = { bs = false },
-		},
-		['{'] = {
-			action = 'open',
-			pair = '{}',
-			neigh_pattern = '[^\\].',
-			register = { bs = false },
-		},
-
-		['"'] = {
-			action = 'open',
-			pair = '""',
-			neigh_pattern = '[^\\].',
-			register = { cr = false, bs = false },
-		},
-		["'"] = {
-			action = 'open',
-			pair = "''",
-			neigh_pattern = '[^%a\\].',
-			register = { cr = false, bs = false },
-		},
-		['`'] = {
-			action = 'open',
-			pair = '``',
-			neigh_pattern = '[^\\].',
-			register = { cr = false, bs = false },
-		},
-	}
-end
-
 return M
