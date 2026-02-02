@@ -46,7 +46,7 @@ local put = function()
 	m({
 		'v',
 		'p',
-		[["_d<Plug>(YankyPutBeforeFilter)]],
+		[["_d<Plug>(YankyPutBefore)]],
 		{ desc = 'replace selection keeping register content (auto-indent)' },
 	})
 
