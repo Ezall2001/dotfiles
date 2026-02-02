@@ -1,5 +1,5 @@
 local create_plugin_event_name = function(name)
-	local pattern = name .. "Registred"
+	local pattern = name .. 'Registred'
 	return pattern
 end
 
