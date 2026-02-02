@@ -14,6 +14,11 @@ local specs = {
 		dependencies = { 'stevearc/oil.nvim' },
 	},
 	{
+		'malewicz1337/oil-git.nvim',
+		name = 'oil_git',
+		dependencies = { 'stevearc/oil.nvim' },
+	},
+	{
 		'ThePrimeagen/harpoon',
 		name = 'harpoon',
 		branch = 'harpoon2',

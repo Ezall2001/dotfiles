@@ -1,13 +1,13 @@
 local buf_options = {
 	buflisted = false,
-	bufhidden = "hide",
+	bufhidden = 'hide',
 }
 
 local win_options = {
 	wrap = true,
-	signcolumn = "no",
+	signcolumn = 'no',
 	cursorcolumn = false,
-	foldcolumn = "0",
+	foldcolumn = '0',
 	spell = false,
 }
 
@@ -23,8 +23,8 @@ local float = {
 	padding = 2,
 	max_width = 0,
 	max_height = 0,
-	border = "rounded",
-	preview_split = "auto",
+	border = 'rounded',
+	preview_split = 'auto',
 	win_options = {
 		winblend = 0,
 	},
@@ -33,18 +33,18 @@ local float = {
 ---@type oil.SetupViewOptions
 local view_options = {
 	show_hidden = true,
-	natural_order = "fast",
+	natural_order = 'fast',
 	case_insensitive = false,
 	sort = {
-		{ "type", "asc" },
-		{ "name", "asc" },
+		{ 'type', 'asc' },
+		{ 'name', 'asc' },
 	},
 }
 
 ---@type oil.SetupPreviewWindowConfig
 local preview_win = {
 	update_on_cursor_moved = true,
-	preview_method = "fast_scratch",
+	preview_method = 'fast_scratch',
 }
 
 ---@type oil.SetupConfirmationWindowConfig
@@ -55,7 +55,7 @@ local confirmation = {
 	max_height = 0.9,
 	min_height = { 5, 0.1 },
 	height = nil,
-	border = "rounded",
+	border = 'rounded',
 	win_options = {
 		winblend = 0,
 	},
@@ -69,8 +69,8 @@ local progress = {
 	max_height = { 10, 0.9 },
 	min_height = { 5, 0.1 },
 	height = nil,
-	border = "rounded",
-	minimized_border = "none",
+	border = 'rounded',
+	minimized_border = 'none',
 	win_options = {
 		winblend = 0,
 	},
@@ -83,11 +83,11 @@ local conf = {
 	skip_confirm_for_simple_edits = true,
 	prompt_save_on_select_new_entry = true,
 	cleanup_delay_ms = 2000,
-	columns = { "icon" },
-	constrain_cursor = "editable",
+	columns = { 'icon' },
+	constrain_cursor = 'editable',
 	watch_for_changes = true,
 	use_default_keymaps = false,
-	keymaps = require("keymap.definitions.oil").oil_buf,
+	keymaps = require('keymap.definitions.oil').oil_buf,
 	buf_options = buf_options,
 	win_options = win_options,
 	lsp_file_methods = lsp_file_methods,
@@ -98,10 +98,10 @@ local conf = {
 	progress = progress,
 
 	ssh = {
-		border = "rounded",
+		border = 'rounded',
 	},
 	keymaps_help = {
-		border = "rounded",
+		border = 'rounded',
 	},
 }
 

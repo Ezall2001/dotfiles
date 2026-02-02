@@ -21,7 +21,12 @@ M.git = {
 	ignored = i(''),
 	removed = i(''),
 	renamed = i(''),
+	file_untracked = i('󱙔'),
+	file_staged = i('󰎝'),
 	file_modified = i('󱞂'),
+	file_deleted = i('󱙒'),
+	file_renamed = i('󰚹'),
+	conflict = i(''),
 }
 
 M.app = {
