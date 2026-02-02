@@ -38,7 +38,7 @@ local resize = function()
 		c.all_map_modes,
 		'<M-C-r>',
 		'<ESC>:wincmd =<CR>',
-		{ desc = 'equalize window sizes', silent = true },
+		{ desc = 'resize windows equally', silent = true },
 	})
 
 	m({
