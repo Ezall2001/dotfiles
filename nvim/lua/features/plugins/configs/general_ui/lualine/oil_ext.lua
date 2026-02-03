@@ -1,22 +1,5 @@
 --#selene: allow(mixed_table)
-
-local ws_path = function()
-	local o = require('oil')
-
-	local dir = o.get_current_dir()
-
-	if dir == nil then
-		return 'error getting dir'
-	end
-
-	local cwd = vim.fn.getcwd()
-
-	if vim.startswith(dir, cwd) then
-		return dir:sub(#cwd + 2)
-	end
-
-	return dir
-end
+local o = require('features.oil')
 
 local cwd = function()
 	return vim.fn.getcwd()
@@ -30,10 +13,19 @@ local project = function()
 	return ''
 end
 
+local dir_component = function()
+	local dir = o.dir()
+	if vim.endswith(dir, '/') then
+		return dir:sub(0, #dir - 1)
+	else
+		return dir
+	end
+end
+
 return {
 	sections = {
 		lualine_a = { project, cwd },
-		lualine_b = { ws_path },
+		lualine_b = { dir_component },
 	},
 	filetypes = { 'oil' },
 }

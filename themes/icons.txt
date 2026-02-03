@@ -142,6 +142,7 @@ js: 
 python: 󱔎
 
 # files
+log: 
 file: 󰈔
 new_file: 
 unknown_file: 󰡯

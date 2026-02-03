@@ -60,6 +60,7 @@ M.file = {
 	new_file = i(''),
 	unknown_file = i('󰡯'),
 	read_only = i('󰏮'),
+	log = i(''),
 }
 
 M.text = {

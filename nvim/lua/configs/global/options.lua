@@ -18,7 +18,8 @@ vim.o.background = 'dark'
 -- ui components
 vim.o.modeline = false
 vim.o.showmode = false
-vim.o.showtabline = 0
+vim.o.showtabline = 1
+vim.o.tabpagemax = 10
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.numberwidth = 4
@@ -407,7 +408,6 @@ vim.o.warn = true
 'smartindent'	  'si'	    smart autoindenting for C programs
 'smarttab'	  'sta'     <Tab> in leading whitespace indents by 'shiftwidth'
 'smoothscroll'	  'sms'     scroll by screen lines when 'wrap' is set
-'softtabstop'	  'sts'     number of columns between two soft tab stops
 'startofline'	  'sol'     commands move cursor to first non-blank in line
 'suffixes'	  'su'	    suffixes that are ignored with multiple match
 'suffixesadd'	  'sua'     suffixes added when searching for a file
@@ -416,9 +416,6 @@ vim.o.warn = true
 'synmaxcol'	  'smc'     maximum column to find syntax items
 'syntax'	  'syn'     syntax to be loaded for current buffer
 'tabclose'	  'tcl'     which tab page to focus when closing a tab
-'tabline'	  'tal'     custom format for the console tab pages line
-'tabpagemax'	  'tpm'     maximum number of tab pages for |-p| and "tab all"
-'tabstop'	  'ts'	    number of columns between two tab stops
 'tagbsearch'	  'tbs'     use binary searching in tags files
 'tagcase'	  'tc'      how to handle case when searching in tags files
 'tagfunc'	  'tfu'	    function to get list of tag matches
