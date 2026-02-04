@@ -1,4 +1,6 @@
-local debounce = function(f, interval, init)
+local u = require('utils.callback')
+
+local debounce = function(f, interval)
 	local timer = vim.loop.new_timer()
 
 	if timer == nil then
@@ -6,13 +8,12 @@ local debounce = function(f, interval, init)
 		return f
 	end
 
-	if init == nil or init then
-		timer:start(interval, 0, vim.schedule_wrap(f))
-	end
+	local wrapper = function(...)
+		local args = { ... }
+		local cb = u.mkcb(f, unpack(args))
 
-	local wrapper = function()
 		timer:stop()
-		timer:start(interval, 0, vim.schedule_wrap(f))
+		timer:start(interval, 0, vim.schedule_wrap(cb))
 	end
 
 	return wrapper
