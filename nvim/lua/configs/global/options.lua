@@ -272,9 +272,6 @@ vim.o.warn = true
 'errorbells'	  'eb'	    ring the bell for error messages
 'errorfile'	  'ef'	    name of the errorfile for the QuickFix mode
 'errorformat'	  'efm'     description of the lines in the error file
-'eventignore'	  'ei'	    autocommand events that are ignored
-'eventignorewin'  'eiw'     autocommand events that are ignored in a window
-'expandtab'	  'et'	    use spaces when <Tab> is inserted
 'exrc'		  'ex'	    read init files in the current directory
 'fileencoding'	  'fenc'    file encoding for multibyte text
 'fileencodings'   'fencs'   automatically detected character encodings

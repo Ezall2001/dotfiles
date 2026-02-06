@@ -1,16 +1,22 @@
 local c = require('features.window.editor_resize.cache')
-local ev = require('features.window.editor_resize.events')
+local editor_ev = require('features.window.editor_resize.events.editor')
 local p = require('features.plugins')
+local window_ev = require('features.window.editor_resize.events.window')
 
 local init = function()
-	c.update_editor_cache()
-
-	vim.api.nvim_create_autocmd({ 'WinResized', 'WinNew', 'WinClosed' }, {
-		callback = ev.on_win_event,
-	})
+	c.update_editor()
+	c.update_layout()
 
 	vim.api.nvim_create_autocmd('VimResized', {
-		callback = ev.on_editor_resize,
+		callback = editor_ev.on_resize,
+	})
+
+	vim.api.nvim_create_autocmd({ 'WinNew', 'WinClosed' }, {
+		callback = window_ev.on_open_close,
+	})
+
+	vim.api.nvim_create_autocmd('WinResized', {
+		callback = window_ev.on_resize,
 	})
 end
 

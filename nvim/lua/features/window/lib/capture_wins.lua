@@ -14,15 +14,25 @@ local capture_win = function(id)
 	return win
 end
 
-local capture_wins = function()
+local capture_tab_wins = function(tab)
 	local wins = {}
-	local ids = vim.api.nvim_tabpage_list_wins(0)
 
-	for _, id in ipairs(ids) do
+	for _, id in ipairs(vim.api.nvim_tabpage_list_wins(tab)) do
 		local win = capture_win(id)
 		if win ~= nil then
 			table.insert(wins, win)
 		end
+	end
+
+	return wins
+end
+
+local capture_wins = function()
+	local wins = {}
+
+	for _, tab in ipairs(vim.api.nvim_list_tabpages()) do
+		local tab_wins = capture_tab_wins(tab)
+		vim.list_extend(wins, tab_wins)
 	end
 
 	return wins
