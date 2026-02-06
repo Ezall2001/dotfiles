@@ -1,0 +1,14 @@
+{
+	"custom/hyp_ws_0": {
+		"exec": "waybar_hyp_ws 0",
+		"interval": "once",
+		"return-type": "json",
+		"signal": 1
+	},
+	"custom/hyp_ws_1": {
+		"exec": "waybar_hyp_ws 1",
+		"interval": "once",
+		"return-type": "json",
+		"signal": 1
+	}
+}

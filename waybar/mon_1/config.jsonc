@@ -1,15 +1,17 @@
 {
 	//config
-	"name": "HDMI-A-1",
+	"name": "eDP-1",
+	"output": ["eDP-1"],
 	"layer": "top",
 	"position": "top",
-	"height": 30,
+	"height": 20,
 	"spacing": 0,
 	"mode": "dock",
 	"start_hidden": false,
 	"reload_style_on_change": true,
 	// imports
 	"include": [
+		"./mon_1/groups.jsonc",
 		"./battery.jsonc",
 		"./cpu.jsonc",
 		"./gpu.jsonc",
@@ -22,19 +24,12 @@
 		"./cava.jsonc",
 		"./bluetooth.jsonc",
 		"./systemd.jsonc",
-		"./groups.jsonc",
-		"./privacy.jsonc"
+		"./privacy.jsonc",
+		"./weather.jsonc",
+		"./hyp_ws.jsonc"
 	],
 	// layout
-	"modules-left": [
-		"group/left"
-	],
-	"modules-center": [
-		"group/center-left",
-		"group/center",
-		"group/center-right"
-	],
-	"modules-right": [
-		"group/right"
-	]
+	"modules-left": ["group/left"],
+	"modules-center": ["group/center-left", "group/center", "group/center-right"],
+	"modules-right": ["group/right"]
 }

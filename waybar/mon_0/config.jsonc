@@ -1,0 +1,35 @@
+{
+	//config
+	"name": "HDMI-A-1",
+	"output": ["HDMI-A-1"],
+	"layer": "top",
+	"position": "top",
+	"height": 20,
+	"spacing": 0,
+	"mode": "dock",
+	"start_hidden": false,
+	"reload_style_on_change": true,
+	// imports
+	"include": [
+		"./mon_0/groups.jsonc",
+		"./battery.jsonc",
+		"./cpu.jsonc",
+		"./gpu.jsonc",
+		"./memory.jsonc",
+		"./image.jsonc",
+		"./network.jsonc",
+		"./clock.jsonc",
+		"./mpris.jsonc",
+		"./pulseaudio.jsonc",
+		"./cava.jsonc",
+		"./bluetooth.jsonc",
+		"./systemd.jsonc",
+		"./privacy.jsonc",
+		"./weather.jsonc",
+		"./hyp_ws.jsonc"
+	],
+	// layout
+	"modules-left": ["group/left"],
+	"modules-center": ["group/center-left", "group/center", "group/center-right"],
+	"modules-right": ["group/right"]
+}

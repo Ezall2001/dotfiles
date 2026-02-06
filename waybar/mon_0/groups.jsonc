@@ -4,8 +4,10 @@
 		"modules": [
 			"image#arch",
 			"clock",
+			"custom/weather",
 			"systemd-failed-units",
-			"privacy"
+			"privacy",
+			"custom/hyp_ws_0"
 		]
 	},
 	"group/center-left": {
@@ -19,7 +21,6 @@
 			"group/gpu"
 		]
 	},
-	//"image#pc-mode"
 	"group/center": {
 		"orientation": "horizontal",
 		"modules": []
@@ -30,10 +31,6 @@
 	},
 	"group/right": {
 		"orientation": "horizontal",
-		"modules": [
-			"cava",
-			"mpris",
-			"pulseaudio"
-		]
+		"modules": ["cava", "mpris", "pulseaudio"]
 	}
 }

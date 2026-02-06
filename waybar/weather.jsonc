@@ -1,0 +1,7 @@
+{
+	"custom/weather": {
+		"exec": "waybar_weather",
+		"interval": 900, // 15min: 60sec * 15
+		"return-type": "json"
+	}
+}

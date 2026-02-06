@@ -1,0 +1,36 @@
+{
+	"group/left": {
+		"orientation": "horizontal",
+		"modules": [
+			"image#arch",
+			"clock",
+			"custom/weather",
+			"systemd-failed-units",
+			"privacy",
+			"custom/hyp_ws_1"
+		]
+	},
+	"group/center-left": {
+		"orientation": "horizontal",
+		"modules": [
+			"network",
+			"bluetooth",
+			"battery",
+			"memory",
+			"group/cpu",
+			"group/gpu"
+		]
+	},
+	"group/center": {
+		"orientation": "horizontal",
+		"modules": []
+	},
+	"group/center-right": {
+		"orientation": "horizontal",
+		"modules": []
+	},
+	"group/right": {
+		"orientation": "horizontal",
+		"modules": ["cava", "mpris", "pulseaudio"]
+	}
+}

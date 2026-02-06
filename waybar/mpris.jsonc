@@ -1,5 +1,6 @@
 {
 	"mpris": {
+		"player": "firefox",
 		"interval": 5,
 		"title-len": 30,
 		"ellipsis": "󰨿 ",

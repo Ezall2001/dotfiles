@@ -13,9 +13,6 @@
 	},
 	"group/cpu": {
 		"orientation": "horizontal",
-		"modules": [
-			"cpu",
-			"temperature#cpu"
-		]
+		"modules": ["cpu", "temperature#cpu"]
 	}
 }
