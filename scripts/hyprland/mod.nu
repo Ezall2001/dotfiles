@@ -15,3 +15,4 @@ export module hyp_keymap
 export module hyp_init
 export module hyp_idle
 export module hyp_backlight
+export module hyp_log
