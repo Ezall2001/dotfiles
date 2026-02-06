@@ -2,6 +2,7 @@ use ../hyp_utils [get_socket]
 use ./handlers/window.nu [window_opened_handler window_closed_handler move_window_handler active_window_change_handler]
 use ./handlers/workspace.nu [workspace_changed_handler move_workspace_handler]
 use ./handlers/monitor.nu [monintor_added_handler monintor_removed_handler active_monitor_change_handler]
+use ../hyp_log [main]
 
 
 def handler [event:string] {
@@ -24,6 +25,10 @@ def handler [event:string] {
 }
 
 export def main [] {
-	socat -U - $"UNIX-CONNECT:(get_socket 2)"
-	| lines | each {handler $in} | ignore
+	try {
+		socat -U - $"UNIX-CONNECT:(get_socket 2)"
+		| lines | each {handler $in} | ignore
+	} catch {|e|
+		hyp_log $e.rendered hyp_events --notify 'hyp_events error' --level error
+	}
 }
