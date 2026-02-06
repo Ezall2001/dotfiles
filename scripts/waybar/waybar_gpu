@@ -1,15 +1,31 @@
 #!/usr/bin/env nu
 
-def usage [] {
-	let data = nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader
+use ../hyprland/hyp_log [main]
+
+def get_data [field] {
+	nvidia-smi --query-gpu=($field) --format=csv,nounits,noheader
 	| str replace ' ' ''
 	| from csv --noheaders
-	| rename usage
-	| get usage
+	| get column0
 	| first
+}
+
+def usage [] {
+	let val = try {
+		get_data utilization.gpu
+	} catch {|e|
+		hyp_log $e.rendered 'waybar_gpu usage' --notify 'waybar_gpu error' --level error
+		null
+	}
+
+	let text = if $val == null {
+		'gpu:error'
+	} else {
+		$"<span size='12000'>󰾲</span> ($val)"
+	}
 
 	{
-		text: $data
+		text: $text
 		alt: ""
 		tooltip: ""
 		class: "gpu-usage"
@@ -18,15 +34,22 @@ def usage [] {
 }
 
 def temp [] {
-	let data = nvidia-smi --query-gpu=temperature.gpu --format=csv,nounits,noheader
-	| str replace ' ' ''
-	| from csv --noheaders
-	| rename temp
-	| get temp
-	| first
+	let val = try {
+		get_data temperature.gpu
+	} catch {|e|
+		hyp_log $e.rendered 'waybar_gpu temp' --notify 'waybar_gpu error' --level error
+		null
+	}
+
+	let text = if $val == null {
+		'gpu:error'
+	} else {
+		$"($val)°C"
+	}
+
 
 	{
-		text: $data
+		text: $text
 		alt: ""
 		tooltip: ""
 		class: "gpu-temp"
