@@ -1,7 +1,9 @@
-local m = require("keymap.lib").map
+local m = require('keymap.lib').map
 
 local reset = function()
-	m({ "n", "Q", "<nop>" })
+	m({ 'n', 'Q', '<nop>' })
+	m({ { 'i', 'n', 'v' }, '<C-p>', '<nop>' })
+	m({ { 'i', 'n', 'v' }, '<C-n>', '<nop>' })
 end
 
 local M = {}
