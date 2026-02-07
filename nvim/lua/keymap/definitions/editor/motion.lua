@@ -2,15 +2,15 @@ local m = require('keymap.lib').map
 
 local motion = function()
 	m({
-		'n',
+		{ 'n', 'x', 'o' },
 		'L',
 		'$',
 		{ desc = 'move to end of line' },
 	})
 	m({
-		'n',
+		{ 'n', 'x', 'o' },
 		'H',
-		'_',
+		'^',
 		{ desc = 'move to start of line' },
 	})
 end
