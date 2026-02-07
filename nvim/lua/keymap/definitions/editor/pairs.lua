@@ -7,7 +7,7 @@ M.mini_pairs = function()
 		['('] = {
 			action = 'open',
 			pair = '()',
-			neigh_pattern = '[^\\][^%a]',
+			neigh_pattern = '[^\\][%s]',
 			register = { bs = true, cr = true },
 		},
 		[')'] = {
@@ -18,7 +18,7 @@ M.mini_pairs = function()
 		['['] = {
 			action = 'open',
 			pair = '[]',
-			neigh_pattern = '[^\\][^%a]',
+			neigh_pattern = '[^\\][%s]',
 			register = { bs = true, cr = true },
 		},
 		[']'] = {
@@ -29,8 +29,8 @@ M.mini_pairs = function()
 		['{'] = {
 			action = 'open',
 			pair = '{}',
-			neigh_pattern = '[^\\][^%a]',
-			register = { bs = true, cr = true },
+			neigh_pattern = '[^\\][%s]',
+			register = { bs = true, cr = false },
 		},
 		['}'] = {
 			action = 'close',
@@ -40,19 +40,19 @@ M.mini_pairs = function()
 		['"'] = {
 			action = 'closeopen',
 			pair = '""',
-			neigh_pattern = '[^\\][^%a]',
+			neigh_pattern = '[^\\][%s]',
 			register = { cr = false, bs = true },
 		},
 		["'"] = {
 			action = 'closeopen',
 			pair = "''",
-			neigh_pattern = '[^%a\\][^%a]',
+			neigh_pattern = '[^%a\\][%s]',
 			register = { cr = false, bs = true },
 		},
 		['`'] = {
 			action = 'closeopen',
 			pair = '``',
-			neigh_pattern = '[^\\][^%a]',
+			neigh_pattern = '[^\\][%s]',
 			register = { cr = false, bs = true },
 		},
 	}
