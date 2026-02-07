@@ -25,13 +25,6 @@ local pickers = function()
 
 	m({
 		'n',
-		'<leader>ts',
-		t.spell,
-		{ desc = 'telescope spell suggestions' },
-	})
-
-	m({
-		'n',
 		'<leader>tc',
 		t.cmdline,
 		{ desc = 'telescope commandline' },

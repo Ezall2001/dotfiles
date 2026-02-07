@@ -30,4 +30,12 @@ M.mini_indentation = function()
 	}
 end
 
+M.mini_splitjoin = function()
+	return {
+		toggle = '<leader>j',
+		split = '',
+		join = '',
+	}
+end
+
 return M

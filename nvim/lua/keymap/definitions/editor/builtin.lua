@@ -1,6 +1,6 @@
 local m = require('keymap.lib').map
 
-local editing = function()
+local builtin = function()
 	m({
 		'n',
 		'J',
@@ -47,42 +47,7 @@ end
 local M = {}
 
 M.init = function()
-	editing()
-end
-
-M.mini_move = function()
-	return {
-		left = '<',
-		right = '>',
-		up = 'K',
-		down = 'J',
-
-		line_left = '',
-		line_right = '',
-		line_down = '',
-		line_up = '',
-	}
-end
-
-M.mini_splitjoin = function()
-	return {
-		toggle = '<leader>j',
-		split = '',
-		join = '',
-	}
-end
-
-M.mini_surround = function()
-	return {
-		add = 'sa',
-		delete = 'sd',
-		replace = 'sr',
-		suffix_last = 'l',
-		suffix_next = 'n',
-		find = '',
-		find_left = '',
-		highlight = '',
-	}
+	builtin()
 end
 
 return M
