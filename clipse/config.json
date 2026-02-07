@@ -25,7 +25,7 @@
 		"togglePinned": "P",
 		"choose": "enter",
 		"filter": "/",
-		"yankFilter": "y",
+		"yankFilter": "ctrl+y",
 		"preview": " ",
 		"remove": "x",
 		"more": "?",
