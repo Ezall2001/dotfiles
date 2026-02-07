@@ -27,7 +27,7 @@ local gitsigns = function()
 
 	m({
 		'v',
-		'<leader>hs',
+		'<leader>hr',
 		function()
 			gs.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') })
 		end,
