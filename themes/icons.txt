@@ -161,6 +161,7 @@ fold:  
 fold_lines: 󰡏
 tab: ┃
 space: ·
+section: 󰚟
 
 # other
 command: 
