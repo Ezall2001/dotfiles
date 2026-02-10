@@ -6,7 +6,7 @@ local gitsigns = function()
 
 	m({
 		'n',
-		'<leader>gs',
+		'<leader>gsh',
 		gs.show,
 		{ desc = 'gitsigns show' },
 	})

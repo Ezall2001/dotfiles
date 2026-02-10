@@ -5,4 +5,9 @@ M.commit = function()
 	n.open({ 'commit' })
 end
 
+M.stash = function()
+	local n = require('neogit')
+	n.open({ 'stash' })
+end
+
 return M
