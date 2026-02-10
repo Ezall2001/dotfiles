@@ -64,6 +64,7 @@ M.file = {
 }
 
 M.text = {
+	section = i('󰚟'),
 	fold_open = i(''),
 	fold_closed = i(''),
 	fold_lines = i('󰡏'),

@@ -3,7 +3,7 @@ local services = {}
 services['github.com'] = {
 	pull_request = 'https://github.com/${owner}/${repository}/compare/${branch_name}?expand=1',
 	commit = 'https://github.com/${owner}/${repository}/commit/${oid}',
-	tree = 'https://${host}/${owner}/${repository}/tree/${branch_name}',
+	tree = 'https://github.com/${owner}/${repository}/tree/${branch_name}',
 }
 
 services['bitbucket.org'] = {

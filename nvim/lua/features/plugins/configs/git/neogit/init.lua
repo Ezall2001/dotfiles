@@ -1,7 +1,12 @@
+local commit = require('features.plugins.configs.git.neogit.commit')
 local i = require('constants.icons')
+local k = require('keymap.definitions.git')
 local neogit = require('neogit')
+local other = require('features.plugins.configs.git.neogit.other')
 local services = require('features.plugins.configs.git.neogit.services')
+local status = require('features.plugins.configs.git.neogit.status')
 
+---@type NeogitConfig
 local conf = {
 	disable_hint = false,
 	disable_context_highlighting = false,
@@ -18,18 +23,33 @@ local conf = {
 	use_per_project_settings = true,
 	ignored_settings = {},
 	highlight = { italic = true, bold = true, underline = true },
-	use_default_keymaps = true,
+	use_default_keymaps = false,
 	auto_refresh = true,
 	sort_branches = '-committerdate',
 	commit_order = 'topo',
 	initial_branch_name = '',
-	kind = 'floating',
+	kind = 'tab',
 	disable_line_numbers = false,
 	disable_relative_line_numbers = false,
 	console_timeout = 2000,
 	auto_show_console = true,
 	auto_close_console = true,
+	fetch_after_checkout = true,
+	process_spinner = false,
 	notification_icon = i.git.git(false),
+	sections = status.sections,
+	status = status.status,
+	commit_editor = commit.commit_editor,
+	commit_select_view = commit.commit_select_view,
+	commit_view = commit.commit_view,
+	rebase_editor = other.rebase_editor,
+	merge_editor = other.merge_editor,
+	preview_buffer = other.preview_buffer,
+	popup = other.popup,
+	stash = other.stash,
+	refs_view = other.refs_view,
+	log_view = other.log_view,
+	reflog_view = other.reflog_view,
 }
 
 conf.floating = {
@@ -40,43 +60,36 @@ conf.floating = {
 	border = 'rounded',
 }
 
-conf.commit_editor = {
-	kind = 'tab',
-	show_staged_diff = true,
-	staged_diff_split_kind = 'split',
-	spell_check = true,
+conf.signs = {
+	hunk = { '', '' },
+	item = {
+		i.text.fold_closed(false),
+		i.text.fold_open(false),
+	},
+	section = {
+		i.text.section(false),
+		i.text.section(false),
+	},
 }
 
-conf.commit_select_view = {
-	kind = 'tab',
+conf.integrations = {
+	telescope = true,
+	diffview = true,
+	fzf_lua = false,
+	mini_pick = false,
+	snacks = false,
 }
-conf.commit_view = {
-	kind = 'vsplit',
-	verify_commit = vim.fn.executable('gpg') == 1, -- Can be set to true or false, otherwise we try to find the binary
-}
-conf.log_view = {
-	kind = 'tab',
-}
-conf.rebase_editor = {
-	kind = 'auto',
-}
-conf.reflog_view = {
-	kind = 'tab',
-}
-conf.merge_editor = {
-	kind = 'auto',
-}
-conf.preview_buffer = {
-	kind = 'floating_console',
-}
-conf.popup = {
-	kind = 'split',
-}
-conf.stash = {
-	kind = 'tab',
-}
-conf.refs_view = {
-	kind = 'tab',
+
+conf.mappings = {
+	popup = k.neogit.popup,
+	status = k.neogit.status,
+	finder = k.neogit.finder,
+	commit_editor = k.neogit.commit_editor,
+	commit_editor_I = k.neogit.commit_editor_I,
+	commit_view = k.neogit.commit_view,
+	refs_view = k.neogit.refs_view,
+	rebase_editor = k.neogit.rebase_editor,
+	rebase_editor_I = k.neogit.rebase_editor_I,
 }
 
 neogit.setup(conf)

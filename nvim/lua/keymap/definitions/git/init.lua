@@ -1,14 +1,30 @@
-local gitsigns = require('keymap.definitions.git.gitsigns')
+local commits = require('keymap.definitions.git.commits')
+local log = require('keymap.definitions.git.log')
 local neogit = require('keymap.definitions.git.neogit')
-local p = require('features.plugins')
-local telescope = require('keymap.definitions.git.telescope')
+local r = require('utils.require_all_in_dir')
+local rebase = require('keymap.definitions.git.rebase')
+
+local cb = function(mod)
+	mod.init()
+end
 
 local M = {}
 
+M.neogit = {
+	popup = neogit.popup,
+	status = neogit.status,
+	finder = neogit.finder,
+	refs_view = neogit.refs_view,
+	commit_editor = commits.commit_editor,
+	commit_editor_I = commits.commit_editor_I,
+	commit_view = commits.commit_view,
+	rebase_editor = rebase.rebase_editor,
+	rebase_editor_I = rebase.rebase_editor_I,
+}
+
 M.init = function()
-	p.on_plugin_register('neogit', neogit)
-	p.on_plugin_register('telescope', telescope)
-	p.on_plugin_register('gitsigns', gitsigns)
+	local r_path = vim.fs.joinpath('keymap', 'definitions', 'git')
+	r(r_path, cb)
 end
 
 return M

@@ -11,7 +11,7 @@ local specs = {
 	{
 		'nvim-lualine/lualine.nvim',
 		name = 'lualine',
-		dependencie = {
+		dependencies = {
 			'nvim-tree/nvim-web-devicons',
 			'chrisgrieser/nvim-recorder',
 		},

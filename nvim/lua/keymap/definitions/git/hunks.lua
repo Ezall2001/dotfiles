@@ -1,4 +1,5 @@
 local m = require('keymap.lib').map
+local p = require('features.plugins')
 
 local gitsigns = function()
 	local gs = require('gitsigns')
@@ -83,13 +84,12 @@ local gitsigns = function()
 		end,
 		{ desc = 'trouble get hunks' },
 	})
-
-	m({
-		'n',
-		'<leader>gs',
-		gs.show,
-		{ desc = 'gitsigns show' },
-	})
 end
 
-return gitsigns
+local M = {}
+
+M.init = function()
+	p.on_plugin_register('gitsigns', gitsigns)
+end
+
+return M
