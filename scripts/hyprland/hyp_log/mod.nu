@@ -30,5 +30,5 @@ export def read [] {
 }
 
 export def clean [] {
-	rm $FILE
+	'' | save -f $FILE
 }
