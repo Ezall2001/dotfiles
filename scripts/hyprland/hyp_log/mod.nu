@@ -19,7 +19,9 @@ export def main [
 		notify-send $notify -t 5000 -u $level
 	}
 
-	let log = $"(date now) ($level | str upcase) [($module)]\n($msg)\n\n"
+	let timestamp = date now | format date
+
+	let log = $"($timestamp) ($level | str upcase) [($module)]\n($msg)\n\n"
 	$log | save -a $FILE
 }
 
