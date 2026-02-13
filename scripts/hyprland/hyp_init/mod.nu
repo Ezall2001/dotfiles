@@ -7,10 +7,10 @@ export use ./init_focus.nu [main]
 export use ./init_hyp_events.nu [main]
 
 export def _main [] {
+	hyp_setups init
 	init_hyp_events
 	init_waybar
 	init_other
-	hyp_setups init
 	init_windows
 	init_focus
 }
