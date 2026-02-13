@@ -1,0 +1,70 @@
+[global]
+
+# LAYER
+origin = top-right
+offset = (5, 5)
+scale = 0
+notification_limit = 5
+default_pause_level = 0
+monitor = 0
+follow = keyboard
+indicate_hidden = true
+transparency = 0
+separator_height = 0
+separator_color = auto
+gap_size = 10
+sort = true
+layer = overlay
+idle_threshold = 1m
+
+# FRAME
+width = (100, 600)
+height = (10, 400)
+padding = 10
+horizontal_padding = 10
+text_icon_padding = 0
+frame_width = 2
+font = JetBrainsMono Nerd Font 11
+line_height = 0
+vertical_alignment = center
+ignore_newline = false
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = true
+show_age_threshold = 60
+corner_radius = 25
+corners = "bottom-right, top-left"
+
+# PROGRESS
+progress_bar = true
+progress_bar_horizontal_alignment = left
+progress_bar_height = 10
+progress_bar_min_width = 150
+progress_bar_max_width = 300
+progress_bar_frame_width = 1
+progress_bar_corner_radius = 4
+progress_bar_corners = "all"
+
+# ICON
+icon_corner_radius = 10
+icon_corners = all
+
+# OTHER
+enable_posix_regex = true
+force_xwayland = false
+enable_recursive_icon_lookup = true
+sticky_history = true
+history_length = 100
+title = dunst
+class = dunst
+force_xinerama = false
+
+# ACTIONS
+always_run_script = true
+mouse_left_click = do_action
+mouse_middle_click = close_current
+mouse_right_click = context
+browser = "/usr/bin/xdg-open"
+#dmenu = ""
+ignore_dbusclose = false
+override_pause_level = 0
