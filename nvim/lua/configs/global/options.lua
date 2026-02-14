@@ -71,7 +71,7 @@ vim.o.confirm = true
 vim.o.matchpairs = '(:),{:},[:],<:>'
 
 -- session
-vim.o.sessionoptions = 'folds,help,winpos'
+vim.o.sessionoptions = 'folds,help,winpos,tabpages'
 
 -- shada
 vim.o.shada = "%40,:100,@100,/100,'100,<50,f0,s100,h"
@@ -382,7 +382,6 @@ vim.o.warn = true
 'secure'		    secure mode for reading .vimrc in current dir
 'selection'	  'sel'     what type of selection to use
 'selectmode'	  'slm'     when to use Select mode instead of Visual mode
-'sessionoptions'  'ssop'    options for |:mksession|
 'shada'		  'sd'	    use |shada| file upon startup and exiting
 'shell'		  'sh'	    name of shell to use for external commands
 'shellcmdflag'	  'shcf'    flag to shell to execute one command
