@@ -10,8 +10,8 @@ end
 
 local M = {}
 
-M.neogit = {
-	popup = neogit.popup,
+M.neogit = neogit
+
 	status = neogit.status,
 	finder = neogit.finder,
 	refs_view = neogit.refs_view,

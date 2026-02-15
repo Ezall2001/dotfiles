@@ -2,12 +2,12 @@ local p = require('features.plugins')
 local m = require('keymap.lib').map
 
 local neogit = function()
-	local n = require('features.neogit')
+	local n = require('neogit')
 
 	m({
 		'n',
-		'<leader>gc',
-		n.popup.commit,
+		'<leader>gn',
+		n.open,
 		{ desc = 'neogit commit popup' },
 	})
 end

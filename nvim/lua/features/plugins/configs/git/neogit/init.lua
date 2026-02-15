@@ -1,6 +1,6 @@
 local commit = require('features.plugins.configs.git.neogit.commit')
 local i = require('constants.icons')
-local k = require('keymap.definitions.git')
+local k = require('keymap.definitions.git').neogit.keymap
 local neogit = require('neogit')
 local other = require('features.plugins.configs.git.neogit.other')
 local services = require('features.plugins.configs.git.neogit.services')
@@ -81,15 +81,15 @@ conf.integrations = {
 }
 
 conf.mappings = {
-	popup = k.neogit.popup,
-	status = k.neogit.status,
-	finder = k.neogit.finder,
-	commit_editor = k.neogit.commit_editor,
-	commit_editor_I = k.neogit.commit_editor_I,
-	commit_view = k.neogit.commit_view,
-	refs_view = k.neogit.refs_view,
-	rebase_editor = k.neogit.rebase_editor,
-	rebase_editor_I = k.neogit.rebase_editor_I,
+	popup = k.popup,
+	status = k.status,
+	finder = k.finder,
+	commit_editor = k.commit_editor,
+	commit_editor_I = k.commit_editor_I,
+	commit_view = k.commit_view,
+	refs_view = k.refs_view,
+	rebase_editor = k.rebase_editor,
+	rebase_editor_I = k.rebase_editor_I,
 }
 
 neogit.setup(conf)
