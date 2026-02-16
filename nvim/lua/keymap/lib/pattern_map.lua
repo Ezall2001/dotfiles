@@ -1,12 +1,11 @@
-local ku = require("keymap.lib.utils")
-local u = require("utils.callback")
-local map = require("keymap.lib.map")
+local ku = require('keymap.lib.utils')
+local map = require('keymap.lib.map')
+local u = require('utils.callback')
 
 local attach_cb = function(keymaps, args)
-	local _map = ku.create_map(keymaps)
-	_map[4].buffer = args.buf
-
 	for _, m in ipairs(keymaps) do
+		local _map = ku.create_map(m)
+		_map[4].buffer = args.buf
 		map(m)
 	end
 end
@@ -23,7 +22,7 @@ local pattern_mapper = function(pattern)
 	})
 
 	LM.attach = function()
-		vim.api.nvim_create_autocmd("BufEnter", {
+		vim.api.nvim_create_autocmd('BufEnter', {
 			pattern = pattern,
 			callback = u.mkcb(attach_cb, LM.maps),
 		})
