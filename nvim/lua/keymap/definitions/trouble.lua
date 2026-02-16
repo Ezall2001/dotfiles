@@ -21,10 +21,10 @@ local keys = {
 	L = 'fold_open_recursive',
 	h = 'fold_close',
 	H = 'fold_close_recursive',
-	zm = 'fold_more',
-	zM = 'fold_close_all',
-	zr = 'fold_reduce',
-	zR = 'fold_open_all',
+	zc = 'fold_more',
+	zH = 'fold_close_all',
+	zo = 'fold_reduce',
+	zL = 'fold_open_all',
 }
 
 local trouble = function()
