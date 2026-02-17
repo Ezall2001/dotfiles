@@ -1,12 +1,13 @@
 local p = require('features.plugins')
 local m = require('keymap.lib').map
+local d = require('features.dev')
 local u = require('utils.callback')
 
 local dev = function()
 	m({
 		'n',
 		'<leader>/r',
-		require('features.dev.source_curr'),
+		d.source_curr,
 		{ desc = 'source current lua file' },
 	})
 end
@@ -30,7 +31,7 @@ local telescope = function()
 
 	m({
 		'n',
-		'<leader>/au',
+		'<leader>/a',
 		t.autocommands,
 		{ desc = 'telescope list autocommands' },
 	})
