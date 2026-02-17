@@ -17,5 +17,6 @@
 
 [core]
   editor = nvim
+	pager = less
   sshCommand = ssh -F /home/armen/.config/ssh/config
 	excludesFile = /home/armen/.config/git/.gitignore
