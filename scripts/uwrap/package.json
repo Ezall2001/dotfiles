@@ -1,0 +1,12 @@
+{
+	"$schema": "https://json.schemastore.org/package.json",
+	"type": "module",
+	"main": "./src/index.js",
+	"scripts": {
+		"start": "node ."
+	},
+	"dependencies": {
+		"commander": "^14.0.3",
+		"wrap-ansi": "^10.0.0"
+	}
+}
