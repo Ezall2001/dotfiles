@@ -1,0 +1,7 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main]
+
+def main [text:string width:int] {
+	_main $text $width
+}
