@@ -1,38 +1,224 @@
 {
 	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 	"display": {
+		"disableLinewrap": true,
+		"stat": false,
+		"pipe": false,
+		"showErrors": false,
+		"hideCursor": true,
+		"noBuffer": false,
+		"brightColor": true,
+		"separator": " ",
+		"color": {
+			"separator": "white",
+			"keys": "white",
+			"title": "white",
+			"output": "white"
+		},
 		"key": {
-			"type": "icon"
+			"type": "string",
+			"width": 0,
+			"paddingLeft": 0
+		},
+		"bar": {
+			"width": 20,
+			"char": {
+				"total": "■",
+				"elapsed": "■"
+			},
+			"color": {
+				"total": "black",
+				"elapsed": "magenta",
+				"border": "white"
+			},
+			"border": {
+				"left": "",
+				"right": "",
+				"rightElapsed": "",
+				"leftElapsed": ""
+			}
+		},
+		"size": {
+			"ndigits": 2,
+			"maxPrefix": "TB",
+			"binaryPrefix": "jedec",
+			"spaceBeforeUnit": "always"
+		},
+		"fraction": {
+			"ndigits": 2,
+			"trailingZeros": "default"
+		},
+		"percent": {
+			"ndigits": 0,
+			"spaceBeforeUnit": "never",
+			"width": 0
+		},
+		"temp": {
+			"unit": "C",
+			"ndigits": 0,
+			"spaceBeforeUnit": "never"
+		},
+		"freq": {
+			"spaceBeforeUnit": "always",
+			"ndigits": 2
+		},
+		"duration": {
+			"spaceBeforeUnit": "never",
+			"abbreviation": true
+		},
+		"constants": []
+	},
+	"general": {
+		"thread": true,
+		"dsForceDrm": true
+	},
+	"logo": {
+		"type": "kitty-icat",
+		"source": "~/.config/fastfetch/assets/arch_linux_blue_girl.png",
+		"width": 40,
+		"height": null,
+		"preserveAspectRatio": true,
+		"recache": false,
+		"printRemaining": true,
+		"position": "left",
+		"padding": {
+			"top": 1,
+			"left": 0,
+			"right": 0
+		},
+		"chafa": {
+			"fgOnly": true,
+			"ditherMode": "DIFFUSION",
+			"colorSpace": "RGB",
+			"canvasMode": "TRUECOLOR"
 		}
 	},
-	"general": {},
-	"logo": {},
 	"modules": [
 		{
-			"type": "title"
+			"type": "custom",
+			"format": "┏━━━━━━━━━━━━━━━━{#1;36}Packard_bell{#1;97}@{#1;36}arch{#}━━━━━━━━━━━━━━━━┓" // 1 + 16 + 17 + 16 +1
 		},
-		{ "type": "separator" },
+
 		{
-			"type": "os"
+			"type": "custom",
+			"format": ""
 		},
-		{ "type": "host" },
-		{ "type": "bootmgr" },
-		{ "type": "kernel" },
-		{ "type": "processes" },
-		{ "type": "packages" },
-		{ "type": "shell" },
-		{ "type": "display" },
-		{ "type": "de" },
-		{ "type": "wm" },
-		{ "type": "terminal" },
-		{ "type": "cpu" },
-		{ "type": "gpu" },
-		{ "type": "memory" },
-		{ "type": "swap" },
-		{ "type": "disk" },
-		{ "type": "battery" },
-		{ "type": "poweradapter" },
-		{ "type": "break" },
-		{ "type": "colors" }
+		{
+			"type": "custom",
+			"format": "Arch {#90}&&{#} Hyprland {#90}&&{#} Qutebrowser",
+			"key": " BTW stack",
+			"keyColor": "red"
+		},
+		{
+			"type": "custom",
+			"format": "{#light_black}│{#} Ghostty {#90}&&{#} Tmux {#90}&&{#} Nushell {#90}&&{#} Nvim",
+			"key": " "
+		},
+		{
+			"type": "custom",
+			"format": "└────",
+			"outputColor": "light_black"
+		},
+
+		{
+			"type": "memory",
+			"format": "{total} ({percentage}) {percentage-bar}",
+			"key": "{#32}┌ {#92} "
+		},
+		{
+			"type": "swap",
+			"format": "{total} ({percentage})",
+			"key": "{#32}├ {#92}󰓡 "
+		},
+		{
+			"type": "disk",
+			"format": "{size-total} ({size-percentage}) {#90}<-{#} {mountpoint}",
+			"folders": "/:/home",
+			"key": "{#32}├ {#92} "
+		},
+		{
+			"type": "cpu",
+			"format": "Intel i3-3120M {freq-max} ({temperature})",
+			"temp": true,
+			"key": "{#32}├ {#92} "
+		},
+		{
+			"type": "gpu",
+			"format": "GeForce 710M",
+			"hideType": "integrated",
+			"key": "{#32}├ {#92}󰢮 "
+		},
+		{
+			"type": "board",
+			"format": "{name}",
+			"key": "{#32}└ {#92}󰛡 "
+		},
+
+		{
+			"type": "custom",
+			"format": " "
+		},
+
+		{
+			"type": "command",
+			"text": "fast_quote header",
+			"format": "{#34}󰓥{#} {result}",
+			"parallel": true,
+			"key": " "
+		},
+		{
+			"type": "command",
+			"text": "fast_quote 0",
+			"format": "┃ {result}",
+			"parallel": true,
+			"key": " "
+		},
+		{
+			"type": "command",
+			"text": "fast_quote 1",
+			"format": "┃ {result}",
+			"parallel": true,
+			"key": " "
+		},
+		{
+			"type": "command",
+			"text": "fast_quote 2",
+			"format": "┃ {result}",
+			"parallel": true,
+			"key": " "
+		},
+		{
+			"type": "command",
+			"text": "fast_quote 3",
+			"format": "┃ {result}",
+			"parallel": true,
+			"key": " "
+		},
+		{
+			"type": "command",
+			"text": "fast_quote 4",
+			"format": "┃ {result}",
+			"parallel": true,
+			"key": " "
+		},
+
+		{
+			"type": "command",
+			"text": "fast_quote footer",
+			"format": "┃ {result}",
+			"parallel": true,
+			"splitLines": true,
+			"key": " "
+		},
+
+		{
+			"type": "custom",
+			"format": "┗━━━━━━━━━━━━━━━━━━━━━━━━󰮍━━━━━━━━━━━━━━━━━━━━━━━━┛"
+		},
+
+		{
+			"type": "custom",
+			"format": " {#light_black}  {#red}  {#green}  {#yellow}  {#blue}  {#magenta}  {#cyan}  {#white}"
+		}
 	]
 }

@@ -28,9 +28,11 @@ night_partly_couldy: 
 night_partly_cloudy_rain: 
 
 # hardware
+motherboard: 󰛡
 cpu: 
 gpu: 󰢮
 ram: 
+swap: 󰓡
 disk: 
 headset: 
 bluetooth-headset: 󰥰
@@ -134,6 +136,7 @@ root: 󰡗
 no-write: 󰏮
 
 # apps
+arch: 󰣇
 firefox: 󰈹
 mpd: 󰦚
 bash: $
@@ -187,3 +190,4 @@ starship: 📜
 sfzf - nvim-telescope: 🐕‍🦺
 fzf_nav: 
 hyp_backlight: ⚫
+fastfetch: 󰓥
