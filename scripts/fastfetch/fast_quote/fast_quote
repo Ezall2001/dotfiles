@@ -1,0 +1,12 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main]
+use ./refresh.nu [_refresh]
+
+export def main [line: oneof<string,int>] {
+	_main $line
+}
+
+export def 'main _refresh' [] {
+	_refresh
+}
