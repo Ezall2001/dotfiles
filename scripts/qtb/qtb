@@ -1,0 +1,12 @@
+#!/usr/bin/env nu
+
+use ./session
+use ./init.nu
+
+
+def main [] { }
+def 'main init' [] {init}
+
+def 'main session start' [session?:string] {session start $session}
+def 'main session create' [session:string, --open (-o)] {session create $session --open=$open}
+def 'main session delete' [session?:string] {session delete $session}

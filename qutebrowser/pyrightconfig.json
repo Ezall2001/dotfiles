@@ -1,0 +1,20 @@
+{
+	"$schema": "https://raw.githubusercontent.com/microsoft/pyright/main/packages/vscode-pyright/schemas/pyrightconfig.schema.json",
+	"include": ["src"],
+	"exclude": ["**/node_modules", "**/__pycache__"],
+	"pythonVersion": "3.13",
+	"pythonPlatform": "All",
+	"useLibraryCodeForTypes": true,
+	"strictListInference": true,
+	"strictDictionaryInference": true,
+	"strictSetInference": true,
+	"strictParameterNoneValue": true,
+	"deprecateTypingAliases": true,
+	"enableExperimentalFeatures": false,
+	"disableBytesTypePromotions": true,
+	"strictGenericNarrowing": true,
+	"enableBasedFeatures": true,
+	"analyzeUnannotatedFunctions": true,
+	"typeCheckingMode": "standard",
+	"stubPath": "./src/typings"
+}
