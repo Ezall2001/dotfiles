@@ -9,7 +9,7 @@ def search():
 
 
 def dev():
-	Binds.bind('<space>/s', 'config-source', 'normal')
+	Binds.bind('<space>/s', 'config-source;;message-info reloaded', 'normal')
 	Binds.bind('<space>/h', 'help --tab', 'normal')
 
 
