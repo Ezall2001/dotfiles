@@ -1,5 +1,3 @@
-#!/usr/bin/env nu
-
 alias reindex = run-external 'tmux' 'move-window' '-r'
 
 export def main [target:int]: nothing -> nothing {
@@ -10,8 +8,8 @@ export def main [target:int]: nothing -> nothing {
 		return null
 	}
 
-	let flag = if $src > $target {'b'} else {'a'}
+	let flag = if $src > $target {'-b'} else {'-a'}
 
-	run-external 'tmux' 'move-window' $'-($flag)' '-t' $':($target)'
+	tmux move-window $flag '-t' $':($target)'
 	reindex
 }
