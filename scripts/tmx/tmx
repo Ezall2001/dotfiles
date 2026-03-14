@@ -1,0 +1,13 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [window keybinds]
+
+def main [] {}
+
+def 'main window move' [target:int] {
+	window move $target
+}
+
+def 'main keybinds send_key_if' [...patterns] {
+	keybinds send_key_if ...$patterns
+}

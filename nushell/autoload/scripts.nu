@@ -1,10 +1,10 @@
 const NU_LIB_DIRS = [($nu.home-dir | path join '.config/scripts')]
 
 #use hyprland *
-use tmux *
+use tmx *
 use helb *
 use btrkdlfmt *
-use qutebrowser *
+use qtb
 use nvim *
 use uansi *
 use upath
