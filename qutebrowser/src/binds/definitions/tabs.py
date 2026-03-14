@@ -34,10 +34,13 @@ def base():
 
 
 def move():
+	letter_num_map = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
 	for i in range(1, 10):
-		Binds.bind(f'<alt-ctrl-{i}>', f'tab-move {i}', ['normal', 'insert', 'caret'])
+		Binds.bind(
+			f'<alt-shift-{letter_num_map[i - 1]}>', f'tab-move {i}', ['normal', 'insert', 'caret']
+		)
 
-	Binds.bind('<alt-ctrl-0>', 'tab-move 10', ['normal', 'insert', 'caret'])
+	Binds.bind('<alt-shift-)>', 'tab-move 10', ['normal', 'insert', 'caret'])
 
 
 def other():
