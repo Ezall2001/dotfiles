@@ -4,7 +4,6 @@ from lib.binds import Binds
 def insert():
 	Binds.bind('<space>i', 'hint --first inputs normal', 'normal')
 	Binds.bind('i', 'mode-enter insert', 'normal')
-	Binds.bind('<ctrl-escape>', 'fake-key <escape>', 'insert')
 
 
 def passthrough():
@@ -58,6 +57,7 @@ def normal():
 
 def other():
 	Binds.bind('<escape>', 'mode-leave', ['insert', 'hint', 'register', 'prompt', 'yesno', 'command'])
+	Binds.bind('<ctrl-escape>', 'fake-key <escape>', ['insert', 'normal'])
 
 
 def setup():
