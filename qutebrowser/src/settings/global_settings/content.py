@@ -1,5 +1,5 @@
 def content(c):
-	c.autoplay = True
+	c.autoplay = False
 	c.blocking.adblock.lists = [
 		'https://easylist.to/easylist/easylist.txt',
 		'https://easylist.to/easylist/easyprivacy.txt',
