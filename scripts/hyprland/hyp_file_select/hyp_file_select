@@ -1,0 +1,11 @@
+#!/usr/bin/env nu
+
+use mod.nu [_main _spf]
+
+def main [--multi (-m), --dir (-d)] {
+	_main --multi=$multi --dir=$dir
+}
+
+def 'main _spf' [dir:string] {
+	_spf $dir
+}
