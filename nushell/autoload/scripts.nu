@@ -1,6 +1,6 @@
 const NU_LIB_DIRS = [($nu.home-dir | path join '.config/scripts')]
 
-#use hyprland *
+use hyprland *
 use tmx *
 use helb *
 use btrkdlfmt *
