@@ -4,7 +4,9 @@ export def main [client:record] {
 
 	if $same_ws {
 		hyprctl dispatch focuswindow address:($client.address)
+		| ignore
 	} else {
 		hyprctl dispatch movetoworkspace name:($curr_ws), address:($client.address)
+		| ignore
 	}
 }
