@@ -17,6 +17,6 @@ export def main [cmd:list<string> title:string params:record] {
 	let cmd = $cmd | str join ' '
 	let winrule = get_win_rule $params
 
-	hyprctl dispatch -- exec ($winrule) $'ghostty --title=($title) -e ($cmd)'
+	hyprctl dispatch -- exec ($winrule) $'ghostty --title=($title) -e ($cmd)' | ignore
 
 }
