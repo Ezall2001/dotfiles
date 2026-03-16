@@ -59,8 +59,7 @@ def downloads(c):
 	c.location.prompt = True
 	c.location.remember = True
 	c.location.suggestion = 'both'
-	# TODO: set this
-	c.open_dispatcher = None
+	c.open_dispatcher = 'xdg-open'
 	c.position = 'top'
 	c.prevent_mixed_content = True
 	c.remove_finished = 5000
@@ -75,10 +74,9 @@ def editor(c):
 
 def fileselect(c):
 	c.handler = 'external'
-	# TODO: set this
-	# c.folder.command = ['xterm', '-e', 'ranger', '--choosedir={}']
-	# c.multiple_files.command = ['xterm', '-e', 'ranger', '--choosefiles={}']
-	# c.single_file.command = ['xterm', '-e', 'ranger', '--choosefile={}']
+	c.folder.command = ['hyp_file_select', '--dir']
+	c.multiple_files.command = ['hyp_file_select', '--multi']
+	c.single_file.command = ['hyp_file_select']
 
 
 def other(c):
