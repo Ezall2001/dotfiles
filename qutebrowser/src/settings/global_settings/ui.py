@@ -1,7 +1,7 @@
 def window(c):
 	c.hide_decoration = True
 	c.title_format = 'not used'
-	c.transparent = False
+	c.transparent = True
 
 
 def zoom(c):
