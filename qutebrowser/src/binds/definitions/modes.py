@@ -27,6 +27,37 @@ def prompt():
 	Binds.bind('<ctrl-p>', 'prompt-item-focus prev', 'prompt')
 
 
+def caret():
+	Binds.bind('v', 'mode-enter caret', 'normal')
+	Binds.bind('V', 'mode-enter caret;;selection-toggle --line', 'normal')
+	Binds.bind('v', 'selection-toggle', 'caret')
+	Binds.bind('V', 'selection-toggle --line', 'caret')
+
+	Binds.bind('h', 'move-to-prev-char', 'caret')
+	Binds.bind('l', 'move-to-next-char', 'caret')
+	Binds.bind('k', 'move-to-prev-line', 'caret')
+	Binds.bind('j', 'move-to-next-line', 'caret')
+	Binds.bind('H', 'move-to-start-of-line', 'caret')
+	Binds.bind('L', 'move-to-end-of-line', 'caret')
+	Binds.bind('K', 'move-to-start-of-document', 'caret')
+	Binds.bind('J', 'move-to-end-of-document', 'caret')
+	Binds.bind('b', 'move-to-prev-word', 'caret')
+	Binds.bind('w', 'move-to-next-word', 'caret')
+	Binds.bind('e', 'move-to-end-of-word', 'caret')
+	Binds.bind('[', 'move-to-start-of-prev-block', 'caret')
+	Binds.bind(']', 'move-to-start-of-next-block', 'caret')
+	Binds.bind('{', 'move-to-end-of-prev-block', 'caret')
+	Binds.bind('}', 'move-to-end-of-next-block', 'caret')
+
+	Binds.bind('<ctrl-h>', 'scroll left', 'caret')
+	Binds.bind('<ctrl-l>', 'scroll right', 'caret')
+	Binds.bind('<ctrl-k>', 'scroll up', 'caret')
+	Binds.bind('<ctrl-j>', 'scroll down', 'caret')
+
+	Binds.bind('y', 'yank selection', ['normal', 'caret'])
+	Binds.bind('o', 'selection-reverse', 'caret')
+
+
 def command():
 	Binds.bind(':', 'cmd-set-text :', 'normal')
 	Binds.bind('.', 'cmd-repeat-last', 'normal')
@@ -56,12 +87,15 @@ def normal():
 
 
 def other():
-	Binds.bind('<escape>', 'mode-leave', ['insert', 'hint', 'register', 'prompt', 'yesno', 'command'])
+	Binds.bind(
+		'<escape>', 'mode-leave', ['insert', 'hint', 'register', 'prompt', 'yesno', 'command', 'caret']
+	)
 	Binds.bind('<ctrl-escape>', 'fake-key <escape>', ['insert', 'normal'])
 
 
 def setup():
 	command()
+	caret()
 	normal()
 	insert()
 	passthrough()
