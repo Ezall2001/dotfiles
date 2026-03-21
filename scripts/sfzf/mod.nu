@@ -6,7 +6,7 @@ use utils/state.nu [update_internal_state]
 use header/make_header_params.nu
 
 export use header/actions_header.nu *
-export use consts.nu [FZF_DELIMETER STYLED_FZF_DELIMETER]
+export use consts.nu [FZF_DELIMETER STYLED_FZF_DELIMETER STYLES]
 export use utils/state.nu [get_state update_state]
 export use utils/icons.nu [get_toggle_icon]
 export use actions.nu [change_header join_actions reload_input]
