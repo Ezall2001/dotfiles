@@ -130,6 +130,8 @@ undo: 󰕍
 sort_asc: 
 sort_desc: 
 copy: 󰆏
+pause: 
+play: 
 
 # rights
 root: 󰡗

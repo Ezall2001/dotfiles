@@ -1,0 +1,16 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [_main]
+use ./menu [_menu]
+use ./menu/input.nu [get_input]
+use ./menu/preview.nu [main]
+use ./menu/actions.nu [pause clear delete]
+
+def main [] { _main }
+
+def 'main _menu' [] {_menu}
+def 'main _action pause' [lvl:int] {pause $lvl}
+def 'main _action clear' [] {clear}
+def 'main _action delete' [id:string] {delete $id}
+def 'main _input' [] { get_input }
+def 'main _preview' [id:int] { preview $id}
