@@ -6,7 +6,7 @@ export def _clipse [address?:string]: nothing -> nothing {
 	let val = try {wl-paste} catch {''}
 
 	if ($env.LAST_EXIT_CODE != 0) or ($address == null) {return null}
-	hyp_write $val $address
+	hyp_write $val paste $address
 }
 
 export def _main []: [nothing -> nothing] {

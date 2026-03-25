@@ -3,6 +3,7 @@ use ../../sfzf [main]
 use ./input.nu [get_input]
 use ./params.nu [get_params]
 use ./consts.nu [BINDS]
+use ../hyp_write [main]
 
 export def _menu [address?:string] {
 	let params = get_params
@@ -12,7 +13,7 @@ export def _menu [address?:string] {
 	lines | str join " "
 
 	if $address == null {return}
-	hyp_write $output $address
+	hyp_write $output paste $address
 }
 
 export def _main [] {

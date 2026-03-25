@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [_hyp_write]
+use ./mod.nu [_main]
 
-def main [str:string address?:string] {
-	_hyp_write $str $address
+def main [str:string strategy:string address?:string] {
+	_main $str $strategy $address
 }

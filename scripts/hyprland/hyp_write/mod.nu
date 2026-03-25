@@ -13,7 +13,7 @@ def get_active_address [] {
 	hyprctl activewindow -j | from json | get address
 }
 
-export def _hyp_write [str:string address?:string] {
+export def _main [str:string strategy:string address?:string] {
 	let pid = $address | default (get_active_address)
 
 	let client = hyprctl clients -j | from json |
@@ -21,13 +21,12 @@ export def _hyp_write [str:string address?:string] {
 
 	if ($client | is-empty) { return }
 
-	if ($client.class == 'com.mitchellh.ghostty') {
-		paste_strategy $address $str
-	} else {
-		wtype_strategy $address $str
+	match $strategy {
+		paste => (paste_strategy $address $str)
+		type => (wtype_strategy $address $str)
 	}
 }
 
-export def main [str:string address?:string] {
-	_hyp_write $str $address
+export def main [str:string strategy:string  address?:string] {
+	_main $str $strategy $address
 }
