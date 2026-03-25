@@ -2,6 +2,14 @@ from lib.binds import Binds
 from lib.userscript import Params, uscrpt
 
 
+def download():
+	Binds.bind('<space>dp', 'download', 'normal')
+	Binds.bind('<space>do', 'download-open', 'normal')
+	Binds.bind('<space>dc', 'download-cancel', 'normal')
+	Binds.bind('<space>dd', 'download-delete', 'normal')
+	Binds.bind('<space>dr', 'download-retry', 'normal')
+
+
 def search():
 	Binds.bind('/', 'cmd-set-text /', 'normal')
 	Binds.bind('?', 'cmd-set-text ?', 'normal')
@@ -20,8 +28,8 @@ def messages():
 
 
 def devtools():
-	Binds.bind('<space>dt', 'devtools right', 'normal')
-	Binds.bind('<space>df', 'devtools-focus', 'normal')
+	Binds.bind('<space>vo', 'devtools right', 'normal')
+	Binds.bind('<space>vf', 'devtools-focus', 'normal')
 
 
 def darktheme():
@@ -38,3 +46,4 @@ def setup():
 	messages()
 	devtools()
 	darktheme()
+	download()
