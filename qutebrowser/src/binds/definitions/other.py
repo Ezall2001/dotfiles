@@ -4,6 +4,7 @@ from lib.userscript import Params, uscrpt
 
 def search():
 	Binds.bind('/', 'cmd-set-text /', 'normal')
+	Binds.bind('?', 'cmd-set-text ?', 'normal')
 	Binds.bind('n', 'search-next', 'normal')
 	Binds.bind('N', 'search-prev', 'normal')
 
