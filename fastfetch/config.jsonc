@@ -75,7 +75,7 @@
 	"logo": {
 		"type": "kitty-icat",
 		"source": "~/.config/fastfetch/assets/arch_linux_blue_girl.png",
-		"width": 40,
+		"width": 30,
 		"height": null,
 		"preserveAspectRatio": true,
 		"recache": false,
@@ -83,8 +83,8 @@
 		"position": "left",
 		"padding": {
 			"top": 1,
-			"left": 0,
-			"right": 0
+			"left": 2,
+			"right": 5
 		},
 		"chafa": {
 			"fgOnly": true,
