@@ -8,3 +8,4 @@ def setup():
 	Binds.bind('<ctrl-shift-f>', 'hint all hover', 'normal')
 	Binds.bind('<space>fy', 'hint all yank', 'normal')
 	Binds.bind('<space>fd', 'hint all download', 'normal')
+	Binds.bind('<space>fr', 'hint all --rapid tab-bg', 'normal')
