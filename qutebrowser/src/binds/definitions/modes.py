@@ -84,6 +84,8 @@ def command():
 
 def normal():
 	Binds.bind('<escape>', 'search', 'normal')
+	Binds.bind('<space>y', 'yank url', 'normal')
+	Binds.bind('<space>m', 'tab-mute', 'normal')
 
 
 def other():
