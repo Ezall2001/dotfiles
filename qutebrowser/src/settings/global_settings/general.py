@@ -17,6 +17,7 @@ def url(c):
 		'DEFAULT': 'https://search.brave.com/search?q={}',
 		'yt': 'https://www.youtube.com/results?search_query={}',
 		'gt': 'https://github.com/search?q={}&type=repositories',
+		'gg': 'https://www.google.com/search?q={}',
 	}
 	c.start_pages = ['https://search.brave.com']
 	c.yank_ignored_parameters = [
