@@ -2,6 +2,19 @@ from lib.binds import Binds
 from lib.userscript import Params, uscrpt
 
 
+def bookmarks():
+	Binds.bind('<space>ba', 'cmd-set-text -s :bookmark-add {url}', 'normal')
+	Binds.bind('<space>bd', 'cmd-set-text -s :bookmark-del', 'normal')
+	Binds.bind('<space>bl', 'bookmark-list --tab --jump', 'normal')
+	Binds.bind('<space>bx', 'hint --rapid links run bookmark-del {hint-url}', 'normal')
+
+
+def quickmarks():
+	Binds.bind('<space>qa', 'cmd-set-text -s :quickmark-add {url}', 'normal')
+	Binds.bind('<space>qd', 'cmd-set-text -s :quickmark-del', 'normal')
+	Binds.bind('<space>ql', 'bookmark-list --tab', 'normal')
+
+
 def hints():
 	Binds.bind('f', 'hint all normal', 'normal')
 	Binds.bind('F', 'hint all tab-fg', 'normal')
@@ -56,6 +69,8 @@ def darktheme():
 
 
 def setup():
+	bookmarks()
+	quickmarks()
 	marks()
 	search()
 	hints()

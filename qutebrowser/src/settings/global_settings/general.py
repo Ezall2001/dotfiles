@@ -38,11 +38,10 @@ def completion(c):
 	c.height = '50%'
 	c.min_chars = 1
 	c.open_categories = [
-		'searchengines',
 		'quickmarks',
-		'bookmarks',
 		'history',
 		'filesystem',
+		'searchengines',
 	]
 	c.quick = True
 	c.scrollbar.padding = 0
