@@ -2,6 +2,16 @@ from lib.binds import Binds
 from lib.userscript import Params, uscrpt
 
 
+def hints():
+	Binds.bind('f', 'hint all normal', 'normal')
+	Binds.bind('F', 'hint all tab-fg', 'normal')
+	Binds.bind('<ctrl-f>', 'hint all tab-bg', 'normal')
+	Binds.bind('<ctrl-shift-f>', 'hint all hover', 'normal')
+	Binds.bind('<space>fy', 'hint all yank', 'normal')
+	Binds.bind('<space>fd', 'hint all download', 'normal')
+	Binds.bind('<space>fr', 'hint all --rapid tab-bg', 'normal')
+
+
 def marks():
 	Binds.bind('M', 'mode-enter set_mark', 'normal')
 	Binds.bind('m', 'mode-enter jump_mark', 'normal')
@@ -48,6 +58,7 @@ def darktheme():
 def setup():
 	marks()
 	search()
+	hints()
 	dev()
 	messages()
 	devtools()
