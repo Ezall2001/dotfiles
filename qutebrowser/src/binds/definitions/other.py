@@ -65,7 +65,7 @@ def dev():
 
 def messages():
 	Binds.bind('<space>nx', 'clear-messages', 'normal')
-	Binds.bind('<space>nt', 'messages --bg', 'normal')
+	Binds.bind('<space>nt', 'messages --tab', 'normal')
 
 
 def devtools():
