@@ -2,6 +2,11 @@ from lib.binds import Binds
 from lib.userscript import Params, uscrpt
 
 
+def macro():
+	Binds.bind('q', 'macro-record', 'normal')
+	Binds.bind('Q', 'macro-run', 'normal')
+
+
 def bookmarks():
 	Binds.bind('<space>ba', 'cmd-set-text -s :bookmark-add {url}', 'normal')
 	Binds.bind('<space>bd', 'cmd-set-text -s :bookmark-del', 'normal')
@@ -69,6 +74,7 @@ def darktheme():
 
 
 def setup():
+	macro()
 	bookmarks()
 	quickmarks()
 	marks()

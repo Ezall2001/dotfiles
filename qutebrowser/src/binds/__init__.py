@@ -16,13 +16,3 @@ def setup(config: ConfigAPI, c: ConfigContainer):
 	modes.setup()
 
 	Binds.apply(config)
-	# session-save
-	# close
-	# try navigate
-	# bookmarks / quickmark
-	# downloads
-	# mode-enter jump_mark
-	# marks
-	# macros
-
-	# TODO: finish from ZQ
