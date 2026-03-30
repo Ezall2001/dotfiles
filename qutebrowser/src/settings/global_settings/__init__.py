@@ -1,7 +1,8 @@
-from . import content, general, hints, input, qt, tabs, ui
+from . import colors, content, general, hints, input, qt, tabs, ui
 
 
 def setup(c):
+	colors.setup(c)
 	general.setup(c)
 	qt.setup(c)
 	input.setup(c)

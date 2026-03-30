@@ -10,3 +10,4 @@ sfzf: theme-icons
 waybar_weather: theme-icons
 fastfetch: theme-icons
 zen: font
+qutebrowser: theme-font
