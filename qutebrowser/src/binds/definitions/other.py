@@ -2,6 +2,11 @@ from lib.binds import Binds
 from lib.userscript import Params, uscrpt
 
 
+def marks():
+	Binds.bind('M', 'mode-enter set_mark', 'normal')
+	Binds.bind('m', 'mode-enter jump_mark', 'normal')
+
+
 def download():
 	Binds.bind('<space>dp', 'download', 'normal')
 	Binds.bind('<space>do', 'download-open', 'normal')
@@ -41,6 +46,7 @@ def darktheme():
 
 
 def setup():
+	marks()
 	search()
 	dev()
 	messages()
