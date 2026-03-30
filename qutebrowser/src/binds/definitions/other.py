@@ -2,6 +2,14 @@ from lib.binds import Binds
 from lib.userscript import Params, uscrpt
 
 
+def keyhint():
+	Binds.bind(
+		'<space>/k',
+		'config-cycle keyhint.delay 0 10000;;config-cycle input.partial_timeout 500 0;;message-info "keyhint toggled"',
+		'normal',
+	)
+
+
 def macro():
 	Binds.bind('q', 'macro-record', 'normal')
 	Binds.bind('Q', 'macro-run', 'normal')
@@ -74,6 +82,7 @@ def darktheme():
 
 
 def setup():
+	keyhint()
 	macro()
 	bookmarks()
 	quickmarks()
