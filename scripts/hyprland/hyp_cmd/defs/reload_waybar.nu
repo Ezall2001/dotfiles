@@ -1,5 +1,5 @@
 use ../../../killp [killp]
-use ../../../ujob [ujob]
+use ../../../ujob
 use ../../hyp_init [init_waybar]
 use ../../../uschedule [wait_until]
 
