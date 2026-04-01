@@ -33,9 +33,9 @@ export def spawn [tag:string closure:closure] {
 	let id = job spawn {
 		try {
 			let val = do $closure
-			std_message $val --finished | job send $p_id
+			std_message $tag $val --finished | job send $p_id
 		} catch {|e|
-			std_message $e --error | job send $p_id
+			std_message $tag $e --error | job send $p_id
 		}
 	}
 
