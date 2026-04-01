@@ -12,7 +12,7 @@ export def is_timeout_message [msg:any expected_id:int]: nothing -> bool {
 	(is_std_message $msg) and $msg.status == $FINISH_STATUS and $msg.val == $TIMEOUT_EXIT_VALUE and $msg.id == $expected_id
 }
 
-export def std_message [val?:any --error (-e) --finished (-f)]: nothing -> record {
+export def std_message [tag:string val?:any --error (-e) --finished (-f)]: nothing -> record {
 	let status = if $error {$ERROR_STATUS} else if $finished {$FINISH_STATUS} else {$RUNNING_STATUS}
-	{id:(job id) status:$status val:$val}
+	{id:(job id) status:$status tag:$tag val:$val}
 }
