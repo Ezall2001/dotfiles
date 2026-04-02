@@ -1,4 +1,6 @@
 export const RUNNING_STATUS = 'running'
-export const FINISH_STATUS = 'finished'
+export const OK_STATUS = 'ok'
 export const ERROR_STATUS = 'error'
-export const TIMEOUT_EXIT_VALUE = 'nu_job_timeout'
+export const TIMEOUT_STATUS = 'timeout'
+
+export const TAG_SEPERATOR = ';;;'
