@@ -127,6 +127,7 @@ renamed: 
 
 # general actions
 undo: 󰕍
+sync: 󰓦
 sort_asc: 
 sort_desc: 
 copy: 󰆏
