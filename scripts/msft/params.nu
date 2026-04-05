@@ -15,7 +15,7 @@ export def get_params [state:record] {
 	}
 
 	let grouped_params = {
-		with-nth: $"{1}($FZF_DELIMETER){2}"
+		with-nth: $"{1}($STYLED_FZF_DELIMETER){2}"
 	}
 
 	let ungrouped_params = {
