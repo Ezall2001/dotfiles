@@ -1,0 +1,28 @@
+#!/usr/bin/env nu
+
+use ./exposed
+use ./init.nu [main]
+use ./unlock.nu [main]
+use ./menu [main preview get_input on_focus_change]
+use ./menu/actions.nu
+use ./mod.nu [_main]
+use ./sync.nu [main]
+
+def main [] {_main}
+def 'main _menu' [] {menu}
+def 'main _preview' [item:string] {preview $item}
+def 'main _input' [] {get_input}
+def 'main _action yank' [field:int item:string] {actions yank $field $item}
+def 'main _action sync' [] {actions sync}
+def 'main _event on_focus_change' [item:string] {on_focus_change $item}
+
+def 'main init' [] {init}
+def 'main unlock' [--force(-f) --no-interactive] {
+	unlock --force=$force --no-interactive=$no_interactive
+}
+def 'main sync' [] {sync}
+
+def 'main exposed check' [] {exposed check}
+def 'main exposed view' [] {exposed view}
+def 'main exposed warn' [] {exposed warn}
+def 'main exposed resolve' [] {exposed resolve}
