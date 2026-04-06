@@ -7,7 +7,6 @@ use ../sync.nu
 alias _sync = sync
 
 export def yank [field:int item:string] {
-	let field = if $field == 0 {9} else {$field - 1}
 	$item | save -f /tmp/bbw
 
 	let item = $item | from json
@@ -18,6 +17,7 @@ export def yank [field:int item:string] {
 	try {
 		let val = do $getter $item
 		$val | clipse -c
+		notify-send -u LOW -t 1000 'field copied'
 	} catch {|e|
 		notify-send -u CRITICAL 'error while yanking field'
 	}

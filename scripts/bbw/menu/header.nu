@@ -4,13 +4,10 @@ use fields.nu [FIELDS_MAP]
 def get_components [state:record type:int] {
 	let yanks = FIELDS_MAP | get ($type - 1)
 	| enumerate | flatten | each {|field|
-		let key = if $field.index == 9 {0} else {$field.index + 1}
-		| into string
-
 		{
 			icon: '󰆏 ',
 			label: $field.label,
-			key: ($key)
+			key: $'f($field.index + 1)'
 		}
 	}
 
