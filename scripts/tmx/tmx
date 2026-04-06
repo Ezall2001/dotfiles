@@ -8,6 +8,4 @@ def 'main window move' [target:int] {
 	window move $target
 }
 
-def 'main keybinds send_key_if' [...patterns] {
-	keybinds send_key_if ...$patterns
-}
+def 'main keybinds' [] { keybinds }
