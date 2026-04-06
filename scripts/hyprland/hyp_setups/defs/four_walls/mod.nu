@@ -1,12 +1,10 @@
 use ../../utils/col_rule.nu [make_col_priority_rule]
 
-const devices = [
-	{name:builtin_kbd type:keyboard backlight:'asus::kbd_backlight'}
-]
+const devices = [ ]
 
 const monitors = [
 	{name:'HDMI-A-1' init_focus:0 backlight:ddci2}
-	{name:'eDP-1' init_focus:1 backlight:intel_backlight}
+	{name:'LVDS-1' init_focus:1 backlight:intel_backlight}
 ]
 
 export def main [] {
