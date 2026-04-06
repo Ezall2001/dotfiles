@@ -7,7 +7,6 @@ export use ./init.nu [main]
 export use ./sync.nu [main]
 
 export def _main [] {
-	unlock
 	hyp_menu [bbw _menu] bbw $PARAMS
 }
 
