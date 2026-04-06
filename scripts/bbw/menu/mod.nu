@@ -9,6 +9,8 @@ export use actions.nu [yank]
 export use events.nu [on_focus_change]
 
 export def main [] {
+	unlock
+
 	let state = $DEFAULT_STATE
 	update_state $state {}
 	let params = get_params $state
