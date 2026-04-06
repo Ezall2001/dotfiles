@@ -4,7 +4,7 @@ use ../hyp_setups [get_setup]
 
 def get_active_mon_backlight [] {
 	let setup = get_setup
-	let ws  = get_active_ws ($setup)
+	let ws = get_active_ws ($setup)
 	if $ws == null {return}
 	$setup.monitors | get $ws.col | get backlight
 }

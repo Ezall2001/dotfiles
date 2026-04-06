@@ -4,7 +4,7 @@ def get_header [] {
 	let set = {
 		icon: ' ',
 		label: 'set',
-		key: 'num'
+		key: 'fun'
 	}
 
 	let black = {
