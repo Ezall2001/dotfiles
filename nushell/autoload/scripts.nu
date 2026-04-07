@@ -11,4 +11,5 @@ use upath
 use killp *
 use params
 use ujob
+use bbw
 # use fastfetch *
