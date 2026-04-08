@@ -15,6 +15,6 @@ export def reload_input []: nothing -> string {
 	$'reload[($cmd)]'
 }
 
-export def join_actions [actions:list<string>]: nothing -> string {
-	$actions | str join '+'
+export def join_actions [actions:list<oneof<string,nothing>>]: nothing -> string {
+	$actions | where $it != null | str join '+'
 }

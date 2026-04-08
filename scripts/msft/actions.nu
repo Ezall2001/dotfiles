@@ -15,6 +15,8 @@ export def group [] {
 
 export def sort [by:string] {
 	let state = get_state
+	let toggle_sort = if ($by == score) xor ($state.sort == score) {
+		'toggle-sort' } else {null}
 
 	let direction = if $by == score {-1} else if $by == $state.sort { $state.sort_direction * -1 } else {-1}
 	let state = update_state {sort: $by, sort_direction: $direction} $state
@@ -23,7 +25,7 @@ export def sort [by:string] {
 
 	join_actions [
 		(change_header $header)
-		'toggle-sort'
+		$toggle_sort
 		(reload_input)
 	]
 }
