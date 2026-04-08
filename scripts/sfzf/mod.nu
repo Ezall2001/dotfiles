@@ -1,9 +1,9 @@
 use consts.nu [DEFAULT_PARAMS]
 use footer.nu [make_footer_params]
 use binds.nu [make_binds_params]
-use ../params
 use utils/state.nu [update_internal_state]
 use header/make_header_params.nu
+use ../nushell/nui/params
 
 export use header/actions_header.nu *
 export use consts.nu [FZF_DELIMETER STYLED_FZF_DELIMETER STYLES]

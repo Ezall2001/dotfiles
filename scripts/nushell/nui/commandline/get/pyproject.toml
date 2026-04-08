@@ -1,0 +1,9 @@
+[project]
+	name = "commandline"
+	version = "0.1.0"
+	requires-python = ">=3.10,<3.15"
+	dependencies = []
+
+[tool.poetry]
+	[tool.poetry.scripts]
+		main = "commandline.__main__:main"

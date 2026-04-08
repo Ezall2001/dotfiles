@@ -1,7 +1,7 @@
 use ../../../sfzf [FZF_DELIMETER]
 use ../../hyp_setups [get_backlight_devices]
 use ../utils.nu [get_brightness]
-use ../../../utype [into_pct]
+use ../../../nushell/nui/type [into_pct]
 
 def get_item [dev:record] {
 	let brightness = get_brightness $dev.backlight

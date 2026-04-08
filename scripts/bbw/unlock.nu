@@ -1,5 +1,5 @@
 use consts.nu [BASE_URL STATE_PATH]
-use ../upath
+use ../nushell/nui
 use utils.nu [key_path update_state get_state]
 use ./sync.nu [main]
 
@@ -42,7 +42,7 @@ def unlock [] {
 	let key = get_key $pass
 	if $key == null { return }
 
-	$key | upath save -f (key_path)
+	$key | nui save -f (key_path)
 
 	_sync
 	check

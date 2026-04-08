@@ -1,6 +1,6 @@
 use ../../sfzf [get_state]
 use consts.nu [STARTS]
-use ../../ucommandline
+use ../nui/commandline
 
 def handle_spaces [path: string] {
 	if ($path | str contains ' ') {$"`($path)`"} else {$path}
@@ -25,5 +25,5 @@ export def get_output [
 ]: nothing -> string {
 	let state = get_state
 	let formatted = format $state $selected
-	ucommandline replace $buffer $cursor_str $formatted | to nuon
+	commandline replace $buffer $cursor_str $formatted | to nuon
 }

@@ -1,4 +1,4 @@
-use ../../utype [from_pct into_pct]
+use ../../nushell/nui/type [from_pct into_pct]
 
 export def get_brightness [name:string]: nothing -> oneof<int,nothing> {
 	try {

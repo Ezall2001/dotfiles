@@ -1,4 +1,4 @@
-use ../upath
+use ../nushell/nui
 use consts.nu [STATE_PATH DEFAULT_STATE]
 
 export def typename [type:int] {
@@ -28,7 +28,7 @@ export def update_state [new_state:record old_state?:record] {
 	} else {$old_state}
 
 	let updated_state = $old_state | merge $new_state
-	$updated_state | to json | upath save -f $STATE_PATH
+	$updated_state | to json | nui save -f $STATE_PATH
 
 	$updated_state
 }

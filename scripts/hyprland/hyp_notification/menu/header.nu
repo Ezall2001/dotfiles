@@ -1,5 +1,5 @@
 use ../../../sfzf [get_state build_action_header]
-use ../../../uansi [style]
+use ../../../nushell/nui/ansi [style]
 
 def get_components [state:record] {
 	let unpause = {

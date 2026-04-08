@@ -1,7 +1,6 @@
 use ../unlock.nu [main]
 use ../consts.nu [EXPOSED_PATH BASE_URL]
-use ../../ujob
-use ../../upath
+use ../../nushell/nui
 
 def format [item:record folders:table] {
 	let folder = if 'folderId' in $item {
@@ -27,29 +26,29 @@ export def main [] {
 	let is_unlocked = unlock --no-interactive
 	if not $is_unlocked { return }
 
-	let items_tag = ujob spawn items {
+	let items_tag = nui job spawn items {
 		let res = http get $'($BASE_URL)/list/object/items'
 		$res.data.data
 	}
-	let folders_tag = ujob spawn folders {
+	let folders_tag = nui job spawn folders {
 		let res = http get $'($BASE_URL)/list/object/folders'
 		$res.data.data
 	}
 
-	let tags = ujob await $items_tag --timeout 1min
+	let tags = nui job await $items_tag --timeout 1min
 	| first | get val
 	| where type == 1 and login.password != null
 	| each {|item|
 		sleep 100ms
-		ujob spawn $item.id { check $item }
+		nui job spawn $item.id { check $item }
 	}
 
-	let folders = ujob await $folders_tag --timeout 1min
+	let folders = nui job await $folders_tag --timeout 1min
 	| first | get val
 
-	ujob await --timeout 10min ...$tags
+	nui job await --timeout 10min ...$tags
 	| get val | where exposed > 0
 	| each {format $in $folders}
 	| str join "\n\n"
-	| upath save -f $EXPOSED_PATH
+	| nui save -f $EXPOSED_PATH
 }
