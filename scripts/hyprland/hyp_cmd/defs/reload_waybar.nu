@@ -1,9 +1,8 @@
-use ../../../killp [killp]
+use ../../../nushell/nui
 use ../../hyp_init [init_waybar]
-use ../../../uschedule [wait_until]
 
 def reload [] {
-	killp --all --force waybar
+	nui kill --all --force waybar
 	hyprctl dispatch exec hyp_cmd init_waybar
 }
 

@@ -1,2 +1,2 @@
-source aliases/mod.nu
+source commands/mod.nu
 source integration/mod.nu

@@ -3,7 +3,7 @@ use ./params.nu [get_params]
 use ../hyp_utils [get_exec_rules post_exec_rules]
 use ../../sfzf [main]
 use ../hyp_apps [get_apps]
-use ../../uschedule [wait_until]
+use ../../nushell/nui/schedule [wait_until]
 
 def find_client [app:record] {
 	hyprctl clients -j | from json

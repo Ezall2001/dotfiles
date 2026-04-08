@@ -2,7 +2,7 @@ use ../consts.nu [MODIFIERS_MASK_MAP]
 use ../../sfzf [main FZF_DELIMETER STYLED_FZF_DELIMETER]
 use ../hyp_menu [main]
 use ../hyp_utils [mod_mask_to_name]
-use ../../uansi [style]
+use ../../nushell/nui/ansi [style]
 
 
 def get_params [] {

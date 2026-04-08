@@ -1,5 +1,5 @@
 use ../consts.nu [BASE_URL]
-use ../../ujob
+use ../../nushell/nui
 use ../../sfzf [FZF_DELIMETER get_state]
 use ../utils.nu [typename]
 
@@ -17,16 +17,16 @@ def stringify_item [item:record folders:table] {
 
 
 export def get_input [state?:record] {
-	let items_tag = ujob spawn items {
+	let items_tag = nui job spawn items {
 		let res = http get $'($BASE_URL)/list/object/items'
 		$res.data.data
 	}
-	let folders_tag = ujob spawn folders {
+	let folders_tag = nui job spawn folders {
 		let res = http get $'($BASE_URL)/list/object/folders'
 		$res.data.data
 	}
 
-	let res = ujob await $items_tag $folders_tag
+	let res = nui job await $items_tag $folders_tag
 	let items = $res | where tag == $items_tag | first | get val
 	let folders = $res | where tag == $folders_tag | first | get val
 
