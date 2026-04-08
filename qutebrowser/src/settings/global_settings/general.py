@@ -61,7 +61,7 @@ def downloads(c):
 	c.location.suggestion = 'both'
 	c.open_dispatcher = 'xdg-open'
 	c.position = 'top'
-	c.prevent_mixed_content = True
+	c.prevent_mixed_content = False
 	c.remove_finished = 5000
 
 
