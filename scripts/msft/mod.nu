@@ -4,9 +4,14 @@ use const.nu [DEFAULT_STATE INPUT_GETTER BINDS]
 use input.nu [get_input]
 use output.nu [get_output]
 
+def get_default_state [group:bool] {
+	let state = $DEFAULT_STATE | merge {group:$group}
+	let cond_state = if $group {{sort: timestamp}} else {{}}
+	$state | merge $cond_state
+}
 
 export def _msft [group:bool] {
-	let state = ($DEFAULT_STATE | merge {group: $group})
+	let state = get_default_state $group
 	update_state $state {}
 	let params = get_params $state
 
