@@ -5,6 +5,7 @@ UNIGINE
 gtk-3.0
 menus
 systemd
+procps
 ghc
 .mozilla
 go
