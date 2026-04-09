@@ -9,7 +9,8 @@ const ERROR_JSON = {
 
 def main [] {
 	try {
-		~/.config/scripts/waybar/waybar_weather/dist/waybar_weather
+		cd ~/.config/scripts/waybar/waybar_weather
+		poetry run main
 	} catch {|e|
 		hyp_log $e.rendered waybar_weather --notify 'waybar_weather' --level error
 		$ERROR_JSON | to json --raw
