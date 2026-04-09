@@ -1,0 +1,8 @@
+#!/usr/bin/env nu
+
+use ./mod.nu [commit restore]
+
+def main [] { }
+
+def 'main commit' [] {commit}
+def 'main restore' [] {restore}
