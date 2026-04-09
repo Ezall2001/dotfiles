@@ -1,6 +1,7 @@
 use ../unlock.nu [main]
 use ../consts.nu [EXPOSED_PATH BASE_URL]
 use ../../nushell/nui
+use ../utils.nu [get_state]
 
 def format [item:record folders:table] {
 	let folder = if 'folderId' in $item {
@@ -46,8 +47,10 @@ export def main [] {
 	let folders = nui job await $folders_tag --timeout 1min
 	| first | get val
 
+	let state = get_state
+
 	nui job await --timeout 10min ...$tags
-	| get val | where exposed > 0
+	| get val | where ($it.exposed > 0) and ($it.id not-in $state.ignore_exposed)
 	| each {format $in $folders}
 	| str join "\n\n"
 	| nui save -f $EXPOSED_PATH

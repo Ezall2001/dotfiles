@@ -26,3 +26,4 @@ def 'main exposed check' [] {exposed check}
 def 'main exposed view' [] {exposed view}
 def 'main exposed warn' [] {exposed warn}
 def 'main exposed resolve' [] {exposed resolve}
+def 'main exposed ignore' [id:string] {exposed ignore $id}
