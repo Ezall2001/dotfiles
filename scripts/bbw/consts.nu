@@ -6,6 +6,7 @@ export const BASE_URL = $'http://localhost:($PORT)'
 export def DEFAULT_STATE [] {
 	{
 		last_check: ((date now) - 1wk)
+		ignore_exposed: []
 	}
 }
 
