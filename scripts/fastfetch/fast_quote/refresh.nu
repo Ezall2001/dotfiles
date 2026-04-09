@@ -1,5 +1,5 @@
-use ../consts.nu [CACHE_DIR]
-use ./consts.nu [CACHE_FILE URL DEFAULT_QUOTE]
+use ./consts.nu [STATE_FILE URL DEFAULT_QUOTE]
+use ../../nushell/nui
 
 export def main [] {
 	hyprctl dispatch exec fast_quote _refresh | ignore
@@ -21,6 +21,5 @@ export def _refresh [] {
 	let ttl = (date now) + 12min
 
 	let cache = {quote:$quote ttl:$ttl}
-	mkdir $CACHE_DIR
-	$cache | save -f $CACHE_FILE
+	$cache | nui save -f $STATE_FILE
 }

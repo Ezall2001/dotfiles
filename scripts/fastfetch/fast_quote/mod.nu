@@ -1,10 +1,10 @@
-use ./consts.nu [CACHE_FILE DEFAULT_QUOTE]
+use ./consts.nu [STATE_FILE DEFAULT_QUOTE]
 use ./format.nu [main]
 use ./refresh.nu [main]
 
 export def _main [line:oneof<string,int>] {
 	let cache = try {
-		open $CACHE_FILE
+		open $STATE_FILE
 	} catch {
 		if $line == 'header' {refresh}
 		return (format $DEFAULT_QUOTE $line)
