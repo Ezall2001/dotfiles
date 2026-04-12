@@ -1,0 +1,22 @@
+#!/usr/bin/env nu
+
+use /usr/bin/scripts/system/rbackup/local
+use /usr/bin/scripts/system/rbackup/cloud
+
+def 'main' [] {}
+
+def 'main local backup' [backup_dir:string --no-delete] {
+	local backup $backup_dir --no-delete=$no_delete
+}
+
+def 'main local restore' [backup_dir:string --no-delete] {
+	local restore $backup_dir --no-delete=$no_delete
+}
+
+def 'main cloud backup' [backup_dir:string] {
+	cloud backup $backup_dir
+}
+
+def 'main cloud restore' [backup_dir:string --no-delete] {
+	cloud restore $backup_dir --no-delete=$no_delete
+}
