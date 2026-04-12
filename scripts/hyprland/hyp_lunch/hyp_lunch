@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [_main _menu]
+use /usr/bin/scripts/hyprland/hyp_lunch/mod.nu [_main _menu]
 
 def main [name?:string] { _main $name }
 def 'main _menu' [] {_menu}

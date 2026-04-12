@@ -1,5 +1,5 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [_main]
+use /usr/bin/scripts/hyprland/hyp_idle/mod.nu [_main]
 
 def main [level:int] { _main $level }

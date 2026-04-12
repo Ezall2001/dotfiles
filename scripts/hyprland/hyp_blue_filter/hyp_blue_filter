@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [_main set unset]
+use /usr/bin/scripts/hyprland/hyp_blue_filter/mod.nu [_main set unset]
 
 def main [] {_main}
 def 'main set' [] {set}

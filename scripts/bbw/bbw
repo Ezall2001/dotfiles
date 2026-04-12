@@ -1,12 +1,12 @@
 #!/usr/bin/env nu
 
-use ./exposed
-use ./init.nu [main]
-use ./unlock.nu [main]
-use ./menu [main preview get_input on_focus_change]
-use ./menu/actions.nu
-use ./mod.nu [_main]
-use ./sync.nu [main]
+use /usr/bin/scripts/bbw/exposed
+use /usr/bin/scripts/bbw/init.nu [main]
+use /usr/bin/scripts/bbw/unlock.nu [main]
+use /usr/bin/scripts/bbw/menu [main preview get_input on_focus_change]
+use /usr/bin/scripts/bbw/menu/actions.nu
+use /usr/bin/scripts/bbw/mod.nu [_main]
+use /usr/bin/scripts/bbw/sync.nu [main]
 
 def main [] {_main}
 def 'main _menu' [] {menu}

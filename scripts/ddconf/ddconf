@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [commit restore]
+use /usr/bin/scripts/ddconf/mod.nu [commit restore]
 
 def main [] { }
 

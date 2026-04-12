@@ -1,8 +1,6 @@
 #!/usr/bin/env nu
 
-use ./session
-use ./init.nu
-
+use /usr/bin/scripts/qtb/session
 
 def main [] { }
 def 'main init' [] {init}

@@ -1,13 +1,12 @@
 #!/usr/bin/env nu
 
-use move.nu
-use focus.nu
-use resize.nu
-use toggle_float.nu
+use /usr/bin/scripts/hyprland/hyp_window/move.nu
+use /usr/bin/scripts/hyprland/hyp_window/focus.nu
+use /usr/bin/scripts/hyprland/hyp_window/resize.nu
+use /usr/bin/scripts/hyprland/hyp_window/toggle_float.nu
 
 def main [] {}
 def 'main focus' [direction?:string --toggle_floating (-f)] { focus $direction --toggle_floating=$toggle_floating }
 def 'main move' [direction:string] { move $direction }
 def 'main resize' [direction:string --reset (-r)] { resize $direction --reset=$reset}
 def 'main toggle_float' [] { toggle_float }
-

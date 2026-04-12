@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use ../hyprland/hyp_log [main]
+use /usr/bin/scripts/hyprland/hyp_log [main]
 
 def get_data [field] {
 	nvidia-smi --query-gpu=($field) --format=csv,nounits,noheader

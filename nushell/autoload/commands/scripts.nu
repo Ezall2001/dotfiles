@@ -4,7 +4,7 @@ use hyprland *
 use tmx *
 use btrkdlfmt *
 use qtb
-use nvim *
+use vi *
 use nushell/nui
 use bbw
 use system *

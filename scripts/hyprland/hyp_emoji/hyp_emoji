@@ -1,7 +1,7 @@
 #!/usr/bin/env nu
 
-use ./actions.nu [copy]
-use ./mod.nu [_main _menu]
+use /usr/bin/scripts/hyprland/hyp_emoji/actions.nu [copy]
+use /usr/bin/scripts/hyprland/hyp_emoji/mod.nu [_main _menu]
 
 def main [] { _main }
 def 'main _menu' [address?:string] { _menu $address }

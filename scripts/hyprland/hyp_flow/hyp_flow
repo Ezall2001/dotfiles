@@ -1,13 +1,13 @@
 #!/usr/bin/env nu
 
-use ./focus.nu [main]
-use ./pull.nu [main]
-use ./push.nu [main]
-use ./change_vws_col.nu [main]
+use /usr/bin/scripts/hyprland/hyp_flow/focus.nu [main]
+use /usr/bin/scripts/hyprland/hyp_flow/pull.nu [main]
+use /usr/bin/scripts/hyprland/hyp_flow/push.nu [main]
+use /usr/bin/scripts/hyprland/hyp_flow/change_vws_col.nu [main]
 
-use ./secondary_vws [_menu main]
-use ./secondary_vws/actions.nu
-use ./secondary_vws/input.nu [get_input]
+use /usr/bin/scripts/hyprland/hyp_flow/secondary_vws [_menu main]
+use /usr/bin/scripts/hyprland/hyp_flow/secondary_vws/actions.nu
+use /usr/bin/scripts/hyprland/hyp_flow/secondary_vws/input.nu [get_input]
 
 def main [] {}
 

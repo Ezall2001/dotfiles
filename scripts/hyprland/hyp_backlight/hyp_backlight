@@ -1,10 +1,10 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [_main]
-use ./menu [_menu]
-use ./menu/input.nu [get_input]
-use ./menu/actions.nu [set_brightness]
-use ./controls.nu [increase decrease increase_mon decrease_mon]
+use /usr/bin/scripts/hyprland/hyp_backlight/mod.nu [_main]
+use /usr/bin/scripts/hyprland/hyp_backlight/menu [_menu]
+use /usr/bin/scripts/hyprland/hyp_backlight/menu/input.nu [get_input]
+use /usr/bin/scripts/hyprland/hyp_backlight/menu/actions.nu [set_brightness]
+use /usr/bin/scripts/hyprland/hyp_backlight/controls.nu [increase decrease increase_mon decrease_mon]
 
 def main [name?:string pct?:int] { _main $name $pct }
 def 'main increase' [name:string pct:int] {increase $name $pct}
