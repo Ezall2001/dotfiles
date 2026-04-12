@@ -1,0 +1,7 @@
+#!/usr/bin/env nu
+
+use /usr/bin/scripts/system/sysmgr/main.nu [_main]
+
+def main [spec_name:string task_name:string] {
+	_main $spec_name $task_name
+}
