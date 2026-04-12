@@ -1,0 +1,7 @@
+#!/usr/bin/env nu
+
+use /usr/bin/scripts/system/fgen/mod.nu [_main]
+
+def main [name:string callback?:closure --watch(-w)] {
+	_main $name $callback --watch=$watch
+}
