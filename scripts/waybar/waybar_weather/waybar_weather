@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use ../../hyprland/hyp_log [main]
+use /usr/bin/scripts/hyprland/hyp_log [main]
 
 const ERROR_JSON = {
 		text: 'waybar_weather:error'

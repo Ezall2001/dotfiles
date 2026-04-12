@@ -1,6 +1,6 @@
 #!/usr/bin/env -S nu --stdin
 
-use ../nushell/nui/path [lookup]
+use /usr/bin/scripts/nushell/nui/path [lookup]
 
 const default_config_path = '~/.config/kdl/kdlfmt.kdl'
 

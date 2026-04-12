@@ -1,13 +1,13 @@
 #!/usr/bin/env nu
 
-use preview.nu
-use filters.nu
-use consts.nu [BINDS INPUT_GETTER DEFAULT_STATE]
-use ../../sfzf [main get_state update_state]
-use params/mod.nu [get_params]
-use input.nu [get_input]
-use output.nu [get_output]
-use ../nui [commandline]
+use /usr/bin/scripts/nushell/nu_path_completer/preview.nu
+use /usr/bin/scripts/nushell/nu_path_completer/filters.nu
+use /usr/bin/scripts/nushell/nu_path_completer/consts.nu [BINDS INPUT_GETTER DEFAULT_STATE]
+use /usr/bin/scripts/sfzf [main get_state update_state]
+use /usr/bin/scripts/nushell/nu_path_completer/params/mod.nu [get_params]
+use /usr/bin/scripts/nushell/nu_path_completer/input.nu [get_input]
+use /usr/bin/scripts/nushell/nu_path_completer/output.nu [get_output]
+use /usr/bin/scripts/nushell/nui [commandline]
 
 
 def 'main _filter dir' [] { filters dir }

@@ -1,8 +1,8 @@
 #!/usr/bin/env nu
 
 
-use ./refresh.nu [main]
-use ./mod.nu [_main]
+use /usr/bin/scripts/waybar/waybar_hyp_ws/refresh.nu [main]
+use /usr/bin/scripts/waybar/waybar_hyp_ws/mod.nu [_main]
 
 
 def main [col:int] { _main $col }

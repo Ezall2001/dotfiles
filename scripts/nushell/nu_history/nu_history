@@ -1,6 +1,6 @@
 #!/usr/bin/env -S nu --stdin
 
-use ../../sfzf
+use /usr/bin/scripts/sfzf [main]
 
 def get_params [buffer:string] {
 	{

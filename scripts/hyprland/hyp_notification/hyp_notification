@@ -1,10 +1,10 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [_main]
-use ./menu [_menu]
-use ./menu/input.nu [get_input]
-use ./menu/preview.nu [main]
-use ./menu/actions.nu [pause clear delete]
+use /usr/bin/scripts/hyprland/hyp_notification/mod.nu [_main]
+use /usr/bin/scripts/hyprland/hyp_notification/menu [_menu]
+use /usr/bin/scripts/hyprland/hyp_notification/menu/input.nu [get_input]
+use /usr/bin/scripts/hyprland/hyp_notification/menu/preview.nu [main]
+use /usr/bin/scripts/hyprland/hyp_notification/menu/actions.nu [pause clear delete]
 
 def main [] { _main }
 

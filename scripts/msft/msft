@@ -1,9 +1,9 @@
 #!/usr/bin/env nu
 
-use mod.nu [_msft]
-use actions.nu [group sort delete restore]
-use input.nu [get_input]
-use preview.nu [_preview]
+use /usr/bin/scripts/msft/mod.nu [_msft]
+use /usr/bin/scripts/msft/actions.nu [group sort delete restore]
+use /usr/bin/scripts/msft/input.nu [get_input]
+use /usr/bin/scripts/msft/preview.nu [_preview]
 
 def main [--group] {_msft $group}
 

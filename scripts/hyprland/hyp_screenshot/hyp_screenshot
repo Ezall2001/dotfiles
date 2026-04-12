@@ -1,5 +1,5 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [_main]
+use /usr/bin/scripts/hyprland/hyp_screenshot/mod.nu [_main]
 
 def main [mode:string, --active (-a)] {_main $mode $active}

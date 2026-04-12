@@ -15,4 +15,4 @@ $env.XDG_CACHE_HOME = $nu.home-dir | path join ".cache"
 $env.XDG_PICTURES_DIR = $nu.home-dir | path join "Downloads"
 
 ## OTHER
-$env.path ++= (fd -tx . ~/.config/scripts | lines | each {path dirname})
+$env.path ++= ['/usr/bin/scripts/bin']

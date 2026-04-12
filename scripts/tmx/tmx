@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-use ./mod.nu [window keybinds]
+use /usr/bin/scripts/tmx/mod.nu [window keybinds]
 
 def main [] {}
 

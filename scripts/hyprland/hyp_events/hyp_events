@@ -1,6 +1,6 @@
 #! /usr/bin/env nu
 
-use ./init.nu [main]
+use /usr/bin/scripts/hyprland/hyp_events/init.nu [main]
 
 def main [] {}
 def 'main init' [] {init}
