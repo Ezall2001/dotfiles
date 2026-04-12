@@ -1,12 +1,14 @@
-def permission [] {
-	print 'setting doas.conf owner to root'
-	^doas chown root /etc/doas.conf
+use ../../fgen [main]
+
+def gen [] {
+	print 'generating doas conf'
+	fgen doas
 }
 
 export def main [] {
 	{
 		tasks: {
-			premission: {permission}
+			gen: {gen}
 		}
 	}
 }

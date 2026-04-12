@@ -1,5 +1,6 @@
 use ./btop.nu [main]
 use ./scripts.nu [main]
+use ./doas.nu [main]
 
 def normalize [spec:record] {
 	$spec | merge {
@@ -12,5 +13,6 @@ export def main [] {
 	[
 		(btop)
 		(scripts)
+		(doas)
 	] | each {normalize $in}
 }
