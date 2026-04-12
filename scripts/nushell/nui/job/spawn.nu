@@ -19,10 +19,9 @@ export def main [tag_name:string closure:closure] {
 	let msg_tag = date now | format date "%H%M%S%f"
 	let tag =	$"($tag_name)($TAG_SEPERATOR)($msg_tag)"
 
-	let id = job spawn {
+	let id = job spawn --description $tag {
 		job_wrapper $tag $closure $pid
 	}
 
-	job tag $id $tag
 	$tag
 }
