@@ -1,0 +1,9 @@
+export const SUM_PATH = '~/.local/state/rbackup/sum' | path expand
+export const CLOUD_LINKS_PATH = '~/.local/state/rbackup/cloud_links' | path expand
+export const TMP_DIR = '/tmp/rbackup'
+export const DIFF_PATH = '/tmp/rbackup/diff'
+export const DELETED_FILES_PATH = '/tmp/rbackup/deleted_files'
+export const BACKED_DIRS = [/etc /usr /home]
+export const LOCAL_REMOTE = 'local'
+export const CLOUD_REMOTE = 'drive'
+export const CONFIG_PATH = '~/.config/rclone/rclone.conf' | path expand
