@@ -31,7 +31,7 @@ def setup(c):
 
 	c.colors.webpage.bg = palette['background']
 	c.colors.tooltip.bg = palette['black']
-	c.colors.tooltip.fg = palette['purple']
+	c.colors.tooltip.fg = palette['orange']
 
 	c.colors.contextmenu.disabled.bg = palette['black']
 	c.colors.contextmenu.disabled.fg = palette['light_black']
