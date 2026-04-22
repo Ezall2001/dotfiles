@@ -1,6 +1,7 @@
 use ./btop.nu [main]
 use ./scripts.nu [main]
 use ./doas.nu [main]
+use ./pacman.nu [main]
 
 def normalize [spec:record] {
 	$spec | merge {
@@ -11,6 +12,7 @@ def normalize [spec:record] {
 
 export def main [] {
 	[
+		(pacman)
 		(btop)
 		(scripts)
 		(doas)
