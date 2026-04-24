@@ -1,0 +1,10 @@
+[Trigger]
+	Operation = Install
+	Operation = Upgrade
+	Type = Package
+	Target = starship
+
+[Action]
+	Description = (re)generate inegration script
+	When = PostTransaction
+	Exec = /usr/bin/scripts/bin/pacpac hooks starship setup

@@ -1,0 +1,9 @@
+[Trigger]
+	Operation = Remove
+	Type = Package
+	Target = starship
+
+[Action]
+	Description = remove inegration script
+	When = PostTransaction
+	Exec = /usr/bin/scripts/bin/pacpac hooks starship cleanup
