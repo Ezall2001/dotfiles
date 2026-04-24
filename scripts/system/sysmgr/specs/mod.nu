@@ -6,9 +6,11 @@ use ./qtb.nu [main]
 use ./dotfiles.nu [main]
 use ./poetry.nu [main]
 use ./nodejs.nu [main]
+use ./ly.nu [main]
 
 export def main [] {
 	{
+		ly: (ly)
 		dotfiles: (dotfiles)
 		doas: (doas)
 		clipse: (clipse)
