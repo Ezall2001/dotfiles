@@ -76,7 +76,7 @@ def devtools():
 def darktheme():
 	Binds.bind(
 		'<space>t',
-		uscrpt(Params('message'), 'theme', 'toggle'),
+		uscrpt(Params('message'), 'toggle_dark_theme'),
 		'normal',
 	)
 

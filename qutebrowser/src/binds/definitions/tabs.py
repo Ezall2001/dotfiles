@@ -40,12 +40,12 @@ def nav():
 def base():
 	Binds.bind(
 		'b',
-		uscrpt(Params(), 'nav', 'goto_base', 'true'),
+		uscrpt(Params(), 'goto_base', 'true'),
 		'normal',
 	)
 	Binds.bind(
 		'B',
-		uscrpt(Params(), 'nav', 'goto_base'),
+		uscrpt(Params(), 'goto_base'),
 		'normal',
 	)
 

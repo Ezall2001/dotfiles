@@ -1,6 +1,6 @@
 use ../utils.nu [userscript_write]
 
-export def toggle [] {
+export def main [] {
 	let url_pattern = $env.QUTE_URL | url parse
 	| $"*://($in.host)/*"
 
