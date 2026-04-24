@@ -1,11 +1,7 @@
-use ./select.nu [main]
 use ../consts.nu [session_base_dir CONFIG_ENTRY]
+use ./list.nu [main]
 
-export def main [session?:string] {
-	let session = if $session == null {
-		select
-	} else {$session}
-
+export def main [session:string@list] {
 	let base_dir = session_base_dir $session
 
 

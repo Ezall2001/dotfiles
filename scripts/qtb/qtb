@@ -4,6 +4,7 @@ use /usr/bin/scripts/qtb/session
 
 def main [] { }
 
-def 'main session start' [session?:string] {session start $session}
+def 'main session start' [session:string] {session start $session}
 def 'main session create' [session:string, --open (-o)] {session create $session --open=$open}
-def 'main session delete' [session?:string] {session delete $session}
+def 'main session delete' [session:string] {session delete $session}
+def 'main session list' [] {session list}
