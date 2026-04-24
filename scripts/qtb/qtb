@@ -3,7 +3,6 @@
 use /usr/bin/scripts/qtb/session
 
 def main [] { }
-def 'main init' [] {init}
 
 def 'main session start' [session?:string] {session start $session}
 def 'main session create' [session:string, --open (-o)] {session create $session --open=$open}
