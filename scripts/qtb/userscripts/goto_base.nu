@@ -1,6 +1,6 @@
 use ../utils.nu [userscript_write]
 
-export def goto_base [new_tab:bool] {
+export def main [new_tab:bool] {
 	let base_url = $env.QUTE_URL | url parse
 	| $"($in.scheme)://($in.host):($in.port)"
 

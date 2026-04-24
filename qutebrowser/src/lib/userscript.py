@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Literal
 
-USERSCRIPT_PATH = Path('~/.config/scripts/qtb/userscript').expanduser()
+USERSCRIPT_PATH = Path('~/.config/scripts/qtb/qtb_userscript').expanduser()
 
 
 class Params:

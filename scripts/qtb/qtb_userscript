@@ -1,0 +1,10 @@
+#!/usr/bin/env nu
+
+use /usr/bin/scripts/qtb/userscripts [goto_base change_session toggle_dark_theme change_session_menu]
+
+def main [] {}
+
+def 'main toggle_dark_theme' [] {toggle_dark_theme}
+def 'main goto_base' [new_tab:bool = false] {goto_base $new_tab}
+def 'main change_session' [] {change_session}
+def 'main change_session _menu' [] {change_session_menu}
