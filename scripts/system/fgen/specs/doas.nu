@@ -12,8 +12,12 @@ def gen [spec:record] {
 export def main [] {
 	{
 		name: doas
-		src: ~/.config/doas/doas.conf
-		dst: /etc/doas.conf
-		gen: {|spec| gen $spec}
+		gens: [
+			{
+				src: ~/.config/doas/doas.conf
+				dst: /etc/doas.conf
+				gen: {|spec| gen $spec}
+			}
+		]
 	}
 }

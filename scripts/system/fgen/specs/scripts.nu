@@ -19,8 +19,12 @@ def gen [spec:record] {
 export def main [] {
 	{
 		name: scripts
-		src: ~/.config/scripts
-		dst: /usr/bin/scripts
-		gen: {|spec| gen $spec}
+		gens: [
+			{
+				src: ~/.config/scripts
+				dst: /usr/bin/scripts
+				gen: {|spec| gen $spec}
+			}
+		]
 	}
 }
