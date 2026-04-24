@@ -1,11 +1,7 @@
-use ./select.nu [main]
 use ../consts.nu [session_base_dir session_file]
+use ./list.nu [main]
 
-export def main [session?:string] {
-	let session = if $session == null {
-		select
-	} else {$session}
-
+export def main [session:string@list] {
 	let active = hyprctl clients -j | from json
 	| where initialTitle == $session | first
 
