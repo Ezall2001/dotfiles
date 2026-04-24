@@ -14,7 +14,9 @@ export def _main [name:string callback?:closure --watch(-w)] {
 	# NOTE: wrapped for lazy evaluation
 	let callback = $callback | default { ({ null }) }
 
-	do $spec.gen $spec
+	$spec.gens | each {|gen|
+		do $gen.gen $gen
+	}
 	do $callback
 
 	if $watch {

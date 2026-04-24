@@ -4,10 +4,14 @@ use ./doas.nu [main]
 use ./pacman.nu [main]
 
 def normalize [spec:record] {
-	$spec | merge {
-		src: ($spec.src | path expand)
-		dst: ($spec.dst | path expand)
+	let normalized_gens = $spec.gens | each {|gen|
+		$gen | merge {
+				src: ($gen.src | path expand)
+				dst: ($gen.dst | path expand)
+		}
 	}
+
+	$spec | merge {gens: $normalized_gens}
 }
 
 export def main [] {
