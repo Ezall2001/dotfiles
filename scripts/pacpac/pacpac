@@ -1,0 +1,21 @@
+#!/usr/bin/env -S nu
+
+use /usr/bin/scripts/pacpac/gen_mirror.nu [main]
+use /usr/bin/scripts/pacpac/hooks [main]
+use /usr/bin/scripts/pacpac/lockfile
+
+def main [] {}
+
+def 'main gen_mirror' [] {gen_mirror}
+
+def 'main hooks' [name:string action:string] {
+	hooks $name $action
+}
+
+def 'main lockfile lock' [] {
+	lockfile lock
+}
+
+def 'main lockfile init' [] {
+	lockfile init
+}
