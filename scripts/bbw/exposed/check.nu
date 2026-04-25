@@ -27,11 +27,11 @@ export def main [] {
 	let is_unlocked = unlock --no-interactive
 	if not $is_unlocked { return }
 
-	let items_tag = nui job spawn items {
+	let items_tag = nui job spawn --tag-name items {
 		let res = http get $'($BASE_URL)/list/object/items'
 		$res.data.data
 	}
-	let folders_tag = nui job spawn folders {
+	let folders_tag = nui job spawn --tag-name folders {
 		let res = http get $'($BASE_URL)/list/object/folders'
 		$res.data.data
 	}
@@ -41,7 +41,7 @@ export def main [] {
 	| where type == 1 and login.password != null
 	| each {|item|
 		sleep 100ms
-		nui job spawn $item.id { check $item }
+		nui job spawn --tag-name $item.id { check $item }
 	}
 
 	let folders = nui job await $folders_tag --timeout 1min

@@ -17,11 +17,11 @@ def stringify_item [item:record folders:table] {
 
 
 export def get_input [state?:record] {
-	let items_tag = nui job spawn items {
+	let items_tag = nui job spawn --tag-name items {
 		let res = http get $'($BASE_URL)/list/object/items'
 		$res.data.data
 	}
-	let folders_tag = nui job spawn folders {
+	let folders_tag = nui job spawn --tag-name folders {
 		let res = http get $'($BASE_URL)/list/object/folders'
 		$res.data.data
 	}

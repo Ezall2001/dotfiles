@@ -1,5 +1,6 @@
 use consts.nu [TAG_SEPERATOR ERROR_STATUS OK_STATUS]
 use messages.nu [message]
+use ./new_tag.nu [main]
 
 def job_wrapper [tag:string closure:closure pid:int] {
 	let msg = try {
@@ -14,10 +15,13 @@ def job_wrapper [tag:string closure:closure pid:int] {
 	$msg | job send $pid --tag $msg_tag
 }
 
-export def main [tag_name:string closure:closure] {
+export def main [closure:closure --tag-name(-n):string --tag(-t):string] {
+	if $tag == null and $tag_name == null {
+		error make 'you need to pass either a tag name or the full tag'
+	}
+
 	let pid = job id
-	let msg_tag = date now | format date "%H%M%S%f"
-	let tag =	$"($tag_name)($TAG_SEPERATOR)($msg_tag)"
+	let tag = $tag | default {new_tag $tag_name}
 
 	let id = job spawn --description $tag {
 		job_wrapper $tag $closure $pid
