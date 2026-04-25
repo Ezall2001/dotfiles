@@ -1,5 +1,8 @@
+use ../../../pacpac
+
 def install_packages [] {
 	print 'installing paru packages from lockfile'
+	pacpac lockfile install
 }
 
 def install [] {
