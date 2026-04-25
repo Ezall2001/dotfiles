@@ -7,11 +7,13 @@ use ./dotfiles.nu [main]
 use ./poetry.nu [main]
 use ./nodejs.nu [main]
 use ./ly.nu [main]
+use ./paru.nu [main]
 
 export def main [] {
 	{
-		ly: (ly)
 		dotfiles: (dotfiles)
+		paru:(paru)
+		ly: (ly)
 		doas: (doas)
 		clipse: (clipse)
 		btop: (btop)
