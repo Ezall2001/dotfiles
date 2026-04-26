@@ -5,7 +5,7 @@ export def get [
 	pos:int
 ]: nothing -> record<type:string,start:int,end:int,string:string> {
 	cd ~/.config/scripts/nushell/nui/commandline/get
-	poetry run main $buffer $pos | from json
+	^poetry run main $buffer $pos | from json
 }
 
 export def replace [
