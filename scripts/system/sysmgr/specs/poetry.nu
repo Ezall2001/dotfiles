@@ -7,9 +7,9 @@ def install [] {
 	$PATHS | each {|p|
 		print ('installing poetry project: ' + $p)
 		cd $p
-		poetry env activate
-		poetry lock
-		poetry install
+		^poetry env activate
+		^poetry lock
+		^poetry install
 	}
 }
 
