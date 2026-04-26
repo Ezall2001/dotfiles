@@ -3,10 +3,13 @@
 use /usr/bin/scripts/pacpac/gen_mirror.nu [main]
 use /usr/bin/scripts/pacpac/hooks [main]
 use /usr/bin/scripts/pacpac/lockfile
+use /usr/bin/scripts/pacpac/tidyup.nu [main]
 
 def main [] {}
 
 def 'main gen_mirror' [] {gen_mirror}
+
+def 'main tidyup' [] {tidyup}
 
 def 'main hooks' [name:string action:string] {
 	hooks $name $action
