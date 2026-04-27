@@ -3,6 +3,7 @@ use ./scripts.nu [main]
 use ./doas.nu [main]
 use ./pacman.nu [main]
 use ./ly.nu [main]
+use ./fcron.nu [main]
 
 def normalize [spec:record] {
 	let normalized_gens = $spec.gens | each {|gen|
@@ -18,6 +19,7 @@ def normalize [spec:record] {
 export def main [] {
 	[
 		(ly)
+		(fcron)
 		(pacman)
 		(btop)
 		(scripts)
