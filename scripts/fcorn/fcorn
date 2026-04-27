@@ -1,0 +1,5 @@
+#!/usr/bin/nu
+
+use /usr/bin/scripts/fcorn/mod.nu [_main]
+
+def main [] {_main}
