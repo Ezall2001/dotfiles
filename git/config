@@ -1,5 +1,6 @@
 [include]
 	path = ./advice.conf
+	path = ./alias.conf
 
 [user]
 	email = armen.bakir.e@gmail.com
