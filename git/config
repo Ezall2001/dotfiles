@@ -1,3 +1,6 @@
+[include]
+	path = ./advice.conf
+
 [user]
 	email = armen.bakir.e@gmail.com
 	name = Ezall2001
