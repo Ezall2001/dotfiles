@@ -1,0 +1,12 @@
+{
+	"name": "dotfiles",
+	"version": "1.0.0",
+	"description": "personal dotfiles",
+	"main": "index.js",
+	"scripts": {},
+	"keywords": [],
+	"author": "armen ben bakir",
+	"packageManager": "pnpm@10.33.0",
+	"devDependencies": {
+	}
+}
