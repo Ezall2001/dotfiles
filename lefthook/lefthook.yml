@@ -1,0 +1,26 @@
+assert_lefthook_installed: true
+install_non_git_hooks: false
+min_version: 2.0.17
+no_auto_install: true
+no_tty: false
+source_dir: .lefthook/
+skip_lfs: false
+glob_matcher: gobwas
+
+colors:
+  cyan: 6
+  gray: 245
+  green: 2
+  red: 1
+  yellow: 3
+
+output:
+  - meta
+  - summary
+  - empty_summary
+  - success
+  - failure
+  - execution
+  - execution_out
+  - execution_info
+  - skips
