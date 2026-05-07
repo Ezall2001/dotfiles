@@ -3,6 +3,8 @@ obsidian
 Electron
 UNIGINE
 gtk-3.0
+gtk-4.0
+xsettingsd
 menus
 systemd
 procps
