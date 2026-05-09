@@ -32,7 +32,12 @@ let rules: UserConfig['rules'] = {
 
 let config: UserConfig = {
 	extends: [],
-	parserPreset: 'conventional-changelog-conventionalcommits',
+	parserPreset: {
+		name: 'conventional-changelog-conventionalcommits',
+		parserOpts: {
+			commentChar: '#',
+		},
+	},
 	formatter: '@commitlint/format',
 	rules: rules,
 	ignores: [],
