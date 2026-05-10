@@ -25,7 +25,7 @@ def setup(c):
 		'light_white': '#ffffff',
 		'black': '#21222c',
 		'light_black': '#6272a4',
-		'background': '#1a102e',
+		'background': '#0d0b19',
 		'grey': ['#44475a', '#282a36'],
 	}
 
