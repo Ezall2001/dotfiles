@@ -3,7 +3,7 @@
 local specs = {
 	{ 'luukvbaal/statuscol.nvim', name = 'statuscol' },
 	{ 'mbbill/undotree', name = 'undotree' },
-	{ 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+	{ 'Mofiqul/dracula.nvim', name = 'dracula', priority = 1000 },
 	{ 'nvim-tree/nvim-web-devicons', name = 'devicons' },
 	{ 'rcarriga/nvim-notify', name = 'notify' },
 	{ 'folke/trouble.nvim', name = 'trouble' },
