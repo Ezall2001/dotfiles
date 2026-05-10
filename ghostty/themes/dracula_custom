@@ -19,11 +19,11 @@ palette = 14=#a4ffff
 palette = 15=#ffffff
 
 
-background = #1a102e
+background = #0d0b19
 foreground = #fff0f9
 
-selection-foreground = #1a102e
+selection-foreground = #0d0b19
 selection-background = #fff0f9
 
 cursor-color = #fff0f9
-cursor-text = #1a102e
+cursor-text = #0d0b19

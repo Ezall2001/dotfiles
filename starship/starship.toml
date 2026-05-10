@@ -40,7 +40,7 @@ git_brown = '#533f4b'
 git_red = '#D00050'
 git_green = '#008B48'
 
-fill_bg = '#201439'
+fill_bg = '#151127'
 
 status_bg = 'white'
 status_black = 'black'
