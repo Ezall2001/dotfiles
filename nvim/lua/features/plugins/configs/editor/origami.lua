@@ -9,7 +9,11 @@ local config = {
 	pauseFoldsOnSearch = true,
 	foldtext = {
 		enabled = true,
-		padding = 3,
+		padding = {
+			character = ' ',
+			width = 3,
+			hlgroup = nil,
+		},
 		lineCount = {
 			template = i.fold_lines(true) .. '%d',
 			hlgroup = 'Comment',
