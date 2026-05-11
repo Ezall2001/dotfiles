@@ -12,7 +12,6 @@ local M = {}
 
 M.neogit = neogit
 
-
 M.init = function()
 	local r_path = vim.fs.joinpath('keymap', 'definitions', 'git')
 	r(r_path, cb)

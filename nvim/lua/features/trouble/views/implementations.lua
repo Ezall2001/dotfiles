@@ -4,15 +4,15 @@ local M = {}
 
 ---@type trouble.Mode
 local implementations = {
-	mode = "lsp_implementations",
-	desc = "implementations",
+	mode = 'lsp_implementations',
+	desc = 'implementations',
 	win = {
-		position = "bottom",
+		position = 'bottom',
 	},
 }
 
 M.implementations = function()
-	require("trouble").open(implementations)
+	require('trouble').open(implementations)
 end
 
 return M

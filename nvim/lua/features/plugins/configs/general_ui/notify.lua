@@ -1,5 +1,5 @@
-local t = require("notify")
-local c = require("constants")
+local c = require('constants')
+local t = require('notify')
 
 local i = c.icons.programming
 
@@ -7,13 +7,13 @@ local config = {
 	merge_duplicates = true,
 	max_width = 80,
 	minimum_width = 50,
-	background_colour = "#000000",
+	background_colour = '#000000',
 	fps = 60,
 	timeout = 3000,
 	top_down = true,
 	level = 2,
-	render = "default",
-	stages = "fade_in_slide_out",
+	render = 'default',
+	stages = 'fade_in_slide_out',
 	icons = {
 		DEBUG = i.debug(),
 		ERROR = i.error(),
@@ -22,8 +22,8 @@ local config = {
 		WARN = i.warn(),
 	},
 	time_formats = {
-		notification = "%H%M.%S",
-		notification_history = "%FT%T",
+		notification = '%H%M.%S',
+		notification_history = '%FT%T',
 	},
 }
 

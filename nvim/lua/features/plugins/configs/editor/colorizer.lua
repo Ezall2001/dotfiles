@@ -1,4 +1,4 @@
-local c = require("colorizer")
+local c = require('colorizer')
 
 local conf = {
 	RGB = true,
@@ -9,7 +9,7 @@ local conf = {
 	hsl_fn = true,
 	css = false,
 	css_fn = false,
-	mode = "background",
+	mode = 'background',
 }
 
-c.setup({ "text" }, conf)
+c.setup({ 'text' }, conf)

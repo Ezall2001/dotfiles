@@ -1,13 +1,13 @@
-local t = require("tiny-inline-diagnostic")
+local t = require('tiny-inline-diagnostic')
 
 local hi = {
-	error = "DiagnosticError",
-	warn = "DiagnosticWarn",
-	info = "DiagnosticInfo",
-	hint = "DiagnosticHint",
-	arrow = "NonText",
-	background = "CursorLine",
-	mixing_color = "None",
+	error = 'DiagnosticError',
+	warn = 'DiagnosticWarn',
+	info = 'DiagnosticInfo',
+	hint = 'DiagnosticHint',
+	arrow = 'NonText',
+	background = 'CursorLine',
+	mixing_color = 'None',
 }
 
 local multiline = {
@@ -33,7 +33,7 @@ local options = {
 	show_all_diags_on_cursorline = true,
 	throttle = 50,
 	break_line = { enabled = false, after = 30 },
-	overflow = { mode = "none", padding = 0 },
+	overflow = { mode = 'none', padding = 0 },
 	softwrap = 40,
 	enable_on_insert = false,
 	enable_on_select = false,
@@ -44,7 +44,7 @@ local options = {
 }
 
 local conf = {
-	preset = "modern",
+	preset = 'modern',
 	transparent_bg = false,
 	transparent_cursorline = true,
 	blend = { factor = 0 },

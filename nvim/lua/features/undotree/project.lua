@@ -1,4 +1,4 @@
-local c = require("features.undotree.constants")
+local c = require('features.undotree.constants')
 
 local M = {}
 

@@ -1,4 +1,4 @@
-local m = require("mini.cursorword")
+local m = require('mini.cursorword')
 
 local config = {
 	delay = 100,

@@ -1,5 +1,5 @@
 local map = {
-	kdl = "kdl",
+	kdl = 'kdl',
 }
 
 local M = {}

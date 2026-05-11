@@ -1,9 +1,9 @@
-local p = require("features.plugins")
+local p = require('features.plugins')
 
 local completion = function()
-	local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-	vim.lsp.config("*", {
+	vim.lsp.config('*', {
 		capabilities = capabilities,
 	})
 end
@@ -11,7 +11,7 @@ end
 local M = {}
 
 M.init = function()
-	p.on_plugin_register("cmp", completion)
+	p.on_plugin_register('cmp', completion)
 end
 
 return M
