@@ -51,7 +51,7 @@ local config = {
 		before = 'fg',
 		keyword = 'fg',
 		after = '',
-		pattern = [[.*<(KEYWORDS)\s*:]],
+		pattern = [[(\S*<(KEYWORDS):)]],
 		comments_only = true,
 		max_line_len = 400,
 		exclude = {},
@@ -65,7 +65,7 @@ local config = {
 			'--line-number',
 			'--column',
 		},
-		pattern = [[\b(KEYWORDS):]],
+		pattern = [[.*(KEYWORDS)\s*:]],
 	},
 }
 
