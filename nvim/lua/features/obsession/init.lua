@@ -1,5 +1,5 @@
 local M = {}
 
-M.project = require("features.obsession.project")
+M.project = require('features.obsession.project')
 
 return M

@@ -1,4 +1,4 @@
-local i = require("constants").icons.text
+local i = require('constants').icons.text
 
 --- @type ibl.config
 local config = {
@@ -18,6 +18,6 @@ local config = {
 	scope = { enabled = false },
 }
 
-local ibl = require("ibl")
+local ibl = require('ibl')
 
 ibl.setup(config)

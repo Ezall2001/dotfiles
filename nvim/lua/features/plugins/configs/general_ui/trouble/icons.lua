@@ -1,14 +1,14 @@
-local i = require("constants").icons
+local i = require('constants').icons
 
 ---@type trouble.Indent.symbols
 local icons = {
 	indent = {
-		top = "│ ",
-		middle = "├╴",
-		last = "╰╴",
+		top = '│ ',
+		middle = '├╴',
+		last = '╰╴',
 		fold_open = i.text.fold_open(true),
 		fold_closed = i.text.fold_closed(true),
-		ws = "  ",
+		ws = '  ',
 	},
 	folder_closed = i.file.dir_closed(),
 	folder_open = i.file.dir_open(),
@@ -23,10 +23,10 @@ local icons = {
 		Event = i.programming.event(),
 		Field = i.programming.field(),
 		File = i.file.file(),
-		Function = i.programming["function"](),
+		Function = i.programming['function'](),
 		Interface = i.programming.interface(),
 		Key = i.programming.key(),
-		Method = i.programming["function"](),
+		Method = i.programming['function'](),
 		Module = i.programming.module(),
 		Namespace = i.programming.namespace(),
 		Null = i.programming.null(),

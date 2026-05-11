@@ -81,18 +81,18 @@ local workspace = {
 
 local config = {
 	Lua = {
-		codeLens = { enable = false },
-		signatureHelp = { enable = true },
-		format = { enable = false },
-		completion = completion,
-		diagnostics = diagnostics,
-		hint = hint,
-		hover = hover,
-		language = language,
-		semantic = semantic,
-		type = type,
-		typeFormat = typeFormat,
-		workspace = workspace,
+		--codeLens = { enable = false },
+		--signatureHelp = { enable = true },
+		--format = { enable = false },
+		--completion = completion,
+		--diagnostics = diagnostics,
+		--hint = hint,
+		--hover = hover,
+		--language = language,
+		--semantic = semantic,
+		--type = type,
+		--typeFormat = typeFormat,
+		--workspace = workspace,
 	},
 }
 

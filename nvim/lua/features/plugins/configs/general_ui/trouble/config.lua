@@ -9,13 +9,13 @@ local throttle = {
 
 ---@type trouble.Window.opts
 local win = {
-	position = "right",
+	position = 'right',
 	size = { width = 50, height = 10 },
 }
 
 ---@type trouble.Window.opts
 local preview = {
-	type = "main",
+	type = 'main',
 }
 
 ---@class trouble.Config
@@ -37,9 +37,9 @@ local conf = {
 	win = win,
 	preview = preview,
 	throttle = throttle,
-	keys = require("keymap.definitions.trouble").keys,
-	modes = require("features.plugins.configs.general_ui.trouble.modes"),
-	icons = require("features.plugins.configs.general_ui.trouble.icons"),
+	keys = require('keymap.definitions.trouble').keys,
+	modes = require('features.plugins.configs.general_ui.trouble.modes'),
+	icons = require('features.plugins.configs.general_ui.trouble.icons'),
 }
 
 return conf

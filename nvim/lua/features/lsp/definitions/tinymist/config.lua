@@ -1,13 +1,13 @@
-local t = require("configs.ft_configs.definitions.typst").utils
+local t = require('configs.ft_configs.definitions.typst').utils
 
 local lint = {
 	enabled = true,
-	when = "onSave",
+	when = 'onSave',
 }
 
 local preview = {
 	partialRendering = true,
-	refresh = "onType",
+	refresh = 'onType',
 }
 
 local completion = {
@@ -15,22 +15,22 @@ local completion = {
 	postfixUfcs = true,
 	postfixUfcsLeft = true,
 	postfixUfcsRight = true,
-	symbol = "step",
+	symbol = 'step',
 	triggerOnSnippetPlaceholders = true,
 }
 
 local config = {
-	compileStatus = "disable",
+	compileStatus = 'disable',
 	completion = completion,
-	exportPdf = "never",
-	formatterMode = "typstyle",
+	exportPdf = 'never',
+	formatterMode = 'typstyle',
 	formatterIndentSize = 2,
 	formatterPrintWidth = 120,
 	formatterProseWrap = false,
 	lint = lint,
 	preview = preview,
-	projectResolution = "singleFile",
-	semanticTokens = "enable",
+	projectResolution = 'singleFile',
+	semanticTokens = 'enable',
 	systemFonts = true,
 	rootPath = t.get_root(),
 }

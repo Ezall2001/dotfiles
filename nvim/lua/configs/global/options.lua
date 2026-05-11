@@ -202,6 +202,8 @@ vim.o.warn = true
 -- vim.o.incsearch = true
 -- vim.o.undofile
 
+-- fileformats
+
 -- not considered
 -- verbose, verbosefile
 -- whichwrap
@@ -217,6 +219,7 @@ vim.o.warn = true
 -- modelineexpr modelines
 -- dictionary
 -- directory
+-- iskeyword
 
 --[[
 'backspace'	  'bs'	    how backspace works at start of line
@@ -315,7 +318,6 @@ vim.o.warn = true
 'infercase'	  'inf'     adjust case of match for keyword completion
 'isfname'	  'isf'     characters included in file names and pathnames
 'isident'	  'isi'     characters included in identifiers
-'iskeyword'	  'isk'     characters included in keywords
 'isprint'	  'isp'     printable characters
 'joinspaces'	  'js'	    two spaces after a period with a join command
 'keymap'	  'kmp'     name of a keyboard mapping

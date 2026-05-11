@@ -1,6 +1,6 @@
-local t = require("nvim-treesitter.configs")
+local t = require('nvim-treesitter.configs')
 
-local syntaxes = { "jsonc", "vim", "regex", "lua", "bash", "markdown", "markdown_inline", "typst" }
+local syntaxes = { 'jsonc', 'vim', 'regex', 'lua', 'bash', 'markdown', 'markdown_inline', 'typst' }
 
 local conf = {
 	ignore_install = {},

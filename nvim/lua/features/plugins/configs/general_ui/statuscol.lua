@@ -1,5 +1,5 @@
-local s = require("statuscol")
-local b = require("statuscol.builtin")
+local b = require('statuscol.builtin')
+local s = require('statuscol')
 
 local config = {
 	ft_ignore = nil,
@@ -10,10 +10,10 @@ local config = {
 	relculright = true,
 
 	segments = {
-		{ text = { "%s" } },
+		{ text = { '%s' } },
 		{ text = { b.foldfunc } },
 		{
-			text = { b.lnumfunc, " " },
+			text = { b.lnumfunc, ' ' },
 			condition = { true, b.not_empty },
 		},
 	},

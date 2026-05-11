@@ -1,4 +1,4 @@
-local i = require("constants").icons
+local i = require('constants').icons
 
 vim.g.undotree_RelativeTimestamp = 1
 vim.g.undotree_WindowLayout = 1

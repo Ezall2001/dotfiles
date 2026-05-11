@@ -1,5 +1,5 @@
-local tc = require("todo-comments")
-local i = require("constants").icons.programming
+local tc = require('todo-comments')
+local i = require('constants').icons.programming
 
 local config = {
 	signs = true,
@@ -8,64 +8,64 @@ local config = {
 	keywords = {
 		FIX = {
 			icon = i.fix(true),
-			color = "error",
+			color = 'error',
 		},
 		TODO = {
 			icon = i.todo(true),
-			color = "info",
+			color = 'info',
 		},
 		HACK = {
 			icon = i.hack(true),
-			color = "warning",
+			color = 'warning',
 		},
 		WARN = {
 			icon = i.warn(true),
-			color = "warning",
+			color = 'warning',
 		},
 		PERF = {
 			icon = i.performance(true),
 		},
 		NOTE = {
 			icon = i.note(true),
-			color = "hint",
+			color = 'hint',
 		},
 		TEST = {
 			icon = i.test(true),
-			color = "test",
+			color = 'test',
 		},
 	},
 	colors = {
-		error = { "DiagnosticError" },
-		warning = { "DiagnosticWarn" },
-		info = { "DiagnosticInfo" },
-		hint = { "DiagnosticHint" },
-		default = { "Identifier" },
-		test = { "Identifier" },
+		error = { 'DiagnosticError' },
+		warning = { 'DiagnosticWarn' },
+		info = { 'DiagnosticInfo' },
+		hint = { 'DiagnosticHint' },
+		default = { 'Identifier' },
+		test = { 'Identifier' },
 	},
-	gui_style = { fg = "NONE", bg = "BOLD" },
+	gui_style = { fg = 'NONE', bg = 'BOLD' },
 	merge_keywords = false,
 	highlight = {
 		multiline = true,
-		multiline_pattern = "^.",
+		multiline_pattern = '^.',
 		multiline_context = 10,
 		before = 'fg',
 		keyword = 'fg',
 		after = '',
-		pattern = [[(\S*<(KEYWORDS):)]],
+		pattern = [[.*<(KEYWORDS)\s*:]],
 		comments_only = true,
 		max_line_len = 400,
 		exclude = {},
 	},
 	search = {
-		command = "rg",
+		command = 'rg',
 		args = {
-			"--color=never",
-			"--no-heading",
-			"--with-filename",
-			"--line-number",
-			"--column",
+			'--color=never',
+			'--no-heading',
+			'--with-filename',
+			'--line-number',
+			'--column',
 		},
-		pattern = [[.*(KEYWORDS)\s*:]],
+		pattern = [[\b(KEYWORDS):]],
 	},
 }
 

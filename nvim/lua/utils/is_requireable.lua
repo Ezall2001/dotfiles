@@ -7,10 +7,9 @@ local is_requireable = function(r_path)
 
 	if vim.fn.filereadable(file_abs_path) == 1 then
 		return true
-		end
+	end
 
-	if vim.fn.isdirectory(abs_path) == 1
-			and vim.fn.filereadable(abs_init_path) == 1 then
+	if vim.fn.isdirectory(abs_path) == 1 and vim.fn.filereadable(abs_init_path) == 1 then
 		return true
 	end
 

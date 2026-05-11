@@ -1,18 +1,18 @@
-local p = require("features.project")
-local m = require("keymap.lib").map
+local p = require('features.project')
+local m = require('keymap.lib').map
 
 local project = function()
 	m({
-		"n",
-		"<Leader>/pc",
+		'n',
+		'<Leader>/pc',
 		p.create,
-		{ desc = "create project (.nivm)" },
+		{ desc = 'create project (.nivm)' },
 	})
 	m({
-		"n",
-		"<Leader>/pd",
+		'n',
+		'<Leader>/pd',
 		p.delete,
-		{ desc = "delete project (.nvim)" },
+		{ desc = 'delete project (.nvim)' },
 	})
 end
 

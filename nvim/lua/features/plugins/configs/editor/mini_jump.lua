@@ -1,7 +1,7 @@
-local m = require("mini.jump")
+local m = require('mini.jump')
 
 local config = {
-	mappings = require("keymap.definitions.editor").mini_jump(),
+	mappings = require('keymap.definitions.editor').mini_jump(),
 
 	delay = {
 		highlight = 100,

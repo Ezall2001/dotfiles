@@ -1,5 +1,5 @@
-local mi = require("mini.indentscope")
-local i = require("constants.icons").text
+local mi = require('mini.indentscope')
+local i = require('constants.icons').text
 
 local config = {
 	draw = {
@@ -11,10 +11,10 @@ local config = {
 		priority = 2,
 	},
 
-	mappings = require("keymap.definitions.editor").mini_indent(),
+	mappings = require('keymap.definitions.editor').mini_indent(),
 
 	options = {
-		border = "both",
+		border = 'both',
 		indent_at_cursor = false,
 		n_lines = 10000,
 		try_as_border = true,

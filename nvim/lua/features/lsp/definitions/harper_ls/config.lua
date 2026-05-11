@@ -1,4 +1,4 @@
-local u = require("features.lsp.definitions.harper_ls.utils")
+local u = require('features.lsp.definitions.harper_ls.utils')
 
 local linters = {
 	SpelledNumbers = true,
@@ -12,13 +12,13 @@ local config = {
 	userDictPath = u.get_user_dict_path(),
 	workspaceDictPath = u.get_ws_dict_path(),
 	fileDictPath = u.get_file_dict_dir_path(),
-	ignoredLintsPath = "",
+	ignoredLintsPath = '',
 	linters = linters,
 	codeActions = { ForceStable = true },
 	markdown = { IgnoreLinkTitle = false },
-	diagnosticSeverity = "hint",
+	diagnosticSeverity = 'hint',
 	isolateEnglish = false,
-	dialect = "American",
+	dialect = 'American',
 	maxFileLength = 120000,
 }
 
