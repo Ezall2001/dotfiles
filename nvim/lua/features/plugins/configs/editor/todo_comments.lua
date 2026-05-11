@@ -48,10 +48,10 @@ local config = {
 		multiline = true,
 		multiline_pattern = "^.",
 		multiline_context = 10,
-		before = "fg",
-		keyword = "fg",
-		after = "",
-		pattern = [[.*<(KEYWORDS)\s*:]],
+		before = 'fg',
+		keyword = 'fg',
+		after = '',
+		pattern = [[(\S*<(KEYWORDS):)]],
 		comments_only = true,
 		max_line_len = 400,
 		exclude = {},
@@ -65,7 +65,7 @@ local config = {
 			"--line-number",
 			"--column",
 		},
-		pattern = [[\b(KEYWORDS):]],
+		pattern = [[.*(KEYWORDS)\s*:]],
 	},
 }
 
