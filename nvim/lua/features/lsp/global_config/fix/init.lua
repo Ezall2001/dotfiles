@@ -4,7 +4,7 @@ local p = require('features.plugins')
 local space_trim = require('features.lsp.global_config.fix.space_trim')
 
 local format = function(args)
-	auto_code_actions(args.buf)
+	-- auto_code_actions(args.buf)
 	p.on_plugin_register('mini_trailspace', space_trim)
 	lsp_formatter(args.buf)
 end
