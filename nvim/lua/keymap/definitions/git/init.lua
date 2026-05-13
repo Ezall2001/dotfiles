@@ -12,16 +12,6 @@ local M = {}
 
 M.neogit = neogit
 
-	status = neogit.status,
-	finder = neogit.finder,
-	refs_view = neogit.refs_view,
-	commit_editor = commits.commit_editor,
-	commit_editor_I = commits.commit_editor_I,
-	commit_view = commits.commit_view,
-	rebase_editor = rebase.rebase_editor,
-	rebase_editor_I = rebase.rebase_editor_I,
-}
-
 M.init = function()
 	local r_path = vim.fs.joinpath('keymap', 'definitions', 'git')
 	r(r_path, cb)
