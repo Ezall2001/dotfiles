@@ -10,3 +10,5 @@ alias btop = btop -p 0
 alias pn = pnpm
 
 alias mixer = ncpamixer -c ($env.XDG_CONFIG_HOME | path join 'ncpamixer/ncpamixer.conf')
+
+alias grm = gtrash put
