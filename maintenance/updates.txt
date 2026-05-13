@@ -1,4 +1,4 @@
-- hyprland: 0.53
+- hyprland: 0.54 (fixed braking only)
 - neovim: 0.11
 - ghostty: 1.2.3
 - nushell: 0.100
