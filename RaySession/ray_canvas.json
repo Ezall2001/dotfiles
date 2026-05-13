@@ -1,0 +1,95 @@
+{
+  "views": [
+    {
+      "index": 1,
+      "default_port_types": "ALL",
+      "ALL": {
+        "Zen": {
+          "INPUT|OUTPUT": {
+            "pos": [194, 2]
+          }
+        },
+        "TU106 High Definition Audio Controller Pro 9": {
+          "INPUT": {
+            "pos": [402, 2]
+          },
+          "OUTPUT": {
+            "pos": [-14, 2]
+          }
+        },
+        "TU106 High Definition Audio Controller Pro": {
+          "INPUT": {
+            "pos": [402, 158]
+          },
+          "OUTPUT": {
+            "pos": [-14, 158]
+          }
+        },
+        "TU106 High Definition Audio Controller Pro 7": {
+          "INPUT": {
+            "pos": [402, 314]
+          },
+          "OUTPUT": {
+            "pos": [-14, 314]
+          }
+        },
+        "TU106 High Definition Audio Controller Pro 8": {
+          "INPUT": {
+            "pos": [402, 470]
+          },
+          "OUTPUT": {
+            "pos": [-14, 470]
+          }
+        },
+        "Built-in Audio Analog Stereo": {
+          "INPUT": {
+            "pos": [402, -106]
+          },
+          "OUTPUT": {
+            "pos": [2, -226]
+          }
+        },
+        "cava": {
+          "INPUT|OUTPUT": {
+            "pos": [194, 62]
+          }
+        },
+        "cava-137": {
+          "INPUT|OUTPUT": {
+            "pos": [194, 122]
+          }
+        },
+        "Midi-Bridge": {
+          "INPUT": {
+            "pos": [402, -154]
+          },
+          "OUTPUT": {
+            "pos": [-14, -70]
+          }
+        },
+        "BLE MIDI 1": {
+          "INPUT": {
+            "pos": [402, -202]
+          },
+          "OUTPUT": {
+            "pos": [2, -118]
+          }
+        },
+        "Midi Through": {
+          "INPUT": {
+            "pos": [400, 0]
+          },
+          "OUTPUT": {
+            "pos": [0, 0]
+          }
+        }
+      }
+    }
+  ],
+  "portgroups": {},
+  "custom_names": {
+    "groups": {},
+    "ports": {}
+  },
+  "version": "0.17.1"
+}
