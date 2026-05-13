@@ -1,3 +1,4 @@
+use ./rclone.nu [main]
 use ./btop.nu [main]
 use ./scripts.nu [main]
 use ./doas.nu [main]
@@ -21,6 +22,7 @@ export def main [] {
 		(ly)
 		(fcron)
 		(pacman)
+		(rclone)
 		(btop)
 		(scripts)
 		(doas)

@@ -26,7 +26,7 @@ local options = {
 	component_separators = { left = '', right = '' },
 	section_separators = { left = '', right = '' },
 	icons_enabled = true,
-	theme = 'auto',
+	theme = 'dracula-nvim',
 	disabled_filetypes = disabled_filetypes,
 	always_divide_middle = true,
 	always_show_tabline = false,

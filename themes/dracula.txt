@@ -40,7 +40,7 @@ hsl(231, 15%, 18%) - #282a36
 hsl(249, 39%, 7%) - #0d0b19
 
 # extra
-## starship(fill)
+## starship(fill), neovim(dracula)
 hsl(251, 39%, 11%) - #151127
 
 ## cava(last-gradiant)

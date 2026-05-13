@@ -1,0 +1,24 @@
+other: install packages from lockfile
+other: clone dotconfig repo
+other: run sysmgr scripts
+other: install gpu dirvers
+
+tmux: install tmux plugins (prefix + I)
+
+nvim: install nvim plugin
+nvim: install nvim mason lsps
+
+hyprland: set envs
+hyprland: set monitor settings
+hyprland: set hyprpaper wallpaper path
+hyprland: set hyprlock wallpaper
+hyprland: set input devices
+
+waybar: fill waybar_weather .env
+waybar: adjust per monitor config
+
+nushell: fill nushell autoload/secrets.nu
+
+btop: change the names of gpus
+
+#TODO: generate locale

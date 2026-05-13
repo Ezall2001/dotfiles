@@ -35,17 +35,6 @@ local conf = {
 			ignored = i.git.ignored(true),
 		},
 	},
-
-	highlights = {
-		OilGitAdded = { fg = '#a6e3a1' },
-		OilGitModified = { fg = '#f9e2af' },
-		OilGitRenamed = { fg = '#cba6f7' },
-		OilGitDeleted = { fg = '#f38ba8' },
-		OilGitCopied = { fg = '#cba6f7' },
-		OilGitConflict = { fg = '#fab387' },
-		OilGitUntracked = { fg = '#89b4fa' },
-		OilGitIgnored = { fg = '#6c7086' },
-	},
 }
 
 o.setup(conf)

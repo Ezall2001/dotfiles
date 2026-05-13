@@ -9,6 +9,7 @@ local lsps = {
 	'selene',
 	'stylua',
 	'typescript-language-server',
+	'lemminx',
 }
 
 local check_lsp = function(lsp)

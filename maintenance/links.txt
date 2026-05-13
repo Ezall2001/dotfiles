@@ -1,0 +1,2 @@
+dotfiles/doas/doas.conf ->S /etc/doas.conf (also change the ownership to root)
+#TODO: ly, ssh,

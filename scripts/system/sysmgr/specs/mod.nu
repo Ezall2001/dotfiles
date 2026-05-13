@@ -3,6 +3,7 @@ use ./btop.nu [main]
 use ./doas.nu [main]
 use ./tmux.nu [main]
 use ./qtb.nu [main]
+use ./fcron.nu [main]
 use ./dotfiles.nu [main]
 use ./poetry.nu [main]
 use ./nodejs.nu [main]
@@ -19,6 +20,7 @@ export def main [] {
 		btop: (btop)
 		tmux: (tmux)
 		qtb: (qtb)
+		fcron: (fcron)
 		poetry: (poetry)
 		nodejs: (nodejs)
 	}

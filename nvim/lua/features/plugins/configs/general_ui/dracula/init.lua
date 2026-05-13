@@ -1,4 +1,5 @@
 local d = require('dracula')
+local overrides = require('features.plugins.configs.general_ui.dracula.overrides')
 
 local conf = {
 	colors = {
@@ -9,6 +10,7 @@ local conf = {
 		purple = '#BD93F9',
 		cyan = '#8BE9FD',
 		pink = '#ff7aca',
+
 		bright_red = '#FF5C87',
 		bright_green = '#69FF94',
 		bright_yellow = '#FFFFA5',
@@ -32,6 +34,7 @@ local conf = {
 	show_end_of_buffer = false,
 	transparent_bg = true,
 	italic_comment = true,
+	overrides = overrides,
 }
 
 d.setup(conf)

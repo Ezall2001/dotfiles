@@ -10,6 +10,14 @@ def keyhint():
 	)
 
 
+def session():
+	Binds.bind(
+		'<space>s',
+		uscrpt(Params(), 'change_session'),
+		'normal',
+	)
+
+
 def macro():
 	Binds.bind('q', 'macro-record', 'normal')
 	Binds.bind('Q', 'macro-run', 'normal')
@@ -82,6 +90,7 @@ def darktheme():
 
 
 def setup():
+	session()
 	keyhint()
 	macro()
 	bookmarks()

@@ -36,6 +36,14 @@ local matching = {
 local sources = {
 	{ name = 'nvim_lsp' },
 	{ name = 'path' },
+	{
+		name = 'luasnip',
+		--TODO: test these
+		option = {
+			use_show_condition = true,
+			show_autosnippets = true,
+		},
+	},
 	{ name = 'buffer' },
 }
 
