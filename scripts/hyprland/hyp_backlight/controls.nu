@@ -9,7 +9,7 @@ def get_active_mon_backlight [] {
 	$setup.monitors | get $ws.col | get backlight
 }
 
-export def increase_mon [pct:int --name (-n):string] {
+export def increase [pct:int --name (-n):string] {
 	let name = $name | default (get_active_mon_backlight)
 
 	if $name == null {
@@ -20,7 +20,7 @@ export def increase_mon [pct:int --name (-n):string] {
 	increase_brightness $name $pct
 }
 
-export def decrease_mon [pct:int --name (-n):string] {
+export def decrease [pct:int --name (-n):string] {
 	let name = $name | default (get_active_mon_backlight)
 
 	if $name == null {
@@ -30,6 +30,3 @@ export def decrease_mon [pct:int --name (-n):string] {
 
 	decrease_brightness $name $pct
 }
-
-export def increase [name:string pct:int] {increase_brightness $name $pct}
-export def decrease [name:string pct:int] {decrease_brightness $name $pct}

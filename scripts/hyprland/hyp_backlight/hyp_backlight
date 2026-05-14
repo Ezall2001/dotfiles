@@ -4,13 +4,11 @@ use /usr/bin/scripts/hyprland/hyp_backlight/mod.nu [_main]
 use /usr/bin/scripts/hyprland/hyp_backlight/menu [_menu]
 use /usr/bin/scripts/hyprland/hyp_backlight/menu/input.nu [get_input]
 use /usr/bin/scripts/hyprland/hyp_backlight/menu/actions.nu [set_brightness]
-use /usr/bin/scripts/hyprland/hyp_backlight/controls.nu [increase decrease increase_mon decrease_mon]
+use /usr/bin/scripts/hyprland/hyp_backlight/controls.nu [increase decrease]
 
 def main [name?:string pct?:int] { _main $name $pct }
-def 'main increase' [name:string pct:int] {increase $name $pct}
-def 'main decrease' [name:string pct:int] {decrease $name $pct}
-def 'main increase_mon' [pct:int --name(-n):string] {increase_mon $pct --name=$name}
-def 'main decrease_mon' [pct:int --name(-n):string] {decrease_mon $pct --name=$name}
+def 'main increase' [pct:int --name(-n):string] {increase $pct --name=$name}
+def 'main decrease' [pct:int --name(-n):string] {decrease $pct --name=$name}
 
 def 'main _menu' [] {_menu}
 def 'main _input' [] {get_input}

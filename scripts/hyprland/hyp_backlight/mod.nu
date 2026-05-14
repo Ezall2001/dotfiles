@@ -1,6 +1,6 @@
 use ../hyp_menu [main]
 
-export use ./controls.nu [increase decrease increase_mon decrease_mon]
+export use ./controls.nu [increase decrease]
 export use ./utils.nu [get_brightness set_brightness]
 
 export def _main [name?:string pct?:int] {
