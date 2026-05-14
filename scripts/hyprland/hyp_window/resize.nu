@@ -10,7 +10,7 @@ def get_step_coof [direction:string] {
 	}
 }
 
-export def main [direction:string --reset (-r)] {
+export def main [direction:string ] {
 	let act_mon = hyprctl monitors -j | from json | where focused == true | first
 	let act_win = hyprctl activewindow -j | from json
 

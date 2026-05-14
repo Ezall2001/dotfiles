@@ -8,5 +8,5 @@ use /usr/bin/scripts/hyprland/hyp_window/toggle_float.nu
 def main [] {}
 def 'main focus' [direction?:string --toggle_floating (-f)] { focus $direction --toggle_floating=$toggle_floating }
 def 'main move' [direction:string] { move $direction }
-def 'main resize' [direction:string --reset (-r)] { resize $direction --reset=$reset}
+def 'main resize' [direction:string] { resize $direction}
 def 'main toggle_float' [] { toggle_float }
