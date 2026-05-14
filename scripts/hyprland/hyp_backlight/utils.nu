@@ -8,7 +8,7 @@ export def get_brightness [name:string]: nothing -> oneof<int,nothing> {
 }
 
 export def set_brightness [name:string pct:int]: nothing -> bool {
-	let pct = $pct | into_pct
+	let pct = [$pct 0] | math max | into_pct
 	try {
 		brightnessctl -d $name s $pct | ignore
 		true
