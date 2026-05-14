@@ -1,4 +1,6 @@
-export const EMOJIES_DIR = '~/personal/media/emojies' | path expand
+export def EMOJI_PATH [] {
+	$env.XDG_CONFIG_HOME | path join 'themes' 'emoji.json'
+}
 
 export const BINDS = [
 	{
