@@ -35,6 +35,7 @@ M.app = {
 }
 
 M.other = {
+	done = i(''),
 	horizontal_seperator = i('─'),
 	pointer = i(''),
 	cmdline = i(''),
@@ -78,6 +79,7 @@ M.text = {
 }
 
 M.programming = {
+	bug = i(''),
 	debug = i(''),
 	warn = i(''),
 	hint = i('󱩌'),
