@@ -27,6 +27,7 @@ $env.config.keybindings = [
 		mode: [vi_insert vi_normal]
 		event: { send: menudown }
 	}
+	# FIX: dueplicate
 	{
 		name: menu_prv
 		modifier: control
@@ -34,6 +35,7 @@ $env.config.keybindings = [
 		mode: [vi_insert vi_normal]
 		event: { send: menuprevious }
 	}
+	# FIX: no menu page next
 	{
 		name: menu_page_prv
 		modifier: control
@@ -93,17 +95,15 @@ $env.config.keybindings = [
 		]
 	}
 	{
-		name: fzf_nav_cd
+		name: path_completer
 		modifier: control
 		keycode: char_c
 		mode: [vi_insert vi_normal]
-		event: { send: executehostcommand cmd: 'fzf_nav cd | __zoxide_z $in' }
-	}
-	{
-		name: fzf_nav_vi
-		modifier: control
-		keycode: char_v
-		mode: [vi_insert vi_normal]
-		event: { send: executehostcommand cmd: 'fzf_nav vim' }
+		event: {
+			send: executehostcommand
+			cmd: 'nu_path_completer (commandline) (commandline get-cursor)
+			| from nuon
+			| do {commandline edit $in.buffer; commandline set-cursor $in.pos}'
+		}
 	}
 ]
