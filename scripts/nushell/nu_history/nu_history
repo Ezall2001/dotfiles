@@ -1,17 +1,7 @@
 #!/usr/bin/env -S nu --stdin
 
-use /usr/bin/scripts/sfzf [main]
+use /usr/bin/scripts/nushell/nu_history/mod.nu [_main]
 
-def get_params [buffer:string] {
-	{
-		query: $buffer
-		height: 20%
-		list-border: rounded
-		scheme: history
-	}
-}
-
-def main [buffer='':string]: string -> string {
-	let params = get_params $buffer
-	$in | sfzf --params $params
+def main [buffer='':string] {
+	_main $buffer
 }
