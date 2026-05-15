@@ -8,6 +8,7 @@ use ./poetry.nu [main]
 use ./nodejs.nu [main]
 use ./ly.nu [main]
 use ./paru.nu [main]
+use ./bbw.nu [main]
 
 export def main [] {
 	{
@@ -21,5 +22,6 @@ export def main [] {
 		qtb: (qtb)
 		poetry: (poetry)
 		nodejs: (nodejs)
+		bbw: (bbw)
 	}
 }
