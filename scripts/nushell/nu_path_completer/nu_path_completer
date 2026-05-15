@@ -1,14 +1,14 @@
 #!/usr/bin/env nu
 
-use /usr/bin/scripts/nushell/nu_path_completer/preview.nu
+use /usr/bin/scripts/nushell/nu_path_completer/mod.nu [_main]
+use /usr/bin/scripts/nushell/nu_path_completer/preview.nu [main]
 use /usr/bin/scripts/nushell/nu_path_completer/filters.nu
-use /usr/bin/scripts/nushell/nu_path_completer/consts.nu [BINDS INPUT_GETTER DEFAULT_STATE]
-use /usr/bin/scripts/sfzf [main get_state update_state]
-use /usr/bin/scripts/nushell/nu_path_completer/params/mod.nu [get_params]
 use /usr/bin/scripts/nushell/nu_path_completer/input.nu [get_input]
-use /usr/bin/scripts/nushell/nu_path_completer/output.nu [get_output]
 use /usr/bin/scripts/nushell/nui [commandline]
 
+def main [buffer='':string, pos=0:int, state?:record] {
+	_main $buffer $pos $state
+}
 
 def 'main _filter dir' [] { filters dir }
 def 'main _filter hidden' [] { filters hidden }
@@ -17,15 +17,3 @@ def 'main _filter absolute' [] { filters absolute }
 def 'main _filter start' [start:string] { filters start $start }
 def 'main _update input' [] { get_input }
 def 'main _preview' [selected:string] { preview $selected }
-
-
-def main [buffer='':string, pos=0:int, state?:record] {
-	let state = $DEFAULT_STATE | merge ($state | default {})
-	update_state $state {}
-
-	let cursor_str = commandline get $buffer $pos
-	let params = get_params $state $cursor_str.string
-	let selected = get_input | sfzf $INPUT_GETTER --binds $BINDS --params $params
-
-	get_output $buffer $cursor_str $selected
-}

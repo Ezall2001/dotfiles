@@ -6,10 +6,10 @@ export const STARTS = {
 export const INPUT_GETTER = ['nu_path_completer' '_update' 'input']
 
 export const DEFAULT_STATE = {
-	hidden: true
+	hidden: false
 	absolute: false
 	ignored: false
-	dir: false
+	dir: true
 	start: 'personal'
 }
 

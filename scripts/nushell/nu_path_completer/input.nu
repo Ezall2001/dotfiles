@@ -10,12 +10,5 @@ export def get_input []: nothing -> string {
 	let ignored = if $state.ignored {'--no-ignore'} else {'--ignore'}
 	let type = if $state.dir {'--type=d'} else {'--type=f'}
 
-	let sub_range = if $start == '/' {1..} else {
-		($start | str length | $in + 1)..
-	}
-
-	fd $hidden $ignored $type -g '**' $start |
-	split row "\n" |
-	par-each {$in | str substring $sub_range} |
-	str join "\n"
+	fd --base-directory $start $hidden $ignored $type .
 }
