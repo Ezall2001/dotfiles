@@ -1,16 +1,24 @@
 #!/usr/bin/env nu
 
 use /usr/bin/scripts/hyprland/hyp_notification/mod.nu [_main]
+use /usr/bin/scripts/hyprland/hyp_notification/close.nu [main]
+use /usr/bin/scripts/hyprland/hyp_notification/pause.nu [main]
 use /usr/bin/scripts/hyprland/hyp_notification/menu [_menu]
 use /usr/bin/scripts/hyprland/hyp_notification/menu/input.nu [get_input]
 use /usr/bin/scripts/hyprland/hyp_notification/menu/preview.nu [main]
-use /usr/bin/scripts/hyprland/hyp_notification/menu/actions.nu [pause clear delete]
+use /usr/bin/scripts/hyprland/hyp_notification/menu/actions.nu
 
 def main [] { _main }
+def 'main close' [--all(-a)] {close --all=$all}
+def 'main pause' [--lvl(-l):int --toggle(-t) --increase(-i) --decrease(-d)] {
+	pause --lvl=$lvl --toggle=$toggle --increase=$increase --decrease=$decrease
+}
 
 def 'main _menu' [] {_menu}
-def 'main _action pause' [lvl:int] {pause $lvl}
-def 'main _action clear' [] {clear}
-def 'main _action delete' [id:string] {delete $id}
+def 'main _action pause' [--increase --decrease] {
+	actions pause --increase=$increase --decrease=$decrease
+}
+def 'main _action clear' [] {actions clear}
+def 'main _action delete' [id:string] {actions delete $id}
 def 'main _input' [] { get_input }
 def 'main _preview' [id:int] { preview $id}

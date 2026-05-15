@@ -2,16 +2,10 @@ use ../../../sfzf [get_state build_action_header]
 use ../../../nushell/nui/ansi [style]
 
 def get_components [state:record] {
-	let unpause = {
-		icon: ' '
-		label: ''
-		key: 'u'
-	}
-
 	let pause = {
 		icon: ' '
-		label: $"\(($state.pause))"
-		key: 'num'
+		label: $"($state.pause.label) \(($state.pause.val))"
+		key: 'H/L'
 	}
 
 	let delete = {
@@ -27,7 +21,7 @@ def get_components [state:record] {
 	}
 
 
-	[$delete $clear $pause $unpause]
+	[$delete $clear $pause]
 }
 
 export def get_header [state?:record] {

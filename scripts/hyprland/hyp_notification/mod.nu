@@ -1,9 +1,5 @@
 use ../hyp_menu [main]
 
-# pause all/info/none
-# history
-# history clear
-
 export def main [] {
 	_main
 }
