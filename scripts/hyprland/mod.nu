@@ -17,3 +17,4 @@ export module hyp_idle
 export module hyp_backlight
 export module hyp_log
 export module hyp_file_select
+export module hyp_audio
