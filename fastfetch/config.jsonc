@@ -138,13 +138,13 @@
 		},
 		{
 			"type": "cpu",
-			"format": "Intel i3-3120M {freq-max} ({temperature})",
+			"format": "Intel i7-10870H {freq-max} ({temperature})",
 			"temp": true,
 			"key": "{#32}├ {#92} "
 		},
 		{
 			"type": "gpu",
-			"format": "GeForce 710M",
+			"format": "GeForce RTX 2060 M",
 			"hideType": "integrated",
 			"key": "{#32}├ {#92}󰢮 "
 		},
