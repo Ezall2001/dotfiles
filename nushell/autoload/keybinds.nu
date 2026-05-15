@@ -49,11 +49,15 @@ $env.config.keybindings = [
 		event: { send: menu name: completion_menu }
 	}
 	{
-		name: help_menu
+		name: helb
 		modifier: control
 		keycode: char_h
 		mode: [vi_insert vi_normal]
-		event: { send: menu name: help_menu }
+		event: [
+			{ edit: MoveToStart }
+			{ edit: InsertString value: "helb " }
+			{ send: Enter }
+		]
 	}
 	{
 		name: history_menu
