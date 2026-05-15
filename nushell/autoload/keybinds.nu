@@ -61,10 +61,11 @@ $env.config.keybindings = [
 		keycode: char_t
 		mode: [vi_insert vi_normal]
 		event: {
-			until: [
-				{ send: menu name: history_menu }
-				{ send: menupagenext }
-			]
+			send: executehostcommand
+			cmd: 'history | sort-by -r start_timestamp
+			| uniq-by command | get command | each {str trim}
+			| uniq | str join "\n"
+			| nu_history (commandline) | commandline edit $in'
 		}
 	}
 	{
