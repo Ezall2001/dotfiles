@@ -1,0 +1,2 @@
+- pdfjs-legacy: needed by qutebrowser (exactly the legacy version. sad)
+- kitty: needed by fastfetch in tmux
