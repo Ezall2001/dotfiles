@@ -10,11 +10,16 @@ def format [state:record selected:string]: nothing -> string {
 	let start = $STARTS | get $state.start | path expand
 
 	let formatter = if $state.absolute {
-		{|p| $start | path join $p}
-	} else { {|p| $p} }
+		{|p| $p}
+	} else {
+		{|p| realpath --relative-to $env.PWD $p }
+	}
 
 	$selected | split row "\n"
-	| each {do $formatter $in | handle_spaces $in}
+	| each {|p|
+		$start | path join $p | do $formatter $in
+		| handle_spaces $in
+	}
 	| str join ' '
 }
 
