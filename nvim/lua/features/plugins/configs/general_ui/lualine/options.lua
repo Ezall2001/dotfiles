@@ -4,11 +4,13 @@ local disabled_filetypes = {
 }
 
 local refresh = {
-	statusline = 1000,
+	statusline = 300,
 	tabline = 1000,
 	winbar = 1000,
 	refresh_time = 16, -- ~60fps
 	events = {
+		'RecordingEnter',
+		'RecordingLeave',
 		'WinEnter',
 		'BufEnter',
 		'BufWritePost',
