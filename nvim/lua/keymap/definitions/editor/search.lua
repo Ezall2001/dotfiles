@@ -23,7 +23,7 @@ local search = function()
 
 	m({
 		'v',
-		'<leader>?',
+		'?',
 		[["zy:%s/<C-r>z//g<Left><Left>]],
 		{ desc = 'search and replace selection' },
 	})
