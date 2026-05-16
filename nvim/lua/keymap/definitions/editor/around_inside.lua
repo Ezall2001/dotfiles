@@ -1,14 +1,15 @@
 local M = {}
 
-M.mapping = function()
+M.mini_ai = function()
 	return {
 		around = 'a',
 		inside = 'i',
 
+		-- NOTE: not that useful (prefer find motions)
 		around_next = '',
 		inside_next = '',
-		around_last = 'al',
-		inside_last = 'il',
+		around_last = '',
+		inside_last = '',
 
 		goto_left = '',
 		goto_right = '',

@@ -18,7 +18,7 @@ M.mini_comment = require('keymap.definitions.editor.comment').mini_comment
 M.mini_jump = require('keymap.definitions.editor.jump_cursor').mini_jump
 M.mini_surround = require('keymap.definitions.editor.around_inside').mini_surround
 M.mini_pairs = require('keymap.definitions.editor.pairs').mini_pairs
-M.mini_ai = require('keymap.definitions.editor.around_inside')
+M.mini_ai = require('keymap.definitions.editor.around_inside').mini_ai
 M.yanky_picker = require('keymap.definitions.editor.yank').yanky_telescope_picker
 
 return M
