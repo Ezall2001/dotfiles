@@ -6,7 +6,7 @@ local u = require('utils.callback')
 local sticky_marks = function()
 	m({
 		'n',
-		'Mv',
+		'gmv',
 		'mv',
 		{ desc = 'start sticky mark' },
 	})
@@ -21,13 +21,13 @@ end
 local local_jumps = function()
 	m({
 		'n',
-		'[j',
+		'[m',
 		u.mkcb(jumps.jump, 'local', -1),
 		{ desc = 'jump to pervious local jump' },
 	})
 	m({
 		'n',
-		']j',
+		']m',
 		u.mkcb(jumps.jump, 'local', 1),
 		{ desc = 'jump to next local jump' },
 	})
