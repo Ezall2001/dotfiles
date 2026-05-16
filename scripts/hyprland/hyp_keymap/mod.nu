@@ -1,3 +1,4 @@
+use ./consts.nu [HYP_MENU_PARAMS]
 use ../consts.nu [MODIFIERS_MASK_MAP]
 use ../../sfzf [main FZF_DELIMETER STYLED_FZF_DELIMETER]
 use ../hyp_menu [main]
@@ -40,8 +41,7 @@ export def _menu [] {
 }
 
 export def _main [] {
-	let params = {size: [600 700]}
-	hyp_menu [hyp_keymap _menu] hyp_keymap $params
+	hyp_menu [hyp_keymap _menu] hyp_keymap $HYP_MENU_PARAMS
 }
 
 export def main [] {_main}

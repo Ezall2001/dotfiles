@@ -1,13 +1,6 @@
 use ../consts.nu [SCREEN_GAP]
 
-export const PAUSE_LVLS = [
-	{label: 'none', val: 0}
-	{label: 'lt normal', val: 50}
-	{label: 'lt error', val: 90}
-	{label: 'all', val: 100}
-]
-
-const SIZE = [1000 600]
+const SIZE = [600 700]
 
 export const HYP_MENU_PARAMS = {
 	size: $SIZE

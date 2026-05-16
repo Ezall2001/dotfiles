@@ -1,9 +1,11 @@
 use ../consts.nu [SCREEN_GAP]
 
+export const DEFAULT_SIZE = [500 700]
+
 export const DEFAULT_PARAMS = {
-	size: [500 700]
+	size: $DEFAULT_SIZE
 	pos: [
-		$'monitor_w-window_w-($SCREEN_GAP)'
-		$'monitor_h-window_h-($SCREEN_GAP)'
+		$'monitor_w-($DEFAULT_SIZE.0)-($SCREEN_GAP)'
+		$'monitor_h-($DEFAULT_SIZE.1)-($SCREEN_GAP)'
 	]
 }
