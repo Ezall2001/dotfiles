@@ -13,7 +13,7 @@ end
 
 M.mini_indent = require('keymap.definitions.editor.indentation').mini_indentation
 M.mini_splitjoin = require('keymap.definitions.editor.indentation').mini_splitjoin
-M.mini_move = require('keymap.definitions.editor.move_selection').mini_move
+M.mini_move = require('keymap.definitions.editor.selection').mini_move
 M.mini_comment = require('keymap.definitions.editor.comment').mini_comment
 M.mini_jump = require('keymap.definitions.editor.jump_cursor').mini_jump
 M.mini_surround = require('keymap.definitions.editor.surround').mini_surround
