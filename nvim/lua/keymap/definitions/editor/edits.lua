@@ -2,13 +2,6 @@ local m = require('keymap.lib').map
 
 local builtin = function()
 	m({
-		'n',
-		'J',
-		'mzJ`z',
-		{ desc = 'append line below' },
-	})
-
-	m({
 		{ 'n', 'v' },
 		'<leader>d',
 		'"_d',

@@ -13,6 +13,19 @@ local motion = function()
 		'^',
 		{ desc = 'move to start of line' },
 	})
+	m({
+		{ 'n', 'x', 'o' },
+		'J',
+		'G',
+		{ desc = 'append line below' },
+	})
+
+	m({
+		{ 'n', 'x', 'o' },
+		'K',
+		'gg',
+		{ desc = 'go to first line' },
+	})
 end
 
 local M = {}
