@@ -2,12 +2,12 @@ local M = {}
 
 M.recorder = function()
 	return {
-		startStopRecording = 'q',
+		startStopRecording = 'qq',
 		playMacro = 'Q',
-		switchSlot = '<C-q>',
-		editMacro = 'cq',
-		deleteAllMacros = 'dq',
-		yankMacro = 'yq',
+		switchSlot = 'qs',
+		editMacro = 'qe',
+		deleteAllMacros = 'qd',
+		yankMacro = 'qy',
 		addBreakPoint = '##',
 	}
 end
