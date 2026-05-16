@@ -18,13 +18,13 @@ local yank = function()
 
 	m({
 		{ 'n', 'v' },
-		'<leader>y',
+		'Gy',
 		[["+<Plug>(YankyYank)]],
 		{ desc = 'yank to clipboard' },
 	})
 	m({
 		'n',
-		'<leader>Y',
+		'GY',
 		[["+<Plug>(YankyYank)$]],
 		{ desc = 'yank to end of line to clipboard' },
 	})
@@ -52,6 +52,19 @@ local put = function()
 
 	m({
 		'n',
+		'Gp',
+		'"+<Plug>(YankyPutAfter)',
+		{ desc = 'put after cursor from clipboard' },
+	})
+	m({
+		'n',
+		'GP',
+		'"+<Plug>(YankyPutBefore)',
+		{ desc = 'put before cursor from clipboard' },
+	})
+
+	m({
+		'n',
 		'[p',
 		'<Plug>(YankyPreviousEntry)',
 		{ desc = 'yanky cycle previous entry' },
@@ -68,7 +81,7 @@ local yanky = function()
 	local l = require('yanky.textobj').last_put
 	m({
 		'n',
-		'<leader>pv',
+		'gpv',
 		l,
 		{ desc = 'yanky select last put' },
 	})
@@ -79,7 +92,7 @@ local telescope = function()
 
 	m({
 		'n',
-		'<leader>pt',
+		'<leader>yt',
 		t.yank_history,
 		{ desc = 'telescope open yank history' },
 	})
