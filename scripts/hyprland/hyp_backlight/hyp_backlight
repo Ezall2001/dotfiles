@@ -7,8 +7,14 @@ use /usr/bin/scripts/hyprland/hyp_backlight/menu/actions.nu [set_brightness]
 use /usr/bin/scripts/hyprland/hyp_backlight/controls.nu [increase decrease]
 
 def main [name?:string pct?:int] { _main $name $pct }
-def 'main increase' [pct:int --name(-n):string] {increase $pct --name=$name}
-def 'main decrease' [pct:int --name(-n):string] {decrease $pct --name=$name}
+
+def 'main increase' [pct:int --name(-n):string --notify(-t)] {
+	increase $pct --name=$name --notify=$notify
+}
+
+def 'main decrease' [pct:int --name(-n):string --notify(-t)] {
+	decrease $pct --name=$name --notify=$notify
+}
 
 def 'main _menu' [] {_menu}
 def 'main _input' [] {get_input}
