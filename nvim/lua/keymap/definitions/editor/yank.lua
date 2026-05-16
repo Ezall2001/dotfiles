@@ -1,6 +1,31 @@
 local p = require('features.plugins')
 local m = require('keymap.lib').map
 
+local sticky_yank = function()
+	local regs = { 'h', 't', 'n' }
+
+	for _, reg in ipairs(regs) do
+		m({
+			{ 'n', 'v' },
+			string.format('gy%s', reg),
+			string.format('"%s<Plug>(YankyYank)', reg),
+			{ desc = string.format('yank to %s register', reg) },
+		})
+		m({
+			{ 'n', 'v' },
+			string.format('gp%s', reg),
+			string.format('"%s<Plug>(YankyPutAfter)', reg),
+			{ desc = string.format('put after from %s register', reg) },
+		})
+		m({
+			{ 'n', 'v' },
+			string.format('gP%s', reg),
+			string.format('"%s<Plug>(YankyPutAfter)', reg),
+			{ desc = string.format('put after from %s register', reg) },
+		})
+	end
+end
+
 local yank = function()
 	m({
 		{ 'n', 'v' },
@@ -119,6 +144,7 @@ M.yanky_telescope_picker = function()
 end
 
 M.init = function()
+	sticky_yank()
 	yank()
 	put()
 	p.on_plugin_register('yanky', yanky)
