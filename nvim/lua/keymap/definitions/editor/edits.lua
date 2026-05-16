@@ -3,14 +3,14 @@ local m = require('keymap.lib').map
 local builtin = function()
 	m({
 		{ 'n', 'v' },
-		'<leader>d',
+		'gd',
 		'"_d',
 		{ desc = 'd to void register' },
 	})
 
 	m({
 		{ 'n', 'v' },
-		'<leader>D',
+		'gD',
 		'"_D',
 		{ desc = 'D to void register' },
 	})
