@@ -25,9 +25,9 @@ end
 
 M.mini_comment = function()
 	return {
-		comment = '',
-		comment_line = '<Leader>cc',
-		comment_visual = '<Leader>cc',
+		comment = 'gc',
+		comment_line = 'gcc',
+		comment_visual = 'gc',
 		textobject = 'ac',
 	}
 end
