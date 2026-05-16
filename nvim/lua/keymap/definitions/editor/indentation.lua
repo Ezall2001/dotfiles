@@ -5,13 +5,20 @@ local indentation = function()
 		{ 'n', 'v' },
 		',',
 		'=',
-		{ desc = 'vim default [=] (indent)' },
+		{ desc = 'vim default = (indent)' },
 	})
 	m({
 		'n',
 		',ap',
 		'mz=ap`z',
 		{ desc = 'auto indent paragraph' },
+	})
+
+	m({
+		'n',
+		',l',
+		'mzJ`z',
+		{ desc = 'join with below line' },
 	})
 end
 
@@ -32,7 +39,7 @@ end
 
 M.mini_splitjoin = function()
 	return {
-		toggle = '<leader>j',
+		toggle = ',c',
 		split = '',
 		join = '',
 	}
