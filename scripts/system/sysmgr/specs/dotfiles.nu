@@ -14,12 +14,22 @@ def gen [] {
 	fgen scripts
 }
 
+def prepare [] {
+	print 'seting up node dependencies'
+
+	cd $CONFIG_PATH
+	^pnpm install
+	^pnpm approve-builds
+	^pnpm prepare
+}
+
 
 export def main [] {
 	{
 		tasks: {
 			mklinks: {mklinks}
 			gen: {gen}
+			prepare: {prepare}
 		}
 	}
 }
