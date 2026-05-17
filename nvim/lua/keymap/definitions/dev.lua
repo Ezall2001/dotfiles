@@ -1,7 +1,23 @@
 local p = require('features.plugins')
 local m = require('keymap.lib').map
 local d = require('features.dev')
+local pr = require('features.project')
 local u = require('utils.callback')
+
+local project = function()
+	m({
+		'n',
+		'<Leader>/pc',
+		pr.create,
+		{ desc = 'create project (.nivm)' },
+	})
+	m({
+		'n',
+		'<Leader>/pd',
+		pr.delete,
+		{ desc = 'delete project (.nvim)' },
+	})
+end
 
 local dev = function()
 	m({
@@ -54,6 +70,7 @@ end
 local M = {}
 
 M.init = function()
+	project()
 	dev()
 	p.on_plugin_register('telescope', telescope)
 end
