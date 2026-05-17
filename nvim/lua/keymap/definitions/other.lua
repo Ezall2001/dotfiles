@@ -14,7 +14,11 @@ local other = function()
 	m({
 		'n',
 		'<Esc>',
-		'<Cmd>nohlsearch<CR><Esc>',
+		function()
+			vim.cmd('nohlsearch')
+			local mj = require('mini.jump')
+			mj.stop_jumping()
+		end,
 		{
 			desc = 'Escape, remove search highlight',
 			silent = true,
