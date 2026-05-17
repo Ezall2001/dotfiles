@@ -5,20 +5,20 @@ local tr = require('features.trouble').views.symbols
 local symbols = function()
 	m({
 		'n',
-		'<leader>ly',
+		'\\y',
 		tl.document_symbols,
 		{ desc = 'telescope lsp buffer symbols' },
 	})
 	m({
 		'n',
-		'<leader>lwy',
+		'\\Y',
 		tl.workspace_symbols,
 		{ desc = 'telescope lsp workspace symbols' },
 	})
 
 	m({
 		'n',
-		'<leader>Ly',
+		'|y',
 		tr.document_symbols,
 		{ desc = 'trouble buffer symbols' },
 	})

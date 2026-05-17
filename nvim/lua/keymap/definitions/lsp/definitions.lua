@@ -5,26 +5,26 @@ local tr = require('features.trouble').views.definitions
 local definitions = function()
 	m({
 		'n',
-		'<leader>ldf',
+		'\\f',
 		tl.definitions,
 		{ desc = 'telescope lsp definitions' },
 	})
 	m({
 		'n',
-		'<leader>ldt',
+		'\\t',
 		tl.type_definitions,
 		{ desc = 'telescope lsp type definitions' },
 	})
 
 	m({
 		'n',
-		'<leader>Ldf',
+		'|f',
 		tr.definitions,
 		{ desc = 'trouble definitions' },
 	})
 	m({
 		'n',
-		'<leader>Ldt',
+		'|t',
 		tl.type_definitions,
 		{ desc = 'trouble type definitions' },
 	})

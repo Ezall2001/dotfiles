@@ -19,19 +19,19 @@ end
 local hover = function()
 	m({
 		'n',
-		'<Leader>lho',
+		'\\h',
 		noice_hover,
 		{ desc = 'lsp hover' },
 	})
 	m({
 		'n',
-		'<Leader>lhd',
+		'\\g',
 		hover_diagnostics,
 		{ desc = 'lsp hover diagnostic' },
 	})
 	m({
 		'n',
-		'<Leader>lhs',
+		'\\s',
 		noice_hover_signature,
 		{ desc = 'lsp hover signature' },
 	})

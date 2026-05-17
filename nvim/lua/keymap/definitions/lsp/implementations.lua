@@ -5,14 +5,14 @@ local tr = require('features.trouble').views.implementations
 local implementations = function()
 	m({
 		'n',
-		'<leader>lp',
+		'\\p',
 		tl.implementations,
 		{ desc = 'telescope lsp implementations' },
 	})
 
 	m({
 		'n',
-		'<leader>Lp',
+		'|p',
 		tr.implementations,
 		{ desc = 'trouble implementations' },
 	})

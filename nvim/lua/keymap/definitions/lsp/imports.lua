@@ -5,7 +5,7 @@ local imports = function()
 
 	m({
 		'n',
-		'<Leader>tp',
+		'\\m',
 		i.pick,
 		{ desc = 'telescope lsp import' },
 	})

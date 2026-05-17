@@ -6,14 +6,14 @@ local tr = require('features.trouble').views.diagnostics
 local diagnostics = function()
 	m({
 		'n',
-		'<leader>ldg',
+		'\\d',
 		tl.diagnostics,
 		{ desc = 'telescope lsp diagnostics' },
 	})
 
 	m({
 		'n',
-		'<leader>Ldg',
+		'|d',
 		tr.diagnostics,
 		{ desc = 'trouble diagnostics' },
 	})

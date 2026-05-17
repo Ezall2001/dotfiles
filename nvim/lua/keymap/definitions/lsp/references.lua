@@ -5,14 +5,14 @@ local tr = require('features.trouble').views.references
 local references = function()
 	m({
 		'n',
-		'<leader>lr',
+		'\\e',
 		tl.references,
 		{ desc = 'telescope lsp references' },
 	})
 
 	m({
 		'n',
-		'<leader>Lr',
+		'|e',
 		tr.references,
 		{ desc = 'trouble references' },
 	})
