@@ -1,5 +1,6 @@
 local m = require('keymap.lib').map
 local p = require('features.plugins')
+local u = require('utils.callback')
 
 ---@type table<string, trouble.Action.spec|false>
 local keys = {
@@ -11,12 +12,10 @@ local keys = {
 	['<cr>'] = 'jump',
 	['<C-v>'] = 'jump_split',
 	['<C-z>'] = 'jump_vsplit',
-	j = 'next',
-	k = 'prev',
 	dd = 'delete',
 	d = { action = 'delete', mode = 'v' },
-	p = 'preview',
-	P = 'toggle_preview',
+	w = 'preview',
+	W = 'toggle_preview',
 	l = 'fold_open',
 	L = 'fold_open_recursive',
 	h = 'fold_close',
@@ -28,30 +27,33 @@ local keys = {
 }
 
 local trouble = function()
-	local t = require('trouble')
+	local a = require('features.trouble').actions
 
 	m({
 		'n',
 		'[t',
-		function()
-			---@diagnostic disable-next-line: missing-parameter
-			t.prev()
-			---@diagnostic disable-next-line: missing-parameter
-			t.jump()
-		end,
+		u.mkcb(a.navigate.prev, true),
 		{ desc = 'Trouble previous' },
+	})
+	m({
+		'n',
+		']t',
+		u.mkcb(a.navigate.next, true),
+		{ desc = 'Trouble next' },
 	})
 
 	m({
 		'n',
-		']t',
-		function()
-			---@diagnostic disable-next-line: missing-parameter
-			t.next()
-			---@diagnostic disable-next-line: missing-parameter
-			t.jump()
-		end,
-		{ desc = 'Trouble next' },
+		'{t',
+		u.mkcb(a.navigate.prev_group, true),
+		{ desc = 'Trouble previous group' },
+	})
+
+	m({
+		'n',
+		'}t',
+		u.mkcb(a.navigate.next_group, true),
+		{ desc = 'Trouble next group' },
 	})
 end
 
