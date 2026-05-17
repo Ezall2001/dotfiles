@@ -74,7 +74,7 @@ vim.o.matchpairs = '(:),{:},[:],<:>'
 vim.o.sessionoptions = 'folds,help,winpos,tabpages'
 
 -- shada
-vim.o.shada = "%40,:100,@100,/100,'100,<50,f0,s100,h"
+vim.o.shada = "%40,:100,@100,/100,'100,<50,f1,s100,h"
 vim.o.shadafile = 'NONE' -- delay read after project load (handled by shada)
 
 -- jumps

@@ -19,12 +19,6 @@ local specs = {
 		dependencies = { 'stevearc/oil.nvim' },
 	},
 	{
-		'ThePrimeagen/harpoon',
-		name = 'harpoon',
-		branch = 'harpoon2',
-		dependencies = { 'nvim-lua/plenary.nvim' },
-	},
-	{
 		'nvim-telescope/telescope.nvim',
 		name = 'telescope',
 		dependencies = {
