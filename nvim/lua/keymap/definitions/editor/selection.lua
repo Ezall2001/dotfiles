@@ -24,10 +24,10 @@ end
 
 M.mini_move = function()
 	return {
-		left = '<',
-		right = '>',
-		up = 'K',
-		down = 'J',
+		left = '<C-h>',
+		right = '<C-l>',
+		up = '<C-k>',
+		down = '<C-j>',
 
 		line_left = '',
 		line_right = '',

@@ -39,7 +39,7 @@ local buitlin = function()
 		{ 'n', 'x', 'o' },
 		'J',
 		'G',
-		{ desc = 'append line below' },
+		{ desc = 'move to first line' },
 	})
 
 	m({
