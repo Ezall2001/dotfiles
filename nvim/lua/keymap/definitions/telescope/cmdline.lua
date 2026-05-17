@@ -1,7 +1,7 @@
 local actions = {
-	complete = '<Tab>',
-	run_selection = '<C-CR>',
-	run_input = '<CR>',
+	complete = '<C-l>',
+	run_selection = '<CR>',
+	run_input = '<C-CR>',
 }
 
 return actions

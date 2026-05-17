@@ -16,11 +16,11 @@ actions_group.motions = {
 	},
 	{
 		action = a.move_to_bottom,
-		key = { n = 'G' },
+		key = { n = 'J' },
 	},
 	{
 		action = a.move_to_top,
-		key = { n = 'gg' },
+		key = { n = 'K' },
 	},
 }
 
@@ -50,7 +50,7 @@ actions_group.selection = {
 actions_group.preview = {
 	{
 		action = l.toggle_preview,
-		key = { n = '<C-p>' },
+		key = '<C-w>',
 	},
 	{
 		action = a.preview_scrolling_down,
@@ -73,7 +73,7 @@ actions_group.preview = {
 actions_group.other = {
 	{
 		action = a.close,
-		key = { n = '<esc>', i = '<C-q>' },
+		key = { n = '<esc>', i = '<M-x>' },
 	},
 	{
 		action = open_with_trouble,
