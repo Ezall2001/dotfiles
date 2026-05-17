@@ -5,21 +5,21 @@ local telescope = function()
 
 	m({
 		'n',
-		'<Leader>tf',
+		'<Leader>bf',
 		t.find_files,
 		{ desc = 'telescope find files' },
 	})
 
 	m({
 		'n',
-		'<Leader>tg',
+		'<Leader>bg',
 		t.live_grep,
 		{ desc = 'telescope live grep' },
 	})
 
 	m({
 		'n',
-		'<Leader>tv',
+		'<Leader>bv',
 		t.visited_files,
 		{ desc = 'telescope last visited' },
 	})
