@@ -35,10 +35,19 @@ M.app = {
 }
 
 M.other = {
+	direction = {
+		left = i(''),
+		right = i(''),
+		up = i(''),
+		down = i(''),
+	},
+	flag = i(''),
+	filter = i('󰈲'),
 	done = i(''),
 	horizontal_seperator = i('─'),
 	pointer = i(''),
 	cmdline = i(''),
+	search = i(''),
 	search_down = i(' '),
 	search_up = i(' '),
 	help = i(''),
@@ -62,6 +71,7 @@ M.file = {
 	unknown_file = i('󰡯'),
 	read_only = i('󰏮'),
 	log = i(''),
+	write = i(''),
 }
 
 M.text = {
@@ -79,6 +89,7 @@ M.text = {
 }
 
 M.programming = {
+	not_found = i('❓'),
 	bug = i(''),
 	debug = i(''),
 	warn = i(''),

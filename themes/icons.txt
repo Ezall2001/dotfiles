@@ -118,7 +118,7 @@ file-deleted: 󱙒
 file-renamed: 󰚹
 line-deleted: ━
 line-added/upated: ┃
-line-untracked = ┆
+line-untracked: ┆
 added: 
 modified: 
 ignored: 
@@ -133,6 +133,8 @@ sort_desc: 
 copy: 󰆏
 pause: 
 play: 
+write: 
+filter: 󰈲
 
 # rights
 root: 󰡗
@@ -170,6 +172,7 @@ space: ·
 section: 󰚟
 
 # other
+direction:    
 command: 
 down: 
 up: 
@@ -186,11 +189,11 @@ install: 
 toggle: 󰒉 
 done: #other.toggle.1
 luminosity: 
+flag: 
 
 # special
 hyperlock: 🌀 🧙🏻‍♂️
 starship: 📜
 sfzf - nvim-telescope: 🐕‍🦺
-fzf_nav: 
 hyp_backlight: ⚫
 fastfetch: 󰓥
