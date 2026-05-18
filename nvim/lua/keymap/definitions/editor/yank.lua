@@ -60,19 +60,19 @@ local put = function()
 		'n',
 		'p',
 		'<Plug>(YankyPutAfter)',
-		{ desc = 'put after cursor (auto-indent)' },
+		{ desc = 'put after cursor' },
 	})
 	m({
 		'n',
 		'P',
 		'<Plug>(YankyPutBefore)',
-		{ desc = 'put before cursor (auto-indent)' },
+		{ desc = 'put before cursor' },
 	})
 	m({
 		'v',
 		'p',
 		[["_d<Plug>(YankyPutBefore)]],
-		{ desc = 'replace selection keeping register content (auto-indent)' },
+		{ desc = 'replace selection keeping register content' },
 	})
 
 	m({
