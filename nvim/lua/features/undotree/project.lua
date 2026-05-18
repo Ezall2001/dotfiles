@@ -16,11 +16,11 @@ M.load = function()
 end
 
 M.delete = function()
-	vim.o.undodir = c.default_vim_undotree_dir_path
+	vim.o.undodir = c.default_undotree_dir
 end
 
 M.fallback = function()
-	vim.o.undodir = c.default_vim_undotree_dir_path
+	vim.o.undodir = c.default_undotree_dir
 end
 
 return M
