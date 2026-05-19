@@ -1,5 +1,5 @@
 local m = require('keymap.lib').map
-local g = require('features.grug_far')
+local p = require('features.plugins')
 
 local M = {}
 
@@ -35,18 +35,19 @@ M.keymap = {
 	qflist = {},
 }
 
-M.init = function()
-	m({
-		'n',
-		'<leader>?',
-		'<Cmd>GrugFar<Cr>',
-	})
+local grug = function()
+	local g = require('grug-far')
 
 	m({
-		'x',
+		{ 'n', 'x' },
 		'<leader>?',
-		g.invoke.prefil_search,
+		g.open,
+		{ desc = 'open grug-far (search and replace)' },
 	})
+end
+
+M.init = function()
+	p.on_plugin_register('grug_far', grug)
 end
 
 return M
