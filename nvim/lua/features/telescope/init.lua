@@ -22,7 +22,6 @@ M.pickers.implementations = implementations
 M.pickers.other = other
 M.pickers.references = references
 M.pickers.symbols = symbols
-M.pickers.git = git
 
 M.previewer = previewer
 

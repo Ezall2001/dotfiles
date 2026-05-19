@@ -5,12 +5,12 @@ M.commit_editor = {
 	['<c-n>'] = 'NextMessage',
 	['<c-r>'] = 'ResetMessage',
 	['<c-s>'] = 'Submit',
-	['<c-x>'] = 'Abort',
+	['<M-x>'] = 'Abort',
 }
 
 M.commit_editor_I = {
 	['<c-s>'] = 'Submit',
-	['<c-x>'] = 'Abort',
+	['<M-x>'] = 'Abort',
 }
 
 M.commit_view = {

@@ -1,28 +1,25 @@
 local M = {}
 
 M.rebase_editor = {
-	['<leader>gp'] = 'Pick',
-	['<leader>gr'] = 'Reword',
-	['<leader>ge'] = 'Edit',
-	['<leader>gs'] = 'Squash',
-	['<leader>gf'] = 'Fixup',
-	['<leader>gx'] = 'Execute',
-	['<leader>gd'] = 'Drop',
-	['<leader>gb'] = 'Break',
+	['gp'] = 'Pick',
+	['gr'] = 'Reword',
+	['ge'] = 'Edit',
+	['gs'] = 'Squash',
+	['gf'] = 'Fixup',
+	['gx'] = 'Execute',
+	['gd'] = 'Drop',
+	['gb'] = 'Break',
+	['go'] = 'OpenOrScrollUp',
 	['<esc>'] = 'Close',
 	['q'] = 'Close',
 	['<cr>'] = 'OpenCommit',
-	['k'] = 'MoveUp',
-	['j'] = 'MoveDown',
 	['<c-s>'] = 'Submit',
-	['<c-x>'] = 'Abort',
-	['[o'] = 'OpenOrScrollUp',
-	[']o'] = 'OpenOrScrollDown',
+	['<M-x>'] = 'Abort',
 }
 
 M.rebase_editor_I = {
 	['<c-s>'] = 'Submit',
-	['<c-x>'] = 'Abort',
+	['<M-x>'] = 'Abort',
 }
 
 return M

@@ -1,14 +1,32 @@
 local commits = require('keymap.definitions.git.neogit.commits')
 local other = require('keymap.definitions.git.neogit.other')
+local p = require('features.plugins')
+local popup = require('keymap.definitions.git.neogit.popup')
 local rebase = require('keymap.definitions.git.neogit.rebase')
 local status = require('keymap.definitions.git.neogit.status')
+local m = require('keymap.lib').map
+
+local neogit = function()
+	popup.init()
+
+	local n = require('neogit')
+
+	m({
+		'n',
+		'<leader>gn',
+		n.open,
+		{ desc = 'neogit commit popup' },
+	})
+end
 
 local M = {}
 
-M.init = function() end
+M.init = function()
+	p.on_plugin_register('neogit', neogit)
+end
 
 M.keymap = {
-	popup = other.popup,
+	popup = popup.keymap,
 	status = status,
 	finder = other.finder,
 	refs_view = other.refs_view,

@@ -1,7 +1,7 @@
 local M = {}
 
 M.commit_view = {
-	kind = 'tab',
+	kind = 'vsplit',
 	verify_commit = vim.fn.executable('gpg') == 1,
 }
 

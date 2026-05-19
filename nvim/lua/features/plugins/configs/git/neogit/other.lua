@@ -1,11 +1,11 @@
 local M = {}
 
 M.rebase_editor = {
-	kind = 'auto',
+	kind = 'tab',
 }
 
 M.merge_editor = {
-	kind = 'auto',
+	kind = 'tab',
 }
 
 M.preview_buffer = {
