@@ -19,21 +19,20 @@ local project = function()
 	})
 end
 
-local dev = function()
+local other = function()
 	m({
 		'n',
-		'<leader>/r',
-		d.source_curr,
-		{ desc = 'source current lua file' },
+		'g/m',
+		'<C-]>',
+		{ desc = 'go to tag' },
+	})
 
-local other = function()
 	m({
 		'n',
 		'g/e',
 		d.exec.exec_file,
 		{ desc = 'exec current buffer' },
 	})
-
 	m({
 		'x',
 		'g/e',
