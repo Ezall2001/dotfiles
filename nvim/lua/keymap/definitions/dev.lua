@@ -25,6 +25,20 @@ local dev = function()
 		'<leader>/r',
 		d.source_curr,
 		{ desc = 'source current lua file' },
+
+local other = function()
+	m({
+		'n',
+		'g/e',
+		d.exec.exec_file,
+		{ desc = 'exec current buffer' },
+	})
+
+	m({
+		'x',
+		'g/e',
+		d.exec.exec_selection,
+		{ desc = 'exec selection' },
 	})
 end
 
@@ -71,7 +85,7 @@ local M = {}
 
 M.init = function()
 	project()
-	dev()
+	other()
 	p.on_plugin_register('telescope', telescope)
 end
 

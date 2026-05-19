@@ -1,9 +1,9 @@
 local cwd = require('features.dev.cwd')
-local source_curr = require('features.dev.source_curr')
+local exec = require('features.dev.exec')
 
 local M = {}
 
 M.cwd = cwd
-M.source_curr = source_curr
+M.exec = exec
 
 return M
