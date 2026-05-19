@@ -20,7 +20,7 @@ local telescope = function()
 	local t = require('features.telescope').pickers.other
 	m({
 		'n',
-		'<leader>st',
+		'<leader>s',
 		t.spell,
 		{ desc = 'telescope spell suggestions' },
 	})

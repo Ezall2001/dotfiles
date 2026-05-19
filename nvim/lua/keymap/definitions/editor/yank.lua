@@ -117,7 +117,7 @@ local telescope = function()
 
 	m({
 		'n',
-		'<leader>yt',
+		'<leader>y',
 		t.yank_history,
 		{ desc = 'telescope open yank history' },
 	})
