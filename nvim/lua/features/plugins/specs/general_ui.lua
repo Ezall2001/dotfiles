@@ -1,6 +1,7 @@
 --#selene: allow(mixed_table)
 
 local specs = {
+	{ 'MagicDuck/grug-far.nvim', name = 'grug_far' },
 	{ 'luukvbaal/statuscol.nvim', name = 'statuscol' },
 	{ 'mbbill/undotree', name = 'undotree' },
 	{ 'Mofiqul/dracula.nvim', name = 'dracula', priority = 1000 },

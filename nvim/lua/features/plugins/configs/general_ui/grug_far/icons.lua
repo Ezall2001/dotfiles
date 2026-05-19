@@ -1,0 +1,26 @@
+local i = require('constants.icons')
+
+return {
+	enabled = true,
+	fileIconsProvider = 'first_available',
+	actionEntryBullet = '',
+	searchInput = i.other.search(true),
+	replaceInput = i.file.write(true),
+	filesFilterInput = i.other.filter(true),
+	flagsInput = i.other.flag(true),
+	pathsInput = i.file.dir_closed(true),
+	helpTitle = i.other.help(true),
+	historyTitle = i.other.history(true),
+	resultsStatusReady = i.other.input(true),
+	resultsStatusError = i.programming.not_found(true),
+	resultsStatusSuccess = i.other.done(true),
+	resultsEngineLeft = i.other.direction.left(false),
+	resultsEngineRight = i.other.direction.right(false),
+	resultsActionMessage = i.programming.info(true),
+	resultsAddedIndicator = '',
+	resultsRemovedIndicator = '',
+	resultsChangeIndicator = '',
+	resultsDiffSeparatorIndicator = '',
+	lineNumbersEllipsis = '',
+	newline = i.text.wrap(true),
+}
