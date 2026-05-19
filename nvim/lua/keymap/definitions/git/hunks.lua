@@ -5,14 +5,14 @@ local gitsigns = function()
 	local gs = require('gitsigns')
 	m({
 		'n',
-		'<leader>hs',
+		'ghs',
 		gs.stage_hunk,
 		{ desc = 'gitsigns stage/unstage hunks' },
 	})
 
 	m({
 		'v',
-		'<leader>hs',
+		'ghs',
 		function()
 			gs.stage_hunk({ vim.fn.line('.'), vim.fn.line('v') })
 		end,
@@ -21,14 +21,14 @@ local gitsigns = function()
 
 	m({
 		'n',
-		'<leader>hr',
+		'ghr',
 		gs.reset_hunk,
 		{ desc = 'gitsigns reset hunks' },
 	})
 
 	m({
 		'v',
-		'<leader>hr',
+		'ghr',
 		function()
 			gs.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') })
 		end,
@@ -37,7 +37,7 @@ local gitsigns = function()
 
 	m({
 		'n',
-		'<leader>hB',
+		'ghb',
 		function()
 			gs.blame_line({ full = true })
 		end,
@@ -53,7 +53,7 @@ local gitsigns = function()
 
 	m({
 		'n',
-		'<leader>hp',
+		'ghp',
 		gs.preview_hunk,
 		{ desc = 'gitsigns preview hunk' },
 	})
