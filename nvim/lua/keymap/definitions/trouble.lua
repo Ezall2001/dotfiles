@@ -5,7 +5,7 @@ local u = require('utils.callback')
 ---@type table<string, trouble.Action.spec|false>
 local keys = {
 	['?'] = 'help',
-	r = 'refresh',
+	['<C-r>'] = 'refresh',
 	R = 'toggle_refresh',
 	q = 'close',
 	['<C-cr>'] = 'jump_close',
