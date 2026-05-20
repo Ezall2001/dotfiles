@@ -6,4 +6,6 @@ M.init = function()
 	cleanup()
 end
 
+M.invoke = require('features.diffview.invoke')
+
 return M
