@@ -39,13 +39,6 @@ local gitsigns = function()
 		gs.reset_buffer_index,
 		{ desc = 'git unstage buffer' },
 	})
-	--TEST: not sure if needed
-	m({
-		'n',
-		'ggsh',
-		gs.show,
-		{ desc = 'gitsigns show' },
-	})
 end
 
 local M = {}
