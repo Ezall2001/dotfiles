@@ -137,6 +137,10 @@ vim.o.smartcase = true
 -- cmd
 vim.o.inccommand = 'nosplit'
 
+-- diff
+vim.o.diffopt =
+	'algorithm:histogram,anchor,closeoff,context:6,filler,foldcolumn:1,followwrap,indent-heuristic,inline:char,internal,vertical,linematch:80'
+
 -- buffers
 vim.o.swapfile = false
 vim.o.hidden = false
@@ -220,6 +224,8 @@ vim.o.warn = true
 -- dictionary
 -- directory
 -- iskeyword
+-- diffanchors
+-- diffexpr
 
 --[[
 'backspace'	  'bs'	    how backspace works at start of line
