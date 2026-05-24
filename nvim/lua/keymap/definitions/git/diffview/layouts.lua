@@ -20,7 +20,7 @@ M.diff4 = {
 	{ 'n', 'g?', da.help({ 'view', 'diff4' }), { desc = 'open help panel' } },
 	{ { 'n', 'x' }, 'gho', da.diffget('ours'), { desc = 'get our hunk' } },
 	{ { 'n', 'x' }, 'ght', da.diffget('theirs'), { desc = 'get theirs hunk' } },
-	{ { 'n', 'x' }, 'ghb', da.diffget('theirs'), { desc = 'get base hunk' } },
+	{ { 'n', 'x' }, 'ghb', da.diffget('base'), { desc = 'get base hunk' } },
 }
 
 return M

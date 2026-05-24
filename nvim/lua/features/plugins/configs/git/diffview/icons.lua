@@ -17,6 +17,11 @@ M.signs = {
 	fold_closed = t.fold_closed(false),
 	fold_open = t.fold_open(false),
 	done = o.done(false),
+	selected_file = o.toggle.on(false),
+	unselected_file = o.toggle.off(false),
+	selected_dir = o.toggle.on(false),
+	partially_selected_dir = g.modified(false),
+	unselected_dir = o.toggle.off(false),
 }
 
 M.status_icons = {

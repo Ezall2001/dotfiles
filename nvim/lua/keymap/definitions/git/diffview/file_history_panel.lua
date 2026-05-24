@@ -6,7 +6,7 @@ return {
 	{ 'n', 'g?', da.help('file_history_panel'), { desc = 'open help panel' } },
 	{ 'n', 'g/', da.options, { desc = 'open option panel' } },
 	{ 'n', 'gl', da.open_commit_log, { desc = 'open commit log panel' } },
-	{ 'n', 'gv', da.toggle_files, { desc = 'toggle file panel' } },
+	{ 'n', 'gw', da.toggle_files, { desc = 'toggle file panel' } },
 	{ 'n', 'gd', da.open_in_diffview, { desc = 'open diff' } },
 	{ 'n', 'gh', da.diff_against_head, { desc = 'open diff against head' } },
 	{ 'n', 'gr', da.restore_entry, { desc = 'reset file under cursor' } },
@@ -21,8 +21,8 @@ return {
 	{ 'n', '<C-Cr>', da.goto_file, { desc = 'open file in prv tab' } },
 
 	{ 'n', '<tab>', da.toggle_fold, { desc = 'toggle fold' } },
-	{ 'n', 'zl', da.open_fold, { desc = 'open fold' } },
-	{ 'n', 'zh', da.close_fold, { desc = 'close fold' } },
-	{ 'n', 'zL', da.open_all_folds, { desc = 'open all folds' } },
-	{ 'n', 'zH', da.close_all_folds, { desc = 'close all folds' } },
+	{ 'n', 'l', da.open_fold, { desc = 'open fold' } },
+	{ 'n', 'h', da.close_fold, { desc = 'close fold' } },
+	{ 'n', 'L', da.open_all_folds, { desc = 'open all folds' } },
+	{ 'n', 'H', da.close_all_folds, { desc = 'close all folds' } },
 }

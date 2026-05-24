@@ -3,12 +3,11 @@ local da = require('diffview.actions')
 
 return {
 	{ 'n', '<M-x>', d.close, { desc = 'close diffview' } },
-	{ 'n', '[g', da.select_prev_entry, { desc = 'select next' } },
-	{ 'n', ']g', da.select_next_entry, { desc = 'select prev' } },
-	{ 'n', 'gv', da.toggle_files, { desc = 'toggle file panel' } },
+	{ 'n', '[f', da.select_prev_entry, { desc = 'select next' } },
+	{ 'n', ']f', da.select_next_entry, { desc = 'select prev' } },
+	{ 'n', 'gw', da.toggle_files, { desc = 'toggle file panel' } },
 	{ 'n', 'gy', da.cycle_layout, { desc = 'cycle layouts' } },
 	{ 'n', 'gl', da.open_commit_log, { desc = 'open commit log panel' } },
-	{ 'n', '<leader>di', da.open_in_new_tab, { desc = 'open another diffview tab' } },
 	{ 'n', '<C-r>', da.refresh_files, { desc = 'refresh' } },
 	{ 'n', 'gs', da.toggle_stage_entry, { desc = 'toggle stage entry' } },
 
