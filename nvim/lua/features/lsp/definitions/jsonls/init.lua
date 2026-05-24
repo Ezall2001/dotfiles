@@ -1,19 +1,18 @@
-local events = require('features.lsp.definitions.jsonls.events')
-local default_ft = { 'jsonc', 'json' }
-
 local settings = {
 	format = { enable = false },
 	validate = { enable = true },
 }
 
-local M = {}
+local M = {
+	name = 'jsonls',
+	default_ft = { 'jsonc', 'json' },
+}
 
 M.init = function(ft)
-	ft = ft or default_ft
+	ft = ft or M.default_ft
 
 	vim.lsp.config('jsonls', {
 		filetypes = ft,
-		on_init = events.on_init,
 		init_options = {
 			provideFormatter = false,
 		},

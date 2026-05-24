@@ -1,11 +1,12 @@
 local config = require('features.lsp.definitions.harper_ls.config')
 
-local M = {}
-
-local default_ft = {}
+local M = {
+	name = 'harper_ls',
+	default_ft = {},
+}
 
 M.init = function(ft)
-	ft = ft or default_ft
+	ft = ft or M.default_ft
 
 	vim.lsp.config('harper_ls', {
 		filetypes = ft,

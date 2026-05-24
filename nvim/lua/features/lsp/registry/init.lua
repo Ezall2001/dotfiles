@@ -1,35 +1,34 @@
-local registry = {
-	lsp_ft_map = {},
-	formatters = {},
-	inlay_hint = {},
-	document_color = {},
+local DEFAULT_BUILTIN_CONF = {
+	feats = {},
 }
 
-local register_items = function(table, key, items)
-	if table[key] == nil then
-		table[key] = vim.deepcopy(items)
-	else
-		vim.list_extend(table[key], items)
+local DEFAULT_CONF = {
+	colorizer = false,
+	builtin = {},
+	null_ls = {
+		lsps = {},
+		feats = {},
+	},
+}
+
+local normalize_conf = function(config)
+	local nconfig = vim.tbl_extend('force', DEFAULT_CONF, vim.deepcopy(config))
+
+	for lsp, builtin_conf in pairs(nconfig.builtin) do
+		local nbuiltin_conf = vim.tbl_extend('force', DEFAULT_BUILTIN_CONF, builtin_conf)
+		nconfig.builtin[lsp] = nbuiltin_conf
 	end
+
+	return nconfig
 end
+
+local registry = {}
 
 local M = {}
 
-M.register_lsps = function(fts, lsps, feats)
-	for _, lsp in ipairs(lsps) do
-		register_items(registry.lsp_ft_map, lsp, fts)
-	end
-
-	if feats.inlay_hint == true then
-		vim.list_extend(registry.inlay_hint, fts)
-	end
-
-	if feats.document_color == true then
-		vim.list_extend(registry.document_color, fts)
-	end
-
+M.register_lsps = function(fts, configs)
 	for _, ft in ipairs(fts) do
-		register_items(registry.formatters, ft, feats.formatters)
+		registry[ft] = normalize_conf(configs)
 	end
 end
 

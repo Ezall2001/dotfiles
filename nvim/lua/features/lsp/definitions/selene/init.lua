@@ -1,11 +1,7 @@
 local p = require('features.plugins')
 local u = require('utils.callback')
 
-local default_ft = { 'lua' }
-
 local init = function(ft)
-	ft = ft or default_ft
-
 	local l = require('null-ls')
 	local selene = l.builtins.diagnostics.selene.with({
 		filetypes = ft,
@@ -14,9 +10,14 @@ local init = function(ft)
 	l.register({ selene })
 end
 
-local M = {}
+local M = {
+	name = 'selene',
+	null_ls = true,
+	default_ft = { 'lua' },
+}
 
 M.init = function(ft)
+	ft = ft or M.default_ft
 	p.on_plugin_register('null_ls', u.mkcb(init, ft))
 end
 

@@ -1,13 +1,18 @@
 local r = require('features.lsp').registry
 
+local conf = {
+	colorizer = true,
+}
+
+conf.builtin = {}
+
+conf.null_ls = {
+	lsps = { 'kdlfmt' },
+	feats = { 'formatting' },
+}
+
 local config_lsp = function(ft)
-	r.register_lsps(ft, { 'kdlfmt', 'colorizer' }, {
-		inlay_hint = false,
-		document_color = false,
-		formatters = { 'null-ls' },
-		on_type_formatting = {},
-		semantic_token = {},
-	})
+	r.register_lsps(ft, conf)
 end
 
 return config_lsp

@@ -1,18 +1,18 @@
 local r = require('features.lsp').registry
 
 local conf = {
-	colorizer = true,
+	colorizer = false,
 }
 
 conf.builtin = {
-	taplo = {
-		feats = { 'formatting', 'inlay_hint', 'on_type_formatting', 'semantic_tokens' },
+	lua_ls = {
+		feats = { 'on_type_formatting', 'semantic_tokens', 'inlay_hint', 'document_color' },
 	},
 }
 
 conf.null_ls = {
-	lsps = {},
-	feats = {},
+	lsps = { 'stylua', 'selene' },
+	feats = { 'formatting' },
 }
 
 local config_lsp = function(ft)

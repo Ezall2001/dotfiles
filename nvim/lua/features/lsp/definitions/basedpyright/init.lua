@@ -1,20 +1,19 @@
 local config = require('features.lsp.definitions.basedpyright.config')
-local events = require('features.lsp.definitions.basedpyright.events')
 
-local default_ft = { 'python' }
-
-local M = {}
+local M = {
+	name = 'basedpyright',
+	default_ft = { 'python' },
+}
 
 M.init = function(ft)
-	ft = ft or default_ft
+	ft = ft or M.default_ft
 
 	vim.lsp.config('basedpyright', {
 		filetypes = ft,
-		on_init = events.on_init,
 		settings = config,
 	})
 
-	vim.lsp.enable('basedpyright')
+	vim.lsp.enable(M.name)
 end
 
 return M

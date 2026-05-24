@@ -18,6 +18,7 @@ local config = function()
 end
 
 --TODO: make this behavior for all ignored file by .gitignore
+-- preferably run this on the file then when exiting cleanup those diagnostics
 local remove_ignored_diagnostics_on_exit = function()
 	vim.api.nvim_create_autocmd('DiagnosticChanged', {
 		pattern = '**/.nvim/*',

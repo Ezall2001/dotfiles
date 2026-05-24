@@ -1,20 +1,19 @@
 local config = require('features.lsp.definitions.lua_ls.config')
-local events = require('features.lsp.definitions.lua_ls.events')
 
-local default_ft = { 'lua' }
-
-local M = {}
+local M = {
+	name = 'lua_ls',
+	default_ft = { 'lua' },
+}
 
 M.init = function(ft)
-	ft = ft or default_ft
+	ft = ft or M.default_ft
 
 	vim.lsp.config('lua_ls', {
 		filetypes = ft,
-		on_init = events.on_init,
 		settings = config,
 	})
 
-	vim.lsp.enable('lua_ls')
+	vim.lsp.enable(M.name)
 end
 
 return M

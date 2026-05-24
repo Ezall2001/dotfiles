@@ -1,15 +1,13 @@
-local events = require('features.lsp.definitions.taplo.events')
-
-local default_ft = { 'toml' }
-
-local M = {}
+local M = {
+	name = 'taplo',
+	default_ft = { 'toml' },
+}
 
 M.init = function(ft)
-	ft = ft or default_ft
+	ft = ft or M.default_ft
 
 	vim.lsp.config('taplo', {
 		filetypes = ft,
-		on_init = events.on_init,
 	})
 
 	vim.lsp.enable('taplo')

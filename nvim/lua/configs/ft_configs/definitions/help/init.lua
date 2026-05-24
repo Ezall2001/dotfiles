@@ -1,15 +1,11 @@
+local set_options = require('configs.ft_configs.definitions.help.options')
+
 local M = {}
 
-local config = function()
-	vim.opt_local.bufhidden = 'wipe'
-	vim.cmd('wincmd L')
-end
+M.filetypes = { 'help', 'man' }
 
 M.init = function()
-	vim.api.nvim_create_autocmd('FileType', {
-		pattern = { 'help', 'man' },
-		callback = config,
-	})
+	set_options(M.filetypes)
 end
 
 return M

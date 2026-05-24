@@ -22,9 +22,6 @@ M.on_init = function(client)
 	end
 
 	pin_main_file(client)
-
-	vim.lsp.semantic_tokens.enable(true, { client_id = client.id })
-	vim.lsp.on_type_formatting.enable(true, { client_id = client.id })
 end
 
 return M

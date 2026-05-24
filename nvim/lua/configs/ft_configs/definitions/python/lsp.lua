@@ -5,8 +5,12 @@ local conf = {
 }
 
 conf.builtin = {
-	taplo = {
-		feats = { 'formatting', 'inlay_hint', 'on_type_formatting', 'semantic_tokens' },
+	basedpyright = {
+		feats = { 'inlay_hint', 'on_type_formatting', 'semantic_tokens' },
+	},
+
+	ruff = {
+		feats = { 'formatting', 'on_type_formatting' },
 	},
 }
 

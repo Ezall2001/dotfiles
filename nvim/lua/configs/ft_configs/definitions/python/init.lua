@@ -1,15 +1,11 @@
-local l = require('features.lsp')
+local config_lsp = require('configs.ft_configs.definitions.python.lsp')
 
 local M = {}
 
 M.filetypes = { 'python' }
 
 M.init = function()
-	l.registry.register_lsps(M.filetypes, { 'basedpyright', 'ruff', 'colorizer' }, {
-		inlay_hint = true,
-		document_color = false,
-		formatters = { 'ruff' },
-	})
+	config_lsp(M.filetypes)
 end
 
 return M

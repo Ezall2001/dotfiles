@@ -1,14 +1,13 @@
-local events = require('features.lsp.definitions.nushell.events')
-local default_ft = { 'nu' }
-
-local M = {}
+local M = {
+	name = 'nushell',
+	default_ft = { 'nu' },
+}
 
 M.init = function(ft)
-	ft = ft or default_ft
+	ft = ft or M.default_ft
 
 	vim.lsp.config('nushell', {
 		filetypes = ft,
-		on_init = events.on_init,
 	})
 
 	vim.lsp.enable('nushell')

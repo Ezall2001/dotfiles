@@ -1,24 +1,13 @@
-local l = require('features.lsp')
-
-local config = function()
-	vim.bo.commentstring = '# %s'
-end
+local config_lsp = require('configs.ft_configs.definitions.nushell.lsp')
+local set_options = require('configs.ft_configs.definitions.nushell.options')
 
 local M = {}
 
 M.filetypes = { 'nu' }
 
 M.init = function()
-	l.registry.register_lsps(M.filetypes, { 'colorizer', 'nushell' }, {
-		inlay_hint = true,
-		document_color = false,
-		formatters = {},
-	})
-
-	vim.api.nvim_create_autocmd('FileType', {
-		pattern = M.filetypes,
-		callback = config,
-	})
+	set_options(M.filetypes)
+	config_lsp(M.filetypes)
 end
 
 return M

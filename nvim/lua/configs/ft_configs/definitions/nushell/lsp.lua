@@ -5,8 +5,8 @@ local conf = {
 }
 
 conf.builtin = {
-	taplo = {
-		feats = { 'formatting', 'inlay_hint', 'on_type_formatting', 'semantic_tokens' },
+	nushell = {
+		feats = { 'inlay_hint', 'semantic_tokens' },
 	},
 }
 

@@ -1,12 +1,13 @@
 local config = require('features.lsp.definitions.tinymist.config')
 local events = require('features.lsp.definitions.tinymist.events')
 
-local M = {}
-
-local default_ft = { 'typst' }
+local M = {
+	name = 'tinymist',
+	default_ft = { 'typst' },
+}
 
 M.init = function(ft)
-	ft = ft or default_ft
+	ft = ft or M.default_ft
 
 	vim.lsp.config('tinymist', {
 		filetypes = ft,
