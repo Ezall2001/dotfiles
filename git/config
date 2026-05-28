@@ -19,4 +19,4 @@
 	browser = zen
 
 [diff]
-	external = difft
+	external = difft --context 3 --tab-width 2 --display side-by-side --background dark --syntax-highlight on --color always

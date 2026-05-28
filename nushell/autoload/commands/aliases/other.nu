@@ -10,3 +10,5 @@ alias _btop = btop
 alias btop = btop -p 0
 
 alias pn = pnpm
+
+alias difft = difft --context 3 --tab-width 2 --display side-by-side --background dark --syntax-highlight on
