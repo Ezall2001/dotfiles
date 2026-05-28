@@ -1,5 +1,5 @@
-use ../consts.nu [DIFF_PATH LOCAL_REMOTE CONFIG_PATH TMP_DIR BACKED_DIRS]
-use ../utils.nu [get_includes print_diff]
+use ../consts.nu [DIFF_PATH LOCAL_REMOTE CONFIG_PATH TMP_DIR]
+use ../utils.nu [print_diff get_filters]
 
 export def main [backup_dir:string switch_direction:bool=false] {
 	let dir = if $switch_direction {
@@ -10,14 +10,17 @@ export def main [backup_dir:string switch_direction:bool=false] {
 
 	mkdir $TMP_DIR
 	let cmd = [
-		rclone check
+		doas rclone check
 		...$dir
 		--config $CONFIG_PATH
 		--combined $DIFF_PATH
-		...(get_includes)
+		--filter-from -
 	]
 
-	try {run-external ...$cmd e+o> /dev/null}
+
+	try {
+		get_filters | run-external ...$cmd e+o> /dev/null
+	}
 
 	print_diff
 

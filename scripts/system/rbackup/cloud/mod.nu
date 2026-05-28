@@ -1,2 +1,2 @@
-export use ./restore.nu
-export use ./backup.nu
+export use ./restore [main]
+export use ./backup [main]
