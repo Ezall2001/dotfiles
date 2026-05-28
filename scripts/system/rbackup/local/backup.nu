@@ -1,26 +1,24 @@
-use ../consts.nu [LOCAL_REMOTE CONFIG_PATH SUM_PATH BACKED_DIRS]
-use ../files.nu [get_system_files get_remote_files]
+use ../consts.nu [IGNORED_DIRS BACKED_DIRS LOCAL_REMOTE CONFIG_PATH META_SUM_PATH]
+use ../utils.nu [get_filters]
 use ./confirm.nu [main]
-use ../check_root.nu [main]
-use ../utils.nu [get_includes]
 
-def create_sum [] {
+def create_sum [backup_dir:string] {
 	print 'calculating sum'
 
-	let cmd = [
-		rclone md5sum
+	get_filters | run-external ...[
+		doas rclone md5sum
 		($LOCAL_REMOTE):/
 		--config $CONFIG_PATH
-		--output-file $SUM_PATH
-		...(get_includes)
+		--output-file $META_SUM_PATH
+		--filter-from -
 	]
-	run-external $cmd
 }
 
 def backup [backup_dir:string no_delete:bool] {
 	let op = if $no_delete {'copy'} else {'sync'}
-	let cmd = [
-		rclone $op
+
+	get_filters | run-external ...[
+		doas rclone $op
 		($LOCAL_REMOTE):/ ($LOCAL_REMOTE):($backup_dir)
 		--config $CONFIG_PATH
 		--progress
@@ -28,14 +26,12 @@ def backup [backup_dir:string no_delete:bool] {
 		--no-update-modtime
 		--no-update-dir-modtime
 		--create-empty-src-dirs
-		...(get_includes)
+		--filter-from -
 	]
-	run-external ...$cmd
 }
 
 export def main [backup_dir:string --no-delete] {
-	check_root
 	if not (confirm $backup_dir) {return}
 	backup $backup_dir $no_delete
-	create_sum
+	create_sum $backup_dir
 }

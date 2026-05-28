@@ -1,4 +1,4 @@
-use consts.nu [BACKED_DIRS DIFF_PATH]
+use consts.nu [IGNORED_DIRS BACKED_DIRS DIFF_PATH]
 
 export def print_diff [] {
 	let changes = open $DIFF_PATH | lines
@@ -13,9 +13,8 @@ export def print_diff [] {
 	| bat --tabs 2 --theme base16 --language Diff
 }
 
-export def get_includes [] {
-	$BACKED_DIRS | each {|d|
-		let dir = $"($d)/**"
-		[--include $dir]
-	} | flatten
+export def get_filters [] {
+	let ignored = $IGNORED_DIRS | each {$'- ($in)'}
+	let included = $BACKED_DIRS | each {$'+ ($in)/**'}
+	$ignored ++ $included ++ ['- /**'] | str join "\n"
 }
