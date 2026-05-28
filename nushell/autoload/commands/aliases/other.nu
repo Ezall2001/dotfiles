@@ -12,3 +12,5 @@ alias pn = pnpm
 alias mixer = ncpamixer -c ($env.XDG_CONFIG_HOME | path join 'ncpamixer/ncpamixer.conf')
 
 alias grm = gtrash put
+
+alias difft = difft --context 3 --tab-width 2 --display side-by-side --background dark --syntax-highlight on
