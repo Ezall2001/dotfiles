@@ -26,7 +26,7 @@ let rules: UserConfig['rules'] = {
 	'type-enum': [
 		RCS.Error,
 		'always',
-		['chore', 'ci', 'feat', 'fix', 'perf', 'refactor', 'style'],
+		['chore', 'ci', 'feat', 'fix', 'perf', 'refactor', 'style', 'patch'],
 	],
 }
 
