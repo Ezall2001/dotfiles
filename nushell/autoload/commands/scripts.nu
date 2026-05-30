@@ -9,3 +9,4 @@ use nushell/nui
 use bbw
 use system *
 use fastfetch *
+use themes
