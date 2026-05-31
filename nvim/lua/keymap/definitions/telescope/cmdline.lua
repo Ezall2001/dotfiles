@@ -1,5 +1,5 @@
 local actions = {
-	complete = '<C-l>',
+	complete = '<C-Space>',
 	run_selection = '<CR>',
 	run_input = '<C-CR>',
 }

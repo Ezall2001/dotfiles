@@ -59,7 +59,7 @@ local cmp = function()
 		['<C-o>'] = c.mapping(toggle_cmp_doc, { 'i', 'c' }),
 		['<C-u>'] = c.mapping(scroll_up, { 'i', 'c' }),
 		['<C-d>'] = c.mapping(scroll_down, { 'i', 'c' }),
-		['<C-l>'] = c.mapping(complete_accept, { 'i', 'c' }),
+		['<C-Space>'] = c.mapping(complete_accept, { 'i', 'c' }),
 	}
 end
 
