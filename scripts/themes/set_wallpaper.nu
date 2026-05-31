@@ -1,9 +1,10 @@
-use ./const.nu [WALLPAPER_PATH]
+use ./const.nu [WALLPAPER_PATH ASSETS_PATH]
 
 export def main [path:string] {
 	let path = $path | path expand
 
-	rm $WALLPAPER_PATH
+	rm -f $WALLPAPER_PATH
+	mkdir $ASSETS_PATH
 	ln -sT $path $WALLPAPER_PATH
 
 	hyprctl monitors -j | from json | get name | each {|mon|
