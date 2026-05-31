@@ -1,4 +1,5 @@
 local m = require('keymap.lib').map
+local s = require('features.window.search')
 
 local search = function()
 	m({
@@ -17,14 +18,14 @@ local search = function()
 	m({
 		'v',
 		'/',
-		[["zy/<C-r>z]],
+		s.search_selection,
 		{ desc = 'search for selected string' },
 	})
 
 	m({
 		'v',
 		'?',
-		[["zy:%s/<C-r>z//g<Left><Left>]],
+		s.search_selection_and_replace,
 		{ desc = 'search and replace selection' },
 	})
 end
