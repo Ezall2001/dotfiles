@@ -6,13 +6,13 @@ local scrolling = function()
 	m({
 		{ 'n', 'v' },
 		'<C-d>',
-		u.mkcb(scroll.half_scroll, 'j'),
+		u.mkcb(scroll.half_scroll, 1),
 		{ desc = 'scroll down half page' },
 	})
 	m({
 		{ 'n', 'v' },
 		'<C-u>',
-		u.mkcb(scroll.half_scroll, 'k'),
+		u.mkcb(scroll.half_scroll, -1),
 		{ desc = 'scroll up half page' },
 	})
 	m({

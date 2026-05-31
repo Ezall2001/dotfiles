@@ -7,7 +7,6 @@ local progress = require('features.plugins.configs.general_ui.noice.lsp_progress
 local routes = require('features.plugins.configs.general_ui.noice.routes')
 local views = require('features.plugins.configs.general_ui.noice.views')
 
---TODO: scroll hover with builtin api
 --- @type NoiceConfig
 local conf = {
 	throttle = 1000 / 60,

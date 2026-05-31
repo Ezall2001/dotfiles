@@ -14,7 +14,7 @@ local type_hierarchy = require('keymap.definitions.lsp.type_hierarchy')
 local M = {}
 
 M.init = function()
-	hover()
+	hover.init()
 	type_hierarchy()
 	other()
 

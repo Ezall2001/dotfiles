@@ -1,4 +1,6 @@
 local m = require('keymap.lib').map
+local p = require('features.plugins')
+local u = require('utils.callback')
 
 --NOTE: wrapped in function for lazy evaluation
 local noice_hover = function()
@@ -14,6 +16,23 @@ end
 
 local noice_hover_signature = function()
 	vim.lsp.buf.signature_help()
+end
+
+local scroll = function()
+	local n = require('noice.lsp')
+
+	m({
+		'n',
+		'<C-S-k>',
+		u.mkcb(n.scroll, -5),
+		{ desc = 'scroll up noice float' },
+	})
+	m({
+		'n',
+		'<C-S-j>',
+		u.mkcb(n.scroll, 5),
+		{ desc = 'scroll down noice float' },
+	})
 end
 
 local hover = function()
@@ -37,4 +56,11 @@ local hover = function()
 	})
 end
 
-return hover
+local M = {}
+
+M.init = function()
+	p.on_plugin_register('noice', scroll)
+	hover()
+end
+
+return M
