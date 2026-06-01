@@ -5,8 +5,7 @@ continuation_prompt = '[ ](bold blue)'
 
 format = """
 [░▒▓](fg:username_bg)\
-$username\
-$hostname\
+[($username$hostname )](bg:username_bg)\
 \
 $directory\
 \
@@ -52,6 +51,19 @@ palette = 'dracula_custom'
 
 
 # LEFT
+## USER
+[username]
+	style_user = 'bold fg:username_text bg:username_bg'
+	style_root = 'bold italic fg:username_text bg:username_bg'
+	format = '[$user]($style)'
+	show_always = false
+	aliases = {"Administrator" = "root"}
+
+[hostname]
+	ssh_only = true
+	trim_at = "."
+	format = '[@$hostname](bold italic fg:username_text bg:username_bg)'
+
 ## DIR
 [directory]
 	use_os_path_sep = false
