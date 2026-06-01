@@ -29,44 +29,44 @@ $time \
 palette = 'dracula_custom'
 
 [palettes.dracula_custom]
-username_bg = '#371D49'
-username_text = 'bright-purple'
+	username_bg = '#371D49'
+	username_text = 'bright-purple'
 
-directory_bg = 'red'
-directory_text = 'bright-white'
+	directory_bg = 'red'
+	directory_text = 'bright-white'
 
-git_bg = '#ead3c1'
-git_brown = '#533f4b'
-git_red = '#D00050'
-git_green = '#008B48'
+	git_bg = '#ead3c1'
+	git_brown = '#533f4b'
+	git_red = '#D00050'
+	git_green = '#008B48'
 
-fill_bg = '#151127'
+	fill_bg = '#151127'
 
-status_bg = 'white'
-status_black = 'black'
-status_red = '#D00050'
-status_green = '#008B48'
-status_brown = '#B78F71'
-status_yellow = '#ADBA17'
-status_blue = 'blue'
+	status_bg = 'white'
+	status_black = 'black'
+	status_red = '#D00050'
+	status_green = '#008B48'
+	status_brown = '#B78F71'
+	status_yellow = '#ADBA17'
+	status_blue = 'blue'
 
 
 # LEFT
 ## DIR
 [directory]
-use_os_path_sep = false
-truncation_symbol = '󰩀/'
-home_symbol = ' '
-read_only = '┃ 󰏮 '
-read_only_style = 'bold fg:directory_text bg:directory_bg'
-style = 'italic bold fg:directory_text bg:directory_bg'
-repo_root_style = 'italic bold underline fg:directory_text bg:directory_bg'
-format = """\
+	use_os_path_sep = false
+	truncation_symbol = '󰩀/'
+	home_symbol = ' '
+	read_only = '┃ 󰏮 '
+	read_only_style = 'bold fg:directory_text bg:directory_bg'
+	style = 'italic bold fg:directory_text bg:directory_bg'
+	repo_root_style = 'italic bold underline fg:directory_text bg:directory_bg'
+	format = """\
 [](fg:username_bg bg:directory_bg)\
 [ $path ]($style)\
 [($read_only)]($read_only_style)\
 [](fg:directory_bg bg:git_bg)"""
-repo_root_format = """\
+	repo_root_format = """\
 [](fg:username_bg bg:directory_bg)\
 [  /]($style)[$repo_root]($repo_root_style)\
 [$path ]($style)\
@@ -76,95 +76,95 @@ repo_root_format = """\
 
 ## GIT
 [git_branch]
-format = '[$branch(:$remote_branch)](bold fg:git_brown bg:git_bg)'
-always_show_remote = false
-truncation_symbol = '󰨿 '
-truncation_length = 20
-only_attached = true
+	format = '[$branch(:$remote_branch)](bold fg:git_brown bg:git_bg)'
+	always_show_remote = false
+	truncation_symbol = '󰨿 '
+	truncation_length = 20
+	only_attached = true
 
 [git_commit]
-format = '[\[$hash($tag)\]](bold italic fg:git_brown bg:git_bg)'
-only_detached = true
-tag_disabled = false
-tag_symbol = '🔖'
-tag_max_candidates = 0
+	format = '[\[$hash($tag)\]](bold italic fg:git_brown bg:git_bg)'
+	only_detached = true
+	tag_disabled = false
+	tag_symbol = '🔖'
+	tag_max_candidates = 0
 
 [git_metrics]
-format = "([(-$deleted)]($deleted_style)|[(+$added)]($added_style))"
-added_style = 'bold bg:git_bg fg:git_green'
-deleted_style = 'bold bg:git_bg fg:git_red'
-disabled = false
+	format = "([(-$deleted)]($deleted_style)|[(+$added)]($added_style))"
+	added_style = 'bold bg:git_bg fg:git_green'
+	deleted_style = 'bold bg:git_bg fg:git_red'
+	disabled = false
 
 [git_state]
-rebase = '󰓂 '
-merge = ' '
-revert = '󰕍 '
-cherry_pick = '[󱁂 ](fg:git_red bg:git_bg)'
-bisect = '󱂅 '
-format = '[$state( $progress_current/$progress_total)](fg:git_brown bg:git_bg)'
-disabled = false
+	rebase = '󰓂 '
+	merge = ' '
+	revert = '󰕍 '
+	cherry_pick = '[󱁂 ](fg:git_red bg:git_bg)'
+	bisect = '󱂅 '
+	format = '[$state( $progress_current/$progress_total)](fg:git_brown bg:git_bg)'
+	disabled = false
 
 [git_status]
-up_to_date = ''
-ahead = '󱃭 '
-behind = '󱃩 '
-diverged = '󰾷 '
-conflicted = ' '
-untracked = '󱙔 '
-staged = '󰎝 '
-modified = '󱞂 '
-deleted = '󱙒 '
-renamed = '󰚹 '
-stashed = '󰘓 '
-format = '[(\[$all_status$ahead_behind\])](fg:git_brown bg:git_bg)'
-disabled = false
+	up_to_date = ''
+	ahead = '󱃭 '
+	behind = '󱃩 '
+	diverged = '󰾷 '
+	conflicted = ' '
+	untracked = '󱙔 '
+	staged = '󰎝 '
+	modified = '󱞂 '
+	deleted = '󱙒 '
+	renamed = '󰚹 '
+	stashed = '󰘓 '
+	format = '[(\[$all_status$ahead_behind\])](fg:git_brown bg:git_bg)'
+	disabled = false
 
 
 # MID
 [fill]
-symbol = ' '
-style = 'bg:fill_bg'
+	symbol = ' '
+	style = 'bg:fill_bg'
 
 
 # RIGHT
 ## STATUS
 [status]
-disabled = false
-success_symbol = '🚀'
-symbol = '[](bold bg:status_bg fg:status_red)'
-not_executable_symbol = '❌'
-not_found_symbol = '❓'
-sigint_symbol = '💣'
-signal_symbol = '💣'
-recognize_signal_code = true
-map_symbol = true
-pipestatus = false
-format = '[$symbol](bold bg:status_bg)'
+	disabled = false
+	success_symbol = '🚀'
+	symbol = '[](bold bg:status_bg fg:status_red)'
+	not_executable_symbol = '❌'
+	not_found_symbol = '❓'
+	sigint_symbol = '💣'
+	signal_symbol = '💣'
+	recognize_signal_code = true
+	map_symbol = true
+	pipestatus = false
+	format = '[$symbol](bold bg:status_bg)'
 
 ## LANG
 [lua]
-version_format = 'v${major}'
-format = '[ $version ](bold fg:status_blue bg:status_bg)'
+	version_format = 'v${major}'
+	format = '[ $version ](bold fg:status_blue bg:status_bg)'
 
 [nodejs]
-version_format = 'v${major}'
-format = '[ $version ](bold fg:status_green bg:status_bg)'
+	version_format = 'v${major}'
+	format = '[ $version ](bold fg:status_green bg:status_bg)'
 
 [python]
-version_format = 'v${major}'
-format = '[󱔎 $version ](bold fg:status_yellow bg:status_bg)'
+	version_format = 'v${major}'
+	format = '[󱔎 $version ](bold fg:status_yellow bg:status_bg)'
 
 ## PERF
 [cmd_duration]
-format = '([󱎫 ](bold fg:status_brown bg:status_bg)[$duration](bold fg:status_brown bg:status_bg))'
-min_time = 100 # (in ms)
-show_milliseconds = true
-show_notifications = true
-min_time_to_notify = 60000 # 1 min (in ms)
-notification_timeout = 3000 # 3 sec (in ms)
+	format = '([󱎫 ](bold fg:status_brown bg:status_bg)[$duration](bold fg:status_brown bg:status_bg))'
+	min_time = 100                                                                                     # (in ms)
+	show_milliseconds = true
+	show_notifications = true
+	min_time_to_notify = 60000                                                                         # 1 min (in ms)
+	notification_timeout = 3000                                                                        # 3 sec (in ms)
 
 ## TIME
 [time]
-disabled = false
-time_format = '%H%M.%S'
-format = '[$time](bold fg:status_red bg:status_bg)'
+	disabled = false
+	time_format = '%H%M.%S'
+	format = '[$time](bold fg:status_red bg:status_bg)'
